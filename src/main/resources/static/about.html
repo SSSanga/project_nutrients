@@ -8,125 +8,70 @@
     <title>Nutrient Recommendations About</title>
 
 
-  <style>
-    
-    .logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.logo img {
-  width: 200px;
-  height: auto;
-}
-
-body {
-  font-family: 'Noto Sans KR', sans-serif;
-  margin: 20px;
-  background-color:  #fff;
-  color: #fff;
-}
-
-h1 {
-  color: #333;
-  text-align: center;
-  margin-top: 50px;
-}
-
-p {
-  color: #ccc;
-}
-
-.highlight {
-  font-weight: bold;
-  color: #18dcff;
-}
-
-.card {
-  margin-top: 50px;
-  background-color: #fff;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-  color: #333;
-}
-
-.card-header {
-  background-color: #333;
-  border-bottom: none;
-  padding-bottom: 0;
-  text-align: center;
-}
-
-.card-title {
-  font-size: 24px;
-  font-weight: bold;
-  color: #fff;
-  margin-top: 20px;
-}
-
-.card-text {
-  font-size: 16px;
-  line-height: 1.8;
-  color: #666;
-  margin-top: 20px;
-}
-
-.card-body {
-  border-radius: 15px;
-  padding: 30px;
-  margin-top: -20px;
-}
-
-.btn-primary {
-  background-color: #18dcff !important;
-  border: none !important;
-  margin-top: 30px;
-}
-
-.btn-primary:hover {
-  background-color: #18dcff !important;
-}
-  </style>
+ 
 </head>
 
 <body>
   
- 
-    <!-- Menu -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand mx-auto" href="./main.html">Nutrient Recommendations</a>
-            <button class="navbar-toggler" type="submit" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" formaction="./main.html">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<!-- Main -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+      <a class="navbar-brand mx-auto" href="./main.html">Nutrient Recommendations</a>
+      <button class="navbar-toggler" type="submit" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" formaction="./main.html">
+          <span class="navbar-toggler-icon"></span>
+      </button>
 
-
-        <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
-              <ul class="navbar-nav">
-                  <li class="nav-item">
-                      <a class="nav-link" href="about.html">About</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="reviews.html">Reviews</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="contacts.html">Contacts</a>
-                  </li>
-              </ul>
-          </div>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-              <ul class="navbar-nav">
-                  <li class="nav-item">
-                      <a class="nav-link" href="signup.html">Sign up / Log in</a>
-                  </li>
-              </ul>
-          </div>
+      <!-- 검색창 -->
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav">
+              <li class="nav-item">
+                  <div class="input-group mt-2 center">
+                      <input type="text" class="form-control" placeholder="Search...">
+                      <button class="btn btn-primary" type="button">Go</button>
+                  </div>
+              </li>
+          </ul>
       </div>
-  </nav>
+
+      <!-- 회원관리 -->
+      <div class="dropdown nav-item">
+          <button class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown">회원관리</button>
+
+          <ul class="dropdown-menu dropdown-menu-end">
+              <li class="dropdown-item">
+                  <a class="nav-link active" href="./login.html">로그인</a>
+              </li>
+              <hr>
+              <li class="dropdown-item">
+                  <a class="nav-link active" href="./signup.html">회원가입</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+
+<!-- Menu -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav">
+              <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="reviews.html">List</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="reviews.html">Reviews</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="contacts.html">Contacts</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</nav>
 
 
   
