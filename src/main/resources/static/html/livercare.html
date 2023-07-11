@@ -2,78 +2,79 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
-
-  <title>Nutrient Recommendations About</title>
-
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrient Recommendations List</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <style>
+        .center {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
 </head>
 
 <body>
 
-  <!-- Main -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand mx-auto" href="./main.html">Nutrient Recommendations</a>
-      <button class="navbar-toggler" type="submit" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" formaction="./main.html">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <!-- Main -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand mx-auto" href="./main.html">Nutrient Recommendations</a>
+            <button class="navbar-toggler" type="submit" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" formaction="./main.html">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-      <!-- 검색창 -->
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <div class="input-group mt-2 center">
-              <input type="text" class="form-control" placeholder="Search...">
-              <button class="btn btn-primary" type="button">Go</button>
+            <!-- 검색창 -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <div class="input-group mt-2 center">
+                            <input type="text" class="form-control" placeholder="Search...">
+                            <button class="btn btn-primary" type="button">Go</button>
+                        </div>
+                    </li>
+                </ul>
             </div>
-          </li>
-        </ul>
-      </div>
 
-      <!-- 회원관리 -->
-      <div class="dropdown nav-item">
-        <button class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown">회원관리</button>
+            <!-- 회원관리 -->
+            <div class="dropdown nav-item">
+                <button class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown">회원관리</button>
 
-        <ul class="dropdown-menu dropdown-menu-end">
-          <li class="dropdown-item">
-            <a class="nav-link active" href="./login.html">로그인</a>
-          </li>
-          <hr>
-          <li class="dropdown-item">
-            <a class="nav-link active" href="./signup.html">회원가입</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                        <a class="nav-link active" href="./login.html">로그인</a>
+                    </li>
+                    <hr>
+                    <li class="dropdown-item">
+                        <a class="nav-link active" href="./signup.html">회원가입</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <!-- Menu -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="reviews.html">List</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="reviews.html">Reviews</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contacts.html">Contacts</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
+    <!-- Menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reviews.html">List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reviews.html">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
   <div class="container">
     <div class="h2">간기능 개선 영양제 LIST</div>
@@ -120,22 +121,7 @@
   </div>
   <!-- 다른 사진들을 추가로 추가할 수 있습니다. -->
 
-  <style>
-    .column {
-      display: flex;
-      flex-direction: column;
-    }
-  </style>
 
-
-
-
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-4 mt-4">
-    <div class="container">
-      <p>&copy; 2023 Your Website. All Rights Reserved.</p>
-    </div>
-  </footer>
 
 
 </body>
