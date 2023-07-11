@@ -14,9 +14,9 @@
         <div class="text-center mt-4 mb-4 h1">Update Form</div>
     </div>
     <div class="container">
-        <form id="insertForm" action="/main/update" method="post">
-            <div class="mb-3">
-                <label class="form-label" for="commonCodeId">COMMON_CODE_ID:</label>
+        <form id="updateForm" action="/main/updateForm" method="post">
+            <div class="mb-3" type="hidden">
+                <label class="form-label" for="commonCodeId" type="hidden">COMMON_CODE_ID:</label>
                 <input class="form-control" type="hidden" id="commonCodeId" name="COMMON_CODE_ID">
             </div>
             <div class="mb-3">
@@ -36,7 +36,7 @@
                 <input class="form-control" type="text" id="modifyDate" name="MODIFY_DATE">
             </div>
             <div class="text-center">
-                <button class="btn btn-primary" type="submit" formaction="/main/updateAndSelectSearch">Submit</button>
+                <button class="btn btn-primary" type="submit" formaction="/main/updateAndSelectSearch/${UNIQUE_ID}">Submit</button>
             </div>
         </form>
     </div>

@@ -67,6 +67,7 @@
                                     <th>PARENT_COMMON_CODE_ID</th>
                                     <th>COMMON_CODE_ID</th>
                                     <th>NAME</th>
+                                    <th>Update</th>
                                     <th>Delete</th>
                                 </tr>
                             </thead>
