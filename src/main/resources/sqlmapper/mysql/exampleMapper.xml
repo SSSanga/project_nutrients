@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="MainSpl">
+    <!-- 검색 -->
+	<select id="selectSearch" parameterType="Map" resultType="Map">
+        SELECT * 
+        FROM project_nutrients.commons_code
+        where 1 = 1 
+        <choose>
+            <when test="search == 'NAME'">
+            <![CDATA[
+            and YEAR > #{words}
+            ]]>
+            </when>
+            <when test="search == 'parent_flag'">
+
+            and CAR_NAME like CONCAT(#{words}, '%')
+            </when>
+        </choose>        
+        ;
+	</select>
+
+</mapper>
