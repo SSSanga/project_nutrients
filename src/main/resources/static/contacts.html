@@ -18,64 +18,46 @@
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" formaction="./main.html">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- 검색창 -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <div class="input-group mt-2 center">
+                            <input type="text" class="form-control" placeholder="Search...">
+                            <button class="btn btn-primary" type="button">Go</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 회원관리 -->
+            <div class="dropdown nav-item">
+                <button class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown">회원관리</button>
+
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                        <a class="nav-link active" href="./login.html">로그인</a>
+                    </li>
+                    <hr>
+                    <li class="dropdown-item">
+                        <a class="nav-link active" href="./signup.html">회원가입</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
-
-    <!-- Main Content -->
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-md-8">
-                <h2>Search</h2>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Search..." id="keydownEnter">
-                    <button class="btn btn-primary" type="button" onclick="carTableBody()">Go</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <hr>
-
-    <!-- slide -->
-    <div class="container">
-        <!-- slide: 끊김없이 넘어감; data-bs-ride: 슬라이딩 기능을 넣어줌-->
-        <div id="controlsID-first" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button class="active" data-bs-slide-to="0" data-bs-target="#controlsID-first"></button>
-                <button data-bs-slide-to="1" data-bs-target="#controlsID-first"></button>
-                <button data-bs-slide-to="2" data-bs-target="#controlsID-first"></button>
-                <button data-bs-slide-to="3" data-bs-target="#controlsID-first"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                </div>
-                <div class="carousel-item">
-                </div>
-                <div class="carousel-item">
-                </div>
-                <div class="carousel-item">
-                </div>
-            </div>
-            <!-- class="carousel-control-prev: 슬라이드 안으로 버튼 집어넣기; data-bs-target="#id명": id로 연결; data-bs-slide: 행동지침-->
-            <button data-bs-slide="prev" data-bs-target="#controlsID-first" class="carousel-control-prev">
-                <!-- "<" 로 바뀜 -->
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button data-bs-slide="next" data-bs-target="#controlsID-first" class="carousel-control-next">
-                <!-- ">" 로 바뀜 -->
-                <span class="carousel-control-next-icon"></span>
-            </button>
-        </div>
-    </div>
-    <hr>
 
     <!-- Menu -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reviews.html">List</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="reviews.html">Reviews</a>
@@ -85,15 +67,9 @@
                     </li>
                 </ul>
             </div>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="signup.html">Sign up / Log in</a>
-                    </li>
-                </ul>
-            </div>
         </div>
     </nav>
+    
     <div class="container">
         <h2>1:1 Contact</h2>
         
