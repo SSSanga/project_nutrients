@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrient Recommendations</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <style>
+        .center {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Main -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand mx-auto" href="./main.html">Nutrient Recommendations</a>
+            <button class="navbar-toggler" type="submit" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" formaction="./main.html">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- 검색창 -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <div class="input-group mt-2 center">
+                            <input type="text" class="form-control" placeholder="Search...">
+                            <button class="btn btn-primary" type="button">Go</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 회원관리 -->
+            <div class="dropdown nav-item">
+                <button class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown">회원관리</button>
+
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                        <a class="nav-link active" href="./login.html">로그인</a>
+                    </li>
+                    <hr>
+                    <li class="dropdown-item">
+                        <a class="nav-link active" href="./signup.html">회원가입</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reviews.html">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>영양제 리뷰 게시판</h1>
+
+        <ul class="list-group">
+            <li class="list-group-item">
+                <h2>Omega-3 Fish Oil</h2>
+                <p>
+                    Omega-3 Fish Oil을 복용한 후에 집중력이 향상되었고 피로도 감소한 것을 느낄 수 있었습니다. 특히, 뇌 기능에 집중하는 업무를 많이 하는 분들에게 추천합니다.
+                </p>
+                <small class="text-muted">- 사용자1</small>
+            </li>
+
+            <li class="list-group-item">
+                <h2>Vitamin D3</h2>
+                <p>
+                    Vitamin D3을 복용한 후에 비타민 D3 수치가 정상 범위로 돌아왔다는 결과를 볼 수 있었습니다. 추운 겨울철에는 특히 유용한 영양제라고 생각합니다.
+                </p>
+                <small class="text-muted">- 사용자2</small>
+            </li>
+
+            <li class="list-group-item">
+                <h2>Probiotic Supplement</h2>
+                <p>
+                    Probiotic Supplement를 복용한 후에 소화가 개선되었고, 배변패턴도 정규화되었습니다. 장 건강에 관심이 있는 분들에게 추천드립니다.
+                </p>
+                <small class="text-muted">- 사용자3</small>
+            </li>
+
+            <li class="list-group-item">
+                <h2>Multivitamin</h2>
+                <p>
+                    Multivitamin을 복용한 후에 영양 섭취에 대한 걱정이 덜어지고 체력이 좋아진 것을 느낄 수 있었습니다. 영양소 섭취에 어려움을 겪는 분들에게 유용한 제품입니다.
+                </p>
+                <small class="text-muted">- 사용자4</small>
+            </li>
+
+            <li class="list-group-item">
+                <h2>Biotin</h2>
+                <p>
+                    Biotin을 복용한 후에 머리카락이 더 건강해지고 빠른 속도로 자라는 것을 확인할 수 있었습니다. 머리카락과 피부 건강에 관심이 있는 분들에게 추천합니다.
+                </p>
+                <small class="text-muted">- 사용자5</small>
+            </li>
+        </ul>
+    </div>
+    <div>
+
+        <button class="btn btn-sucess "type="submit" formaction="" value="작성하기">작성하기 </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

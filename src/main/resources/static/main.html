@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nutrient Recommendations</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <style>
+        .center {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -13,28 +19,59 @@
     <!-- Main -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand mx-auto" href="#">Nutrient Recommendations</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand mx-auto" href="./main.html">Nutrient Recommendations</a>
+            <button class="navbar-toggler" type="submit" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" formaction="./main.html">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- 검색창 -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <div class="input-group mt-2 center">
+                            <input type="text" class="form-control" placeholder="Search...">
+                            <button class="btn btn-primary" type="button">Go</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 회원관리 -->
+            <div class="dropdown nav-item">
+                <button class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown">회원관리</button>
+
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                        <a class="nav-link active" href="./login.html">로그인</a>
+                    </li>
+                    <hr>
+                    <li class="dropdown-item">
+                        <a class="nav-link active" href="./signup.html">회원가입</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-md-8">
-                <h2>Search</h2>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Search..." id="keydownEnter">
-                    <button class="btn btn-primary" type="button" onclick="carTableBody()">Go</button>
-                </div>
+    <!-- Menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reviews.html">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">Contacts</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
-
-    <hr>
+    </nav>
 
     <!-- slide -->
     <div class="container">
@@ -48,16 +85,16 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="./" alt="" width="100%" height="500px">
+                    <img src="./dp_1.jpg" alt="" width="100%" height="700px">
                 </div>
                 <div class="carousel-item">
-                    <img src="./travel.jpg" alt="" width="100%" height="500px">
+                    <img src="./dp_2.jpg" alt="" width="100%" height="700px">
                 </div>
                 <div class="carousel-item">
-                    <img src="./foods.jpg" alt="" width="100%" height="500px">
+                    <img src="./dp_3.jpg" alt="" width="100%" height="700px">
                 </div>
                 <div class="carousel-item">
-                    <img src="./exercise.jpg" alt="" width="100%" height="500px">
+                    <img src="./dp_4.jpg" alt="" width="100%" height="700px">
                 </div>
             </div>
             <!-- class="carousel-control-prev: 슬라이드 안으로 버튼 집어넣기; data-bs-target="#id명": id로 연결; data-bs-slide: 행동지침-->
@@ -72,33 +109,6 @@
         </div>
     </div>
     <hr>
-
-    <!-- Menu -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="reviews.html">Reviews</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacts.html">Contacts</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="signup.html">Sign up / Log in</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-4 mt-4">
