@@ -1,0 +1,28 @@
+body {
+    background-color: #e9ecef;
+}
+.navbar, .navbar-brand, .nav-link {
+    color: #ffffff !important;
+}
+.navbar {
+    background-color: #28a745;
+}
+.dropdown-menu {
+    background-color: #28a745;
+}
+.dropdown-item {
+    color: #ffffff;
+}
+
+.navbar, .dropdown-menu {
+    background-color: #006400;
+}
+.nav-link, .dropdown-item {
+    color: white;
+}
+.btn-primary {
+    background-color: #006400;
+}
+.dropdown-toggle {
+    color: white;
+}
