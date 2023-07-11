@@ -97,7 +97,7 @@
           "active": false,
           "left": 756,
           "top": 97,
-          "zIndex": 55,
+          "zIndex": 1,
           "widthName": 60,
           "widthComment": 60
         },
@@ -343,7 +343,7 @@
           "active": true,
           "left": 136,
           "top": 57,
-          "zIndex": 98,
+          "zIndex": 2,
           "widthName": 67.72998046875,
           "widthComment": 60
         },
