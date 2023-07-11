@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrient Recommendations Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <link href="./../css/main.css" rel="stylesheet" />
+</head>
+
+<body>
+        <nav class="navbar navbar-expand">
+            <a class="navbar-brand mx-auto" href="./main.html">Nutrient Recommendations</a>
+            <button class="navbar-toggler" type="submit" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" formaction="./main.html">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            </nav>
+            <nav class="navbar navbar-expand">
+            <div class="navbar-nav me-auto"> <!--m:마진, e:end(오른쪽)-->
+                <a class="nav-link" href="./about.html">About</a>
+                <a class="nav-link" href="./wholelist.html">List</a>
+                <a class="nav-link" href="./reviews.html">Reviews</a>
+                <a class="nav-link" href="./contacts.html">Contacts</a>
+            </div>
+
+            <!-- 검색창 -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <form>
+                            <div class="input-group mt-2 center">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <button class="btn btn-primary" type="submit"
+                                    formaction="./searchresult.html">Go</button>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="d-flex dropdown nav-item">
+                <button class="btn dropdown-toggle" data-bs-toggle="dropdown">회원관리</button>
+
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item">
+                        <a class="nav-link" href="./mypage.html">마이페이지</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a class="nav-link active" href="./login.html">로그인</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a class="nav-link active" href="./signup.html">회원가입</a>
+                    </li>
+                    <hr>
+                    <li class="dropdown-item">
+                        <a class="nav-link" href="./main.html">로그아웃</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="container py-4">
+                <h1 class="text-center">Reviews</h1>
+                <hr>
+                <div class="row">
+                    <div class="col-md-8 mx-auto">
+                        <div class="list-group">
+                            <a href="./review1.html" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">비타민B복합체 먹었는데 피로 회복 드라마틱해요!!!</h5>
+                                    <small>작성일: 2023-07-11</small>
+                                </div>
+                                <p class="mb-1">글 내용 1</p>
+                            </a>
+                            <a href="./review2.html" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">코큐텐 한달복용 후기</h5>
+                                    <small>작성일: 2023-07-10</small>
+                                </div>
+                                <p class="mb-1">글 내용 2</p>
+                            </a>
+                            <a href="./review3.html" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">밀크씨슬 솔직후기</h5>
+                                    <small>작성일: 2023-07-09</small>
+                                </div>
+                                <p class="mb-1">글 내용 3</p>
+                            </a>
+                            <a href="./review4.html" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">당 개선 제대로임</h5>
+                                    <small>작성일: 2023-07-11</small>
+                                </div>
+                                <p class="mb-1">글 내용 4</p>
+                            </a>
+                            <a href="./review5.html" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">비타민 D는 뼈에 필수*^^*</h5>
+                                    <small>작성일: 2023-07-12</small>
+                                </div>
+                                <p class="mb-1">글 내용 5</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-3 justify-content-end">
+                    <form>
+                        <button type="submit" class="btn btn-primary" formaction="./reviewwriting.html">후기 작성 GO!</button>
+                    </form>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+</html>

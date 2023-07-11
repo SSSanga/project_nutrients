@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrient Recommendations Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <link href="./../css/main.css" rel="stylesheet" />
+</head>
+
+<body>
+        <nav class="navbar navbar-expand">
+            <a class="navbar-brand mx-auto" href="./main.html">Nutrient Recommendations</a>
+            <button class="navbar-toggler" type="submit" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" formaction="./main.html">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            </nav>
+            <nav class="navbar navbar-expand">
+            <div class="navbar-nav me-auto"> <!--m:마진, e:end(오른쪽)-->
+                <a class="nav-link" href="./about.html">About</a>
+                <a class="nav-link" href="./wholelist.html">List</a>
+                <a class="nav-link" href="./reviews.html">Reviews</a>
+                <a class="nav-link" href="./contacts.html">Contacts</a>
+            </div>
+
+            <!-- 검색창 -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <form>
+                            <div class="input-group mt-2 center">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <button class="btn btn-primary" type="submit"
+                                    formaction="./searchresult.html">Go</button>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="d-flex dropdown nav-item">
+                <button class="btn dropdown-toggle" data-bs-toggle="dropdown">회원관리</button>
+
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item">
+                        <a class="nav-link" href="./mypage.html">마이페이지</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a class="nav-link active" href="./login.html">로그인</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a class="nav-link active" href="./signup.html">회원가입</a>
+                    </li>
+                    <hr>
+                    <li class="dropdown-item">
+                        <a class="nav-link" href="./main.html">로그아웃</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="container py-4">
+                <h1 class="text-center">Reviews</h1>
+                <hr>
+                <div class="row">
+                    <div class="col-md-8 mx-auto">
+                        <div class="list-group">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">당 고민이 많았는데요.. *^^*밀크시슬먹고 의사쌤이 칭찬해줬어요!!</h5>
+                            </div>
+                            <hr>
+                            <diV class="mb-1">
+                                <tr>
+                                    <img src="./milkthistle.jpg" alt="vitaminb3" class="square-image" width="100px"
+                                        height="100%">
+                                    <td>
+                                        병원 검진 받는데 의사쌤이 당이 높다고...조절하라고 하더라구요..
+                                        밀크시슬이 당 개선이 도움이 된다고 해서! nutrient recommendations에 들어와서 검색하는데 top3안에 들어가는
+                                        제품이더라구요!
+                                        고민 안하고 바로 찾아서 먹어봤어요!! 1개월 후에 검진받으러 갔는데!! 의사쌤이 칭찬해줬어요!! 당 개선에 확실하네요!!
+                                    </td>
+                                </tr>
+                            </diV>
+                            <div class="row">
+                                <div class="col-md-8 mx-auto">
+                                    <form>
+                                        <button type="submit" class="btn btn-primary"
+                                            formaction="./reviews.html">돌아가기</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <hr>
+                            <script
+                                src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+</html>

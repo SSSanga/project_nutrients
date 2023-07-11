@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrient Recommendations Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <link href="./../css/main.css" rel="stylesheet" />
+</head>
+
+<body>
+        <nav class="navbar navbar-expand">
+            <a class="navbar-brand mx-auto" href="./main.html">Nutrient Recommendations</a>
+            <button class="navbar-toggler" type="submit" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" formaction="./main.html">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            </nav>
+            <nav class="navbar navbar-expand">
+            <div class="navbar-nav me-auto"> <!--m:마진, e:end(오른쪽)-->
+                <a class="nav-link" href="./about.html">About</a>
+                <a class="nav-link" href="./wholelist.html">List</a>
+                <a class="nav-link" href="./reviews.html">Reviews</a>
+                <a class="nav-link" href="./contacts.html">Contacts</a>
+            </div>
+
+            <!-- 검색창 -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <form>
+                            <div class="input-group mt-2 center">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <button class="btn btn-primary" type="submit"
+                                    formaction="./searchresult.html">Go</button>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="d-flex dropdown nav-item">
+                <button class="btn dropdown-toggle" data-bs-toggle="dropdown">회원관리</button>
+
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item">
+                        <a class="nav-link" href="./mypage.html">마이페이지</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a class="nav-link active" href="./login.html">로그인</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a class="nav-link active" href="./signup.html">회원가입</a>
+                    </li>
+                    <hr>
+                    <li class="dropdown-item">
+                        <a class="nav-link" href="./main.html">로그아웃</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+    <!-- Menu -->
+
+    <div>
+        <div class="container m-3">
+            
+                <form action="">
+                    <div class="h3">영양제 추천</div>
+                    <div class="row p-2">
+                        <div class="col-md-3">
+                            <button type="submit" class="w-100 btn btn-lg btn-outline-primary"
+                                formaction="./livercare.html">간 기능 개선</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button type="submit" class="w-100 btn btn-lg btn-outline-primary"
+                                formaction="./recovery.html">피로 회복</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button type="submit" class="w-100 btn btn-lg btn-outline-primary"
+                                formaction="./eyes.html">눈 기능
+                                향상</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button type="submit" class="w-100 btn btn-lg btn-outline-primary"
+                                formaction="./cholesterol.html">혈중 콜레스테롤 개선</button>
+                        </div>
+                    </div>
+                </form>
+            
+        </div>
+    </div>
+
+    <!-- slide -->
+    <div class="container">
+        <!-- slide: 끊김없이 넘어감; data-bs-ride: 슬라이딩 기능을 넣어줌-->
+        <div id="controlsID-first" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button class="active" data-bs-slide-to="0" data-bs-target="#controlsID-first"></button>
+                <button data-bs-slide-to="1" data-bs-target="#controlsID-first"></button>
+                <button data-bs-slide-to="2" data-bs-target="#controlsID-first"></button>
+                <button data-bs-slide-to="3" data-bs-target="#controlsID-first"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./dp_1.jpg" alt="" width="90%" height="700px">
+                </div>
+                <div class="carousel-item">
+                    <img src="./dp_2.jpg" alt="" width="90%" height="700px">
+                </div>
+                <div class="carousel-item">
+                    <img src="./dp_3.jpg" alt="" width="90%" height="700px">
+                </div>
+                <div class="carousel-item">
+                    <img src="./dp_4.jpg" alt="" width="90%" height="700px">
+                </div>
+            </div>
+            <!-- class="carousel-control-prev: 슬라이드 안으로 버튼 집어넣기; data-bs-target="#id명": id로 연결; data-bs-slide: 행동지침-->
+            <button data-bs-slide="prev" data-bs-target="#controlsID-first" class="carousel-control-prev">
+                <!-- "<" 로 바뀜 -->
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button data-bs-slide="next" data-bs-target="#controlsID-first" class="carousel-control-next">
+                <!-- ">" 로 바뀜 -->
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer class="p-5 d-flex justify-content-between align-items-center font-size: 0.8rem footer-green">
+        <div class="row">
+            <div class="">
+                <div class="">
+                    <ul class="list-unstyled d-flex">
+                        <li>
+                            <a href="/etc/companyInfo"
+                                class="text-black text-decoration-none border-end border-secondary">회사소개 &nbsp;</a>
+                        </li>
+                        <li>
+                            <a href="/etc/terms_of_use"
+                                class="text-black text-decoration-none ps-2 border-end border-secondary">이용약관 &nbsp;</a>
+                        </li>
+                        <li>
+                            <a href="/etc/privacy_policy"
+                                class="text-black text-decoration-none ps-2 border-end border-secondary">개인정보처리방침
+                                &nbsp;</a>
+                        </li>
+                        <li>
+                            <a href="/notice/notice_faq" class="text-black text-decoration-none ps-2">고객센터</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="list-unstyled m-0">
+                        <li class="pt-1">
+                            대표번호 : 080-513-5420 (업무시간 : 09:00-18:00 월~금) 주말,
+                            공휴일 휴무
+                        </li>
+                        <li class="pt-1">
+                            <span class="pe-3">대표자 : 이동환</span>
+                            <span>주소 : 서울특별시 구로동 디지털로34길 27 대륭포스트타워 3차 1106호</span>
+                        </li>
+                        <li class="pt-1">
+                            <span>법인명 : (주)0124</span>
+                            <span>사업자 등록정보 : 96-979686</span>
+                        </li>
+                        <li class="pt-1">
+                            <span>호스팅 : (주)0124</span>
+                            <span>E-MAIL : diet@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <img src="img/logo2.png" alt="logo" height="130rem">
+        </div>
+
+
+        <!-- Code injected by live-server -->
+        <script>
+            // <![CDATA[  <-- For SVG support
+            if ('WebSocket' in window) {
+                (function () {
+                    function refreshCSS() {
+                        var sheets = [].slice.call(document.getElementsByTagName("link"));
+                        var head = document.getElementsByTagName("head")[0];
+                        for (var i = 0; i < sheets.length; ++i) {
+                            var elem = sheets[i];
+                            var parent = elem.parentElement || head;
+                            parent.removeChild(elem);
+                            var rel = elem.rel;
+                            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                                elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                            }
+                            parent.appendChild(elem);
+                        }
+                    }
+                    var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                    var address = protocol + window.location.host + window.location.pathname + '/ws';
+                    var socket = new WebSocket(address);
+                    socket.onmessage = function (msg) {
+                        if (msg.data == 'reload') window.location.reload();
+                        else if (msg.data == 'refreshcss') refreshCSS();
+                    };
+                    if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                        console.log('Live reload enabled.');
+                        sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                    }
+                })();
+            }
+            else {
+                console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+            }
+      // ]]>
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="../js/carinforwithfunction.js"></script> -->
+    <script src="../js/carinforwithrest.js"></script>
+</body>
+
+</html>

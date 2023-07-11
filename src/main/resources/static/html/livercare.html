@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrient Recommendations Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <link href="./../css/main.css" rel="stylesheet" />
+</head>
+
+<body>
+        <nav class="navbar navbar-expand">
+            <a class="navbar-brand mx-auto" href="./main.html">Nutrient Recommendations</a>
+            <button class="navbar-toggler" type="submit" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" formaction="./main.html">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            </nav>
+            <nav class="navbar navbar-expand">
+            <div class="navbar-nav me-auto"> <!--m:마진, e:end(오른쪽)-->
+                <a class="nav-link" href="./about.html">About</a>
+                <a class="nav-link" href="./wholelist.html">List</a>
+                <a class="nav-link" href="./reviews.html">Reviews</a>
+                <a class="nav-link" href="./contacts.html">Contacts</a>
+            </div>
+
+            <!-- 검색창 -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <form>
+                            <div class="input-group mt-2 center">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <button class="btn btn-primary" type="submit"
+                                    formaction="./searchresult.html">Go</button>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="d-flex dropdown nav-item">
+                <button class="btn dropdown-toggle" data-bs-toggle="dropdown">회원관리</button>
+
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item">
+                        <a class="nav-link" href="./mypage.html">마이페이지</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a class="nav-link active" href="./login.html">로그인</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a class="nav-link active" href="./signup.html">회원가입</a>
+                    </li>
+                    <hr>
+                    <li class="dropdown-item">
+                        <a class="nav-link" href="./main.html">로그아웃</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+  <div class="container content-center p-5">
+    <div class="h2">간 기능 개선 영양제 LIST</div>
+    <br>
+    <table class="table table-bordered">
+      <tr>
+        <th class="text-center">이름</th>
+        <th class="text-center">키워드</th>
+        <th class="text-center">영양제의 효능/효과</th>
+      </tr>
+
+      <tr>
+        <td><img src="./lc_1.jpg" alt="" class="square-image" width="100px" height="100%"></td>
+        <td>밀크씨슬</td>
+        <td>간 기능 개선</td>
+        <td>간세포를 보호하고 간 염증을 감소시키는 데 도움이 됨</td>
+
+      </tr>
+      <tr>
+        <td><img src="./lc_2.jpg" alt="" class="square-image" width="100px" height="100%"></td>
+        <td>아르티초크 추출물</td>
+        <td>간 기능 개선</td>
+        <td>간세포를 보호하고 간독소를 제거하여 간 기능을 향상</td>
+      </tr>
+      <tr>
+        <td><img src="./lc_3.jpg" alt="" class="square-image" width="100px" height="100%"></td>
+        <td>N-아세틸시스테인 (NAC)</td>
+        <td>간 기능 개선</td>
+        <td>간독소를 제거하여 간 건강을 촉진하는 데 도움</td>
+      </tr>
+
+      <tr>
+        <td><img src="./lc_4.jpg" alt="" class="square-image" width="100px" height="100%"></td>
+        <td>비타민 B 그룹</td>
+        <td>간 기능 개선</td>
+        <td>간 건강을 지원하고 간세포의 복구를 도와줌.</td>
+      </tr>
+    </table>
+  </div>
+
+
+
+  </div>
+  </div>
+  <!-- 다른 사진들을 추가로 추가할 수 있습니다. -->
+
+
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>

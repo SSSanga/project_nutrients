@@ -1,0 +1,36 @@
+body {
+    background-color: #e9ecef;
+}
+.navbar, .navbar-brand, .nav-link {
+    color: #ffffff !important;
+}
+.navbar {
+    background-color: green;
+}
+.dropdown-menu {
+    background-color: green;
+}
+.dropdown-item {
+    color: #ffffff;
+}
+
+.navbar, .dropdown-menu {
+    background-color: green;
+}
+.nav-link, .dropdown-item {
+    color: white;
+}
+.btn-primary {
+    background-color: green;
+}
+.dropdown-toggle {
+    color: white;
+}
+
+.footer-green {
+    background-color: #198754;
+    color: white;
+}
+.footer-green a {
+    color: white;
+}
