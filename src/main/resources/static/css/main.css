@@ -5,24 +5,32 @@ body {
     color: #ffffff !important;
 }
 .navbar {
-    background-color: #28a745;
+    background-color: green;
 }
 .dropdown-menu {
-    background-color: #28a745;
+    background-color: green;
 }
 .dropdown-item {
     color: #ffffff;
 }
 
 .navbar, .dropdown-menu {
-    background-color: #006400;
+    background-color: green;
 }
 .nav-link, .dropdown-item {
     color: white;
 }
 .btn-primary {
-    background-color: #006400;
+    background-color: green;
 }
 .dropdown-toggle {
+    color: white;
+}
+
+.footer-green {
+    background-color: #198754;
+    color: white;
+}
+.footer-green a {
     color: white;
 }
