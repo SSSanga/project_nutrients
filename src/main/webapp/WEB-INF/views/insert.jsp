@@ -1,73 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap 5 Template</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.css">
     <title>Insert Form</title>
 </head>
+
 <body>
-    <h2>Insert Form</h2>
-
-    <form action="/main/insert" method="post">
-        <div>
-            <label for="commonCodeId">Common Code ID:</label>
-            <input type="text" id="commonCodeId" name="commonCodeId">
-        </div>
-        <div>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-        </div>
-        <div>
-            <label for="orderNumber">Order Number:</label>
-            <input type="number" id="orderNumber" name="orderNumber">
-        </div>
-        <div>
-            <label for="attribution1">Attribution 1:</label>
-            <input type="text" id="attribution1" name="attribution1">
-        </div>
-        <div>
-            <label for="attribution2">Attribution 2:</label>
-            <input type="text" id="attribution2" name="attribution2">
-        </div>
-        <div>
-            <label for="description">Description:</label>
-            <input type="text" id="description" name="description">
-        </div>
-        <div>
-            <label for="systemCodeYn">System Code YN:</label>
-            <input type="text" id="systemCodeYn" name="systemCodeYn">
-        </div>
-        <div>
-            <label for="useYn">Use YN:</label>
-            <input type="text" id="useYn" name="useYn">
-        </div>
-        <div>
-            <label for="parentCommonCodeId">Parent Common Code ID:</label>
-            <input type="text" id="parentCommonCodeId" name="parentCommonCodeId">
-        </div>
-        <div>
-            <label for="registerSeq">Register Seq:</label>
-            <input type="text" id="registerSeq" name="registerSeq">
-        </div>
-        <div>
-            <label for="registryDate">Registry Date:</label>
-            <input type="text" id="registryDate" name="registryDate">
-        </div>
-        <div>
-            <label for="modifierSeq">Modifier Seq:</label>
-            <input type="text" id="modifierSeq" name="modifierSeq">
-        </div>
-        <div>
-            <label for="modifyDate">Modify Date:</label>
-            <input type="text" id="modifyDate" name="modifyDate">
-        </div>
-        <div>
-            <input type="submit" value="Submit">
-        </div>
-    </form>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="container">
+        <div class="text-center mt-4 mb-4 h1">Insert Form</div>
+    </div>
+    <div class="container">
+        <form id="insertForm" action="/main/insert" method="post">
+            <div class="mb-3">
+                <label class="form-label" for="commonCodeId">COMMON_CODE_ID:</label>
+                <input class="form-control" type="text" id="commonCodeId" name="COMMON_CODE_ID">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="name">NAME:</label>
+                <input class="form-control" type="text" id="name" name="NAME">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="orderNumber">ORDER_NUMBER:</label>
+                <input class="form-control" type="text" id="orderNumber" name="ORDER_NUMBER">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="attribution1">ATTRIBUTION_1:</label>
+                <input class="form-control" type="text" id="attribution1" name="ATTRIBUTION_1">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="attribution2">ATTRIBUTION_2:</label>
+                <input class="form-control" type="text" id="attribution2" name="ATTRIBUTION_2">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="description">DESCRIPTION:</label>
+                <input class="form-control" type="text" id="description" name="DESCRIPTION">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="systemCodeYn">SYSTEM_CODE_YN:</label>
+                <input class="form-control" type="text" id="systemCodeYn" name="SYSTEM_CODE_YN">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="useYn">USE_YN:</label>
+                <input class="form-control" type="text" id="useYn" name="USE_YN">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="parentCommonCodeId">PARENT_COMMON_CODE_ID:</label>
+                <input class="form-control" type="text" id="parentCommonCodeId" name="PARENT_COMMON_CODE_ID">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="registerSeq">REGISTER_SEQ:</label>
+                <input class="form-control" type="text" id="registerSeq" name="REGISTER_SEQ">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="registryDate">REGISTRY_DATE:</label>
+                <input class="form-control" type="text" id="registryDate" name="REGISTRY_DATE">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="modifierSeq">MODIFIER_SEQ:</label>
+                <input class="form-control" type="text" id="modifierSeq" name="MODIFIER_SEQ">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="modifyDate">MODIFY_DATE:</label>
+                <input class="form-control" type="text" id="modifyDate" name="MODIFY_DATE">
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary" type="submit" formaction="/main/insertAndSelectSearch">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
