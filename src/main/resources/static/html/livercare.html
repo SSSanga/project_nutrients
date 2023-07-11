@@ -1,127 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
-
-    <title>Nutrient Recommendations About</title>
-
-
- 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutrient Recommendations List</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+  <style>
+    .center {
+      display: flex;
+      justify-content: center;
+    }
+  </style>
 </head>
 
 <body>
-  
-<!-- Main -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
+
+  <!-- Main -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
       <a class="navbar-brand mx-auto" href="./main.html">Nutrient Recommendations</a>
       <button class="navbar-toggler" type="submit" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" formaction="./main.html">
-          <span class="navbar-toggler-icon"></span>
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" formaction="./main.html">
+        <span class="navbar-toggler-icon"></span>
       </button>
 
       <!-- 검색창 -->
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-          <ul class="navbar-nav">
-              <li class="nav-item">
-                  <div class="input-group mt-2 center">
-                      <input type="text" class="form-control" placeholder="Search...">
-                      <button class="btn btn-primary" type="button">Go</button>
-                  </div>
-              </li>
-          </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <div class="input-group mt-2 center">
+              <input type="text" class="form-control" placeholder="Search...">
+              <button class="btn btn-primary" type="button">Go</button>
+            </div>
+          </li>
+        </ul>
       </div>
 
       <!-- 회원관리 -->
       <div class="dropdown nav-item">
-          <button class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown">회원관리</button>
+        <button class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown">회원관리</button>
 
-          <ul class="dropdown-menu dropdown-menu-end">
-              <li class="dropdown-item">
-                  <a class="nav-link active" href="./login.html">로그인</a>
-              </li>
-              <hr>
-              <li class="dropdown-item">
-                  <a class="nav-link active" href="./signup.html">회원가입</a>
-              </li>
-          </ul>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li class="dropdown-item">
+            <a class="nav-link active" href="./login.html">로그인</a>
+          </li>
+          <hr>
+          <li class="dropdown-item">
+            <a class="nav-link active" href="./signup.html">회원가입</a>
+          </li>
+        </ul>
       </div>
-  </div>
-</nav>
-
-<!-- Menu -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-          <ul class="navbar-nav">
-              <li class="nav-item">
-                  <a class="nav-link" href="about.html">About</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="reviews.html">List</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="reviews.html">Reviews</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="contacts.html">Contacts</a>
-              </li>
-          </ul>
-      </div>
-  </div>
-</nav>
-
-<div class="product">
-  <img src="./lc.jpg"  alt=""  width="100%" height="100%">
-  <!-- <div class="product-description">
-    <h5>쏜 리서치  S.A.T. 캡슐 60정</h5>
-    
-  </div> -->
-</div>
-
-<div class="product">
-  <img src="영양제2.jpg" alt="영양제 2">
-  <div class="product-description">
-    <h2>영양제 2</h2>
-   
-  </div>
-</div>
-
-<div class="product">
-  <img src="영양제3.jpg" alt="영양제 3">
-  <div class="product-description">
-    <h2>영양제 3</h2>
-    
-  </div>
-</div>
-
-<div class="product">
-  <img src="영양제4.jpg" alt="영양제 4">
-  <div class="product-description">
-    <h2>영양제 4</h2>
-    
-  </div>
-</div>
-  <!-- 다른 사진들을 추가로 추가할 수 있습니다. -->
-  
-  <style>
-    .column {
-      display: flex;
-      flex-direction: column;
-    }
-  </style>
-
-
-
-
-   <!-- Footer -->
-<footer class="bg-dark text-white text-center py-4 mt-4">
-    <div class="container">
-        <p>&copy; 2023 Your Website. All Rights Reserved.</p>
     </div>
-</footer>
+  </nav>
+
+  <!-- Menu -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="reviews.html">List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="reviews.html">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacts.html">Contacts</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container content-center p-5">
+    <div class="h2">간 기능 개선 영양제 LIST</div>
+    <br>
+    <table class="table table-bordered">
+      <tr>
+        <th class="text-center">이름</th>
+        <th class="text-center">키워드</th>
+        <th class="text-center">영양제의 효능/효과</th>
+      </tr>
+
+      <tr>
+        <td><img src="./lc_1.jpg" alt="" class="square-image" width="100px" height="100%"></td>
+        <td>밀크씨슬</td>
+        <td>간 기능 개선</td>
+        <td>간세포를 보호하고 간 염증을 감소시키는 데 도움이 됨</td>
+
+      </tr>
+      <tr>
+        <td><img src="./lc_2.jpg" alt="" class="square-image" width="100px" height="100%"></td>
+        <td>아르티초크 추출물</td>
+        <td>간 기능 개선</td>
+        <td>간세포를 보호하고 간독소를 제거하여 간 기능을 향상</td>
+      </tr>
+      <tr>
+        <td><img src="./lc_3.jpg" alt="" class="square-image" width="100px" height="100%"></td>
+        <td>N-아세틸시스테인 (NAC)</td>
+        <td>간 기능 개선</td>
+        <td>간독소를 제거하여 간 건강을 촉진하는 데 도움</td>
+      </tr>
+
+      <tr>
+        <td><img src="./lc_4.jpg" alt="" class="square-image" width="100px" height="100%"></td>
+        <td>비타민 B 그룹</td>
+        <td>간 기능 개선</td>
+        <td>간 건강을 지원하고 간세포의 복구를 도와줌.</td>
+      </tr>
+    </table>
+  </div>
+
+
+
+  </div>
+  </div>
+  <!-- 다른 사진들을 추가로 추가할 수 있습니다. -->
+
+
 
 
 </body>
