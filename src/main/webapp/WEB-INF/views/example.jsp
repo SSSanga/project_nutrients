@@ -56,9 +56,10 @@
                                 formmethod="get">Go</button>
                         </div>
                                 <!-- Insert Form -->
-                                <h2>Insert</h2>
-                                <button id="insertButton" class="btn btn-primary" onclick="openInsertForm()" formaction="/main/insertForm">Insert</button>
-                                
+                                <div class="d-flex align-items-center">
+                                    <h2 class="me-3">Insert</h2>
+                                    <button id="insertButton" class="btn btn-primary" onclick="openInsertForm()" formaction="/main/insertForm">Insert</button>
+                                </div>                              
                         <h2>Table</h2>
                         <table class="table">
                             <thead>
@@ -82,6 +83,9 @@
                                         </td>
                                         <td>
                                             <%= record.get("NAME") %>
+                                        </td>
+                                        <td>
+                                            <button formaction='/main/updateForm/<%= record.get("COMMON_CODE_ID") %>' formmethod="get">updete</button>
                                         </td>
                                         <td>
                                             <button formaction='/main/deleteAndSelectSearch/<%= record.get("COMMON_CODE_ID") %>' formmethod="post">Del</button>

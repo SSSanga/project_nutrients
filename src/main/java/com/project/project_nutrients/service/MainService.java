@@ -47,6 +47,36 @@ public class MainService {
         return result;
     }
 
+        // MVC view
+    public Object deleteAndSelectSearch(String UNIQUE_ID, Map dataMap) {
+        dataMap.put("COMMON_CODE_ID", UNIQUE_ID);
+
+        HashMap result = new HashMap<>();
+        result.put("deleteCount", this.delete(dataMap));
+
+        result.putAll(this.selectSearch(dataMap));
+        return result;
+    }
+
+    public Object insertAndSelectSearch(Map dataMap) {
+
+        HashMap result = new HashMap<>();
+        result.put("insertCount", this.insert(dataMap));
+
+        result.putAll(this.selectSearch(dataMap));
+        return result;
+    }
+
+    public Object updateAndSelectSearch(String UNIQUE_ID,Map dataMap) {
+        dataMap.put("COMMON_CODE_ID", UNIQUE_ID);
+        
+        HashMap result = new HashMap<>();
+        result.put("updateCount", this.update(dataMap));
+
+        result.putAll(this.selectSearch(dataMap));
+        return result;
+    }
+
     // public Object selectAll(String COMMON_CODE_ID) {
     //     // Object getOne(String sqlMapId, Object dataMap)
     //     String sqlMapId = "Infors.selectAll";
@@ -96,18 +126,7 @@ public class MainService {
         Object result = sharedDao.delete(sqlMapId, dataMap);
         return result;
     }
-
-    // MVC view
-    public Object deleteAndSelectSearch(String UNIQUE_ID, Map dataMap) {
-        dataMap.put("COMMON_CODE_ID", UNIQUE_ID);
-
-        HashMap result = new HashMap<>();
-        result.put("deleteCount", this.delete(dataMap));
-
-        result.putAll(this.selectSearch(dataMap));
-        return result;
-    }
-
+    
     // rest api
     public Object delete(String COMMON_CODE_ID) {
         String sqlMapId = "Infors.delete";

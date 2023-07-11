@@ -37,10 +37,33 @@ public class MainController {
         return modelAndView;
     }
 
+    // 왠지 회원탈퇴? admin이 관리
     @PostMapping("/deleteAndSelectSearch/{UNIQUE_ID}")
     public ModelAndView deleteAndSelectSearch(@PathVariable String UNIQUE_ID
                         , @RequestParam Map params, ModelAndView modelAndView) {
         Object result = mainService.deleteAndSelectSearch(UNIQUE_ID, params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+
+        modelAndView.setViewName("/WEB-INF/views/example.jsp");
+        return modelAndView;
+    }
+
+    // 왠지 회원가입, 리뷰, Q&A 등록? 같음
+    @PostMapping("/insertAndSelectSearch")
+    public ModelAndView deleteAndSelectSearch(@RequestParam Map params, ModelAndView modelAndView) {
+        Object result = mainService.insertAndSelectSearch(params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+
+        modelAndView.setViewName("/WEB-INF/views/example.jsp");
+        return modelAndView;
+}
+
+    @PostMapping("/updateAndSelectSearch/{UNIQUE_ID}")
+    public ModelAndView updateAndSelectSearch(@PathVariable String UNIQUE_ID
+                        , @RequestParam Map params, ModelAndView modelAndView) {
+        Object result = mainService.updateAndSelectSearch(UNIQUE_ID, params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
 
@@ -67,10 +90,10 @@ public class MainController {
     }
 
     // update
-    @PutMapping("/update")
-    public ResponseEntity update(@RequestBody Map paramMap) {
-        Object result = mainService.update(paramMap);
-        return ResponseEntity.ok().body(result);
+    @GetMapping("/updateForm/{UNIQUE_ID}")
+    public ModelAndView updateForm(@PathVariable String UNIQUE_ID, @RequestParam Map params, ModelAndView modelAndView) {
+         modelAndView.setViewName("/WEB-INF/views/update.jsp");
+        return  modelAndView;
     }
 
     // 2PC create
