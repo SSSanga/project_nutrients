@@ -21,7 +21,7 @@ import com.project.project_nutrients.service.MainService;
 @RequestMapping("/main")
 
 public class MainController {
-     @Autowired
+    @Autowired
     MainService mainService;
 
     // /selectSearch?search=YEAR&words=2020
@@ -37,16 +37,53 @@ public class MainController {
         return modelAndView;
     }
 
-    // // delete with MVC
-    // @PostMapping("/deleteAndSelectSearch/{UNIQUE_ID}")
-    // public ModelAndView deleteAndSelectSearch(@PathVariable String UNIQUE_ID
-    //                     , @RequestParam Map params, ModelAndView modelAndView) {
-    //     Object result = mainService.deleteAndSelectSearch(UNIQUE_ID, params);
-    //     modelAndView.addObject("params", params);
-    //     modelAndView.addObject("result", result);
+    @PostMapping("/deleteAndSelectSearch/{UNIQUE_ID}")
+    public ModelAndView deleteAndSelectSearch(@PathVariable String UNIQUE_ID
+                        , @RequestParam Map params, ModelAndView modelAndView) {
+        Object result = mainService.deleteAndSelectSearch(UNIQUE_ID, params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
 
-    //     modelAndView.setViewName("/WEB-INF/views/carinfor/list_map.jsp");
-    //     return modelAndView;
-    // }
+        modelAndView.setViewName("/WEB-INF/views/example.jsp");
+        return modelAndView;
+    }
+
+    // /selectDetail
+    @GetMapping("/selectDetail/{UNIQUE_ID}")
+    public ModelAndView selectDetail(@PathVariable String UNIQUE_ID
+                        , @RequestParam Map params, ModelAndView modelAndView) {
+        Object result = mainService.selectDetail(UNIQUE_ID, params);
+        modelAndView.addObject("params", params);
+
+        modelAndView.setViewName("/WEB-INF/views/example.jsp");
+        return modelAndView;
+    }
+
+    // create
+    @GetMapping("/insertForm")
+    public ModelAndView insertForm(@RequestParam Map params, ModelAndView modelAndView) {
+        modelAndView.setViewName("/WEB-INF/views/insert.jsp");
+        return  modelAndView;
+    }
+
+    // update
+    @PutMapping("/update")
+    public ResponseEntity update(@RequestBody Map paramMap) {
+        Object result = mainService.update(paramMap);
+        return ResponseEntity.ok().body(result);
+    }
+
+    // 2PC create
+    @PostMapping("/insertDouble")
+    public ResponseEntity insertDouble(@RequestBody Map paramMap) {
+        Object result = null;
+        try {
+            result = mainService.insertDouble(paramMap);
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(result);
+        }
+        return ResponseEntity.ok().body(result);
+    }
+
 
 }
