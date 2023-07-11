@@ -2,79 +2,65 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nutrient Recommendations List</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
-  <style>
-    .center {
-      display: flex;
-      justify-content: center;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrient Recommendations Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <link href="./../css/main.css" rel="stylesheet" />
 </head>
 
 <body>
-
-  <!-- Main -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand mx-auto" href="./main.html">Nutrient Recommendations</a>
-      <button class="navbar-toggler" type="submit" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" formaction="./main.html">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- 검색창 -->
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <div class="input-group mt-2 center">
-              <input type="text" class="form-control" placeholder="Search...">
-              <button class="btn btn-primary" type="button">Go</button>
+        <nav class="navbar navbar-expand">
+            <a class="navbar-brand mx-auto" href="./main.html">Nutrient Recommendations</a>
+            <button class="navbar-toggler" type="submit" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" formaction="./main.html">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            </nav>
+            <nav class="navbar navbar-expand">
+            <div class="navbar-nav me-auto"> <!--m:마진, e:end(오른쪽)-->
+                <a class="nav-link" href="./about.html">About</a>
+                <a class="nav-link" href="./wholelist.html">List</a>
+                <a class="nav-link" href="./reviews.html">Reviews</a>
+                <a class="nav-link" href="./contacts.html">Contacts</a>
             </div>
-          </li>
-        </ul>
-      </div>
 
-      <!-- 회원관리 -->
-      <div class="dropdown nav-item">
-        <button class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown">회원관리</button>
+            <!-- 검색창 -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <form>
+                            <div class="input-group mt-2 center">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <button class="btn btn-primary" type="submit"
+                                    formaction="./searchresult.html">Go</button>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+            </div>
 
-        <ul class="dropdown-menu dropdown-menu-end">
-          <li class="dropdown-item">
-            <a class="nav-link active" href="./login.html">로그인</a>
-          </li>
-          <hr>
-          <li class="dropdown-item">
-            <a class="nav-link active" href="./signup.html">회원가입</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+            <div class="d-flex dropdown nav-item">
+                <button class="btn dropdown-toggle" data-bs-toggle="dropdown">회원관리</button>
 
-  <!-- Menu -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="reviews.html">List</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="reviews.html">Reviews</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contacts.html">Contacts</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item">
+                        <a class="nav-link" href="./mypage.html">마이페이지</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a class="nav-link active" href="./login.html">로그인</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a class="nav-link active" href="./signup.html">회원가입</a>
+                    </li>
+                    <hr>
+                    <li class="dropdown-item">
+                        <a class="nav-link" href="./main.html">로그아웃</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
 
   <div class="container content-center p-5">
     <div class="h2">간 기능 개선 영양제 LIST</div>
