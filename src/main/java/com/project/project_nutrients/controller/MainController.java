@@ -61,7 +61,7 @@ public class MainController {
 
     // 왠지 회원가입, 리뷰, Q&A 등록? 같음
     @PostMapping("/insertAndSelectSearch")
-    public ModelAndView deleteAndSelectSearch(@RequestParam Map params, ModelAndView modelAndView) {
+    public ModelAndView insertAndSelectSearch(@RequestParam Map params, ModelAndView modelAndView) {
         Object result = mainService.insertAndSelectSearch(params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
@@ -107,6 +107,5 @@ public class MainController {
     //     }
     //     return ResponseEntity.ok().body(result);
     // }
-
 
 }

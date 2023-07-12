@@ -10,6 +10,24 @@
             <when test="search == 'NAME'">
             and NAME like CONCAT(#{words}, '%')
             </when>
+                        <when test="search == 'box-02'">
+            and NAME like CONCAT(#{words}, '%')
+            </when>
+                        <when test="search == 'box-03'">
+            and NAME like CONCAT(#{words}, '%')
+            </when>
+                        <when test="search == 'box-04'">
+            and NAME like CONCAT(#{words}, '%')
+            </when>
+                        <when test="search == 'box-05'">
+            and NAME like CONCAT(#{words}, '%')
+            </when>
+                        <when test="search == 'box-06'">
+            and NAME like CONCAT(#{words}, '%')
+            </when>
+                        <when test="search == 'box-07'">
+            and NAME like CONCAT(#{words}, '%')
+            </when>
         </choose>        
         ;
 	</select>
@@ -47,4 +65,11 @@
   DELETE FROM COMMONS_CODE
   WHERE COMMON_CODE_ID = #{COMMON_CODE_ID}
 </delete>
+
+<!-- 검색창 -->
+	<select id="select" parameterType="Map" resultType="Map">
+        SELECT NAME, COMMON_CODE_ID, PARENT_COMMON_CODE_ID
+        FROM project_nutrients.commons_code
+        WHERE PARENT_COMMON_CODE_ID = #{PARENT_COMMON_CODE_ID}
+	</select>
 </mapper>

@@ -139,6 +139,16 @@ public class MainService {
     //     return result;
     // }
 
+    public Object select(String PARENT_COMMON_CODE_ID) {
+        // Object getOne(String sqlMapId, Object dataMap)
+        String sqlMapId = "Infors.select";
+        HashMap dataMap = new HashMap<>();
+        dataMap.put("PARENT_COMMON_CODE_ID", PARENT_COMMON_CODE_ID);
+
+        Object result = sharedDao.getList(sqlMapId, dataMap);
+        return result;
+    }
 }
+
 
 

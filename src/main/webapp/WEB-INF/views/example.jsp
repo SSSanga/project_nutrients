@@ -45,10 +45,8 @@
                     <div class="col-md-8">
                         <h2>Search</h2>
                         <div class="input-group mb-3">
-                            <select class="form-select" name="search">
-                                <option>Select an option...</option>
-                                <option value="NAME" <%=(searchStr.equals("NAME")) ? "selected" : "" %>
-                                    >NAME</option>
+                            <select class="form-select" name="search" id="temp" >
+                                <option >Select an option...></option>
                             </select>
                             <input type="text" name="words" value='<%= params.getOrDefault("words", "") %>'
                                 class="form-control" placeholder="Search..." id="keydownEnter">
@@ -117,5 +115,5 @@
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
+        <script src="/JS/commonWithJs.js"></script>
 </html>
