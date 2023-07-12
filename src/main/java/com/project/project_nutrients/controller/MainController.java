@@ -24,8 +24,7 @@ public class MainController {
     @Autowired
     MainService mainService;
 
-    // /selectSearch?search=YEAR&words=2020
-    // /selectSearch/CAR_NAME/소
+    // 검색
     @GetMapping("/selectSearch")
     public ModelAndView selectSearch(@RequestParam Map params
                             , ModelAndView modelAndView) {
@@ -37,7 +36,18 @@ public class MainController {
         return modelAndView;
     }
 
-    // 왠지 회원탈퇴? admin이 관리
+    // /selectDetail
+    @GetMapping("/selectDetail/{COMMON_CODE_ID}")
+    public ModelAndView selectDetail(@PathVariable String COMMON_CODE_ID
+                        , @RequestParam Map params, ModelAndView modelAndView) {
+        Object result = mainService.selectDetail(COMMON_CODE_ID, params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+        modelAndView.setViewName("/WEB-INF/views/detail.jsp");
+        return modelAndView;
+    }
+
+    // 왠지 회원탈퇴? 악플삭제? admin이 관리
     @PostMapping("/deleteAndSelectSearch/{UNIQUE_ID}")
     public ModelAndView deleteAndSelectSearch(@PathVariable String UNIQUE_ID
                         , @RequestParam Map params, ModelAndView modelAndView) {
@@ -60,6 +70,7 @@ public class MainController {
         return modelAndView;
 }
 
+    // 회원정보 수정 회원 = 전화번호, 주소, 이름 등/ admin = 회원 등급?
     @PostMapping("/updateAndSelectSearch/{UNIQUE_ID}")
     public ModelAndView updateAndSelectSearch(@PathVariable String UNIQUE_ID
                         , @RequestParam Map params, ModelAndView modelAndView) {
@@ -71,42 +82,31 @@ public class MainController {
         return modelAndView;
     }
 
-    // /selectDetail
-    @GetMapping("/selectDetail/{UNIQUE_ID}")
-    public ModelAndView selectDetail(@PathVariable String UNIQUE_ID
-                        , @RequestParam Map params, ModelAndView modelAndView) {
-        Object result = mainService.selectDetail(UNIQUE_ID, params);
-        modelAndView.addObject("params", params);
-
-        modelAndView.setViewName("/WEB-INF/views/example.jsp");
-        return modelAndView;
-    }
-
-    // create
+    // main 화면에서 insert 버튼 누를 때 거쳐가는 controller임/ insert.jsp로 가기 위한 경로
     @GetMapping("/insertForm")
     public ModelAndView insertForm(@RequestParam Map params, ModelAndView modelAndView) {
         modelAndView.setViewName("/WEB-INF/views/insert.jsp");
         return  modelAndView;
     }
 
-    // update
+    //  main 화면에서 update 버튼 누를 때 거쳐가는 controller임/update.jsp로 가기 위한 경로
     @GetMapping("/updateForm/{UNIQUE_ID}")
     public ModelAndView updateForm(@PathVariable String UNIQUE_ID, @RequestParam Map params, ModelAndView modelAndView) {
          modelAndView.setViewName("/WEB-INF/views/update.jsp");
         return  modelAndView;
     }
 
-    // 2PC create
-    @PostMapping("/insertDouble")
-    public ResponseEntity insertDouble(@RequestBody Map paramMap) {
-        Object result = null;
-        try {
-            result = mainService.insertDouble(paramMap);
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body(result);
-        }
-        return ResponseEntity.ok().body(result);
-    }
+    // 2PC create 사용 안해요. 나중에 사용하라고 하면 업데이트 해볼께요.
+    // @PostMapping("/insertDouble")
+    // public ResponseEntity insertDouble(@RequestBody Map paramMap) {
+    //     Object result = null;
+    //     try {
+    //         result = mainService.insertDouble(paramMap);
+    //     } catch (Exception e) {
+    //         return ResponseEntity.badRequest().body(result);
+    //     }
+    //     return ResponseEntity.ok().body(result);
+    // }
 
 
 }

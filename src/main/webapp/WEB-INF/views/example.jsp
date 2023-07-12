@@ -67,7 +67,6 @@
                                     <th>PARENT_COMMON_CODE_ID</th>
                                     <th>COMMON_CODE_ID</th>
                                     <th>NAME</th>
-                                    <th>Update</th>
                                     <th>Delete</th>
                                 </tr>
                             </thead>
@@ -83,10 +82,8 @@
                                             <%= record.get("COMMON_CODE_ID") %>
                                         </td>
                                         <td>
+                                        <button class="btn btn-none" formaction='/main/selectDetail/<%= record.get("COMMON_CODE_ID") %>'>
                                             <%= record.get("NAME") %>
-                                        </td>
-                                        <td>
-                                            <button formaction='/main/updateForm/<%= record.get("COMMON_CODE_ID") %>' formmethod="get">updete</button>
                                         </td>
                                         <td>
                                             <button formaction='/main/deleteAndSelectSearch/<%= record.get("COMMON_CODE_ID") %>' formmethod="post">Del</button>
