@@ -35,19 +35,16 @@ public class MainService {
         return result;
     }
 
-    // 검색(조건-?)
-    public Object selectSearch(String search, String words) {
-        String sqlMapId = "Infors.selectSearch";
+    public Object selectDetail(String COMMON_CODE_ID, Map dataMap) {
+        // Object getOne(String sqlMapId, Object dataMap)
+        String sqlMapId = "Infors.selectDetail";
+        dataMap.put("COMMON_CODE_ID", COMMON_CODE_ID);
 
-        HashMap dataMap = new HashMap<>();
-        dataMap.put("search", search);
-        dataMap.put("words", words);
-
-        Object result = sharedDao.getList(sqlMapId, dataMap);
+        Object result = sharedDao.getOne(sqlMapId, dataMap);
         return result;
     }
 
-        // MVC view
+        // MVC view 회원탈퇴? 악플삭제? admin이 관리
     public Object deleteAndSelectSearch(String UNIQUE_ID, Map dataMap) {
         dataMap.put("COMMON_CODE_ID", UNIQUE_ID);
 
@@ -58,6 +55,7 @@ public class MainService {
         return result;
     }
 
+        //회원가입, 리뷰, Q&A 등록? 같음
     public Object insertAndSelectSearch(Map dataMap) {
 
         HashMap result = new HashMap<>();
@@ -67,6 +65,7 @@ public class MainService {
         return result;
     }
 
+        // 회원정보 수정 회원 = 전화번호, 주소, 이름 등/ admin = 회원 등급?
     public Object updateAndSelectSearch(String UNIQUE_ID,Map dataMap) {
         dataMap.put("COMMON_CODE_ID", UNIQUE_ID);
         
@@ -97,21 +96,14 @@ public class MainService {
     //     return result;
     // }
 
-    public Object selectDetail(String COMMON_CODE_ID, Map dataMap) {
-        // Object getOne(String sqlMapId, Object dataMap)
-        String sqlMapId = "Infors.selectByUID";
-        dataMap.put("COMMON_CODE_ID", COMMON_CODE_ID);
-
-        Object result = sharedDao.getOne(sqlMapId, dataMap);
-        return result;
-    }
-
+    // insert를 할때 insertAndSelectSearch에서 사용하는 코드
     public Object insert(Map dataMap) {
         String sqlMapId = "Infors.insert";
         Object result = sharedDao.insert(sqlMapId, dataMap);
         return result;
     }
 
+    // update를 할때 updateAndSelectSearch에서 사용하는 코드
     public Object update(Map dataMap) {
         String sqlMapId = "Infors.update";
         Object result = sharedDao.update(sqlMapId, dataMap);
@@ -137,15 +129,15 @@ public class MainService {
         return result;
     }
 
-    // 2PC
-    public Object insertDouble(Map dataMap) {
-        String sqlMapId = "Infors.insert";
-        // sucess
-        Object result = sharedDao.insert(sqlMapId, dataMap);
-        // error
-        result = sharedDao.insert(sqlMapId, dataMap);
-        return result;
-    }
+    // 2PC 사용 안해요. 사용하라고 하면 코드 수정해볼께요.
+    // public Object insertDouble(Map dataMap) {
+    //     String sqlMapId = "Infors.insert";
+    //     // sucess
+    //     Object result = sharedDao.insert(sqlMapId, dataMap);
+    //     // error
+    //     result = sharedDao.insert(sqlMapId, dataMap);
+    //     return result;
+    // }
 
 }
 

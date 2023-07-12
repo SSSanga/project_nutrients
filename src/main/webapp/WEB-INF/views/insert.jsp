@@ -28,14 +28,6 @@
                 <input class="form-control" type="text" id="orderNumber" name="ORDER_NUMBER">
             </div>
             <div class="mb-3">
-                <label class="form-label" for="attribution1">ATTRIBUTION_1:</label>
-                <input class="form-control" type="text" id="attribution1" name="ATTRIBUTION_1">
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="attribution2">ATTRIBUTION_2:</label>
-                <input class="form-control" type="text" id="attribution2" name="ATTRIBUTION_2">
-            </div>
-            <div class="mb-3">
                 <label class="form-label" for="description">DESCRIPTION:</label>
                 <input class="form-control" type="text" id="description" name="DESCRIPTION">
             </div>
@@ -56,16 +48,8 @@
                 <input class="form-control" type="text" id="registerSeq" name="REGISTER_SEQ">
             </div>
             <div class="mb-3">
-                <label class="form-label" for="registryDate">REGISTRY_DATE:</label>
-                <input class="form-control" type="text" id="registryDate" name="REGISTRY_DATE">
-            </div>
-            <div class="mb-3">
                 <label class="form-label" for="modifierSeq">MODIFIER_SEQ:</label>
                 <input class="form-control" type="text" id="modifierSeq" name="MODIFIER_SEQ">
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="modifyDate">MODIFY_DATE:</label>
-                <input class="form-control" type="text" id="modifyDate" name="MODIFY_DATE">
             </div>
             <div class="text-center">
                 <button class="btn btn-primary" type="submit" formaction="/main/insertAndSelectSearch">Submit</button>
