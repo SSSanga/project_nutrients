@@ -111,7 +111,7 @@
           {
             "name": "NAME",
             "comment": "",
-            "dataType": "VARCHAR",
+            "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -126,7 +126,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 64.6005859375,
+              "widthDataType": 87.71875,
               "widthDefault": 60
             },
             "id": "3df2cda9-717f-48e0-ae29-2db4854e5abb"
@@ -134,7 +134,7 @@
           {
             "name": "BIRTHDATE",
             "comment": "",
-            "dataType": "",
+            "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -149,7 +149,7 @@
               "pfk": false,
               "widthName": 74.47119140625,
               "widthComment": 60,
-              "widthDataType": 60,
+              "widthDataType": 87.71875,
               "widthDefault": 60
             },
             "id": "ada09b65-9a30-45a8-9887-ef252f9117f0"
@@ -157,7 +157,7 @@
           {
             "name": "SEX",
             "comment": "",
-            "dataType": "",
+            "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -172,7 +172,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 60,
+              "widthDataType": 87.71875,
               "widthDefault": 60
             },
             "id": "0207d728-1d38-468b-b232-bf23e6b40680"
@@ -180,7 +180,7 @@
           {
             "name": "ADDRESS",
             "comment": "",
-            "dataType": "",
+            "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -195,7 +195,7 @@
               "pfk": false,
               "widthName": 64.84814453125,
               "widthComment": 60,
-              "widthDataType": 60,
+              "widthDataType": 87.71875,
               "widthDefault": 60
             },
             "id": "12a3fefc-c5be-41d5-bdff-e7fc9cca1978"
@@ -203,7 +203,7 @@
           {
             "name": "PHONE",
             "comment": "",
-            "dataType": "",
+            "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -218,7 +218,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 60,
+              "widthDataType": 87.71875,
               "widthDefault": 60
             },
             "id": "ffbc1605-ba97-4e8a-b315-5336eb849063"
@@ -343,7 +343,7 @@
           "active": true,
           "left": 136,
           "top": 57,
-          "zIndex": 2,
+          "zIndex": 5,
           "widthName": 67.72998046875,
           "widthComment": 60
         },
