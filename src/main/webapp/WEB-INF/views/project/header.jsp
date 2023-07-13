@@ -26,7 +26,7 @@
         <!-- Brand image -->
         <div class="navbar-brand justify-content-center">
             <a href="/project/mainpage.jsp">
-                <img src="/images/drug_img.jpg" alt="" width="200" height="150">
+                <img src="/images/drug_img.png" alt="" width="200" height="150">
             </a>
         </div>
 
@@ -67,7 +67,7 @@
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <li><a class="dropdown-item" href="/update.jsp" style="font-size: 20px;">마이페이지</a></li>
                     <li><a class="dropdown-item" href="/example.jsp" style="font-size: 20px;">로그인</a></li>
-                    <li><button id="insertButton" class="dropdown-item" formaction="/main/insertForm" style="font-size: 20px;">회원가입</button></li>
+                    <li><button id="singupButton" class="dropdown-item" formaction="/members/signupForm" style="font-size: 20px;">회원가입</button></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>

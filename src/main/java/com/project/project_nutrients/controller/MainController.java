@@ -29,7 +29,7 @@ public class MainController {
     @GetMapping({"/", "/home", "/main"})
     public ModelAndView main(ModelAndView modelAndView){
         modelAndView.addObject("name", "Yojulab!");
-        modelAndView.setViewName("/WEB-INF/views/project/header.jsp");
+        modelAndView.setViewName("/WEB-INF/views/mainpage.jsp");
         return modelAndView;
     }
 
@@ -87,7 +87,7 @@ public class MainController {
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
 
-        modelAndView.setViewName("/WEB-INF/views/project/header.jsp");
+        modelAndView.setViewName("/WEB-INF/views/example.jsp");
         return modelAndView;
     }
 
