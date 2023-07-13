@@ -79,18 +79,22 @@
                 <button disabled id="sendMessage" onclick="getToken()">인증번호 전송</button>
             </div>
 
-            <div class="timer-field">
-                <div id="timeLimit">03:00</div>
-                <button disabled id="completion" onclick="checkCompletion()">인증확인</button>
-            </div>
-            <div class="line">
-                <hr>
-            </div>
-            <div class="signUp-field">
-                <button id="signUpButton" disabled onclick="signUpCheck(); redirectToMain();">가입하기</button>
-            </div>
-        </form>
-        
+        </div>
+        <div class="auth">
+            <div id="certificationNumber">000000</div>
+            <button disabled id="sendMessage" onclick="getToken()">인증번호 전송</button>
+        </div>
+
+        <div class="timer">
+            <div id="timeLimit">03:00</div>
+            <button disabled id="completion" onclick="checkCompletion()">인증확인</button>
+        </div>
+        <div class="line">
+            <hr>
+        </div>
+        <div class="signUp">
+            <button id="signUpButton" disabled onclick="signUpCheck(); redirectToMain();" formaction="../loginlist/signupcomplete.html">가입하기</button>
+        </div>
     </div>
    
 </body>
