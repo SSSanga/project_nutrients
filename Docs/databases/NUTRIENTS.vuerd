@@ -3,7 +3,7 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": 0,
+    "scrollTop": -1,
     "scrollLeft": 0,
     "zoomLevel": 1,
     "show": {
@@ -226,7 +226,7 @@
           {
             "name": "HISTORYDISEASE",
             "comment": "",
-            "dataType": "",
+            "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -241,7 +241,7 @@
               "pfk": false,
               "widthName": 115.66748046875,
               "widthComment": 60,
-              "widthDataType": 60,
+              "widthDataType": 87.71875,
               "widthDefault": 60
             },
             "id": "2fea9e4e-a874-4ef8-9bd7-974d321a2f5b"
@@ -249,7 +249,7 @@
           {
             "name": "ALLERGIES",
             "comment": "",
-            "dataType": "",
+            "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -264,7 +264,7 @@
               "pfk": false,
               "widthName": 74.25537109375,
               "widthComment": 60,
-              "widthDataType": 60,
+              "widthDataType": 87.71875,
               "widthDefault": 60
             },
             "id": "48bec810-7953-468c-8599-6b2fd04c1244"
@@ -272,7 +272,7 @@
           {
             "name": "REGISTRATIONDATE",
             "comment": "",
-            "dataType": "",
+            "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -287,7 +287,7 @@
               "pfk": false,
               "widthName": 132.24755859375,
               "widthComment": 60,
-              "widthDataType": 60,
+              "widthDataType": 87.71875,
               "widthDefault": 60
             },
             "id": "009efb34-5a24-43b4-99a1-3beaa47a815c"
@@ -295,7 +295,7 @@
           {
             "name": "EMAIL",
             "comment": "",
-            "dataType": "",
+            "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -310,7 +310,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 60,
+              "widthDataType": 87.71875,
               "widthDefault": 60
             },
             "id": "0f230b9f-1f1a-4e4c-be2d-ea1429c628ff"
@@ -318,13 +318,13 @@
           {
             "name": "PAYMENTINFORMATION",
             "comment": "",
-            "dataType": "",
+            "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -333,17 +333,40 @@
               "pfk": false,
               "widthName": 152.94091796875,
               "widthComment": 60,
-              "widthDataType": 60,
+              "widthDataType": 87.71875,
               "widthDefault": 60
             },
             "id": "b7c42002-fde2-4704-9775-2da736be352b"
+          },
+          {
+            "name": "",
+            "comment": "",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "df71c8cb-2010-4352-a098-ecdc8b94e3e1"
           }
         ],
         "ui": {
-          "active": true,
+          "active": false,
           "left": 136,
           "top": 57,
-          "zIndex": 5,
+          "zIndex": 32,
           "widthName": 67.72998046875,
           "widthComment": 60
         },
