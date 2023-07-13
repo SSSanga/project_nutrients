@@ -21,25 +21,35 @@
             </div>
             <% HashMap params=(HashMap)request.getAttribute("params"); String searchStr=(String)params.getOrDefault("search", ""
             ); HashMap result=(HashMap)request.getAttribute("result"); %>
-            <div class="mb-3">
+            <div class="mb-1">
                 <label class="form-label" for="name">NAME:</label>
-                <input class="form-control" type="text" id="name" name="NAME" value="<%= result.get("NAME") %>">
+                </div>
+                <div class="mb-3 border rounded p-2">
+                <div><%= result.get("NAME") %></div>
             </div>
-            <div class="mb-3">
+            <div class="mb-1">
                 <label class="form-label" for="orderNumber">ORDER_NUMBER:</label>
-                <input  class="form-control" type="text" id="description" name="DESCRIPTION" value="<%= result.get("ORDER_NUMBER") %>">
             </div>
-            <div class="mb-3">
+            <div class="mb-3 border rounded p-2">
+                <div><%= result.get("ORDER_NUMBER") %></div>
+            </div>
+            <div class="mb-1">
                 <label class="form-label" for="description">DESCRIPTION:</label>
-                <input class="form-control" type="text" id="description" name="DESCRIPTION" value="<%= result.get("DESCRIPTION") %>">
             </div>
-            <div class="mb-3">
+            <div class="mb-3 border rounded p-2">
+                <div><%= result.get("DESCRIPTION") %></div>
+            </div>
+            <div class="mb-1">
                 <label class="form-label" for="description">REGISTRY_DATE:</label>
-                <input class="form-control" type="text" id="description" name="REGISTRY_DATE" value="<%= result.get("REGISTRY_DATE") %>">
             </div>
-            <div class="mb-3">
+            <div class="mb-3 border rounded p-2">
+                <div><%= result.get("REGISTRY_DATE") %></div>
+            </div>
+            <div class="mb-1">
                 <label class="form-label" for="description">MODIFY_DATE:</label>
-                <input class="form-control" type="text" id="description" name="MODIFY_DATE" value="<%= result.get("MODIFY_DATE") %>">
+            </div>
+            <div class="mb-3 border rounded p-2">
+                <div><%= result.get("MODIFY_DATE") %></div>
             </div>
             <div class="text-center">
                 <button class="btn btn-primary" type="submit" formaction="/main/selectSearch">back</button>
