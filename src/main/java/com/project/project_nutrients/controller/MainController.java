@@ -1,5 +1,6 @@
 package com.project.project_nutrients.controller;
 import java.util.Map;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
+import java.util.UUID;
 
 import com.project.project_nutrients.service.MainService;
 
@@ -36,7 +38,7 @@ public class MainController {
         return modelAndView;
     }
 
-    // /selectDetail
+    // /selectDetail 회원정보 상세 보기?
     @GetMapping("/selectDetail/{COMMON_CODE_ID}")
     public ModelAndView selectDetail(@PathVariable String COMMON_CODE_ID
                         , @RequestParam Map params, ModelAndView modelAndView) {
@@ -107,5 +109,7 @@ public class MainController {
     //     }
     //     return ResponseEntity.ok().body(result);
     // }
-
+    public String generateUUID() {
+        return UUID.randomUUID().toString();
+    }
 }
