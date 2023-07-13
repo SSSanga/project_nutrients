@@ -13,6 +13,8 @@
 </head>
 
 <body>
+<!-- header -->
+<%@ include file="/WEB-INF/views/project/header.jsp" %>
     <div class="container">
         <div class="text-center mt-4 mb-4 h1">회 원 가 입</div>
     </div>
@@ -82,7 +84,7 @@
             <div class="line">
                 <hr>
             </div>
-            <div class="text-center">
+            <div class="text-center mb-4">
                 <button class="btn btn-primary" type="submit" formaction="/main/insertAndSelectSearch">Submit</button>
             </div>
         </form>
@@ -105,6 +107,8 @@
           });
         }
       </script>
+          <!-- Footer -->
+    <%@ include file="/WEB-INF/views/project/footer.jsp" %>
 </body>
 
 </html>

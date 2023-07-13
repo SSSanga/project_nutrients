@@ -24,19 +24,11 @@
 
     <nav class="navbar navbar-expand justify-content-between">
         <!-- Brand image -->
-        <div class="navbar-brand justify-content-center">
+        <div class="navbar-brand justify-content-center ms-4">
             <a href="/project/mainpage.jsp">
                 <img src="/images/drug_img.png" alt="" width="200" height="150">
             </a>
         </div>
-
-        <!-- Search bar -->
-        <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search"
-                style="font-size: 20px;">
-            <button class="btn btn-outline-success" type="submit" formaction="/nutrientlist/searchresult.html"
-                style="font-size: 20px; background-color: white;"><i class="fas fa-search"></i></button>
-        </form>
 
         <!-- Navigation Links -->
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
@@ -55,6 +47,14 @@
                 </li>
             </ul>
         </div>
+
+        <!-- Search bar -->
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search"
+                style="font-size: 20px;">
+            <button class="btn btn-outline-success" type="submit" formaction="/nutrientlist/searchresult.html"
+                style="font-size: 20px; background-color: white;"><i class="fas fa-search"></i></button>
+        </form>
 
         <!-- User management dropdown -->
         <form action="" method="">
@@ -78,7 +78,7 @@
             <!-- Screen adjust buttons -->
             <span id="zoom-display" class="mx-2">100%</span>
             <button class="btn btn-outline-secondary mx-2" onclick="increaseSize()" style="font-size: 20px;">+</button>
-            <button class="btn btn-outline-secondary" onclick="decreaseSize()" style="font-size: 20px;">-</button>
+            <button class="btn btn-outline-secondary me-4" onclick="decreaseSize()" style="font-size: 20px;">-</button>
         </div>
     </nav>
 </form>
