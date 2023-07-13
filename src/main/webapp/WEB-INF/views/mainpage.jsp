@@ -137,16 +137,16 @@
                             </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="/static/images/pill_3.png" alt="">
+                                    <img src="/images/pill_3.png" alt="">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/static/images/pill_4.png" alt="">
+                                    <img src="/images/pill_4.png" alt="">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/static/images/lee_lutein.png" alt="">
+                                    <img src="/images/lee_lutein.png" alt="">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/static/images/lemona.png" alt="">
+                                    <img src="/images/lemona.png" alt="">
                                 </div>
                             </div>
                             <button data-bs-slide="prev" data-bs-target="#controlsID-first"
