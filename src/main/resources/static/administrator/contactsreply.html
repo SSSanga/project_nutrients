@@ -19,10 +19,10 @@
     </nav>
     <nav class="navbar navbar-expand">
         <div class="navbar-nav me-auto"> <!--m:마진, e:end(오른쪽)-->
-            <a class="nav-link" href="../administrator/about.html">About</a>
-            <a class="nav-link" href="../administrator/wholelist.html">List</a>
-            <a class="nav-link" href="../loginlist/reviews.html">Reviews</a>
-            <a class="nav-link" href="../loginlist/contacts.html">Contacts</a>
+                <a class="nav-link" href="./about.html">About</a>
+                <a class="nav-link" href="./wholelist.html">List</a>
+                <a class="nav-link" href="../loginlist/reviews.html">Reviews</a>
+                <a class="nav-link" href="../loginlist/contacts.html">Contacts</a>
         </div>
 
         <!-- 검색창 -->
@@ -32,8 +32,7 @@
                     <form>
                         <div class="input-group mt-2 center">
                             <input type="text" class="form-control" placeholder="Search...">
-                            <button class="btn btn-primary" type="submit"
-                                formaction="../nutrientlist/searchresult.html">Go</button>
+                            <button class="btn btn-primary" type="submit" formaction="../nutrientlist/searchresult.html">Go</button>
                         </div>
                     </form>
                 </li>
@@ -44,90 +43,69 @@
             <button class="btn dropdown-toggle" data-bs-toggle="dropdown">회원관리</button>
 
             <ul class="dropdown-menu">
-                <li class="dropdown-item">
-                    <a class="nav-link" href="../loginlist/mypage.html">마이페이지</a>
-                </li>
-                <li class="dropdown-item">
-                    <a class="nav-link active" href="../loginlist/login.html">로그인</a>
-                </li>
-                <li class="dropdown-item">
-                    <a class="nav-link active" href="../loginlist/signup.html">회원가입</a>
-                </li>
-                <hr>
-                <li class="dropdown-item">
-                    <a class="nav-link" href="../main.html">로그아웃</a>
+                    <li class="dropdown-item">
+                        <a class="nav-link" href="../loginlist/mypage.html">마이페이지</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a class="nav-link active" href="../loginlist/login.html">로그인</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a class="nav-link active" href="../loginlist/signup.html">회원가입</a>
+                    </li>
+                    <hr>
+                    <li class="dropdown-item">
+                        <a class="nav-link" href="../main.html">로그아웃</a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <div class="container p-4">
-        <div class="card">
-            <div class="card-body">
-                <h2 class="card-title text-center">1:1 Q&A</h2>
-
-                <form>
-                    <div class="mb-3">
-                        <label for="name" class="form-label">이름:</label>
-                        <input type="text" id="name" name="name" class="form-control" required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="email" class="form-label">이메일:</label>
-                        <input type="email" id="email" name="email" class="form-control" required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="phone" class="form-label">전화번호:</label>
-                        <input type="tel" id="phone" name="phone" class="form-control" required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="message" class="form-label">문의 내용:</label>
-                        <textarea id="message" name="message" rows="4" cols="50" class="form-control"
-                            required></textarea>
-                    </div>
-
-                    <button class="btn btn-success" type="button" data-bs-toggle="modal"
-                        data-bs-target="#loginModal">문의하기</button>
-
-                    <!-- 로그인 모달 창 -->
-                    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="loginModalLabel">로그인</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <!-- 로그인 폼 -->
-                                    <form>
-                                        <div class="mb-3">
-                                            <label for="username" class="form-label">ID:</label>
-                                            <input type="text" id="username" name="username" class="form-control"
-                                                required>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="password" class="form-label">비밀번호:</label>
-                                            <input type="password" id="password" name="password" class="form-control"
-                                                required>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary" formaction="../resources/static/contacts.html">로그인</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+    <div class="container">
+        <div class="container py-4">
+            <h1 class="text-center">Contacts List</h1>
+            <div>** 관리자만 접근 가능 및 답 할 수 있음..**</div>
+            <hr>
+            <div class="container">
+                <h1>문의 리스트</h1>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>문의 제목</th>
+                            <th>작성자</th>
+                            <th>날짜</th>
+                            <th>문의 내용</th>
+                            <th>댓글</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>문의 1</td>
+                            <td>작성자 1</td>
+                            <td>날짜 1</td>
+                            <td>내용 1</td>
+                            <td>
+                                <textarea></textarea>
+                                <button class="btn btn-primary">댓글 달기</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>문의 2</td>
+                            <td>작성자 2</td>
+                            <td>날짜 2</td>
+                            <td>내용 2</td>
+                            <td>
+                                <textarea></textarea>
+                                <button class="btn btn-primary">댓글 달기</button>
+                            </td>
+                        </tr>
+                        <!-- 추가적인 행들을 필요에 따라 작성 -->
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
-
-
+    </div>
     <hr>
-
     <!-- Footer -->
     <footer class="p-5 d-flex justify-content-between align-items-center font-size: 0.8rem footer-green">
         <div class="row">
@@ -215,11 +193,13 @@
             else {
                 console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
             }
-      // ]]>
+
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
     </footer>
 
+    <!-- <script src="../js/carinforwithfunction.js"></script> -->
+    <!-- <script src="../js/carinforwithrest.js"></script> -->
 </body>
 
 </html>
