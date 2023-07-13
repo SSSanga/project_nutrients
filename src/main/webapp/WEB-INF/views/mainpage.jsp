@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nutrient Recommendations Home</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
-    <link href="/static/css/css/main.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
 </head>
 
 <body>
@@ -33,7 +33,7 @@
     <nav class="navbar navbar-expand justify-content-between">
         <!-- Brand image -->
         <div class="navbar-brand justify-content-center">
-            <a href="/resources/static/main.html">
+            <a href="/main.html">
                 <img src="/resources/static/views/images/drug_img.jpg" alt="" width="200" height="150">
             </a>
         </div>
