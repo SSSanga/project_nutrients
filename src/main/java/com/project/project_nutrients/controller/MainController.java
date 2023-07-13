@@ -26,6 +26,13 @@ public class MainController {
     @Autowired
     MainService mainService;
 
+    @GetMapping({"/", "/home", "/main"})
+    public ModelAndView main(ModelAndView modelAndView){
+        modelAndView.addObject("name", "Yojulab!");
+        modelAndView.setViewName("/WEB-INF/views/project/header.jsp");
+        return modelAndView;
+    }
+
     // 검색
     @GetMapping("/selectSearch")
     public ModelAndView selectSearch(@RequestParam Map params
@@ -80,7 +87,7 @@ public class MainController {
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
 
-        modelAndView.setViewName("/WEB-INF/views/example.jsp");
+        modelAndView.setViewName("/WEB-INF/views/project/header.jsp");
         return modelAndView;
     }
 
