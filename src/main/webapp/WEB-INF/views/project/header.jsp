@@ -26,7 +26,7 @@
         <!-- Brand image -->
         <div class="navbar-brand justify-content-center">
             <a href="/project/mainpage.jsp">
-                <img src="/images/drug_img.jpg" alt="" width="200" height="150">
+                <img src="/images/drug_img.png" alt="" width="200" height="150">
             </a>
         </div>
 

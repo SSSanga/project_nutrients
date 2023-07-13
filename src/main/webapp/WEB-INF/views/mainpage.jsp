@@ -137,16 +137,16 @@
                             </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="" alt="">
+                                    <img src="/static/images/pill_3.png" alt="">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="" alt="">
+                                    <img src="/static/images/pill_4.png" alt="">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="" alt="">
+                                    <img src="/static/images/lee_lutein.png" alt="">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="" alt="">
+                                    <img src="/static/images/lemona.png" alt="">
                                 </div>
                             </div>
                             <button data-bs-slide="prev" data-bs-target="#controlsID-first"
@@ -163,7 +163,7 @@
                 <div class="col-md-4">
                     <!-- Image -->
                     <div class="image-container">
-                        <img src="/images/ad_img.jpg" alt="AD_Image" class="img-fluid">
+                        <img src="/images/ad_img.png" alt="AD_Image" class="img-fluid">
                     </div>
                 </div>
             </div>
