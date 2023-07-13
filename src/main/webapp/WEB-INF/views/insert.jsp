@@ -21,7 +21,7 @@
             </div>
             <div class="mb-3">
                 <label class="form-label" for="name">NAME:</label>
-                <input class="form-control" type="text" id="name" name="NAME">
+                <input class="form-control" type="text" id="name" name="NAME" placeholder="이메일을 입력해 주세요.">
             </div>
             <div class="mb-3">
                 <label class="form-label" for="orderNumber">ORDER_NUMBER:</label>

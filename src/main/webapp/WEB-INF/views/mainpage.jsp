@@ -1,3 +1,5 @@
+<%@ page import="java.util.HashMap, java.util.ArrayList" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nutrient Recommendations Home</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
-    <link href="/static/css/css/main.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
 </head>
 
 <body>
@@ -30,64 +32,8 @@
         }
     </style>
 
-    <nav class="navbar navbar-expand justify-content-between">
-        <!-- Brand image -->
-        <div class="navbar-brand justify-content-center">
-            <a href="/resources/static/main.html">
-                <img src="/resources/static/views/images/drug_img.jpg" alt="" width="200" height="150">
-            </a>
-        </div>
-
-        <!-- Search bar -->
-        <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search"
-                style="font-size: 20px;">
-            <button class="btn btn-outline-success" type="submit" formaction="/resources/static/nutrientlist/searchresult.html"
-                style="font-size: 20px; background-color: white;"><i class="fas fa-search"></i></button>
-        </form>
-
-        <!-- Navigation Links -->
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="/resources/static/administrator/about.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/resources/static/administrator/wholelist.html">List</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/resources/static/loginlist/reviews.html">Reviews</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/resources/static/loginlist/contacts.html">Contacts</a>
-                </li>
-            </ul>
-        </div>
-
-        <!-- User management dropdown -->
-        <div class="d-flex align-items-center">
-            <div class="dropdown">
-                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
-                    aria-expanded="false" style="font-size: 20px;">
-                    회원관리
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <li><a class="dropdown-item" href="/resources/static/loginlist/mypage.html" style="font-size: 20px;">마이페이지</a></li>
-                    <li><a class="dropdown-item" href="/resources/static/loginlist/login.html" style="font-size: 20px;">로그인</a></li>
-                    <li><a class="dropdown-item" href="/resources/static/loginlist/signup.html" style="font-size: 20px;">회원가입</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="/resources/static/main.html" style="font-size: 20px;">로그아웃</a></li>
-                </ul>
-            </div>
-
-            <!-- Screen adjust buttons -->
-            <span id="zoom-display" class="mx-2">100%</span>
-            <button class="btn btn-outline-secondary mx-2" onclick="increaseSize()" style="font-size: 20px;">+</button>
-            <button class="btn btn-outline-secondary" onclick="decreaseSize()" style="font-size: 20px;">-</button>
-        </div>
-    </nav>
+    <!-- header -->
+    <%@ include file="/WEB-INF/views/project/header.jsp" %>
 
     <!-- Screen adjust functions -->
     <script>
@@ -134,22 +80,20 @@
                 <div class="row p-2">
                     <div class="col-md-3">
                         <button type="submit" class="w-100 btn btn-lg btn-outline"
-                            formaction="/resources/static/administrator/livercare.html">간 기능
-                            개선</button>
+                            formaction="/administrator/livercare.html">간 기능개선</button>
                     </div>
                     <div class="col-md-3">
                         <button type="submit" class="w-100 btn btn-lg btn-outline"
-                            formaction="/resources/static/administrator/recovery.html">피로
-                            회복</button>
+                            formaction="/administrator/recovery.html">피로회복</button>
                     </div>
                     <div class="col-md-3">
                         <button type="submit" class="w-100 btn btn-lg btn-outline"
-                            formaction="/resources/static/administrator/eyes.html">눈 기능
+                            formaction="/administrator/eyes.html">눈 기능
                             향상</button>
                     </div>
                     <div class="col-md-3">
                         <button type="submit" class="w-100 btn btn-lg btn-outline"
-                            formaction="/resources/static/administrator/cholesterol.html">콜레스테롤 개선</button>
+                            formaction="/administrator/cholesterol.html">콜레스테롤 개선</button>
                     </div>
                 </div>
             </form>
@@ -219,7 +163,7 @@
                 <div class="col-md-4">
                     <!-- Image -->
                     <div class="image-container">
-                        <img src="/resources/static/images/ad_img.jpg" alt="AD_Image" class="img-fluid">
+                        <img src="/images/ad_img.jpg" alt="AD_Image" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -230,55 +174,7 @@
     <hr>
 
     <!-- Footer -->
-    <footer class="p-5 d-flex justify-content-between align-items-center font-size: 0.8rem footer-green">
-        <div class="row">
-            <div class="">
-                <div class="">
-                    <ul class="list-unstyled d-flex">
-                        <li>
-                            <a href="/etc/companyInfo"
-                                class="text-black text-decoration-none border-end border-secondary">회사소개 &nbsp;</a>
-                        </li>
-                        <li>
-                            <a href="/etc/terms_of_use"
-                                class="text-black text-decoration-none ps-2 border-end border-secondary">이용약관 &nbsp;</a>
-                        </li>
-                        <li>
-                            <a href="/etc/privacy_policy"
-                                class="text-black text-decoration-none ps-2 border-end border-secondary">개인정보처리방침
-                                &nbsp;</a>
-                        </li>
-                        <li>
-                            <a href="/notice/notice_faq" class="text-black text-decoration-none ps-2">고객센터</a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <ul class="list-unstyled m-0">
-                        <li class="pt-1">
-                            대표번호 : 080-513-5420 (업무시간 : 09:00-18:00 월~금) 주말,
-                            공휴일 휴무
-                        </li>
-                        <li class="pt-1">
-                            <span class="pe-3">대표자 : 이동환</span>
-                            <span>주소 : 서울특별시 구로동 디지털로34길 27 대륭포스트타워 3차 1106호</span>
-                        </li>
-                        <li class="pt-1">
-                            <span>법인명 : (주)0124</span>
-                            <span>사업자 등록정보 : 96-979686</span>
-                        </li>
-                        <li class="pt-1">
-                            <span>호스팅 : (주)0124</span>
-                            <span>E-MAIL : diet@gmail.com</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <img src="/resources/static/images/drug_img.jpg" alt="logo" height="130rem">
-        </div>
-
+    <%@ include file="/WEB-INF/views/project/footer.jsp" %>
 
         <!-- Code injected by live-server -->
         <script>
