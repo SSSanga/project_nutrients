@@ -1,0 +1,199 @@
+{
+  "canvas": {
+    "version": "2.2.11",
+    "width": 2000,
+    "height": 2000,
+    "scrollTop": -1,
+    "scrollLeft": 0,
+    "zoomLevel": 1,
+    "show": {
+      "tableComment": true,
+      "columnComment": true,
+      "columnDataType": true,
+      "columnDefault": true,
+      "columnAutoIncrement": false,
+      "columnPrimaryKey": true,
+      "columnUnique": false,
+      "columnNotNull": true,
+      "relationship": true
+    },
+    "database": "MySQL",
+    "databaseName": "",
+    "canvasType": "ERD",
+    "language": "GraphQL",
+    "tableCase": "pascalCase",
+    "columnCase": "camelCase",
+    "highlightTheme": "VS2015",
+    "bracketType": "none",
+    "setting": {
+      "relationshipDataTypeSync": true,
+      "relationshipOptimization": false,
+      "columnOrder": [
+        "columnName",
+        "columnDataType",
+        "columnNotNull",
+        "columnUnique",
+        "columnAutoIncrement",
+        "columnDefault",
+        "columnComment"
+      ]
+    },
+    "pluginSerializationMap": {}
+  },
+  "table": {
+    "tables": [
+      {
+        "name": "SUPP_LIST",
+        "comment": "영양제리스트",
+        "columns": [
+          {
+            "name": "",
+            "comment": "",
+            "dataType": "",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "978de1c0-e090-450e-a27e-9801e762d920"
+          },
+          {
+            "name": "",
+            "comment": "",
+            "dataType": "",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "54bf66c9-3a74-45e7-9679-6ceb210021aa"
+          },
+          {
+            "name": "",
+            "comment": "",
+            "dataType": "",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "12a019f5-4afb-40b4-a61d-c9fd3a3bd814"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 39,
+          "top": 32,
+          "zIndex": 44,
+          "widthName": 72.08447265625,
+          "widthComment": 80
+        },
+        "visible": true,
+        "id": "482791bb-b997-4db0-b2a5-8803df3faba2"
+      },
+      {
+        "name": "LIVER_LIST",
+        "comment": "간 기능개선",
+        "columns": [],
+        "ui": {
+          "active": false,
+          "left": 40,
+          "top": 195,
+          "zIndex": 31,
+          "widthName": 74.25537109375,
+          "widthComment": 70.61181640625
+        },
+        "visible": true,
+        "id": "14a81a21-1e38-42ae-b07b-ae4d6fc5ee28"
+      },
+      {
+        "name": "RECOVERY_LIST",
+        "comment": "피로회복 ",
+        "columns": [],
+        "ui": {
+          "active": false,
+          "left": 40,
+          "top": 293,
+          "zIndex": 29,
+          "widthName": 109.40869140625,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "78bc0f4e-e6f8-45d0-8f0e-16438bc7cc81"
+      },
+      {
+        "name": "CHOLESTEROL_LIST",
+        "comment": "콜레스테롤 개선 영양제",
+        "columns": [],
+        "ui": {
+          "active": false,
+          "left": 36,
+          "top": 394,
+          "zIndex": 27,
+          "widthName": 133.4853515625,
+          "widthComment": 120
+        },
+        "visible": true,
+        "id": "96d1f973-f53a-4580-a1e4-c4adb43d7efd"
+      },
+      {
+        "name": "EYES_LIST",
+        "comment": "눈 기능 향상",
+        "columns": [],
+        "ui": {
+          "active": false,
+          "left": 34,
+          "top": 487,
+          "zIndex": 35,
+          "widthName": 71.3671875,
+          "widthComment": 74.2236328125
+        },
+        "visible": true,
+        "id": "611b843d-5ece-4781-87b2-ef15956beace"
+      }
+    ],
+    "indexes": []
+  },
+  "memo": {
+    "memos": []
+  },
+  "relationship": {
+    "relationships": []
+  }
+}
