@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -221,
-    "scrollLeft": -25,
+    "scrollTop": -251,
+    "scrollLeft": -156,
     "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
@@ -185,6 +185,29 @@
             "id": "f82b732e-d84d-40e0-b4b8-85f7a8dcd33f"
           },
           {
+            "name": "SEX_ID",
+            "comment": "성별_ID",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "94438ecd-28a6-44ab-8642-e4fa62898a85"
+          },
+          {
             "name": "ADDRESS",
             "comment": "주소",
             "dataType": "VARCHAR(50)",
@@ -208,31 +231,8 @@
             "id": "3d7070fd-3b00-4956-8292-ad1021926087"
           },
           {
-            "name": "REGISTRATIONDATE",
-            "comment": "가입일",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 132.24755859375,
-              "widthComment": 60,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "b4d317ea-e806-4779-b45a-fc9dee7f1a83"
-          },
-          {
-            "name": "EMAIL",
-            "comment": "이메일",
+            "name": "PHONE",
+            "comment": "연락처",
             "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
@@ -251,30 +251,7 @@
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
-            "id": "d9fa4ba2-d82b-4b44-bab0-d3b61d5dbfbc"
-          },
-          {
-            "name": "SEX_ID",
-            "comment": "성별_ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 60,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "94438ecd-28a6-44ab-8642-e4fa62898a85"
+            "id": "7bca2312-f5f1-41fb-8435-ee86509039c6"
           },
           {
             "name": "HISTORYDISEASE_ID",
@@ -323,6 +300,52 @@
             "id": "1da48667-c489-46aa-8c22-e25fb789dd8b"
           },
           {
+            "name": "REGISTRATIONDATE",
+            "comment": "가입일",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 132.24755859375,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "b4d317ea-e806-4779-b45a-fc9dee7f1a83"
+          },
+          {
+            "name": "EMAIL",
+            "comment": "이메일",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "d9fa4ba2-d82b-4b44-bab0-d3b61d5dbfbc"
+          },
+          {
             "name": "PAYMENT_ID",
             "comment": "결제정보_ID",
             "dataType": "VARCHAR(50)",
@@ -350,7 +373,7 @@
           "active": false,
           "left": 330,
           "top": 207,
-          "zIndex": 902,
+          "zIndex": 5,
           "widthName": 111.78271484375,
           "widthComment": 60
         },
@@ -412,7 +435,7 @@
           "active": false,
           "left": 37,
           "top": 22,
-          "zIndex": 856,
+          "zIndex": 1,
           "widthName": 60,
           "widthComment": 60
         },
@@ -474,7 +497,7 @@
           "active": false,
           "left": 768,
           "top": 22,
-          "zIndex": 858,
+          "zIndex": 2,
           "widthName": 115.66748046875,
           "widthComment": 60
         },
@@ -533,10 +556,10 @@
           }
         ],
         "ui": {
-          "active": true,
+          "active": false,
           "left": 742.5,
           "top": 684.25,
-          "zIndex": 911,
+          "zIndex": 4,
           "widthName": 74.25537109375,
           "widthComment": 80
         },
@@ -544,7 +567,7 @@
         "id": "d0884bfc-8971-4c8e-91d2-02e8f229c7dc"
       },
       {
-        "name": "PAYMENㅆ",
+        "name": "PAYMEN",
         "comment": " 결제정보",
         "columns": [
           {
@@ -595,11 +618,11 @@
           }
         ],
         "ui": {
-          "active": false,
+          "active": true,
           "left": 2.5,
           "top": 701,
-          "zIndex": 906,
-          "widthName": 67.97119140625,
+          "zIndex": 7,
+          "widthName": 60,
           "widthComment": 60
         },
         "visible": true,
@@ -684,7 +707,7 @@
             "1da48667-c489-46aa-8c22-e25fb789dd8b"
           ],
           "x": 678.6346435546875,
-          "y": 542.5,
+          "y": 563,
           "direction": "bottom"
         },
         "constraintName": "fk_allergies _to_memvers information ",
@@ -710,7 +733,7 @@
             "ccb3d324-4148-49ba-9f51-fb6a16e8e3b0"
           ],
           "x": 446.2115478515625,
-          "y": 542.5,
+          "y": 563,
           "direction": "bottom"
         },
         "constraintName": "fk_paymentinformation_to_memvers information ",
