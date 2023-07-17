@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -641,
-    "scrollLeft": -177,
-    "zoomLevel": 0.3,
+    "scrollTop": -376,
+    "scrollLeft": -275,
+    "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -70,8 +70,8 @@
             "id": "12a019f5-4afb-40b4-a61d-c9fd3a3bd814"
           },
           {
-            "name": "LIVER_ID",
-            "comment": "간_ID",
+            "name": "KEYWORD_ID",
+            "comment": "기능별_ID",
             "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
@@ -83,90 +83,44 @@
             "ui": {
               "active": false,
               "pk": false,
-              "fk": true,
+              "fk": false,
               "pfk": false,
-              "widthName": 60,
+              "widthName": 89.40087890625,
+              "widthComment": 61.22998046875,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "c8ad5e1b-4af9-4794-9290-3f6ac7d4e25d"
+          },
+          {
+            "name": "KEWORD",
+            "comment": "기능별",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60.5,
               "widthComment": 60,
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
-            "id": "483096b0-7496-4664-9f72-e5b440d3170a"
-          },
-          {
-            "name": "EYES_ID",
-            "comment": "눈_ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 60,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "b7cc7104-78e8-48a2-afb4-7007a16736cf"
-          },
-          {
-            "name": "CHOL_ID",
-            "comment": "콜레스테롤_ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 87.22998046875,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "0c34d17c-6dc5-4987-a383-18c4b9053aae"
-          },
-          {
-            "name": "RECOVERY_ID",
-            "comment": "피로회복_ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 94.955078125,
-              "widthComment": 74.22998046875,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "d4d0556d-6838-4086-85ad-c7a75d908ccd"
+            "id": "fdf23e9e-bd5b-4437-ba7f-3b2067d6f977"
           }
         ],
         "ui": {
           "active": false,
-          "left": 794,
-          "top": 47,
-          "zIndex": 617,
+          "left": 691.7503,
+          "top": 630.7498,
+          "zIndex": 587,
           "widthName": 72.08447265625,
           "widthComment": 80,
           "color": "#4CAF50"
@@ -178,6 +132,52 @@
         "name": "LIVER_LIST",
         "comment": "간 기능개선",
         "columns": [
+          {
+            "name": "SUPP_ID",
+            "comment": "영양제리스트",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 80,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "8abfeb7d-d91a-4f73-9b9b-709803c96363"
+          },
+          {
+            "name": "KEYWORD_ID",
+            "comment": "간_ID",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 89.40087890625,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "266e52b2-1642-4310-9b6d-57a112f32a60"
+          },
           {
             "name": "KEYWORD",
             "comment": "간",
@@ -248,6 +248,98 @@
             "id": "915b1217-d899-45d3-85e4-50f240ad8bef"
           },
           {
+            "name": "EFFECT",
+            "comment": "필요기대효과",
+            "dataType": "VARCHAR(500)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 80,
+              "widthDataType": 94.94873046875,
+              "widthDefault": 60
+            },
+            "id": "1b6ce32d-4c82-428a-aa5c-f5db08e36956"
+          },
+          {
+            "name": "COMPONENT1",
+            "comment": "성분1",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 93.72998046875,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "25cb8330-ec49-48a6-a186-c3effb0b4980"
+          },
+          {
+            "name": "COMPONENT2",
+            "comment": "성분2",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 93.72998046875,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "f9d7835f-44d0-48df-8f8c-0a45abfc2647"
+          },
+          {
+            "name": "TYPE",
+            "comment": "영양제 제형",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 70.61181640625,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "509dbe13-325a-4391-8324-bbf566c01526"
+          },
+          {
             "name": "DOSAGE",
             "comment": "용량",
             "dataType": "VARCHAR(50)",
@@ -294,267 +386,9 @@
             "id": "f4cb90c7-120d-4c86-ac1c-1b674a76388e"
           },
           {
-            "name": "LIVER_ID",
-            "comment": "간_ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": true,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": true,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 60,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "266e52b2-1642-4310-9b6d-57a112f32a60"
-          },
-          {
-            "name": "TYPE_ID",
-            "comment": "영양제 제형_ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 90.841796875,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "836e3960-dcf9-4dc1-9594-da215cc85785"
-          },
-          {
-            "name": "COMPONENT_ID",
-            "comment": "성분_ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 106.72998046875,
-              "widthComment": 60,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "2a0391c9-23db-4f89-a282-406e8dca7f18"
-          },
-          {
-            "name": "SIDE_ID",
-            "comment": "부작용_ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 61.22998046875,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "0896fd45-d590-42fa-a56e-fd14fe450d6c"
-          }
-        ],
-        "ui": {
-          "active": false,
-          "left": 0,
-          "top": 886.4362,
-          "zIndex": 610,
-          "widthName": 74.25537109375,
-          "widthComment": 70.61181640625,
-          "color": "#FF0000"
-        },
-        "visible": true,
-        "id": "14a81a21-1e38-42ae-b07b-ae4d6fc5ee28"
-      },
-      {
-        "name": "TYPE",
-        "comment": "영양제 제형",
-        "columns": [
-          {
-            "name": "TYPE",
-            "comment": "영양제 제형",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 70.61181640625,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "0f69405f-d230-49ca-9a51-f69fbe572e45"
-          },
-          {
-            "name": "TYPE_ID",
-            "comment": "영양제 제형_ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": true,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": true,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 90.841796875,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "4f8b8ed8-e6de-4777-a542-699b8fb834bd"
-          }
-        ],
-        "ui": {
-          "active": false,
-          "left": 768.0081,
-          "top": 1642.4883,
-          "zIndex": 537,
-          "widthName": 60,
-          "widthComment": 70.61181640625,
-          "color": "#E91E63"
-        },
-        "visible": true,
-        "id": "d6f16a65-348d-4dbf-91b7-912600a24720"
-      },
-      {
-        "name": "COMPONENT",
-        "comment": "성분",
-        "columns": [
-          {
-            "name": "NAME_ENG",
-            "comment": "성분 영어",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 74.9599609375,
-              "widthComment": 60,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "cfcc7c79-c1f0-4b13-b006-e999f406b4bc"
-          },
-          {
-            "name": "NAME_KOR",
-            "comment": "성분 한글",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 74.9599609375,
-              "widthComment": 60,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "10bc03d2-5eda-4abc-a801-ddb12b0752a3"
-          },
-          {
-            "name": "COMPONENT_ID",
-            "comment": "성분_ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": true,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": true,
-              "fk": false,
-              "pfk": false,
-              "widthName": 106.72998046875,
-              "widthComment": 60,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "c1cab22c-094e-4899-bd67-dbd42dc9229b"
-          }
-        ],
-        "ui": {
-          "active": false,
-          "left": 93.9643,
-          "top": 1611.2419,
-          "zIndex": 545,
-          "widthName": 86.5,
-          "widthComment": 60,
-          "color": "#00BCD4"
-        },
-        "visible": true,
-        "id": "731c40a2-80fe-4450-b635-7c2ff1c4ea96"
-      },
-      {
-        "name": "SIDEEFFECTS",
-        "comment": "부작용",
-        "columns": [
-          {
             "name": "SIDEEFFECTS",
             "comment": "부작용",
-            "dataType": "VARCHAR(200)",
+            "dataType": "VARCHAR(500)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -572,11 +406,51 @@
               "widthDataType": 94.94873046875,
               "widthDefault": 60
             },
-            "id": "70849995-59d4-49cd-a770-5bd32e33fd9a"
+            "id": "5c76a61c-1436-43e2-8bc7-474d3577ebba"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 1207.75,
+          "top": 549.6862,
+          "zIndex": 566,
+          "widthName": 74.25537109375,
+          "widthComment": 70.61181640625,
+          "color": "#FF0000"
+        },
+        "visible": true,
+        "id": "14a81a21-1e38-42ae-b07b-ae4d6fc5ee28"
+      },
+      {
+        "name": "EYES_LIST",
+        "comment": "눈 기능 개선",
+        "columns": [
+          {
+            "name": "SUPP_ID",
+            "comment": "영양제리스트",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 80,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "62aa7d5b-ed30-4a7a-a5f7-73c95d7a1c36"
           },
           {
-            "name": "SIDE_ID",
-            "comment": "부작용_ID",
+            "name": "KEYWORD_ID",
+            "comment": "눈_ID",
             "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
@@ -590,30 +464,13 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 60,
-              "widthComment": 61.22998046875,
+              "widthName": 89.40087890625,
+              "widthComment": 60,
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
-            "id": "da82e946-ff1d-48df-8b41-c683c534617c"
-          }
-        ],
-        "ui": {
-          "active": false,
-          "left": 1517.4723,
-          "top": 1627.9442,
-          "zIndex": 567,
-          "widthName": 91.5654296875,
-          "widthComment": 60,
-          "color": "#FF9800"
-        },
-        "visible": true,
-        "id": "876af6e2-fd72-4769-94b3-99cff4603bde"
-      },
-      {
-        "name": "EYES_LIST",
-        "comment": "눈 기능 개선",
-        "columns": [
+            "id": "89f3fa58-c107-42e8-b5dd-e47a3d8cccd0"
+          },
           {
             "name": "KEYWORD",
             "comment": "눈",
@@ -684,6 +541,98 @@
             "id": "c7828f32-c3c3-44dc-ac51-acd2ef79909c"
           },
           {
+            "name": "EFFECT",
+            "comment": "필요기대효과",
+            "dataType": "VARCHAR(500)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 80,
+              "widthDataType": 94.94873046875,
+              "widthDefault": 60
+            },
+            "id": "ebbb0dd4-926a-4520-a674-61333ccaaaab"
+          },
+          {
+            "name": "COMPONENT1",
+            "comment": "성분1",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 93.72998046875,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "bae36f96-80d1-4530-87a7-c950c9a108b3"
+          },
+          {
+            "name": "COMPONENT2",
+            "comment": "성분2",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 93.72998046875,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "56019838-5dac-490a-b62f-01fe7eb224e8"
+          },
+          {
+            "name": "TYPE",
+            "comment": "영양제 제형",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 70.61181640625,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "6e645a53-04f7-4e10-8240-396854ff1a9f"
+          },
+          {
             "name": "DOSAGE",
             "comment": "용량",
             "dataType": "VARCHAR(50)",
@@ -730,8 +679,71 @@
             "id": "ef211971-051b-4a6d-9b89-48e8a9443962"
           },
           {
-            "name": "EYES_ID",
-            "comment": "눈_ID",
+            "name": "SIDEEFFECTS",
+            "comment": "부작용",
+            "dataType": "VARCHAR(500)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 91.5654296875,
+              "widthComment": 60,
+              "widthDataType": 94.94873046875,
+              "widthDefault": 60
+            },
+            "id": "d802ebd0-00b2-41b5-8d13-87722557536d"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 701.607,
+          "top": 221.5709,
+          "zIndex": 558,
+          "widthName": 71.3671875,
+          "widthComment": 74.2236328125,
+          "color": "#CDDC39"
+        },
+        "visible": true,
+        "id": "92864dde-346b-4885-a0af-25fa69fdeaa1"
+      },
+      {
+        "name": "RECOVERY_LIST",
+        "comment": "피로 회복",
+        "columns": [
+          {
+            "name": "SUPP_ID",
+            "comment": "영양제리스트",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 80,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "edf5babf-af51-42da-ba5d-1a99bae2f4cb"
+          },
+          {
+            "name": "KEYWORD_ID",
+            "comment": "피로회복_ID",
             "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
@@ -745,99 +757,13 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 60,
-              "widthComment": 60,
+              "widthName": 89.40087890625,
+              "widthComment": 74.22998046875,
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
-            "id": "89f3fa58-c107-42e8-b5dd-e47a3d8cccd0"
+            "id": "472ccada-813b-4f54-8c4d-04bc4ec21b25"
           },
-          {
-            "name": "TYPE_ID",
-            "comment": "영양제 제형_ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 90.841796875,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "aed1fd9e-46c2-4407-9280-c0d0c90d872e"
-          },
-          {
-            "name": "COMPONENT_ID",
-            "comment": "성분_ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 106.72998046875,
-              "widthComment": 60,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "a883790a-7fd0-4154-a6ef-47d974f0ece0"
-          },
-          {
-            "name": "SIDE_ID",
-            "comment": "부작용_ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 61.22998046875,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "a26bc767-29e2-4c71-b547-d2c6fb9cdb4d"
-          }
-        ],
-        "ui": {
-          "active": false,
-          "left": 541.357,
-          "top": 698.3209,
-          "zIndex": 612,
-          "widthName": 71.3671875,
-          "widthComment": 74.2236328125,
-          "color": "#CDDC39"
-        },
-        "visible": true,
-        "id": "92864dde-346b-4885-a0af-25fa69fdeaa1"
-      },
-      {
-        "name": "RECOVERY_LIST",
-        "comment": "피로 회복",
-        "columns": [
           {
             "name": "KEYWORD",
             "comment": "피로회복",
@@ -908,8 +834,77 @@
             "id": "a8eedbc8-57da-4120-a8c5-7ebf8a09f7c2"
           },
           {
-            "name": "DOSAGE",
-            "comment": "용량",
+            "name": "EFFECT",
+            "comment": "필요기대효과",
+            "dataType": "VARCHAR(500)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 80,
+              "widthDataType": 94.94873046875,
+              "widthDefault": 60
+            },
+            "id": "0286bc2e-95fd-45f6-b5b8-a2b84cbcb7b3"
+          },
+          {
+            "name": "COMPONENT1",
+            "comment": "성분1",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 93.72998046875,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "a0cc6c21-9223-49b9-9274-6d1ea9b0868a"
+          },
+          {
+            "name": "COMPONENT2",
+            "comment": "성분2",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 93.72998046875,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "0de6cbc3-dc13-499e-b5b2-17553373f48b"
+          },
+          {
+            "name": "TYPE",
+            "comment": "영양제 제형",
             "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
@@ -924,11 +919,11 @@
               "fk": false,
               "pfk": false,
               "widthName": 60,
-              "widthComment": 60,
+              "widthComment": 70.61181640625,
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
-            "id": "243059bd-343a-45df-a476-3b1bbe4ac4bf"
+            "id": "6159e463-e629-4c07-8c45-2dfcb4b991b9"
           },
           {
             "name": "FREQUENCY",
@@ -954,8 +949,94 @@
             "id": "b579176a-24ac-4c0e-8495-2ea0c67d7734"
           },
           {
-            "name": "RECOVERY_ID",
-            "comment": "피로회복_ID",
+            "name": "DOSAGE",
+            "comment": "용량",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "243059bd-343a-45df-a476-3b1bbe4ac4bf"
+          },
+          {
+            "name": "SIDEEFFECTS",
+            "comment": "부작용",
+            "dataType": "VARCHAR(500)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 91.5654296875,
+              "widthComment": 60,
+              "widthDataType": 94.94873046875,
+              "widthDefault": 60
+            },
+            "id": "8c7cd4c6-2798-4f60-a2f4-845dcd16ffcc"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 702.7096,
+          "top": 1031.0724,
+          "zIndex": 551,
+          "widthName": 109.40869140625,
+          "widthComment": 60,
+          "color": "#9EE1FF"
+        },
+        "visible": true,
+        "id": "e539bc5f-db69-451e-a480-3bba6136e639"
+      },
+      {
+        "name": "CHOLESTEROL_LIST",
+        "comment": "콜레스테롤 개선",
+        "columns": [
+          {
+            "name": "SUPP_ID",
+            "comment": "영양제리스트",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 80,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "f47a6a72-0700-4a56-9dd9-a2e05dcc7436"
+          },
+          {
+            "name": "KEYWORD_ID",
+            "comment": "콜레스테롤_ID",
             "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
@@ -969,99 +1050,13 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 94.955078125,
-              "widthComment": 74.22998046875,
+              "widthName": 89.40087890625,
+              "widthComment": 87.22998046875,
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
-            "id": "472ccada-813b-4f54-8c4d-04bc4ec21b25"
+            "id": "2ddedfc9-2961-4c21-9b60-e4c373ab2c5a"
           },
-          {
-            "name": "TYPE_ID",
-            "comment": "영양제 제형_ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 90.841796875,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "0888531a-12f0-4b43-a157-9d5563e5ea9d"
-          },
-          {
-            "name": "COMPONENT_ID",
-            "comment": "성분_ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 106.72998046875,
-              "widthComment": 60,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "89dc866d-8135-4bd5-8aa2-d69a6c93a34e"
-          },
-          {
-            "name": "SIDE_ID",
-            "comment": "부작용_ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 61.22998046875,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "5ec13ecd-aeca-4a03-a2ac-c15b6b7f64b0"
-          }
-        ],
-        "ui": {
-          "active": false,
-          "left": 1537.7096,
-          "top": 1012.3224,
-          "zIndex": 616,
-          "widthName": 109.40869140625,
-          "widthComment": 60,
-          "color": "#9EE1FF"
-        },
-        "visible": true,
-        "id": "e539bc5f-db69-451e-a480-3bba6136e639"
-      },
-      {
-        "name": "CHOLESTEROL_LIST",
-        "comment": "콜레스테롤 개선",
-        "columns": [
           {
             "name": "KEYWORD",
             "comment": "콜레스테롤",
@@ -1132,6 +1127,98 @@
             "id": "9c02bb08-3261-4a3a-9226-f3bab89b8d2c"
           },
           {
+            "name": "EFFECT",
+            "comment": "필요기대효과",
+            "dataType": "VARCHAR(500)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 80,
+              "widthDataType": 94.94873046875,
+              "widthDefault": 60
+            },
+            "id": "5a89c72f-5380-470b-b738-add615f67b03"
+          },
+          {
+            "name": "COMPONENT1",
+            "comment": "성분1",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 93.72998046875,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "b8deeef0-3e03-428d-b9e2-6ca15643dea1"
+          },
+          {
+            "name": "COMPONENT2",
+            "comment": "성분2",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 93.72998046875,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "c09eb2c9-006f-4bb6-ac9c-e80ac275ec0e"
+          },
+          {
+            "name": "TYPE",
+            "comment": "영양제 제형",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 70.61181640625,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "30ae312a-5124-4a2d-bd17-44e6b6231c59"
+          },
+          {
             "name": "DOSAGE",
             "comment": "용량",
             "dataType": "VARCHAR(50)",
@@ -1178,103 +1265,34 @@
             "id": "1cba8800-891a-4e2e-b58b-a4962d99f44f"
           },
           {
-            "name": "CHOL_ID",
-            "comment": "콜레스테롤_ID",
-            "dataType": "VARCHAR(50)",
+            "name": "SIDEEFFECTS",
+            "comment": "부작용",
+            "dataType": "VARCHAR(500)",
             "default": "",
             "option": {
               "autoIncrement": false,
-              "primaryKey": true,
+              "primaryKey": false,
               "unique": false,
               "notNull": true
             },
             "ui": {
               "active": false,
-              "pk": true,
+              "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 60,
-              "widthComment": 87.22998046875,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "2ddedfc9-2961-4c21-9b60-e4c373ab2c5a"
-          },
-          {
-            "name": "TYPE_ID",
-            "comment": "영양제 제형_ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 90.841796875,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "c3a1dc4c-068a-4366-bbe9-d5f8c11bce27"
-          },
-          {
-            "name": "COMPONENT_ID",
-            "comment": "성분_ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 106.72998046875,
+              "widthName": 91.5654296875,
               "widthComment": 60,
-              "widthDataType": 87.71875,
+              "widthDataType": 94.94873046875,
               "widthDefault": 60
             },
-            "id": "b24cd9c2-0f47-49e6-8a37-08497e1f3a5b"
-          },
-          {
-            "name": "SIDE_ID",
-            "comment": "부작용_ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 61.22998046875,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "9d7b6422-95f0-40a7-b230-c85b99a72d04"
+            "id": "e8ccc524-8f8f-48a2-81a8-e7e8651f94cc"
           }
         ],
         "ui": {
           "active": false,
-          "left": 1100.7975,
-          "top": 707.7026,
-          "zIndex": 614,
+          "left": 46.7975,
+          "top": 660.0915,
+          "zIndex": 562,
           "widthName": 133.4853515625,
           "widthComment": 96.61181640625,
           "color": "#FF5722"
@@ -1295,416 +1313,104 @@
         "relationshipType": "OneN",
         "startRelationshipType": "Dash",
         "start": {
-          "tableId": "d6f16a65-348d-4dbf-91b7-912600a24720",
+          "tableId": "482791bb-b997-4db0-b2a5-8803df3faba2",
           "columnIds": [
-            "4f8b8ed8-e6de-4777-a542-699b8fb834bd"
+            "12a019f5-4afb-40b4-a61d-c9fd3a3bd814"
           ],
-          "x": 1173.568646875,
-          "y": 1669.9883,
-          "direction": "right"
-        },
-        "end": {
-          "tableId": "e539bc5f-db69-451e-a480-3bba6136e639",
-          "columnIds": [
-            "0888531a-12f0-4b43-a157-9d5563e5ea9d"
-          ],
-          "x": 1537.7096,
-          "y": 1075.6974,
-          "direction": "left"
-        },
-        "constraintName": "fk_type_to_recovery_list",
-        "visible": true,
-        "id": "5fb1bd16-c090-4853-b51d-89823f10e21f"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "d6f16a65-348d-4dbf-91b7-912600a24720",
-          "columnIds": [
-            "4f8b8ed8-e6de-4777-a542-699b8fb834bd"
-          ],
-          "x": 1173.568646875,
-          "y": 1724.9883,
-          "direction": "right"
-        },
-        "end": {
-          "tableId": "059b638f-965d-4e81-90ce-8da8c607fa72",
-          "columnIds": [
-            "c3a1dc4c-068a-4366-bbe9-d5f8c11bce27"
-          ],
-          "x": 1440.0153955078124,
-          "y": 961.2026,
-          "direction": "bottom"
-        },
-        "constraintName": "fk_type_to_cholesterol_list",
-        "visible": true,
-        "id": "386d721d-a9b5-4e84-b650-e3f8be97317e"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "d6f16a65-348d-4dbf-91b7-912600a24720",
-          "columnIds": [
-            "4f8b8ed8-e6de-4777-a542-699b8fb834bd"
-          ],
-          "x": 970.7883734375,
-          "y": 1642.4883,
-          "direction": "top"
-        },
-        "end": {
-          "tableId": "92864dde-346b-4885-a0af-25fa69fdeaa1",
-          "columnIds": [
-            "aed1fd9e-46c2-4407-9280-c0d0c90d872e"
-          ],
-          "x": 654.4296318359375,
-          "y": 951.8209,
-          "direction": "bottom"
-        },
-        "constraintName": "fk_type_to_eyes_list",
-        "visible": true,
-        "id": "b43eedb4-9365-42fb-99e8-79feaaa772b3"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "d6f16a65-348d-4dbf-91b7-912600a24720",
-          "columnIds": [
-            "4f8b8ed8-e6de-4777-a542-699b8fb834bd"
-          ],
-          "x": 768.0081,
-          "y": 1697.4883,
-          "direction": "left"
-        },
-        "end": {
-          "tableId": "14a81a21-1e38-42ae-b07b-ae4d6fc5ee28",
-          "columnIds": [
-            "836e3960-dcf9-4dc1-9594-da215cc85785"
-          ],
-          "x": 452.29052734375,
-          "y": 949.8112,
-          "direction": "right"
-        },
-        "constraintName": "fk_type_to_liver_list",
-        "visible": true,
-        "id": "12f25980-053c-4177-accc-24cc8f03ed0c"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "731c40a2-80fe-4450-b635-7c2ff1c4ea96",
-          "columnIds": [
-            "c1cab22c-094e-4899-bd67-dbd42dc9229b"
-          ],
-          "x": 515.41303046875,
-          "y": 1719.9919,
-          "direction": "right"
-        },
-        "end": {
-          "tableId": "e539bc5f-db69-451e-a480-3bba6136e639",
-          "columnIds": [
-            "89dc866d-8135-4bd5-8aa2-d69a6c93a34e"
-          ],
-          "x": 1537.7096,
-          "y": 1202.4474,
-          "direction": "left"
-        },
-        "constraintName": "fk_component_to_recovery_list",
-        "visible": true,
-        "id": "e97a7d94-1518-4c63-9eca-2dc78e6534d9"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "731c40a2-80fe-4450-b635-7c2ff1c4ea96",
-          "columnIds": [
-            "c1cab22c-094e-4899-bd67-dbd42dc9229b"
-          ],
-          "x": 515.41303046875,
-          "y": 1676.4919,
-          "direction": "right"
-        },
-        "end": {
-          "tableId": "059b638f-965d-4e81-90ce-8da8c607fa72",
-          "columnIds": [
-            "b24cd9c2-0f47-49e6-8a37-08497e1f3a5b"
-          ],
-          "x": 1100.7975,
-          "y": 834.4526,
-          "direction": "left"
-        },
-        "constraintName": "fk_component_to_cholesterol_list",
-        "visible": true,
-        "id": "e09b10e6-273e-4e43-acfb-03ee4b0ba031"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "731c40a2-80fe-4450-b635-7c2ff1c4ea96",
-          "columnIds": [
-            "c1cab22c-094e-4899-bd67-dbd42dc9229b"
-          ],
-          "x": 515.41303046875,
-          "y": 1632.9919,
-          "direction": "right"
-        },
-        "end": {
-          "tableId": "92864dde-346b-4885-a0af-25fa69fdeaa1",
-          "columnIds": [
-            "a883790a-7fd0-4154-a6ef-47d974f0ece0"
-          ],
-          "x": 880.5748955078125,
-          "y": 951.8209,
-          "direction": "bottom"
-        },
-        "constraintName": "fk_component_to_eyes_list",
-        "visible": true,
-        "id": "d59ca3bb-299e-4464-a54f-91bedfc2effd"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "731c40a2-80fe-4450-b635-7c2ff1c4ea96",
-          "columnIds": [
-            "c1cab22c-094e-4899-bd67-dbd42dc9229b"
-          ],
-          "x": 304.688665234375,
-          "y": 1611.2419,
-          "direction": "top"
-        },
-        "end": {
-          "tableId": "14a81a21-1e38-42ae-b07b-ae4d6fc5ee28",
-          "columnIds": [
-            "2a0391c9-23db-4f89-a282-406e8dca7f18"
-          ],
-          "x": 226.145263671875,
-          "y": 1139.9362,
-          "direction": "bottom"
-        },
-        "constraintName": "fk_component_to_liver_list",
-        "visible": true,
-        "id": "60f2c0a6-793e-461e-bc9b-3c659b203647"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "876af6e2-fd72-4769-94b3-99cff4603bde",
-          "columnIds": [
-            "da82e946-ff1d-48df-8b41-c683c534617c"
-          ],
-          "x": 1724.8443703125,
-          "y": 1627.9442,
-          "direction": "top"
-        },
-        "end": {
-          "tableId": "e539bc5f-db69-451e-a480-3bba6136e639",
-          "columnIds": [
-            "5ec13ecd-aeca-4a03-a2ac-c15b6b7f64b0"
-          ],
-          "x": 1763.854863671875,
-          "y": 1265.8224,
-          "direction": "bottom"
-        },
-        "constraintName": "fk_sideeffects_to_recovery_list",
-        "visible": true,
-        "id": "85261a3b-9183-4d41-92c1-c99bf9422708"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "876af6e2-fd72-4769-94b3-99cff4603bde",
-          "columnIds": [
-            "da82e946-ff1d-48df-8b41-c683c534617c"
-          ],
-          "x": 1517.4723,
-          "y": 1646.2775333333334,
+          "x": 691.7503,
+          "y": 695.9998,
           "direction": "left"
         },
         "end": {
           "tableId": "059b638f-965d-4e81-90ce-8da8c607fa72",
           "columnIds": [
-            "9d7b6422-95f0-40a7-b230-c85b99a72d04"
+            "f47a6a72-0700-4a56-9dd9-a2e05dcc7436"
           ],
-          "x": 1213.8701318359374,
-          "y": 961.2026,
-          "direction": "bottom"
-        },
-        "constraintName": "fk_sideeffects_to_cholesterol_list",
-        "visible": true,
-        "id": "614a9d79-2801-4f72-b1d1-db55f4656f33"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "876af6e2-fd72-4769-94b3-99cff4603bde",
-          "columnIds": [
-            "da82e946-ff1d-48df-8b41-c683c534617c"
-          ],
-          "x": 1517.4723,
-          "y": 1682.9442000000001,
-          "direction": "left"
-        },
-        "end": {
-          "tableId": "92864dde-346b-4885-a0af-25fa69fdeaa1",
-          "columnIds": [
-            "a26bc767-29e2-4c71-b547-d2c6fb9cdb4d"
-          ],
-          "x": 993.64752734375,
-          "y": 825.0709,
+          "x": 496.9234765625,
+          "y": 817.5915,
           "direction": "right"
         },
-        "constraintName": "fk_sideeffects_to_eyes_list",
+        "constraintName": "fk_supp_list_to_cholesterol_list",
         "visible": true,
-        "id": "83c646b3-1e77-4afc-8df8-0d97d87acfa4"
+        "id": "4a72d29e-5471-482f-8570-937fb34b20b8"
       },
       {
         "identification": false,
         "relationshipType": "OneN",
         "startRelationshipType": "Dash",
         "start": {
-          "tableId": "876af6e2-fd72-4769-94b3-99cff4603bde",
-          "columnIds": [
-            "da82e946-ff1d-48df-8b41-c683c534617c"
-          ],
-          "x": 1517.4723,
-          "y": 1719.6108666666669,
-          "direction": "left"
-        },
-        "end": {
-          "tableId": "14a81a21-1e38-42ae-b07b-ae4d6fc5ee28",
-          "columnIds": [
-            "0896fd45-d590-42fa-a56e-fd14fe450d6c"
-          ],
-          "x": 452.29052734375,
-          "y": 1076.5612,
-          "direction": "right"
-        },
-        "constraintName": "fk_sideeffects_to_liver_list",
-        "visible": true,
-        "id": "6e8ed601-7410-4e15-995f-c87ba2a80dc9"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "14a81a21-1e38-42ae-b07b-ae4d6fc5ee28",
-          "columnIds": [
-            "266e52b2-1642-4310-9b6d-57a112f32a60"
-          ],
-          "x": 226.145263671875,
-          "y": 886.4362,
-          "direction": "top"
-        },
-        "end": {
           "tableId": "482791bb-b997-4db0-b2a5-8803df3faba2",
           "columnIds": [
-            "483096b0-7496-4664-9f72-e5b440d3170a"
+            "12a019f5-4afb-40b4-a61d-c9fd3a3bd814"
           ],
-          "x": 794,
-          "y": 132.75,
-          "direction": "left"
-        },
-        "constraintName": "fk_liver_list_to_supp_list",
-        "visible": true,
-        "id": "9bb47141-4199-4e74-af16-67034966332e"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "92864dde-346b-4885-a0af-25fa69fdeaa1",
-          "columnIds": [
-            "89f3fa58-c107-42e8-b5dd-e47a3d8cccd0"
-          ],
-          "x": 767.502263671875,
-          "y": 698.3209,
-          "direction": "top"
-        },
-        "end": {
-          "tableId": "482791bb-b997-4db0-b2a5-8803df3faba2",
-          "columnIds": [
-            "b7cc7104-78e8-48a2-afb4-7007a16736cf"
-          ],
-          "x": 903.2259521484375,
-          "y": 218.5,
+          "x": 903.810114453125,
+          "y": 761.2498,
           "direction": "bottom"
         },
-        "constraintName": "fk_eyes_list_to_supp_list",
-        "visible": true,
-        "id": "f06818d0-9951-44a9-9c3a-4bad2f6a4c81"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "059b638f-965d-4e81-90ce-8da8c607fa72",
-          "columnIds": [
-            "2ddedfc9-2961-4c21-9b60-e4c373ab2c5a"
-          ],
-          "x": 1326.942763671875,
-          "y": 707.7026,
-          "direction": "top"
-        },
         "end": {
-          "tableId": "482791bb-b997-4db0-b2a5-8803df3faba2",
-          "columnIds": [
-            "0c34d17c-6dc5-4987-a383-18c4b9053aae"
-          ],
-          "x": 1121.6778564453125,
-          "y": 218.5,
-          "direction": "bottom"
-        },
-        "constraintName": "fk_cholesterol_list_to_supp_list",
-        "visible": true,
-        "id": "5e99d5ef-7fbb-40bf-9ca3-507e60194ab8"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
           "tableId": "e539bc5f-db69-451e-a480-3bba6136e639",
           "columnIds": [
-            "472ccada-813b-4f54-8c4d-04bc4ec21b25"
+            "edf5babf-af51-42da-ba5d-1a99bae2f4cb"
           ],
-          "x": 1763.854863671875,
-          "y": 1012.3224,
+          "x": 924.157598046875,
+          "y": 1031.0724,
+          "direction": "top"
+        },
+        "constraintName": "fk_supp_list_to_recovery_list",
+        "visible": true,
+        "id": "031d4f0d-4975-4e0c-b810-935aed63afe1"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "482791bb-b997-4db0-b2a5-8803df3faba2",
+          "columnIds": [
+            "12a019f5-4afb-40b4-a61d-c9fd3a3bd814"
+          ],
+          "x": 1115.8699289062502,
+          "y": 695.9998,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "14a81a21-1e38-42ae-b07b-ae4d6fc5ee28",
+          "columnIds": [
+            "8abfeb7d-d91a-4f73-9b9b-709803c96363"
+          ],
+          "x": 1207.75,
+          "y": 707.1862,
+          "direction": "left"
+        },
+        "constraintName": "fk_supp_list_to_liver_list",
+        "visible": true,
+        "id": "fead4c24-e1fb-4c84-9f99-201a23462d91"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "482791bb-b997-4db0-b2a5-8803df3faba2",
+          "columnIds": [
+            "12a019f5-4afb-40b4-a61d-c9fd3a3bd814"
+          ],
+          "x": 903.810114453125,
+          "y": 630.7498,
           "direction": "top"
         },
         "end": {
-          "tableId": "482791bb-b997-4db0-b2a5-8803df3faba2",
+          "tableId": "92864dde-346b-4885-a0af-25fa69fdeaa1",
           "columnIds": [
-            "d4d0556d-6838-4086-85ad-c7a75d908ccd"
+            "62aa7d5b-ed30-4a7a-a5f7-73c95d7a1c36"
           ],
-          "x": 1230.90380859375,
-          "y": 132.75,
-          "direction": "right"
+          "x": 923.054998046875,
+          "y": 536.5708999999999,
+          "direction": "bottom"
         },
-        "constraintName": "fk_recovery_list_to_supp_list",
+        "constraintName": "fk_supp_list_to_eyes_list",
         "visible": true,
-        "id": "ae9ec7d5-492f-4842-b08d-3e9183868fea"
+        "id": "5af93931-ec6c-4b8c-a19a-2cb7e8f82fb6"
       }
     ]
   }
