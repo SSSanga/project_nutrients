@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -577,
-    "scrollLeft": -210,
+    "scrollTop": -497,
+    "scrollLeft": -519,
     "zoomLevel": 1,
     "show": {
       "tableComment": true,
@@ -119,8 +119,8 @@
         "ui": {
           "active": false,
           "left": 611.9468,
-          "top": 669.6147,
-          "zIndex": 334,
+          "top": 662.6147,
+          "zIndex": 2,
           "widthName": 60,
           "widthComment": 60
         },
@@ -249,9 +249,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 607.347,
-          "top": 966.9994,
-          "zIndex": 342,
+          "left": 598.347,
+          "top": 1000.9994,
+          "zIndex": 4,
           "widthName": 60,
           "widthComment": 60
         },
@@ -380,9 +380,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 1154.4061,
-          "top": 794.9146,
-          "zIndex": 349,
+          "left": 1171.4061,
+          "top": 652.9146,
+          "zIndex": 3,
           "widthName": 60,
           "widthComment": 60
         },
@@ -400,7 +400,7 @@
           "active": false,
           "left": 268,
           "top": 646,
-          "zIndex": 284,
+          "zIndex": 1,
           "width": 259,
           "height": 226
         },
@@ -420,7 +420,7 @@
             "9a0b80df-3cad-43ed-aad6-8e7344e465e8"
           ],
           "x": 803.53615546875,
-          "y": 800.1147,
+          "y": 793.1147,
           "direction": "bottom"
         },
         "end": {
@@ -428,8 +428,8 @@
           "columnIds": [
             "86fe587a-6b08-4745-b85c-151ef54607b7"
           ],
-          "x": 804.8675078125,
-          "y": 966.9994,
+          "x": 795.8675078125,
+          "y": 1000.9994,
           "direction": "top"
         },
         "constraintName": "fk_user_to_review",
@@ -441,38 +441,12 @@
         "relationshipType": "OneN",
         "startRelationshipType": "Dash",
         "start": {
-          "tableId": "85cf6097-3b77-4aa2-adea-ff4dd4f25e06",
-          "columnIds": [
-            "6e985f07-1879-45be-8689-553b2b70d88e"
-          ],
-          "x": 1002.388015625,
-          "y": 1052.7494000000002,
-          "direction": "right"
-        },
-        "end": {
-          "tableId": "138bebf5-a546-4d59-9485-db52a08cde35",
-          "columnIds": [
-            "b4a71af2-0216-4e7c-bbad-e429c01cd6ff"
-          ],
-          "x": 1154.4061,
-          "y": 923.5396,
-          "direction": "left"
-        },
-        "constraintName": "fk_review_to_comment",
-        "visible": true,
-        "id": "f7c23eb8-b747-4c84-b8a1-cd418ef0189c"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
           "tableId": "f3e6c3e9-742b-4377-8baf-be1aeaeb6d0f",
           "columnIds": [
             "9a0b80df-3cad-43ed-aad6-8e7344e465e8"
           ],
           "x": 995.1255109375,
-          "y": 734.8647,
+          "y": 727.8647,
           "direction": "right"
         },
         "end": {
@@ -480,13 +454,39 @@
           "columnIds": [
             "ceb230ad-f9f8-465f-ba71-dcb78405fbce"
           ],
-          "x": 1154.4061,
-          "y": 837.7896,
+          "x": 1171.4061,
+          "y": 695.7896,
           "direction": "left"
         },
         "constraintName": "fk_user_to_comment",
         "visible": true,
         "id": "387979d5-db3b-41eb-a5f5-9fd435d5f749"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "85cf6097-3b77-4aa2-adea-ff4dd4f25e06",
+          "columnIds": [
+            "6e985f07-1879-45be-8689-553b2b70d88e"
+          ],
+          "x": 993.388015625,
+          "y": 1086.7494000000002,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "138bebf5-a546-4d59-9485-db52a08cde35",
+          "columnIds": [
+            "b4a71af2-0216-4e7c-bbad-e429c01cd6ff"
+          ],
+          "x": 1171.4061,
+          "y": 781.5396,
+          "direction": "left"
+        },
+        "constraintName": "fk_review_to_comment",
+        "visible": true,
+        "id": "f7c23eb8-b747-4c84-b8a1-cd418ef0189c"
       }
     ]
   }
