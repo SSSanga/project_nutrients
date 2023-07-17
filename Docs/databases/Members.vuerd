@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -121,
-    "scrollLeft": -355,
+    "scrollTop": -33,
+    "scrollLeft": -363,
     "zoomLevel": 1,
     "show": {
       "tableComment": true,
@@ -43,12 +43,12 @@
   "table": {
     "tables": [
       {
-        "name": "MEMBERSINFOR ",
-        "comment": "회원정보",
+        "name": "MEMBERSANDADMIN",
+        "comment": "사람 ",
         "columns": [
           {
-            "name": "MEMBER_ID",
-            "comment": "회원번호ID",
+            "name": "UNIQUE_ID",
+            "comment": "유니크ID",
             "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
@@ -62,8 +62,8 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 79.2890625,
-              "widthComment": 67,
+              "widthName": 72.7890625,
+              "widthComment": 60,
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
@@ -254,52 +254,6 @@
             "id": "7bca2312-f5f1-41fb-8435-ee86509039c6"
           },
           {
-            "name": "HISTORYDISEASE_ID",
-            "comment": "질병이력_ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 135.8974609375,
-              "widthComment": 74.22998046875,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "bf92ae03-aa85-47dc-a640-ef47d6907afe"
-          },
-          {
-            "name": "ALLERGIES_ID",
-            "comment": "알레르기_ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 94.4853515625,
-              "widthComment": 74.22998046875,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "1da48667-c489-46aa-8c22-e25fb789dd8b"
-          },
-          {
             "name": "REGISTRATIONDATE",
             "comment": "가입일",
             "dataType": "VARCHAR(50)",
@@ -346,8 +300,31 @@
             "id": "d9fa4ba2-d82b-4b44-bab0-d3b61d5dbfbc"
           },
           {
-            "name": "PAYMENT_ID",
-            "comment": "결제정보_ID",
+            "name": "ADMIN_ID",
+            "comment": "관리자아이디",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 64.1181640625,
+              "widthComment": 80,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "32a60d2c-f246-46e6-a0d3-053d7355911d"
+          },
+          {
+            "name": "HISTORY_ID",
+            "comment": "과거력_ID",
             "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
@@ -361,20 +338,20 @@
               "pk": false,
               "fk": true,
               "pfk": false,
-              "widthName": 83.14208984375,
-              "widthComment": 74.22998046875,
+              "widthName": 79.54296875,
+              "widthComment": 61.22998046875,
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
-            "id": "ccb3d324-4148-49ba-9f51-fb6a16e8e3b0"
+            "id": "d8c7b19e-e8a2-45c2-a6c4-9bfa9f6ca96f"
           }
         ],
         "ui": {
           "active": false,
-          "left": 670,
-          "top": 255,
-          "zIndex": 5,
-          "widthName": 111.78271484375,
+          "left": 676,
+          "top": 350,
+          "zIndex": 155,
+          "widthName": 137.0654296875,
           "widthComment": 60
         },
         "visible": true,
@@ -443,11 +420,11 @@
         "id": "d292a32c-5bfe-40b9-8aea-9dc19a6ddf72"
       },
       {
-        "name": "HISTORYDISEASE",
-        "comment": "질병이력",
+        "name": "HISTORY",
+        "comment": "과거력",
         "columns": [
           {
-            "name": "HISTORYDISEASE",
+            "name": "DISEASE",
             "comment": "질병이력",
             "dataType": "VARCHAR(50)",
             "default": "",
@@ -462,52 +439,13 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 115.66748046875,
+              "widthName": 60,
               "widthComment": 60,
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
             "id": "0f387907-55f5-4ca4-b288-13dc9567a9eb"
           },
-          {
-            "name": "HISTORYDISEASE_ID",
-            "comment": "질병이력_ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": true,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": true,
-              "fk": false,
-              "pfk": false,
-              "widthName": 135.8974609375,
-              "widthComment": 74.22998046875,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "5fcf363b-aa93-44b9-bc81-33797d5ff6d8"
-          }
-        ],
-        "ui": {
-          "active": false,
-          "left": 1108,
-          "top": 70,
-          "zIndex": 2,
-          "widthName": 115.66748046875,
-          "widthComment": 60
-        },
-        "visible": true,
-        "id": "e1402054-72a9-4814-9df4-e721963cb03c"
-      },
-      {
-        "name": "ALLERGIES",
-        "comment": "알레르기이력",
-        "columns": [
           {
             "name": "ALLERGIES",
             "comment": "알레르기",
@@ -529,11 +467,11 @@
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
-            "id": "566b6211-707f-4af0-b078-9cb4a7498951"
+            "id": "7a3547f2-b059-498b-9036-3db9ea34559c"
           },
           {
-            "name": "ALLERGIES_ID",
-            "comment": "알레르기_ID",
+            "name": "HISTORY_ID",
+            "comment": "과거력_ ID",
             "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
@@ -547,86 +485,24 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 94.4853515625,
-              "widthComment": 74.22998046875,
+              "widthName": 79.54296875,
+              "widthComment": 64.841796875,
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
-            "id": "64f3b2be-0eba-477b-a458-43c90888383e"
+            "id": "5fcf363b-aa93-44b9-bc81-33797d5ff6d8"
           }
         ],
         "ui": {
           "active": false,
-          "left": 1082.5,
-          "top": 732.25,
-          "zIndex": 4,
-          "widthName": 74.25537109375,
-          "widthComment": 80
-        },
-        "visible": true,
-        "id": "d0884bfc-8971-4c8e-91d2-02e8f229c7dc"
-      },
-      {
-        "name": "PAYMEN",
-        "comment": " 결제정보",
-        "columns": [
-          {
-            "name": "PAYMENT",
-            "comment": "결제정보",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 62.912109375,
-              "widthComment": 60,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "bb9fdfe1-fa87-4eca-8621-6283cf5b8c69"
-          },
-          {
-            "name": "PAYMENT_ID",
-            "comment": "결제정보_ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": true,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": true,
-              "fk": false,
-              "pfk": false,
-              "widthName": 83.14208984375,
-              "widthComment": 74.22998046875,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "97347e2b-c69d-4d32-92b8-cce769c2a118"
-          }
-        ],
-        "ui": {
-          "active": false,
-          "left": 342.5,
-          "top": 749,
-          "zIndex": 3,
+          "left": 1096,
+          "top": 72,
+          "zIndex": 160,
           "widthName": 60,
           "widthComment": 60
         },
         "visible": true,
-        "id": "4bed665b-744b-4db1-9cb8-521bf478beb2"
+        "id": "e1402054-72a9-4814-9df4-e721963cb03c"
       }
     ],
     "indexes": []
@@ -654,8 +530,8 @@
           "columnIds": [
             "94438ecd-28a6-44ab-8642-e4fa62898a85"
           ],
-          "x": 786.2115478515625,
-          "y": 255,
+          "x": 792.7415771484375,
+          "y": 350,
           "direction": "top"
         },
         "constraintName": "fk_sex_to_memvers information ",
@@ -671,74 +547,22 @@
           "columnIds": [
             "5fcf363b-aa93-44b9-bc81-33797d5ff6d8"
           ],
-          "x": 1108,
-          "y": 125,
+          "x": 1096,
+          "y": 137.25,
           "direction": "left"
         },
         "end": {
           "tableId": "2aeac7ea-e582-4fd0-928d-ffc4495261d2",
           "columnIds": [
-            "bf92ae03-aa85-47dc-a640-ef47d6907afe"
+            "d8c7b19e-e8a2-45c2-a6c4-9bfa9f6ca96f"
           ],
-          "x": 1018.6346435546875,
-          "y": 255,
+          "x": 1026.2247314453125,
+          "y": 350,
           "direction": "top"
         },
-        "constraintName": "fk_historydisease_to_memvers information ",
+        "constraintName": "fk_history_to_membersinfor ",
         "visible": true,
-        "id": "4a880064-2029-4cc2-9149-72b15d5fc9d8"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "d0884bfc-8971-4c8e-91d2-02e8f229c7dc",
-          "columnIds": [
-            "64f3b2be-0eba-477b-a458-43c90888383e"
-          ],
-          "x": 1082.5,
-          "y": 787.25,
-          "direction": "left"
-        },
-        "end": {
-          "tableId": "2aeac7ea-e582-4fd0-928d-ffc4495261d2",
-          "columnIds": [
-            "1da48667-c489-46aa-8c22-e25fb789dd8b"
-          ],
-          "x": 1018.6346435546875,
-          "y": 611,
-          "direction": "bottom"
-        },
-        "constraintName": "fk_allergies _to_memvers information ",
-        "visible": true,
-        "id": "bc8546c6-4963-42cd-b9f1-f1a0433e712b"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "4bed665b-744b-4db1-9cb8-521bf478beb2",
-          "columnIds": [
-            "97347e2b-c69d-4d32-92b8-cce769c2a118"
-          ],
-          "x": 754.5908203125,
-          "y": 804,
-          "direction": "right"
-        },
-        "end": {
-          "tableId": "2aeac7ea-e582-4fd0-928d-ffc4495261d2",
-          "columnIds": [
-            "ccb3d324-4148-49ba-9f51-fb6a16e8e3b0"
-          ],
-          "x": 786.2115478515625,
-          "y": 611,
-          "direction": "bottom"
-        },
-        "constraintName": "fk_paymentinformation_to_memvers information ",
-        "visible": true,
-        "id": "ceefeeb6-900d-4392-8564-9554f0b498f1"
+        "id": "20954cc1-228c-4e05-8bbe-72510f0e8f9d"
       }
     ]
   }
