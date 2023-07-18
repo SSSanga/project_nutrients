@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -737,
-    "scrollLeft": 0,
-    "zoomLevel": 1,
+    "scrollTop": -682,
+    "scrollLeft": -240,
+    "zoomLevel": 0.9,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -613,10 +613,10 @@
           }
         ],
         "ui": {
-          "active": true,
+          "active": false,
           "left": 0,
           "top": 745,
-          "zIndex": 18,
+          "zIndex": 32,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1859,10 +1859,10 @@
           }
         ],
         "ui": {
-          "active": false,
-          "left": 317,
-          "top": 1005.5,
-          "zIndex": 8,
+          "active": true,
+          "left": 325.8888,
+          "top": 1016.611,
+          "zIndex": 90,
           "widthName": 137.0654296875,
           "widthComment": 60
         },
@@ -1912,8 +1912,8 @@
           "columnIds": [
             "87092dcc-18d2-48a5-a0aa-371db1c514c5"
           ],
-          "x": 696.5218912760416,
-          "y": 1005.5,
+          "x": 705.4106912760416,
+          "y": 1016.611,
           "direction": "top"
         },
         "end": {
@@ -1964,8 +1964,8 @@
           "columnIds": [
             "87092dcc-18d2-48a5-a0aa-371db1c514c5"
           ],
-          "x": 544.713134765625,
-          "y": 1341,
+          "x": 553.601934765625,
+          "y": 1352.1109999999999,
           "direction": "bottom"
         },
         "end": {
@@ -1999,8 +1999,8 @@
           "columnIds": [
             "a8e3cbca-1e87-4931-9ecb-799386b3ea43"
           ],
-          "x": 544.713134765625,
-          "y": 1005.5,
+          "x": 553.601934765625,
+          "y": 1016.611,
           "direction": "top"
         },
         "constraintName": "",
@@ -2025,8 +2025,8 @@
           "columnIds": [
             "286694af-f6b3-40cc-805b-e18562ec6dc2"
           ],
-          "x": 392.90437825520837,
-          "y": 1005.5,
+          "x": 401.7931782552083,
+          "y": 1016.611,
           "direction": "top"
         },
         "constraintName": "",
@@ -2042,8 +2042,8 @@
           "columnIds": [
             "87092dcc-18d2-48a5-a0aa-371db1c514c5"
           ],
-          "x": 772.42626953125,
-          "y": 1173.25,
+          "x": 781.31506953125,
+          "y": 1184.3609999999999,
           "direction": "right"
         },
         "end": {

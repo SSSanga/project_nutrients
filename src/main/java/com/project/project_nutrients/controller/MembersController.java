@@ -45,21 +45,24 @@ public class MembersController {
     // main 화면에서 마이페이지 버튼 누를 때 거쳐가는 controller임/ mypage.jsp로 가기 위한 경로
     @GetMapping("/mypageForm")
     public ModelAndView mypageForm(@RequestParam Map params, ModelAndView modelAndView) {
-        modelAndView.setViewName("/WEB-INF/views/mypage.jsp");
+        modelAndView.setViewName("/WEB-INF/views/project/members/mypage.jsp");
         return  modelAndView;
     }
 
      // main 화면에서 로그인 버튼 누를 때 거쳐가는 controller임/ login.jsp로 가기 위한 경로
     @GetMapping("/loginForm")
     public ModelAndView loginForm(@RequestParam Map params, ModelAndView modelAndView) {
-        modelAndView.setViewName("/WEB-INF/views/login.jsp");
+        modelAndView.setViewName("/WEB-INF/views/project/members/login.jsp");
         return  modelAndView;
     }
    
+
+
+
     // administrator->memberslist.jsp
     @GetMapping("/memberslistForm")
     public ModelAndView memberslistForm(@RequestParam Map params, ModelAndView modelAndView) {
-        modelAndView.setViewName("/WEB-INF/views/memberslist.jsp");
+        modelAndView.setViewName("/WEB-INF/views/project/members/memberslist.jsp");
         return  modelAndView;
         
     }
@@ -79,7 +82,7 @@ public class MembersController {
     // administrator->membersinfo.jsp
     @GetMapping("/membersinfoForm")
     public ModelAndView membersinfoForm(@RequestParam Map params, ModelAndView modelAndView) {
-        modelAndView.setViewName("/WEB-INF/views/membersinfo.jsp");
+        modelAndView.setViewName("/WEB-INF/views/project/members/membersinfo.jsp");
         return  modelAndView;
     
    

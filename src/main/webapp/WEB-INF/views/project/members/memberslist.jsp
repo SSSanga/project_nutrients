@@ -30,42 +30,42 @@
         <td>MEMB_01</td>
         <td>김영수</td>
         <td>kimys</td>
-        <td><button class="btn btn-success" type="submit" formaction="../administrator/membersinfo.html">상세정보</button></td>
+        <td><button class="btn btn-success" type="submit" formaction="/WEB-INF/views/project/members/membersinfo.jsp">상세정보</button></td>
         <td><button class="btn btn-danger" type="submit">삭제</button></td>
     </tr>
     <tr>
         <td>MEMB_02</td>
         <td>이지현</td>
         <td>eejh</td>
-        <td><button class="btn btn-success" type="submit" formaction="/WEB-INF/views/membersinfo.jsp">상세정보</button></td>
+        <td><button class="btn btn-success" type="submit" formaction="/WEB-INF/views/project/members/membersinfo.jsp">상세정보</button></td>
         <td><button class="btn btn-danger" type="submit">삭제</button></td>
     </tr>
     <tr>
         <td>MEMB_03</td>
         <td>박준호</td>
         <td>parkjh</td>
-        <td><button class="btn btn-success" type="submit" formaction="/WEB-INF/views/membersinfo.jsp">상세정보</button></td>
+        <td><button class="btn btn-success" type="submit" formaction="/WEB-INF/views/project/members/membersinfo.jsp">상세정보</button></td>
         <td><button class="btn btn-danger" type="submit">삭제</button></td>
     </tr>
     <tr>
         <td>MEMB_04</td>
         <td>송지은</td>
         <td>songje</td>
-        <td><button class="btn btn-success" type="submit" formaction="/WEB-INF/views/membersinfo.jsp">상세정보</button></td>
+        <td><button class="btn btn-success" type="submit" formaction="/WEB-INF/views/project/members/membersinfo.jsp">상세정보</button></td>
         <td><button class="btn btn-danger" type="submit">삭제</button></td>
     </tr>
     <tr>
         <td>MEMB_05</td>
         <td>최민준</td>
         <td>choimj</td>
-        <td><button class="btn btn-success" type="submit" formaction="/WEB-INF/views/membersinfo.jsp">상세정보</button></td>
+        <td><button class="btn btn-success" type="submit" formaction="/WEB-INF/views/project/members/membersinfo.jsp">상세정보</button></td>
         <td><button class="btn btn-danger" type="submit">삭제</button></td>
     </tr>
     <tr>
       <td>0000</td>
       <td>0000</td>
       <td>0000</td>
-      <td><button class="btn btn-success" type="submit" formaction="/WEB-INF/views/membersinfo.jsp">상세정보</button></td>
+      <td><button class="btn btn-success" type="submit" formaction="/WEB-INF/views/project/members/membersinfo.jsp">상세정보</button></td>
       <td><button class="btn btn-danger" type="submit">삭제</button></td>
   </tr>
 </table>

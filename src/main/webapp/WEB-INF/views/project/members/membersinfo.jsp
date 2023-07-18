@@ -72,7 +72,7 @@
                         <label for="paymentInfo">지불 정보:</label>
                         <input class="form-control" type="text" id="paymentInformation" name="PAYMENTINFORMATION" value="resultget(PAYM)">
                     </div>
-                    <button type="submint" class="btn btn-success mt-3" value="memberslist" formaction="/WEB-INF/views/memberslist.jsp">돌아가기</button>
+                    <button type="submint" class="btn btn-success mt-3" value="memberslist" formaction="/WEB-INF/views/project/members/memberslist.jsp">돌아가기</button>
                 </form>
             </div>
         </div>
