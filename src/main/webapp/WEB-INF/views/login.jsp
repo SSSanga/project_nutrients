@@ -18,7 +18,7 @@
   <div class="d-flex text-center align-items-center justify-content-center vh-100">  
   <div class="container">
         <main class="form-signin w-50 m-auto">
-            <form action=" /WEB-INF/views/mainpage.jsp">
+            <form action="/WEB-INF/views/mainpage.jsp">
               
                 <img class="mb-4" src="/images/drug_img.png" alt="" width="72" height="57">
                 <h1 class="h3 mb-3 fw-normal">Please sign in</h1>

@@ -61,8 +61,19 @@ public class MembersController {
     public ModelAndView memberslistForm(@RequestParam Map params, ModelAndView modelAndView) {
         modelAndView.setViewName("/WEB-INF/views/memberslist.jsp");
         return  modelAndView;
+        // 삭제 delete 추가하기 
+    }
+
+    // administrator->membersinfo.jsp
+    @GetMapping("/membersinfoForm")
+    public ModelAndView membersinfoForm(@RequestParam Map params, ModelAndView modelAndView) {
+        modelAndView.setViewName("/WEB-INF/views/membersinfo.jsp");
+        return  modelAndView;
+    
+   
     }
     
+   
 
 
 }

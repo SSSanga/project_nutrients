@@ -29,7 +29,6 @@
                     <img src="/images/drug_img.png" alt="" width="200" height="150">
                 </a>
             </div>
-
             <!-- Navigation Links -->
             <form class="d-flex" method="">
                 <div class="d-flex">
@@ -37,11 +36,11 @@
                         <ul class="navbar-nav">
                             <li class="nav-item">
                                 <button id="aboutButton" class="nav-link btn btn-none"
-                                formaction="/about.jsp">About</button>
-                             </li>
+                                    formaction="/about.jsp">About</button>
+                            </li>
                             <li class="nav-item">
                                 <button id="reviewButton" class="nav-link btn btn-none"
-                                formaction="/supp/wholelist">List</button>
+                                    formaction="/supp/wholelist">List</button>
                             </li>
                             <li class="nav-item">
                                 <button id="reviewButton" class="nav-link btn btn-none"
@@ -78,7 +77,8 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="/example.jsp" style="font-size: 20px;">로그아웃</a></li>
+                            <li><a class="dropdown-item" href="/example.jsp" style="font-size: 20px;">로그아웃</a>
+                            </li>
                         </ul>
                     </div>
 
@@ -89,8 +89,9 @@
                     <button class="btn btn-outline-secondary me-4" onclick="decreaseSize()"
                         style="font-size: 20px;">-</button>
                 </div>
+                </form>
         </nav>
-    </form>
+
         <!-- Screen adjust functions -->
         <script>
             var zoom = 1;
