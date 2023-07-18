@@ -21,22 +21,22 @@
                 border-color: white;
             }
         </style>
-
-        <nav class="navbar navbar-expand justify-content-between">
-            <!-- Brand image -->
-            <div class="navbar-brand justify-content-center ms-4">
-                <a href="/project/mainpage.jsp">
-                    <img src="/images/drug_img.png" alt="" width="200" height="150">
-                </a>
-            </div>
-            <!-- Navigation Links -->
-            <form class="d-flex" method="">
+        <form class="d-flex" action="" method="">
+            <nav class="navbar navbar-expand justify-content-between">
+                <!-- Brand image -->
+                <div class="navbar-brand justify-content-center ms-4">
+                    <button id="aboutButton" class="nav-link btn btn-none" formaction="/main/main">
+                        <img src="/images/drug_img.png" alt="" width="200" height="150">
+                    </button>
+                </div>
+                <!-- Navigation Links -->
+                <!-- <form class="d-flex" method=""> -->
                 <div class="d-flex">
                     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
                                 <button id="aboutButton" class="nav-link btn btn-none"
-                                    formaction="/about.jsp">About</button>
+                                    formaction="/about">About</button>
                             </li>
                             <li class="nav-item">
                                 <button id="reviewButton" class="nav-link btn btn-none"
@@ -80,6 +80,7 @@
                             <li><a class="dropdown-item" href="/example.jsp" style="font-size: 20px;">로그아웃</a>
                             </li>
                         </ul>
+                        </button>
                     </div>
 
                     <!-- Screen adjust buttons -->
@@ -89,8 +90,8 @@
                     <button class="btn btn-outline-secondary me-4" onclick="decreaseSize()"
                         style="font-size: 20px;">-</button>
                 </div>
-                </form>
-        </nav>
+            </nav>
+        </form>
 
         <!-- Screen adjust functions -->
         <script>
