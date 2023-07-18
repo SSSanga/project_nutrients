@@ -28,9 +28,9 @@ import com.project.project_nutrients.service.MembersService;
 public class MembersController {
     @PostMapping("/insertAndSelectSearch")
     public ModelAndView insertAndSelectSearch(@RequestParam Map params, ModelAndView modelAndView) {
-        Object result = MembersService.insertAndSelectSearch(params);
+        // Object result = MembersService.insertAndSelectSearch(params);
         modelAndView.addObject("params", params);
-        modelAndView.addObject("result", result);
+        // modelAndView.addObject("result", result);
 
         modelAndView.setViewName("/WEB-INF/views/example.jsp");
         return modelAndView;
