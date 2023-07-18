@@ -19,8 +19,6 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.UUID;
 
 
-
-
 @Controller
 @RequestMapping("/members")
 
@@ -33,7 +31,6 @@ public class MembersController {
 //         Object result = membersService.insertAndSelectSearch(params);
 //         modelAndView.addObject("params", params);
 //         modelAndView.addObject("result", result);
-
 //         modelAndView.setViewName("/WEB-INF/views/example.jsp");
 //         return modelAndView;
 // }

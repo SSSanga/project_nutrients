@@ -31,6 +31,8 @@
         </div>
 
         <!-- Navigation Links -->
+        <form class="d-flex" action="" method="">
+            <div class="d-flex">
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -40,24 +42,23 @@
                     <a class="nav-link" href="/administrator/wholelist.html">List</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/loginlist/reviews.html">Reviews</a>
+                    <button id="reviewButton" class="nav-link btn btn-none" formaction="/reviews/reviewlist">Reviews</button>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/loginlist/contacts.html">Contacts</a>
                 </li>
             </ul>
         </div>
+    </div>
 
         <!-- Search bar -->
-        <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search"
-                style="font-size: 20px;">
-            <button class="btn btn-outline-success" type="submit" formaction="/nutrientlist/searchresult.html"
-                style="font-size: 20px; background-color: white;"><i class="fas fa-search"></i></button>
-        </form>
+
+        <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search"
+            style="font-size: 20px;">
+        <button class="btn btn-outline-success" type="submit" formaction="/nutrientlist/searchresult.html"
+            style="font-size: 20px; background-color: white;"><i class="fas fa-search"></i></button>
 
         <!-- User management dropdown -->
-        <form action="" method="">
         <div class="d-flex align-items-center">
             <div class="dropdown">
                 <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
