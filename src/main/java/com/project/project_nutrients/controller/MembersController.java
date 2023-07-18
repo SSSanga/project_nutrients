@@ -22,7 +22,6 @@ import java.util.UUID;
 @Controller
 @RequestMapping("/members")
 
-
 public class MembersController {
 //     @PostMapping("/insertAndSelectSearch")
 //     public ModelAndView insertAndSelectSearch(@RequestParam Map params, ModelAndView modelAndView) {
@@ -30,6 +29,14 @@ public class MembersController {
 //         modelAndView.addObject("params", params);
 //         modelAndView.addObject("result", result);
 
+    // @Autowired
+    //  MembersService membersService;
+
+//     @PostMapping("/insertAndSelectSearch")
+//     public ModelAndView insertAndSelectSearch(@RequestParam Map params, ModelAndView modelAndView) {
+//         Object result = membersService.insertAndSelectSearch(params);
+//         modelAndView.addObject("params", params);
+//         modelAndView.addObject("result", result);
 //         modelAndView.setViewName("/WEB-INF/views/example.jsp");
 //         return modelAndView;
 // }
@@ -39,8 +46,4 @@ public class MembersController {
         modelAndView.setViewName("/WEB-INF/views/project/signup.jsp");
         return  modelAndView;
     }
-    
-
-
-
 }
