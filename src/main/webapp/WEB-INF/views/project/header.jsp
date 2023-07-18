@@ -47,7 +47,8 @@
                                     formaction="/reviews/reviewlist">Reviews</button>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/loginlist/contacts.html">Contacts</a>
+                                <button id="contactsButton" class="nav-link btn btn-none"
+                                    formaction="/contacts/contactslist">Contacts</button>
                             </li>
                         </ul>
                     </div>
