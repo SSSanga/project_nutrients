@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -248,
-    "scrollLeft": -732,
+    "scrollTop": -367,
+    "scrollLeft": -911,
     "zoomLevel": 1,
     "show": {
       "tableComment": true,
@@ -97,7 +97,7 @@
           "active": false,
           "left": 583,
           "top": 288,
-          "zIndex": 72,
+          "zIndex": 10,
           "widthName": 90.84814453125,
           "widthComment": 67
         },
@@ -159,7 +159,7 @@
           "active": false,
           "left": 491,
           "top": 492,
-          "zIndex": 71,
+          "zIndex": 9,
           "widthName": 60,
           "widthComment": 60
         },
@@ -221,7 +221,7 @@
           "active": false,
           "left": 1571.3212890625,
           "top": 67,
-          "zIndex": 54,
+          "zIndex": 2,
           "widthName": 86.5,
           "widthComment": 60
         },
@@ -283,7 +283,7 @@
           "active": false,
           "left": 1046,
           "top": 2,
-          "zIndex": 76,
+          "zIndex": 11,
           "widthName": 60,
           "widthComment": 70.61181640625
         },
@@ -345,7 +345,7 @@
           "active": false,
           "left": 36,
           "top": 601,
-          "zIndex": 67,
+          "zIndex": 6,
           "widthName": 60,
           "widthComment": 60
         },
@@ -407,7 +407,7 @@
           "active": false,
           "left": 1502.6968,
           "top": 1004,
-          "zIndex": 57,
+          "zIndex": 4,
           "widthName": 91.5654296875,
           "widthComment": 60
         },
@@ -469,7 +469,7 @@
           "active": false,
           "left": 1556,
           "top": 378,
-          "zIndex": 55,
+          "zIndex": 3,
           "widthName": 83.630859375,
           "widthComment": 120
         },
@@ -531,7 +531,7 @@
           "active": false,
           "left": 1429,
           "top": 800,
-          "zIndex": 45,
+          "zIndex": 1,
           "widthName": 74.97265625,
           "widthComment": 96.61181640625
         },
@@ -616,7 +616,7 @@
           "active": false,
           "left": 0,
           "top": 745,
-          "zIndex": 68,
+          "zIndex": 7,
           "widthName": 60,
           "widthComment": 60
         },
@@ -701,7 +701,7 @@
           "active": false,
           "left": 1038,
           "top": 207.5,
-          "zIndex": 60,
+          "zIndex": 5,
           "widthName": 72.08447265625,
           "widthComment": 83.61181640625
         },
@@ -737,7 +737,7 @@
           },
           {
             "id": "1fe4c36b-5910-44d1-8c7c-87cd1121a406",
-            "name": "",
+            "name": "WRITING_DATE",
             "comment": "작성일자",
             "dataType": "TIMESTAMP",
             "default": "",
@@ -752,7 +752,7 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 60,
+              "widthName": 99.2587890625,
               "widthComment": 60,
               "widthDataType": 76.87060546875,
               "widthDefault": 60
@@ -855,7 +855,7 @@
           "active": false,
           "left": 857,
           "top": 783.5,
-          "zIndex": 70,
+          "zIndex": 12,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1003,13 +1003,36 @@
               "widthDataType": 87.71875,
               "widthDefault": 60
             }
+          },
+          {
+            "name": "LINK",
+            "comment": "링크",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "95908116-6a71-4626-8bea-e185940b56e0"
           }
         ],
         "ui": {
           "active": false,
-          "left": 1094,
-          "top": 570.5,
-          "zIndex": 59,
+          "left": 1081,
+          "top": 519.5,
+          "zIndex": 16,
           "widthName": 80.03173828125,
           "widthComment": 70.61181640625
         },
@@ -1045,7 +1068,7 @@
           },
           {
             "id": "a03ffbfc-d742-47c3-b645-8088e96a1c3b",
-            "name": "",
+            "name": "WRITING_DATE",
             "comment": "작성일자",
             "dataType": "TIMESTAMP",
             "default": "",
@@ -1060,7 +1083,7 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 60,
+              "widthName": 99.2587890625,
               "widthComment": 60,
               "widthDataType": 76.87060546875,
               "widthDefault": 60
@@ -1186,7 +1209,7 @@
           "active": false,
           "left": 317,
           "top": 1480.5,
-          "zIndex": 73,
+          "zIndex": 13,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1340,7 +1363,7 @@
             "name": "SYSTEM_CODE_YN",
             "comment": "초기 시스템 코드 여부",
             "dataType": "varchar(40)",
-            "default": "N",
+            "default": "",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
@@ -1474,6 +1497,29 @@
             }
           },
           {
+            "name": "SEX_ID",
+            "comment": "성별_ID",
+            "dataType": "varchar(40)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 68.46630859375,
+              "widthDefault": 60
+            },
+            "id": "d0da01e1-c6e2-46a7-adbd-a334be6568a5"
+          },
+          {
             "id": "0842d5b1-17b9-48fd-8c26-e4fcf819f7bf",
             "name": "PARENT_COMMON_CODE_ID",
             "comment": "상위 공통 코드 ID",
@@ -1501,7 +1547,7 @@
           "active": false,
           "left": 839,
           "top": 1255.5,
-          "zIndex": 74,
+          "zIndex": 14,
           "widthName": 116.1181640625,
           "widthComment": 60
         },
@@ -1816,7 +1862,7 @@
           "active": false,
           "left": 317,
           "top": 1005.5,
-          "zIndex": 69,
+          "zIndex": 8,
           "widthName": 137.0654296875,
           "widthComment": 60
         },
@@ -2022,18 +2068,18 @@
           "columnIds": [
             "2bab95e4-591b-4498-9eb8-2ecc54f02a94"
           ],
-          "x": 1094,
-          "y": 666.5,
-          "direction": "left"
+          "x": 1187.5694580078125,
+          "y": 732,
+          "direction": "bottom"
         },
         "end": {
           "tableId": "79908f30-595d-4c6f-a099-2979daad32ed",
           "columnIds": [
             "f4ace1b7-7d43-42f6-ba4e-b73ca31c715e"
           ],
-          "x": 1062.9248046875,
-          "y": 783.5,
-          "direction": "top"
+          "x": 1279.4375,
+          "y": 879.5,
+          "direction": "right"
         },
         "constraintName": "",
         "visible": true,
@@ -2048,8 +2094,8 @@
           "columnIds": [
             "2bab95e4-591b-4498-9eb8-2ecc54f02a94"
           ],
-          "x": 1520.27783203125,
-          "y": 666.5,
+          "x": 1507.27783203125,
+          "y": 625.75,
           "direction": "right"
         },
         "end": {
@@ -2100,8 +2146,8 @@
           "columnIds": [
             "2bab95e4-591b-4498-9eb8-2ecc54f02a94"
           ],
-          "x": 1307.138916015625,
-          "y": 570.5,
+          "x": 1294.138916015625,
+          "y": 519.5,
           "direction": "top"
         },
         "end": {
@@ -2152,8 +2198,8 @@
           "columnIds": [
             "2bab95e4-591b-4498-9eb8-2ecc54f02a94"
           ],
-          "x": 1307.138916015625,
-          "y": 762.5,
+          "x": 1400.7083740234375,
+          "y": 732,
           "direction": "bottom"
         },
         "end": {
