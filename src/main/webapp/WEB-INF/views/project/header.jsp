@@ -55,10 +55,10 @@
 
                 <!-- Search bar -->
 
-                <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search"
-                    style="font-size: 10px; width:400px;">
-                <button class="btn btn-outline-success" type="submit" formaction="/search"
-                    style="font-size: 10px; background-color: white;"><i class="fas fa-search"></i>검색</button>
+                <input class="form-control me-2 mt-auto mb-auto" type="search" placeholder="Search..." aria-label="Search"
+                    style="font-size: 10px; width:400px; height: 50px;">
+                <button class="btn btn-outline-success mt-auto mb-auto" type="submit" formaction="/search"
+                    style="font-size: 10px; background-color: white; height: 50px;"><i class="fas fa-search"></i>검색</button>
 
                 <!-- User management dropdown -->
                 <div class="d-flex align-items-center">
