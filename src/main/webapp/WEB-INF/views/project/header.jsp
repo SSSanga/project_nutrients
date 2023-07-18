@@ -47,7 +47,8 @@
                                     formaction="/reviews/reviewlist">Reviews</button>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/loginlist/contacts.html">Contacts</a>
+                                <button id="contactsButton" class="nav-link btn btn-none"
+                                    formaction="/contacts/contactslist">Contacts</button>
                             </li>
                         </ul>
                     </div>
@@ -77,7 +78,7 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="/example.jsp" style="font-size: 20px;">로그아웃</a>
+                            <li><button id="singupButton" class="dropdown-item" formaction="/main/main" style="font-size: 20px;">로그아웃</button>
                             </li>
                         </ul>
                         </button>
