@@ -25,7 +25,7 @@ public class SearchController {
 
     @GetMapping("")
     public ModelAndView listadd(ModelAndView modelAndView) {
-        modelAndView.setViewName("/WEB-INF/views/searchresult.jsp");
+        modelAndView.setViewName("/WEB-INF/views/project/supplist/searchresult.jsp");
         return modelAndView;
     }
 }
