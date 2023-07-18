@@ -38,7 +38,7 @@ public class MembersController {
     // main 화면에서 회원가입 버튼 누를 때 거쳐가는 controller임/ signup.jsp로 가기 위한 경로
     @GetMapping("/signupForm")
     public ModelAndView signupForm(@RequestParam Map params, ModelAndView modelAndView) {
-        modelAndView.setViewName("/WEB-INF/views/project/signup.jsp");
+        modelAndView.setViewName("/WEB-INF/views/project/members/signup.jsp");
         return  modelAndView;
     }
 

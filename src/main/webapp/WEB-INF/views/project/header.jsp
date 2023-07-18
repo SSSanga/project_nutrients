@@ -77,7 +77,7 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="/example.jsp" style="font-size: 20px;">로그아웃</a>
+                            <li><button id="singupButton" class="dropdown-item" formaction="/main/main" style="font-size: 20px;">로그아웃</button>
                             </li>
                         </ul>
                         </button>
