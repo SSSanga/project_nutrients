@@ -613,7 +613,7 @@
           }
         ],
         "ui": {
-          "active": false,
+          "active": true,
           "left": 0,
           "top": 745,
           "zIndex": 18,
