@@ -25,8 +25,8 @@ import java.util.UUID;
 @RequestMapping("/members")
 
 public class MembersController {
-    // @Autowired
-    //  MembersService membersService;
+//     @Autowired
+//      MembersService membersService;
 
 //     @PostMapping("/insertAndSelectSearch")
 //     public ModelAndView insertAndSelectSearch(@RequestParam Map params, ModelAndView modelAndView) {
@@ -37,13 +37,35 @@ public class MembersController {
 //         modelAndView.setViewName("/WEB-INF/views/example.jsp");
 //         return modelAndView;
 // }
+
     // main 화면에서 회원가입 버튼 누를 때 거쳐가는 controller임/ signup.jsp로 가기 위한 경로
     @GetMapping("/signupForm")
-    public ModelAndView insertForm(@RequestParam Map params, ModelAndView modelAndView) {
+    public ModelAndView signupForm(@RequestParam Map params, ModelAndView modelAndView) {
         modelAndView.setViewName("/WEB-INF/views/project/signup.jsp");
         return  modelAndView;
     }
 
+    // main 화면에서 마이페이지 버튼 누를 때 거쳐가는 controller임/ mypage.jsp로 가기 위한 경로
+    @GetMapping("/mypageForm")
+    public ModelAndView mypageForm(@RequestParam Map params, ModelAndView modelAndView) {
+        modelAndView.setViewName("/WEB-INF/views/mypage.jsp");
+        return  modelAndView;
+    }
+
+     // main 화면에서 로그인 버튼 누를 때 거쳐가는 controller임/ login.jsp로 가기 위한 경로
+    @GetMapping("/loginForm")
+    public ModelAndView loginForm(@RequestParam Map params, ModelAndView modelAndView) {
+        modelAndView.setViewName("/WEB-INF/views/login.jsp");
+        return  modelAndView;
+    }
    
- 
+    // administrator->memberslist.jsp
+    @GetMapping("/memberslistForm")
+    public ModelAndView memberslistForm(@RequestParam Map params, ModelAndView modelAndView) {
+        modelAndView.setViewName("/WEB-INF/views/memberslist.jsp");
+        return  modelAndView;
+    }
+    
+
+
 }
