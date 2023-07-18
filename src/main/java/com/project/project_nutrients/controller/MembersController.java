@@ -19,28 +19,31 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.UUID;
 
 
-import com.project.project_nutrients.service.MembersService;
+
 
 @Controller
 @RequestMapping("/members")
 
 public class MembersController {
-    @Autowired
-     MembersService membersService;
+    // @Autowired
+    //  MembersService membersService;
 
-    @PostMapping("/insertAndSelectSearch")
-    public ModelAndView insertAndSelectSearch(@RequestParam Map params, ModelAndView modelAndView) {
-        Object result = membersService.insertAndSelectSearch(params);
-        modelAndView.addObject("params", params);
-        modelAndView.addObject("result", result);
+//     @PostMapping("/insertAndSelectSearch")
+//     public ModelAndView insertAndSelectSearch(@RequestParam Map params, ModelAndView modelAndView) {
+//         Object result = membersService.insertAndSelectSearch(params);
+//         modelAndView.addObject("params", params);
+//         modelAndView.addObject("result", result);
 
-        modelAndView.setViewName("/WEB-INF/views/example.jsp");
-        return modelAndView;
-}
+//         modelAndView.setViewName("/WEB-INF/views/example.jsp");
+//         return modelAndView;
+// }
     // main 화면에서 회원가입 버튼 누를 때 거쳐가는 controller임/ signup.jsp로 가기 위한 경로
     @GetMapping("/signupForm")
     public ModelAndView insertForm(@RequestParam Map params, ModelAndView modelAndView) {
         modelAndView.setViewName("/WEB-INF/views/project/signup.jsp");
         return  modelAndView;
     }
+
+   
+ 
 }

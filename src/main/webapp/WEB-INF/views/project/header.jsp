@@ -65,7 +65,7 @@
                     회원관리
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <li><a class="dropdown-item" href="/update.jsp" style="font-size: 20px;">마이페이지</a></li>
+                    <li><a class="dropdown-item" formaction="/members/mypage.jsp" style="font-size: 20px;">마이페이지</a></li>
                     <li><a class="dropdown-item" href="/example.jsp" style="font-size: 20px;">로그인</a></li>
                     <li><button id="singupButton" class="dropdown-item" formaction="/members/signupForm" style="font-size: 20px;">회원가입</button></li>
                     <li>
