@@ -61,9 +61,21 @@ public class MembersController {
     public ModelAndView memberslistForm(@RequestParam Map params, ModelAndView modelAndView) {
         modelAndView.setViewName("/WEB-INF/views/memberslist.jsp");
         return  modelAndView;
-        // 삭제 delete 추가하기 
+        
     }
-
+    //  memberslist.jsp 삭제 delete 추가하기   
+    //  왠지 회원탈퇴? 악플삭제? admin이 관리
+    //  @PostMapping("/deleteAndSelectSearch/{UNIQUE_ID}")
+    //  public ModelAndView deleteAndSelectSearch(@PathVariable String UNIQUE_ID
+    //                      , @RequestParam Map params, ModelAndView modelAndView) {
+    //      Object result = mainService.deleteAndSelectSearch(UNIQUE_ID, params);
+    //      modelAndView.addObject("params", params);
+    //      modelAndView.addObject("result", result);
+ 
+    //      modelAndView.setViewName("/WEB-INF/views/example.jsp");
+    //      return modelAndView;
+    //  }
+ 
     // administrator->membersinfo.jsp
     @GetMapping("/membersinfoForm")
     public ModelAndView membersinfoForm(@RequestParam Map params, ModelAndView modelAndView) {
