@@ -28,7 +28,6 @@ public class MainController {
 
     @GetMapping({"/", "/home", "/main"})
     public ModelAndView main(ModelAndView modelAndView){
-        modelAndView.addObject("name", "Yojulab!");
         modelAndView.setViewName("/WEB-INF/views/mainpage.jsp");
         return modelAndView;
     }
