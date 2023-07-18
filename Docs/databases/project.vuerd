@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 3000,
     "height": 3000,
-    "scrollTop": -647,
-    "scrollLeft": -1,
+    "scrollTop": -959,
+    "scrollLeft": -1209,
     "zoomLevel": 1,
     "show": {
       "tableComment": true,
@@ -1033,13 +1033,36 @@
               "widthDataType": 87.71875,
               "widthDefault": 60
             }
+          },
+          {
+            "name": "LOCATION",
+            "comment": "이미지 위치",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 67.48876953125,
+              "widthComment": 70.61181640625,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "52f78450-54a1-4514-947e-a084c819342f"
           }
         ],
         "ui": {
-          "active": false,
+          "active": true,
           "left": 1831.9366,
           "top": 1322.5081,
-          "zIndex": 283,
+          "zIndex": 325,
           "widthName": 80.03173828125,
           "widthComment": 70.61181640625
         },
@@ -1935,7 +1958,7 @@
             "f88d27e0-ba0b-4997-b722-a396e6d10038"
           ],
           "x": 1831.9366,
-          "y": 1408.2581,
+          "y": 1418.5081,
           "direction": "left"
         },
         "end": {
@@ -1960,7 +1983,7 @@
           "columnIds": [
             "f88d27e0-ba0b-4997-b722-a396e6d10038"
           ],
-          "x": 2040.384598046875,
+          "x": 2045.075516015625,
           "y": 1322.5081,
           "direction": "top"
         },
@@ -2064,8 +2087,8 @@
           "columnIds": [
             "f88d27e0-ba0b-4997-b722-a396e6d10038"
           ],
-          "x": 2248.83259609375,
-          "y": 1408.2581,
+          "x": 2258.21443203125,
+          "y": 1418.5081,
           "direction": "right"
         },
         "end": {
@@ -2116,8 +2139,8 @@
           "columnIds": [
             "f88d27e0-ba0b-4997-b722-a396e6d10038"
           ],
-          "x": 2040.384598046875,
-          "y": 1494.0081,
+          "x": 2045.075516015625,
+          "y": 1514.5081,
           "direction": "bottom"
         },
         "end": {
