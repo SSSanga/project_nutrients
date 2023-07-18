@@ -23,7 +23,7 @@ import java.util.UUID;
 public class RecommendationController {
     @GetMapping("/effectflag")
     public ModelAndView recommendation (ModelAndView modelAndView){
-        modelAndView.setViewName("/WEB-INF/views/recommendation.jsp");
+        modelAndView.setViewName("/WEB-INF/views/project/supplist/recommendation.jsp");
         return modelAndView;
     }
     

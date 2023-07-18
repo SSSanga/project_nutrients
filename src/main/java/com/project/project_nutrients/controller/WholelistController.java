@@ -22,13 +22,13 @@ import java.util.UUID;
 public class WholelistController {
     @GetMapping("/wholelist")
     public ModelAndView wholelist (ModelAndView modelAndView){
-        modelAndView.setViewName("/WEB-INF/views/wholelist.jsp");
+        modelAndView.setViewName("/WEB-INF/views/project/supplist/wholelist.jsp");
         return modelAndView;
     }
 
         @GetMapping("/listadd")
     public ModelAndView listadd (ModelAndView modelAndView){
-        modelAndView.setViewName("/WEB-INF/views/listadd.jsp");
+        modelAndView.setViewName("/WEB-INF/views/project/supplist/listadd.jsp");
         return modelAndView;}
         
 

@@ -3,7 +3,7 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -455,
+    "scrollTop": -737,
     "scrollLeft": 0,
     "zoomLevel": 1,
     "show": {
@@ -616,7 +616,7 @@
           "active": true,
           "left": 0,
           "top": 745,
-          "zIndex": 32,
+          "zIndex": 18,
           "widthName": 60,
           "widthComment": 60
         },

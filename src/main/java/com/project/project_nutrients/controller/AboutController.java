@@ -1,5 +1,4 @@
 package com.project.project_nutrients.controller;
-
 import java.util.Map;
 import java.util.UUID;
 
@@ -19,13 +18,14 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.UUID;
 
 @Controller
-@RequestMapping("/search")
+@RequestMapping("/about")
 
-public class SearchController {
-
+public class AboutController {
     @GetMapping("")
-    public ModelAndView listadd(ModelAndView modelAndView) {
-        modelAndView.setViewName("/WEB-INF/views/project/supplist/searchresult.jsp");
+    public ModelAndView about (ModelAndView modelAndView){
+        modelAndView.setViewName("/WEB-INF/views/about.jsp");
         return modelAndView;
     }
+
+    
 }

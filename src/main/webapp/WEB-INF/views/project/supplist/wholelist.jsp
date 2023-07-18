@@ -126,15 +126,12 @@
 
 <nav aria-label="Page navigation">
   <ul class="pagination">
-      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-      <% for (int i= paginations.getBlockStart(); i <= paginations.getBlockEnd() ; i=i+1){ %>
-          <li class="page-item"><a class="page-link"
-                  href="</a></li>
-
-              
-              <li class="page-item"><a class="page-link" href="/carInfor/map/selectSearch?currentPage=<%= paginations.getNextPage() %>">Next</a>
-              </li>
-  </ul>
+    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+</ul>
 <div class="container-fluid">
   <div class="row justify-content-start align-items-center">
     <div class="col-3">
