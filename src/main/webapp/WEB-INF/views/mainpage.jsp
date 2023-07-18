@@ -80,20 +80,20 @@
                 <div class="row p-2">
                     <div class="col-md-3">
                         <button type="submit" class="w-100 btn btn-lg btn-outline"
-                            formaction="/administrator/livercare.html">간 기능개선</button>
+                            formaction="/recommendation/effectflag">간 기능개선</button>
                     </div>
                     <div class="col-md-3">
                         <button type="submit" class="w-100 btn btn-lg btn-outline"
-                            formaction="/administrator/recovery.html">피로회복</button>
+                            formaction="/recommendation/effectflag">피로회복</button>
                     </div>
                     <div class="col-md-3">
                         <button type="submit" class="w-100 btn btn-lg btn-outline"
-                            formaction="/administrator/eyes.html">눈 기능
+                            formaction="/recommendation/effectflag">눈 기능
                             향상</button>
                     </div>
                     <div class="col-md-3">
                         <button type="submit" class="w-100 btn btn-lg btn-outline"
-                            formaction="/administrator/cholesterol.html">콜레스테롤 개선</button>
+                            formaction="/recommendation/effectflag">콜레스테롤 개선</button>
                     </div>
                 </div>
             </form>
@@ -173,11 +173,9 @@
 
     <hr>
 
-    <!-- Footer -->
-    <%@ include file="/WEB-INF/views/project/footer.jsp" %>
-
-    <!-- <script src="../js/carinforwithfunction.js"></script> -->
-    <!-- <script src="../js/carinforwithrest.js"></script> -->
+   <!-- Footer -->
+   <%@ include file="/WEB-INF/views/project/footer.jsp" %>
+   
 </body>
 
 </html>

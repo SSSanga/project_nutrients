@@ -1,4 +1,5 @@
 package com.project.project_nutrients.controller;
+
 import java.util.Map;
 import java.util.UUID;
 
@@ -18,20 +19,13 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.UUID;
 
 @Controller
-@RequestMapping("/supp")
-public class WholelistController {
-    @GetMapping("/wholelist")
-    public ModelAndView wholelist (ModelAndView modelAndView){
-        modelAndView.setViewName("/WEB-INF/views/wholelist.jsp");
+@RequestMapping("/search")
+
+public class SearchController {
+
+    @GetMapping("")
+    public ModelAndView listadd(ModelAndView modelAndView) {
+        modelAndView.setViewName("/WEB-INF/views/searchresult.jsp");
         return modelAndView;
     }
-
-        @GetMapping("/listadd")
-    public ModelAndView listadd (ModelAndView modelAndView){
-        modelAndView.setViewName("/WEB-INF/views/listadd.jsp");
-        return modelAndView;}
-        
-
-
-
 }
