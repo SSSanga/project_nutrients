@@ -17,7 +17,7 @@
 
 <div class="container mt-5">
         <div class="card">
-            <div class="card-header text-center" style="font-size: 1.5em;">회원정보 수정</div>
+            <div class="card-header text-center" style="font-size: 1.5em;">회원상세정보</div>
             <div class="card-body">
                 <form action="#">
                     <div class="form-group">
@@ -72,7 +72,7 @@
                         <label for="paymentInfo">지불 정보:</label>
                         <input class="form-control" type="text" id="paymentInformation" name="PAYMENTINFORMATION" value="resultget(PAYM)">
                     </div>
-                    <button type="submint" class="btn btn-success mt-3" value="memberslist" formaction="/WEB-INF/views/project/members/memberslist.jsp">돌아가기</button>
+                    <button type="submint" class="btn btn-success mt-3" value="memberslist" formaction="/members/memberslistForm">돌아가기</button>
                 </form>
             </div>
         </div>
