@@ -30,6 +30,16 @@ public class WholelistController {
     public ModelAndView listadd (ModelAndView modelAndView){
         modelAndView.setViewName("/WEB-INF/views/project/supplist/listadd.jsp");
         return modelAndView;}
+
+             @GetMapping("/insert")
+    public ModelAndView insert (ModelAndView modelAndView){
+        modelAndView.setViewName("/supp/insertandselect");
+        return modelAndView;}
+
+        @GetMapping("/insertandselect")
+    public ModelAndView insertandselect (ModelAndView modelAndView){
+        modelAndView.setViewName("/WEB-INF/views/project/supplist/wholelist.jsp");
+        return modelAndView;}
         
 
 

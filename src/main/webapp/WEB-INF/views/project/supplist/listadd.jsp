@@ -89,7 +89,7 @@
                     <input type="text" id="sideEffect" name="sideEffect" class="form-control" required>
                 </div>
 
-                <button class="btn btn-primary" type="submit" formaction="/supp/wholelist">저장 이거슨 insert?</button>
+                <button class="btn btn-primary" type="submit" formaction="/supp/insert">저장 이거슨 insert?</button>
             </form>
         </div>
         <hr>
