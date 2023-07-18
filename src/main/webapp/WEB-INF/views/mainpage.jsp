@@ -7,52 +7,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nutrient Recommendations Home</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
     <link href="/css/main.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-
-    <style>
-        .nav-link {
-            color: white !important;
-            font-size: 1.33em;
-        }
-
-        #dropdownMenuButton {
-            background-color: green;
-            color: white;
-        }
-
-        .btn-outline-secondary {
-            color: white;
-            border-color: white;
-        }
-    </style>
-
-    <!-- header -->
-    <%@ include file="/WEB-INF/views/project/header.jsp" %>
-
-    <!-- Screen adjust functions -->
-    <script>
-        var zoom = 1;
-
-        function increaseSize() {
-            zoom += 0.1;
-            document.getElementById('zoom-display').innerText = Math.round(zoom * 100) + '%';
-            document.body.style.zoom = zoom;
-        }
-
-        function decreaseSize() {
-            zoom -= 0.1;
-            document.getElementById('zoom-display').innerText = Math.round(zoom * 100) + '%';
-            document.body.style.zoom = zoom;
-        }
-    </script>
-
-
+        <!-- header -->
+        <%@ include file="/WEB-INF/views/project/header.jsp" %>
 
     <style>
         .h3,

@@ -3,7 +3,6 @@
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
-        <link href="/css/main.css" rel="stylesheet" />
 
         <style>
             .nav-link {
@@ -57,24 +56,24 @@
                 <!-- Search bar -->
 
                 <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search"
-                    style="font-size: 20px;">
+                    style="font-size: 10px; width:400px;">
                 <button class="btn btn-outline-success" type="submit" formaction="/search"
-                    style="font-size: 20px; background-color: white;"><i class="fas fa-search"></i>검색</button>
+                    style="font-size: 10px; background-color: white;"><i class="fas fa-search"></i>검색</button>
 
                 <!-- User management dropdown -->
                 <div class="d-flex align-items-center">
                     <div class="dropdown">
-                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
-                            data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 20px;">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                            aria-expanded="false" style="font-size: 20px;">
                             회원관리
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <li><button id="mypageButton" class="dropdown-item" formaction="/members/mypageForm"
-                                    style="font-size: 20px;">마이페이지</button></li>
+                                style="font-size: 20px;">마이페이지</button></li>
                             <li><button id="loginButton" class="dropdown-item" formaction="/members/loginForm"
-                                    style="font-size: 20px;">로그인</button></li>
+                                style="font-size: 20px;">로그인</button></li>
                             <li><button id="singupButton" class="dropdown-item" formaction="/members/signupForm"
-                                    style="font-size: 20px;">회원가입</button></li>
+                                style="font-size: 20px;">회원가입</button></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
