@@ -24,11 +24,13 @@ import com.project.project_nutrients.service.MembersService;
 @Controller
 @RequestMapping("/members")
 
-
 public class MembersController {
+    @Autowired
+     MembersService membersService;
+
     @PostMapping("/insertAndSelectSearch")
     public ModelAndView insertAndSelectSearch(@RequestParam Map params, ModelAndView modelAndView) {
-        Object result = MembersService.insertAndSelectSearch(params);
+        Object result = membersService.insertAndSelectSearch(params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
 
