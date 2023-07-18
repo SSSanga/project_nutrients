@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -682,
-    "scrollLeft": -240,
+    "scrollTop": -201,
+    "scrollLeft": -850,
     "zoomLevel": 0.9,
     "show": {
       "tableComment": true,
@@ -95,9 +95,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 583,
-          "top": 288,
-          "zIndex": 10,
+          "left": 574.1112,
+          "top": 189.1115,
+          "zIndex": 48,
           "widthName": 90.84814453125,
           "widthComment": 67
         },
@@ -157,9 +157,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 491,
-          "top": 492,
-          "zIndex": 9,
+          "left": 522.1117,
+          "top": 433.1111,
+          "zIndex": 52,
           "widthName": 60,
           "widthComment": 60
         },
@@ -282,8 +282,8 @@
         "ui": {
           "active": false,
           "left": 1046,
-          "top": 2,
-          "zIndex": 11,
+          "top": 17.5554,
+          "zIndex": 53,
           "widthName": 60,
           "widthComment": 70.61181640625
         },
@@ -422,7 +422,7 @@
             "id": "73e35a96-2c56-4d4f-ab98-abae63cc08b2",
             "name": "SUPP_ID",
             "comment": "영양제_ID",
-            "dataType": "VARCHAR(50)",
+            "dataType": "VARCHAR(500)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -437,7 +437,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 61.22998046875,
-              "widthDataType": 87.71875,
+              "widthDataType": 94.94873046875,
               "widthDefault": 60
             }
           },
@@ -469,7 +469,7 @@
           "active": false,
           "left": 1556,
           "top": 378,
-          "zIndex": 3,
+          "zIndex": 23,
           "widthName": 83.630859375,
           "widthComment": 120
         },
@@ -484,7 +484,7 @@
             "id": "a51ef1ec-c834-488e-be92-0f3f1c840385",
             "name": "SUPP_ID",
             "comment": "영양제_ID",
-            "dataType": "VARCHAR(50)",
+            "dataType": "VARCHAR(500)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -499,7 +499,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 61.22998046875,
-              "widthDataType": 87.71875,
+              "widthDataType": 94.94873046875,
               "widthDefault": 60
             }
           },
@@ -616,7 +616,7 @@
           "active": false,
           "left": 0,
           "top": 745,
-          "zIndex": 32,
+          "zIndex": 14,
           "widthName": 60,
           "widthComment": 60
         },
@@ -631,7 +631,7 @@
             "id": "f294a0ee-6d7d-4212-980d-a635b728f25a",
             "name": "SUPP_ID",
             "comment": "영양제_ID",
-            "dataType": "VARCHAR(50)",
+            "dataType": "VARCHAR(500)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -646,7 +646,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 61.22998046875,
-              "widthDataType": 87.71875,
+              "widthDataType": 94.94873046875,
               "widthDefault": 60
             }
           },
@@ -808,7 +808,7 @@
             "id": "f4ace1b7-7d43-42f6-ba4e-b73ca31c715e",
             "name": "SUPP_ID",
             "comment": "영양제_ID",
-            "dataType": "VARCHAR(50)",
+            "dataType": "VARCHAR(500)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -823,7 +823,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 61.22998046875,
-              "widthDataType": 87.71875,
+              "widthDataType": 94.94873046875,
               "widthDefault": 60
             }
           },
@@ -855,7 +855,7 @@
           "active": false,
           "left": 857,
           "top": 783.5,
-          "zIndex": 12,
+          "zIndex": 47,
           "widthName": 60,
           "widthComment": 60
         },
@@ -870,7 +870,7 @@
             "id": "2bab95e4-591b-4498-9eb8-2ecc54f02a94",
             "name": "SUPP_ID",
             "comment": "영양제_ID",
-            "dataType": "VARCHAR(50)",
+            "dataType": "VARCHAR(500)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -885,7 +885,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 61.22998046875,
-              "widthDataType": 87.71875,
+              "widthDataType": 94.94873046875,
               "widthDefault": 60
             }
           },
@@ -893,7 +893,7 @@
             "id": "ce51a46c-23bf-4334-bd0e-8f4508c39c5f",
             "name": "PRODUCT",
             "comment": "이름",
-            "dataType": "VARCHAR(50)",
+            "dataType": "VARCHAR(500)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -908,7 +908,7 @@
               "pfk": false,
               "widthName": 66.2763671875,
               "widthComment": 60,
-              "widthDataType": 87.71875,
+              "widthDataType": 94.94873046875,
               "widthDefault": 60
             }
           },
@@ -916,7 +916,7 @@
             "id": "ae38288f-eec4-417c-9ee5-3d9b8e4ca47e",
             "name": "MANUFACTURE",
             "comment": "제조사",
-            "dataType": "VARCHAR(50)",
+            "dataType": "VARCHAR(500)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -931,7 +931,7 @@
               "pfk": false,
               "widthName": 100.947265625,
               "widthComment": 60,
-              "widthDataType": 87.71875,
+              "widthDataType": 94.94873046875,
               "widthDefault": 60
             }
           },
@@ -939,7 +939,7 @@
             "id": "6d152d89-9a29-4762-885b-9a4f12d5611a",
             "name": "DOSAGE",
             "comment": "용량",
-            "dataType": "VARCHAR(50)",
+            "dataType": "VARCHAR(500)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -954,7 +954,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 87.71875,
+              "widthDataType": 94.94873046875,
               "widthDefault": 60
             }
           },
@@ -962,7 +962,7 @@
             "id": "17a9008c-7a8a-49f7-a260-7587b050fd81",
             "name": "FREQUENCY",
             "comment": "복용 주기",
-            "dataType": "VARCHAR(50)",
+            "dataType": "VARCHAR(500)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -977,7 +977,7 @@
               "pfk": false,
               "widthName": 83.6181640625,
               "widthComment": 60,
-              "widthDataType": 87.71875,
+              "widthDataType": 94.94873046875,
               "widthDefault": 60
             }
           },
@@ -985,7 +985,7 @@
             "id": "ae84f8b8-ecbb-4f0e-8c24-2dcc7fad160d",
             "name": "LOCATION",
             "comment": "이미지 위치",
-            "dataType": "VARCHAR(50)",
+            "dataType": "VARCHAR(500)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -1000,14 +1000,14 @@
               "pfk": false,
               "widthName": 67.48876953125,
               "widthComment": 70.61181640625,
-              "widthDataType": 87.71875,
+              "widthDataType": 94.94873046875,
               "widthDefault": 60
             }
           },
           {
             "name": "LINK",
             "comment": "링크",
-            "dataType": "VARCHAR(50)",
+            "dataType": "VARCHAR(500)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -1022,7 +1022,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 87.71875,
+              "widthDataType": 94.94873046875,
               "widthDefault": 60
             },
             "id": "95908116-6a71-4626-8bea-e185940b56e0"
@@ -1032,7 +1032,7 @@
           "active": false,
           "left": 1081,
           "top": 519.5,
-          "zIndex": 15,
+          "zIndex": 46,
           "widthName": 80.03173828125,
           "widthComment": 70.61181640625
         },
@@ -1209,7 +1209,7 @@
           "active": false,
           "left": 317,
           "top": 1480.5,
-          "zIndex": 13,
+          "zIndex": 11,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1547,7 +1547,7 @@
           "active": false,
           "left": 839,
           "top": 1255.5,
-          "zIndex": 14,
+          "zIndex": 12,
           "widthName": 116.1181640625,
           "widthComment": 60
         },
@@ -1859,10 +1859,10 @@
           }
         ],
         "ui": {
-          "active": true,
+          "active": false,
           "left": 325.8888,
           "top": 1016.611,
-          "zIndex": 90,
+          "zIndex": 16,
           "widthName": 137.0654296875,
           "widthComment": 60
         },
@@ -1886,8 +1886,8 @@
           "columnIds": [
             "ad2949b2-1c1f-45b8-9b31-72473a43add6"
           ],
-          "x": 803.368896484375,
-          "y": 398,
+          "x": 794.480096484375,
+          "y": 299.1115,
           "direction": "bottom"
         },
         "end": {
@@ -1895,8 +1895,8 @@
           "columnIds": [
             "0c054e81-5885-4914-bc0a-b34e2e923226"
           ],
-          "x": 754.7138671875,
-          "y": 492,
+          "x": 785.8255671875,
+          "y": 433.1111,
           "direction": "top"
         },
         "constraintName": "",
@@ -1921,8 +1921,8 @@
           "columnIds": [
             "431e2acb-a94f-4a3d-b454-60d9873f867e"
           ],
-          "x": 754.7138671875,
-          "y": 602,
+          "x": 785.8255671875,
+          "y": 543.1111000000001,
           "direction": "bottom"
         },
         "constraintName": "",
@@ -2068,7 +2068,7 @@
           "columnIds": [
             "2bab95e4-591b-4498-9eb8-2ecc54f02a94"
           ],
-          "x": 1187.5694580078125,
+          "x": 1189.376953125,
           "y": 732,
           "direction": "bottom"
         },
@@ -2094,7 +2094,7 @@
           "columnIds": [
             "2bab95e4-591b-4498-9eb8-2ecc54f02a94"
           ],
-          "x": 1507.27783203125,
+          "x": 1514.5078125,
           "y": 625.75,
           "direction": "right"
         },
@@ -2146,7 +2146,7 @@
           "columnIds": [
             "2bab95e4-591b-4498-9eb8-2ecc54f02a94"
           ],
-          "x": 1294.138916015625,
+          "x": 1297.75390625,
           "y": 519.5,
           "direction": "top"
         },
@@ -2173,7 +2173,7 @@
             "73d1f175-089a-493a-82ac-93409a5667db"
           ],
           "x": 1248.671630859375,
-          "y": 112,
+          "y": 127.55539999999999,
           "direction": "bottom"
         },
         "end": {
@@ -2198,7 +2198,7 @@
           "columnIds": [
             "2bab95e4-591b-4498-9eb8-2ecc54f02a94"
           ],
-          "x": 1400.7083740234375,
+          "x": 1406.130859375,
           "y": 732,
           "direction": "bottom"
         },

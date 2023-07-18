@@ -40,17 +40,32 @@
           <tr>
             <th>이름</th>
             <th>제조사</th>
+            <th>키워드</th>
             <th>필요 기대 효과</th>
+            <th>성분1</th>
+            <th>성분2</th>
+            <th>용량</th>
+            <th>제형</th>
+            <th>복용 주기</th>
+            <th>부작용</th>
             <th>상세</th>
           </tr>
       </thead>
       <tbody>
         <form>
         <tr>
+            <td>SUPP_10</td>
+            <td>LIVER_10</td>
             <td>듀오락 간케어</td>
+            <td>(주)쎌바이오텍</td>
             <td>간</td>
             <td>간 건강에 도움을 줄 수 있음, 유산균 증식 및 유해균 억제･배변활동 원활･장 건강에 도움을 줄 수 있음</td>
+            <td>실리마린</td>
+            <td>프로바이오틱스</td>
+            <td>1회 1캡슐</td>
+            <td>Capsule</td>
             <td><button type="submit" formactin="">1일 1회</button></td>
+            
         </tr>
       </form>
         <tr>

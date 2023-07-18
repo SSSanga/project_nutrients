@@ -36,7 +36,7 @@
                         <ul class="navbar-nav">
                             <li class="nav-item">
                                 <button id="aboutButton" class="nav-link btn btn-none"
-                                    formaction="/about">About</button>
+                                    formaction="/supp/about">About</button>
                             </li>
                             <li class="nav-item">
                                 <button id="reviewButton" class="nav-link btn btn-none"
