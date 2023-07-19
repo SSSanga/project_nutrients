@@ -3,15 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-<<<<<<< HEAD
-    "scrollTop": -665,
-    "scrollLeft": 0,
+    "scrollTop": -625,
+    "scrollLeft": -1,
     "zoomLevel": 1,
-=======
-    "scrollTop": -357,
-    "scrollLeft": -133,
-    "zoomLevel": 0.8,
->>>>>>> 7642a5eabb6fb861551ebba814576cb3baa18747
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -510,7 +504,30 @@
             }
           },
           {
-            "id": "1101ea78-bcd3-4c22-991e-8a024a7b9284",
+            "id": "e810bc0e-03bb-4c2d-9ccb-cce6765d4c92",
+            "name": "ALLERGIES",
+            "comment": "알레르기",
+            "dataType": "VARCHAR(500)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 74.25537109375,
+              "widthComment": 60,
+              "widthDataType": 94.94873046875,
+              "widthDefault": 60
+            }
+          },
+          {
+            "id": "9988789f-dc8a-440e-ac67-f84925e30211",
             "name": "HISTORY_ID",
             "comment": "과거력_ID",
             "dataType": "VARCHAR(500)",
@@ -535,9 +552,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 77,
-          "top": 302,
-          "zIndex": 37,
+          "left": 0,
+          "top": 513,
+          "zIndex": 86,
           "widthName": 60,
           "widthComment": 60
         },
@@ -796,7 +813,7 @@
           }
         ],
         "ui": {
-          "active": true,
+          "active": false,
           "left": 34,
           "top": 1218.5,
           "zIndex": 88,
@@ -1911,8 +1928,8 @@
           "columnIds": [
             "9988789f-dc8a-440e-ac67-f84925e30211"
           ],
-          "x": 278.36083984375,
-          "y": 412,
+          "x": 201.36083984375,
+          "y": 643.5,
           "direction": "bottom"
         },
         "end": {
