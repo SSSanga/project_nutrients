@@ -16,12 +16,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.project.project_nutrients.service.MainService;
+import com.project.project_nutrients.service.ReviewsService;
+
 import java.util.UUID;
 
 @Controller
 @RequestMapping("/reviews")
 
 public class ReviewsController {
+    @Autowired
+    ReviewsService reviewsService;
    
     @GetMapping("/reviewlist")
     public ModelAndView reviewlist(@RequestParam Map params, ModelAndView modelAndView) {
@@ -45,5 +51,16 @@ public class ReviewsController {
     public ModelAndView reviewwrite(@RequestParam Map params, ModelAndView modelAndView) {
         modelAndView.setViewName("/WEB-INF/views/project/reviews/reviewwriting.jsp");
         return  modelAndView;
+    }
+
+    //  리뷰테스트용 검색 
+    @GetMapping("/reviewselectSearch")
+    public ModelAndView reviewselectSearch(@RequestParam Map params, ModelAndView modelAndView) {
+        Object result = reviewsService.reviewselectSearch(params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+        
+        modelAndView.setViewName("/WEB-INF/views/project/reviews/reviews.jsp");
+        return modelAndView;
     }
 }

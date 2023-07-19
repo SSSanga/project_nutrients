@@ -32,6 +32,7 @@ public class MainController {
         return modelAndView;
     }
 
+
     // 검색
     @GetMapping("/selectSearch")
     public ModelAndView selectSearch(@RequestParam Map params
@@ -118,4 +119,6 @@ public class MainController {
     public String generateUUID() {
         return UUID.randomUUID().toString();
     }
+
+
 }
