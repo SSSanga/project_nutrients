@@ -44,39 +44,25 @@
                     <label for="manufacturer" class="form-label">제조사:</label>
                     <input type="text" id="manufacturer" name="manufacturer" class="form-control" required>
                 </div>
-                <div class="mb-3">
-                    <label for="keyword" class="form-label">키워드:</label>
-                    <select id="keyword" name="keyword" class="form-select" required>
-                        <option value="" disabled selected>키워드 선택</option>
-                        <option value="eyes">눈</option>
-                        <option value="livercare">간</option>
-                        <option value="cholesterol">콜레스테롤</option>
-                        <option value="recovery">피로회복</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label for="effect" class="form-label">필요 기대 효과:</label>
+                                <div class="mb-3">
+                    <label for="effect" class="form-label"> 효과 :</label>
                     <input type="text" id="effect" name="effect" class="form-control" required>
                 </div>
 
                 <div class="mb-3">
-                    <label for="component1" class="form-label">성분1:</label>
-                    <input type="text" id="component" name="component1" class="form-control" required>
-                </div>
-
-                <div class="mb-3">
-                    <label for="component2" class="form-label">성분2:</label>
-                    <input type="text" id="component2" name="component2" class="form-control" required>
-                </div>
+                    <label for="components" class="form-label">성분</label>
+                    <select id="components" name="componentlist" class="form-select" required multiple onclick="toggleOptionsSize()">
+                      <option value="silymarin">실리마린</option>
+                      <option value="vitamin_B3">비타민 B3</option>
+                      <option value="rosavin">로사빈</option>
+                      <option value="vitamin_B1">비타민 B1</option>
+                      <option value="vitamin_C">비타민 C</option>
+                    </select>
+                  </div>
 
                 <div class="mb-3">
                     <label for="dosage" class="form-label">용량:</label>
                     <input type="text" id="dosage" name="dosage" class="form-control" required>
-                </div>
-
-                <div class="mb-3">
-                    <label for="type" class="form-label">제형:</label>
-                    <input type="text" id="type" name="type" class="form-control" required>
                 </div>
 
                 <div class="mb-3">
@@ -85,9 +71,18 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="sideEffect" class="form-label">부작용:</label>
-                    <input type="text" id="sideEffect" name="sideEffect" class="form-control" required>
+                    <label for="badlist" class="form-label">부작용:</label>
+                    <select id ="badlist" name="sideeffect" class="form-select" multiple>
+                        <option value="memory_impairment">기억력 저하</option>
+                        <option value="anticoagulant_interaction">항응고제 상호작용</option>
+                        <option value="hormone_level_changes">호르몬 수준 변화</option>
+                        <option value="weight_gain">체중 증가</option>
+                        <option value="bronchospasm">기관지 경련</option>
+                        <option value="hepatitis">간염</option>
+                      </select>
+                      
                 </div>
+
 
                 <button class="btn btn-primary" type="submit" formaction="/supp/insert">저장 이거슨 insert?</button>
             </form>
