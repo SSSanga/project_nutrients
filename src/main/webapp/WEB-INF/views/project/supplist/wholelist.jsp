@@ -41,7 +41,7 @@
             <th>이름</th>
             <th>제조사</th>
             <th>필요 기대 효과</th>
-            <th>상세</th>
+            <th><button class="btn btb-success"type="submit" formactin="/supp/spec">상세</button></th>
           </tr>
       </thead>
       <tbody>

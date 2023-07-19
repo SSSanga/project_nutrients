@@ -25,6 +25,11 @@ public class WholelistController {
         modelAndView.setViewName("/WEB-INF/views/project/supplist/wholelist.jsp");
         return modelAndView;
     }
+    @GetMapping("/spec")
+    public ModelAndView spec (ModelAndView modelAndView){
+        modelAndView.setViewName("/WEB-INF/views/project/supplist/suppspec.jsp");
+        return modelAndView;
+    }
 
         @GetMapping("/listadd")
     public ModelAndView listadd (ModelAndView modelAndView){
