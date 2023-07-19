@@ -15,16 +15,34 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.project.project_nutrients.service.ListService;
+
 import java.util.UUID;
 
 @Controller
 @RequestMapping("/supp")
-public class WholelistController {
-    @GetMapping("/wholelist")
-    public ModelAndView wholelist (ModelAndView modelAndView){
+public class ListController {
+    @Autowired
+     ListService wholelistservice;
+    
+    // @GetMapping("/wholelist")
+    // public ModelAndView wholelist (@RequestParam Map params, ModelAndView modelAndView){
+    //     Object result = wholelistservice.wholeList(params);
+    //     modelAndView.addObject("params", params);
+    //     modelAndView.addObject("result", result);
+    //     modelAndView.setViewName("/WEB-INF/views/project/supplist/wholelist.jsp");
+    //     return modelAndView;
+    // }
+     @GetMapping("/listpage")
+    public ModelAndView listpage (@RequestParam Map params, ModelAndView modelAndView){
+        Object result = wholelistservice.listWithPaginations(params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
         modelAndView.setViewName("/WEB-INF/views/project/supplist/wholelist.jsp");
         return modelAndView;
     }
+
     @GetMapping("/spec")
     public ModelAndView spec (ModelAndView modelAndView){
         modelAndView.setViewName("/WEB-INF/views/project/supplist/suppspec.jsp");

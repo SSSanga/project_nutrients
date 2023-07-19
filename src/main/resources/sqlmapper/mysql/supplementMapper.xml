@@ -1,78 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="supplement">
+<mapper namespace="Supplement">
 
-<!-- select_wholelist -->
+<!-- count for pagination -->
+  <select id="selectTotal" parameterType="Map" resultType="int">
+    SELECT COUNT(*) AS cnt
+    FROM (SELECT t_SPEC.SUPP_ID, t_LIST.EFFECT_FLAG
+    FROM supp_list AS t_LIST
+    INNER JOIN supp_spec AS t_SPEC
+    ON t_LIST.SUPP_ID = t_SPEC.SUPP_ID) AS t_WHOLELIST
+    INNER JOIN effect AS t_EFFECT
+    ON t_WHOLELIST.EFFECT_FLAG = t_EFFECT.EFFECT_ID;
+	</select>
+<!-- select_wholelist with pagination -->
 
-<select id="supplist" parameterType="Map">
-SELECT t_WHOLELIST.LOCATION, t_WHOLELIST.PRODUCT, t_EFFECT.EFFECT
-FROM (SELECT t_SPEC.LOCATION, t_SPEC.PRODUCT, t_LIST.EFFECT_FLAG 
-FROM supp_list AS t_LIST
-INNER JOIN supp_spec AS t_SPEC
-ON t_LIST.SUPP_ID = t_SPEC.SUPP_ID) AS t_WHOLELIST
-INNER JOIN effect AS t_EFFECT
-ON t_WHOLELIST.EFFECT_FLAG = t_EFFECT.EFFECT_ID;
-</select>
+  <select id="listwithpaginations" parameterType="Map" resultType="Map">
+
+        SELECT t_WHOLELIST.LOCATION, t_WHOLELIST.PRODUCT, t_EFFECT.EFFECT
+        FROM (SELECT t_SPEC.LOCATION, t_SPEC.PRODUCT, t_LIST.EFFECT_FLAG 
+        FROM supp_list AS t_LIST
+        INNER JOIN supp_spec AS t_SPEC
+        ON t_LIST.SUPP_ID = t_SPEC.SUPP_ID) AS t_WHOLELIST
+        INNER JOIN effect AS t_EFFECT
+        ON t_WHOLELIST.EFFECT_FLAG = t_EFFECT.EFFECT_ID
+        LIMIT #{pageBegin},#{pageScale}
+        
+  </select>
+
+  <!-- select_wholelist with pagination -->
+
+  <select id="wholelist" parameterType="Map" resultType="Map">
+
+        SELECT t_WHOLELIST.LOCATION, t_WHOLELIST.PRODUCT, t_EFFECT.EFFECT
+        FROM (SELECT t_SPEC.LOCATION, t_SPEC.PRODUCT, t_LIST.EFFECT_FLAG 
+        FROM supp_list AS t_LIST
+        INNER JOIN supp_spec AS t_SPEC
+        ON t_LIST.SUPP_ID = t_SPEC.SUPP_ID) AS t_WHOLELIST
+        INNER JOIN effect AS t_EFFECT
+        ON t_WHOLELIST.EFFECT_FLAG = t_EFFECT.EFFECT_ID
+  </select>
+
+
+  <select id="suppdetails" parameterType="Map">
+        SELECT t_SUPP_DETAILS.SUPP_ID, t_SUPP_DETAILS.PRODUCT, t_SUPP_DETAILS.MANUFACTURE, t_SUPP_DETAILS.DOSAGE, t_SUPP_DETAILS.FREQUENCY, t_SUPP_DETAILS.COMPONENT, t_SUPP_DETAILS.EFFECT, t_SUPP_DETAILS.SIDEEFFECT
+        FROM 
+        (SELECT supp_spec.SUPP_ID, supp_spec.PRODUCT, supp_spec.MANUFACTURE, supp_spec.DOSAGE, supp_spec.FREQUENCY, t_DETAILS.COMPONENT, t_DETAILS.EFFECT, t_DETAILS.SIDEEFFECT
+        FROM supp_spec
+        INNER JOIN (SELECT t_BADGOODCOM.SUPP_ID, component.COMPONENT, t_BADGOODCOM.SIDEEFFECT, t_BADGOODCOM.EFFECT
+        FROM component
+        INNER JOIN 
+        (SELECT supp_comp.SUPP_ID, supp_comp.COMPONENT_ID,t_BADGOOD.SIDEEFFECT, t_BADGOOD.EFFECT
+        FROM supp_comp
+        INNER JOIN (SELECT t_BAD.SUPP_ID,t_BAD.SIDEEFFECT, t_EFFECT.EFFECT
+        FROM (SELECT SUPP_SIDE.SUPP_ID, SIDEEFFECTS.SIDEEFFECT
+        FROM supp_side
+        INNER JOIN sideeffects
+        ON supp_side.SIDEEFFECT_ID = sideeffects.SIDEEFFECT_ID) AS t_BAD
+        INNER JOIN (SELECT SUPP_LIST.SUPP_ID, EFFECT.EFFECT
+        FROM supp_list
+        INNER JOIN effect
+        ON SUPP_LIST.EFFECT_ID = EFFECT.EFFECT_ID) AS t_EFFECT
+        ON t_BAD.SUPP_ID = t_EFFECT.SUPP_ID ) AS t_BADGOOD
+        ON supp_comp.SUPP_ID=t_BADGOOD.SUPP_ID) AS t_BADGOODCOM
+        ON component.COMPONENT_ID = t_BADGOODCOM.COMPONENT_ID) AS t_DETAILS
+        ON supp_spec.SUPP_ID = t_DETAILS.SUPP_ID
+        ORDER BY supp_spec.SUPP_ID) AS t_SUPP_DETAILS
+        WHERE t_SUPP_DETAILS.SUPP_ID = #{t_SUPP_DETAILS.SUPP_ID}
+  </select>
 
 <!-- select_suppdetails -->
 
-<select id="suppdetails" parameterType="Map">
-SELECT t_SUPP_DETAILS.SUPP_ID, t_SUPP_DETAILS.PRODUCT, t_SUPP_DETAILS.MANUFACTURE, t_SUPP_DETAILS.DOSAGE, t_SUPP_DETAILS.FREQUENCY, t_SUPP_DETAILS.COMPONENT, t_SUPP_DETAILS.EFFECT, t_SUPP_DETAILS.SIDEEFFECT
-FROM 
-(SELECT supp_spec.SUPP_ID, supp_spec.PRODUCT, supp_spec.MANUFACTURE, supp_spec.DOSAGE, supp_spec.FREQUENCY, t_DETAILS.COMPONENT, t_DETAILS.EFFECT, t_DETAILS.SIDEEFFECT
-FROM supp_spec
-INNER JOIN (SELECT t_BADGOODCOM.SUPP_ID, component.COMPONENT, t_BADGOODCOM.SIDEEFFECT, t_BADGOODCOM.EFFECT
-FROM component
-INNER JOIN 
-(SELECT supp_comp.SUPP_ID, supp_comp.COMPONENT_ID,t_BADGOOD.SIDEEFFECT, t_BADGOOD.EFFECT
-FROM supp_comp
-INNER JOIN (SELECT t_BAD.SUPP_ID,t_BAD.SIDEEFFECT, t_EFFECT.EFFECT
-FROM (SELECT SUPP_SIDE.SUPP_ID, SIDEEFFECTS.SIDEEFFECT
-FROM supp_side
-INNER JOIN sideeffects
-ON supp_side.SIDEEFFECT_ID = sideeffects.SIDEEFFECT_ID) AS t_BAD
-INNER JOIN (SELECT SUPP_LIST.SUPP_ID, EFFECT.EFFECT
-FROM supp_list
-INNER JOIN effect
-ON SUPP_LIST.EFFECT_ID = EFFECT.EFFECT_ID) AS t_EFFECT
-ON t_BAD.SUPP_ID = t_EFFECT.SUPP_ID ) AS t_BADGOOD
-ON supp_comp.SUPP_ID=t_BADGOOD.SUPP_ID) AS t_BADGOODCOM
-ON component.COMPONENT_ID = t_BADGOODCOM.COMPONENT_ID) AS t_DETAILS
-ON supp_spec.SUPP_ID = t_DETAILS.SUPP_ID
-ORDER BY supp_spec.SUPP_ID) AS t_SUPP_DETAILS
-WHERE t_SUPP_DETAILS.SUPP_ID = #{t_SUPP_DETAILS.SUPP_ID}
-</select>
+      <!-- Update --> 
+      <!-- DDL문에서 not null인 값은 업데이트시 꼭 넣어줘야 하는 컬럼 / null값, insert시 생성되는 값들은 update해주지 않아도 됨. -->
+      <update id="suppupdate" parameterType="Map">
+      UPDATE review
+      SET TITLE = #{TITLE},
+      WHERE REVIEW_ID = #{REVIEW_ID};
+      </update>
 
-<!-- Update --> 
-<!-- DDL문에서 not null인 값은 업데이트시 꼭 넣어줘야 하는 컬럼 / null값, insert시 생성되는 값들은 update해주지 않아도 됨. -->
-<update id="suppupdate" parameterType="Map">
-UPDATE review
-SET TITLE = #{TITLE},
-WHERE REVIEW_ID = #{REVIEW_ID};
-</update>
+  <!-- delete -->
+  <!-- 유니크 아이디 COMMON_CODE_ID로 delete -->
+  <delete id="suppdelete" parameterType="Map">
+      DELETE FROM supp_comp
+      WHERE SUPP_ID = #{SUPP_ID};
 
-<!-- delete -->
-<!-- 유니크 아이디 COMMON_CODE_ID로 delete -->
-<delete id="suppdelete" parameterType="Map">
-    DELETE FROM supp_comp
-    WHERE SUPP_ID = #{SUPP_ID};
+      DELETE FROM supp_list
+      WHERE SUPP_ID = #{SUPP_ID};
 
-    DELETE FROM supp_list
-    WHERE SUPP_ID = #{SUPP_ID};
+      DELETE FROM supp_side
+      WHERE SUPP_ID = #{SUPP_ID};
 
-    DELETE FROM supp_side
-    WHERE SUPP_ID = #{SUPP_ID};
+      DELETE FROM supp_spec
+      WHERE SUPP_ID = #{SUPP_ID};
+  </delete>
 
-    DELETE FROM supp_spec
-    WHERE SUPP_ID = #{SUPP_ID};
-</delete>
-
-<!-- 검색창 -->
-	<select id="suppselect" parameterType="Map" resultType="Map">
-        SELECT NAME, COMMON_CODE_ID, PARENT_COMMON_CODE_ID
-        FROM project_nutrients.commons_code
-        WHERE PARENT_COMMON_CODE_ID = #{PARENT_COMMON_CODE_ID};
-	</select>
+  <!-- 검색창 -->
+    <select id="suppselect" parameterType="Map" resultType="Map">
+          SELECT NAME, COMMON_CODE_ID, PARENT_COMMON_CODE_ID
+          FROM project_nutrients.commons_code
+          WHERE PARENT_COMMON_CODE_ID = #{PARENT_COMMON_CODE_ID};
+    </select>
 
   <!-- PK의 영양제 SUPP_SPEC 테이블을 먼저 넣은 뒤 FK 위치를 넣어줘야함. 1) SUPP_SPEC, 2) SUPP_LIST(EFFECT),SUPP_COMP, SUPP_SIDE -->
 <insert id="suppinsert" parameterType="Map">
@@ -95,6 +122,24 @@ INSERT INTO supp_comp (SUPP_ID,COMPONENT_ID)
 VALUES (#{SUPP_ID},#{COMPONENT_ID});
 
 </insert>
+
+<select id="selectSearchWithPagination" parameterType="Map" resultType="Map">
+        SELECT * 
+        FROM db_cars.car_infors
+        where 1 = 1 
+        <choose>
+            <when test="search == 'YEAR'">
+            <![CDATA[
+            and YEAR > #{words}
+            ]]>
+            </when>
+            <when test="search == 'CAR_NAME'">
+            and CAR_NAME like CONCAT(#{words}, '%')
+            </when>
+        </choose>      
+          LIMIT #{pageBegin},#{pageScale}
+        ;
+	</select>
 
 
 </mapper>
