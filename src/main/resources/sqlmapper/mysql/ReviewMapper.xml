@@ -14,15 +14,15 @@
 <!-- DDL문에서 not null인 값은 업데이트시 꼭 넣어줘야 하는 컬럼 / null값, insert시 생성되는 값들은 update해주지 않아도 됨. -->
 <update id="reviewupdate" parameterType="Map">
 UPDATE review
-SET TITLE = #{TITLE},
-WHERE REVIEW_ID = #{REVIEW_ID};
+SET TITLE = #{TITLE}
+WHERE REVIEW_ID = #{REVIEW_ID}
 </update>
 
 <!-- delete -->
 <!-- 유니크 아이디 COMMON_CODE_ID로 delete -->
 <delete id="reviewdelete" parameterType="Map">
-  DELETE FROM COMMONS_CODE
-  WHERE COMMON_CODE_ID = #{COMMON_CODE_ID}
+DELETE FROM REVIEW
+WHERE REVIEW_ID = #{REVIEW_ID}
 </delete>
 
 <!-- 검색창 -->
