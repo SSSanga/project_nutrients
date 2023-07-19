@@ -37,7 +37,7 @@
                             <td>날짜 1</td>
                             <td>내용 1</td>
                             <td>
-                                <textarea></textarea>
+                                <input class="d-flex form-control" id="content" style="height:50px; width:200px;"></input>
                                 <button class="btn btn-primary">댓글 달기</button>
                             </td>
                         </tr>
