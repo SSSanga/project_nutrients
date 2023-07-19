@@ -27,8 +27,7 @@ WHERE REVIEW_ID = #{REVIEW_ID}
 
 <!-- 검색창 -->
 	<select id="reviewselect" parameterType="Map" resultType="Map">
-        SELECT NAME, COMMON_CODE_ID, PARENT_COMMON_CODE_ID
-        FROM project_nutrients.commons_code
-        WHERE PARENT_COMMON_CODE_ID = #{PARENT_COMMON_CODE_ID}
+   SELECT REVIEW_ID,TITLE,CONTENT
+   FROM review 
 	</select>
 </mapper>
