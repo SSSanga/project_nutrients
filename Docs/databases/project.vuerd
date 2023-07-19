@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": 0,
-    "scrollLeft": 0,
-    "zoomLevel": 1,
+    "scrollTop": -357,
+    "scrollLeft": -133,
+    "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -504,29 +504,6 @@
             }
           },
           {
-            "id": "ad7623f0-ac3d-47c6-9ab1-3707168a1dcb",
-            "name": "ALLERGIES",
-            "comment": "알레르기",
-            "dataType": "VARCHAR(500)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 74.25537109375,
-              "widthComment": 60,
-              "widthDataType": 94.94873046875,
-              "widthDefault": 60
-            }
-          },
-          {
             "id": "1101ea78-bcd3-4c22-991e-8a024a7b9284",
             "name": "HISTORY_ID",
             "comment": "과거력_ID",
@@ -554,7 +531,7 @@
           "active": false,
           "left": 77,
           "top": 302,
-          "zIndex": 31,
+          "zIndex": 37,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1952,7 +1929,7 @@
             "1101ea78-bcd3-4c22-991e-8a024a7b9284"
           ],
           "x": 278.36083984375,
-          "y": 432.5,
+          "y": 412,
           "direction": "bottom"
         },
         "end": {
