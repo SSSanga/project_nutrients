@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.project.project_nutrients.service.MainService;
+
 import com.project.project_nutrients.service.ReviewsService;
 
 import java.util.UUID;
@@ -31,8 +31,12 @@ public class ReviewsController {
    
     @GetMapping("/reviewlist")
     public ModelAndView reviewlist(@RequestParam Map params, ModelAndView modelAndView) {
+        Object result = reviewsService.reviewselectSearch(params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+        
         modelAndView.setViewName("/WEB-INF/views/project/reviews/reviews.jsp");
-        return  modelAndView;
+        return modelAndView;
     }
 
     @GetMapping("/review")
