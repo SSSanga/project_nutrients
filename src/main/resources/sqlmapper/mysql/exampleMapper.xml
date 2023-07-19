@@ -68,7 +68,10 @@
 
 <!-- 검색창 -->
 	<select id="select" parameterType="Map" resultType="Map">
- SELECT REVIEW_ID,TITLE,CONTENT
- FROM review 
+
+   SELECT NAME, COMMON_CODE_ID, PARENT_COMMON_CODE_ID
+   FROM project_nutrients.commons_code
+  WHERE PARENT_COMMON_CODE_ID = #{PARENT_COMMON_CODE_ID}
+
 	</select>
 </mapper>

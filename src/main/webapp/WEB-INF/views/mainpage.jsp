@@ -63,29 +63,14 @@
 
 
     <style>
-        .carousel-container,
-        .image-container {
-            height: 50vh;
-            /* Adjust this value as needed */
-        }
+ 
 
-        .carousel-container .carousel-inner,
-        .image-container {
-            height: 100%;
-            overflow: hidden;
-        }
 
-        .carousel-container img,
-        .image-container img {
-            max-height: 100%;
-            width: 100%;
-            object-fit: contain;
-        }
     </style>
     <div class="container_img">
-        <div class="container pb-5"> <!-- Added padding-bottom to create space between the container and the footer -->
+        <div class="container"> <!-- Added padding-bottom to create space between the container and the footer -->
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-6 ">
                     <!-- Slide -->
                     <div class="carousel-container">
                         <div id="controlsID-first" class="carousel slide" data-bs-ride="carousel">
@@ -97,16 +82,16 @@
                             </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="/images/pill_3.png" alt="">
+                                    <img class="img-fluid" src="/images/pill_3.png" alt="">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/images/pill_4.png" alt="">
+                                    <img class="img-fluid" src="/images/pill_4.png" alt="">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/images/lee_lutein.png" alt="">
+                                    <img  class="img-fluid" src="/images/lee_lutein.png" alt="">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/images/lemona.png" alt="">
+                                    <img class="img-fluid" src="/images/lemona.png" alt="">
                                 </div>
                             </div>
                             <button data-bs-slide="prev" data-bs-target="#controlsID-first"
@@ -120,7 +105,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <!-- Image -->
                     <div class="image-container">
                         <img src="/images/ad_img.png" alt="AD_Image" class="img-fluid">

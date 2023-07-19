@@ -32,6 +32,7 @@ public class MainService {
         return UUID.randomUUID().toString();
     }
 
+
     // 검색(조건-?)
     public Map selectSearch(Map dataMap) {
         String sqlMapId = "Infors.selectSearch";
@@ -160,6 +161,7 @@ public class MainService {
         Object result = sharedDao.getList(sqlMapId, dataMap);
         return result;
     }
+
 }
 
 

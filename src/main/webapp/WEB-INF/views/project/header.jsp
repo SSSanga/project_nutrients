@@ -62,7 +62,7 @@
                     style="font-size: 10px; background-color: white; height: 50px;"><i class="fas fa-search"></i>검색</button>
 
                 <!-- User management dropdown -->
-                <div class="d-flex align-items-center">
+                <div class="d-flex me-2 align-items-center">
                     <div class="dropdown">
                         <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
                             aria-expanded="false" style="font-size: 20px;">
