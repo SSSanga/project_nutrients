@@ -22,12 +22,24 @@
                 <div class="col-md-8 mx-auto">
                     <form>
                         <div class="mb-3">
+                            <label for="content" class="form-label">리뷰 아이디</label>
+                            <input class="form-control" id="content" rows="5" name="" >
+                        </div>
+                        <div class="mb-3">
                             <label for="title" class="form-label">제목</label>
                             <input type="text" class="form-control" id="title">
                         </div>
                         <div class="mb-3">
                             <label for="content" class="form-label">내용</label>
-                            <input class="form-control" id="content" rows="5" style="height: 300px;"></input>
+                            <input class="form-control" id="content" rows="5" style="height: 300px;">
+                        </div>
+                        <div class="mb-3">
+                            <label for="content" class="form-label">영양제 아이디</label>
+                            <input class="form-control" id="content" rows="5" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="content" class="form-label">멤버 아이디</label>
+                            <input class="form-control" id="content" rows="5" >
                         </div>
                         <div class="mb-3">
                             <label for="image" class="form-label">이미지 첨부</label>
