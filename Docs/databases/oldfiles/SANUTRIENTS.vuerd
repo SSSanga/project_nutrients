@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -641,
-    "scrollLeft": -177,
-    "zoomLevel": 0.3,
+    "scrollTop": -596,
+    "scrollLeft": -400,
+    "zoomLevel": 0.4,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -164,9 +164,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 0,
-          "top": 1440.8417,
-          "zIndex": 7,
+          "left": 41.6667,
+          "top": 492.9731,
+          "zIndex": 1,
           "widthName": 72.08447265625,
           "widthComment": 80,
           "color": "#4CAF50"
@@ -388,9 +388,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 767.2927,
-          "top": 16.0042,
-          "zIndex": 2,
+          "left": 789.5835,
+          "top": 470.1858,
+          "zIndex": 4,
           "widthName": 74.25537109375,
           "widthComment": 70.61181640625,
           "color": "#FF0000"
@@ -451,9 +451,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 1532.4395,
-          "top": 107.5053,
-          "zIndex": 1,
+          "left": 1594.439453125,
+          "top": 684.9879,
+          "zIndex": 5,
           "widthName": 60,
           "widthComment": 70.61181640625,
           "color": "#E91E63"
@@ -538,8 +538,8 @@
         ],
         "ui": {
           "active": false,
-          "left": 0,
-          "top": 100.1589,
+          "left": 1578.55126953125,
+          "top": 107.9084,
           "zIndex": 3,
           "widthName": 86.5,
           "widthComment": 60,
@@ -601,9 +601,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 716.8767,
-          "top": 1824.7439,
-          "zIndex": 6,
+          "left": 1585.255859375,
+          "top": 1130.4441,
+          "zIndex": 2,
           "widthName": 91.5654296875,
           "widthComment": 60,
           "color": "#FF9800"
@@ -825,9 +825,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 24.8302,
-          "top": 445.9775,
-          "zIndex": 4,
+          "left": 789.2743,
+          "top": 83.3207,
+          "zIndex": 6,
           "widthName": 71.3671875,
           "widthComment": 74.2236328125,
           "color": "#CDDC39"
@@ -1049,9 +1049,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 1174,
-          "top": 643.4835,
-          "zIndex": 5,
+          "left": 815.0904,
+          "top": 1108.2161,
+          "zIndex": 7,
           "widthName": 109.40869140625,
           "widthComment": 60,
           "color": "#9EE1FF"
@@ -1273,8 +1273,8 @@
         ],
         "ui": {
           "active": false,
-          "left": 1461.7558,
-          "top": 1357.8853,
+          "left": 791.631,
+          "top": 763.1193,
           "zIndex": 8,
           "widthName": 133.4853515625,
           "widthComment": 96.61181640625,
@@ -1300,8 +1300,8 @@
           "columnIds": [
             "4f8b8ed8-e6de-4777-a542-699b8fb834bd"
           ],
-          "x": 1532.4395,
-          "y": 162.5053,
+          "x": 1594.439453125,
+          "y": 753.7379,
           "direction": "left"
         },
         "end": {
@@ -1309,9 +1309,9 @@
           "columnIds": [
             "0888531a-12f0-4b43-a157-9d5563e5ea9d"
           ],
-          "x": 1400.145263671875,
-          "y": 643.4835,
-          "direction": "top"
+          "x": 1267.38092734375,
+          "y": 1298.3411,
+          "direction": "right"
         },
         "constraintName": "fk_type_to_recovery_list",
         "visible": true,
@@ -1326,18 +1326,18 @@
           "columnIds": [
             "4f8b8ed8-e6de-4777-a542-699b8fb834bd"
           ],
-          "x": 1735.2197734375,
-          "y": 217.5053,
-          "direction": "bottom"
+          "x": 1594.439453125,
+          "y": 726.2379,
+          "direction": "left"
         },
         "end": {
           "tableId": "059b638f-965d-4e81-90ce-8da8c607fa72",
           "columnIds": [
             "c3a1dc4c-068a-4366-bbe9-d5f8c11bce27"
           ],
-          "x": 1687.901063671875,
-          "y": 1357.8853,
-          "direction": "top"
+          "x": 1243.9215273437499,
+          "y": 805.3693,
+          "direction": "right"
         },
         "constraintName": "fk_type_to_cholesterol_list",
         "visible": true,
@@ -1352,8 +1352,8 @@
           "columnIds": [
             "4f8b8ed8-e6de-4777-a542-699b8fb834bd"
           ],
-          "x": 1532.4395,
-          "y": 199.17196666666666,
+          "x": 1594.439453125,
+          "y": 781.2379,
           "direction": "left"
         },
         "end": {
@@ -1361,8 +1361,8 @@
           "columnIds": [
             "aed1fd9e-46c2-4407-9280-c0d0c90d872e"
           ],
-          "x": 477.12072734375,
-          "y": 572.7275,
+          "x": 1241.56482734375,
+          "y": 273.4457,
           "direction": "right"
         },
         "constraintName": "fk_type_to_eyes_list",
@@ -1378,8 +1378,8 @@
           "columnIds": [
             "4f8b8ed8-e6de-4777-a542-699b8fb834bd"
           ],
-          "x": 1532.4395,
-          "y": 125.83863333333335,
+          "x": 1594.439453125,
+          "y": 698.7379,
           "direction": "left"
         },
         "end": {
@@ -1387,8 +1387,8 @@
           "columnIds": [
             "836e3960-dcf9-4dc1-9594-da215cc85785"
           ],
-          "x": 1219.58322734375,
-          "y": 142.7542,
+          "x": 1241.87402734375,
+          "y": 512.4358,
           "direction": "right"
         },
         "constraintName": "fk_type_to_liver_list",
@@ -1404,18 +1404,18 @@
           "columnIds": [
             "c1cab22c-094e-4899-bd67-dbd42dc9229b"
           ],
-          "x": 421.44873046875,
-          "y": 165.40890000000002,
-          "direction": "right"
+          "x": 1578.55126953125,
+          "y": 222.0959,
+          "direction": "left"
         },
         "end": {
           "tableId": "e539bc5f-db69-451e-a480-3bba6136e639",
           "columnIds": [
             "89dc866d-8135-4bd5-8aa2-d69a6c93a34e"
           ],
-          "x": 1174,
-          "y": 706.8585,
-          "direction": "left"
+          "x": 1041.235663671875,
+          "y": 1108.2161,
+          "direction": "top"
         },
         "constraintName": "fk_component_to_recovery_list",
         "visible": true,
@@ -1430,18 +1430,18 @@
           "columnIds": [
             "c1cab22c-094e-4899-bd67-dbd42dc9229b"
           ],
-          "x": 421.44873046875,
-          "y": 208.90890000000002,
-          "direction": "right"
+          "x": 1578.55126953125,
+          "y": 189.4709,
+          "direction": "left"
         },
         "end": {
           "tableId": "059b638f-965d-4e81-90ce-8da8c607fa72",
           "columnIds": [
             "b24cd9c2-0f47-49e6-8a37-08497e1f3a5b"
           ],
-          "x": 1461.7558,
-          "y": 1569.1353,
-          "direction": "left"
+          "x": 1243.9215273437499,
+          "y": 974.3693,
+          "direction": "right"
         },
         "constraintName": "fk_component_to_cholesterol_list",
         "visible": true,
@@ -1456,18 +1456,18 @@
           "columnIds": [
             "c1cab22c-094e-4899-bd67-dbd42dc9229b"
           ],
-          "x": 210.724365234375,
-          "y": 230.65890000000002,
-          "direction": "bottom"
+          "x": 1578.55126953125,
+          "y": 124.2209,
+          "direction": "left"
         },
         "end": {
           "tableId": "92864dde-346b-4885-a0af-25fa69fdeaa1",
           "columnIds": [
             "a883790a-7fd0-4154-a6ef-47d974f0ece0"
           ],
-          "x": 250.975463671875,
-          "y": 445.9775,
-          "direction": "top"
+          "x": 1241.56482734375,
+          "y": 146.6957,
+          "direction": "right"
         },
         "constraintName": "fk_component_to_eyes_list",
         "visible": true,
@@ -1482,18 +1482,18 @@
           "columnIds": [
             "c1cab22c-094e-4899-bd67-dbd42dc9229b"
           ],
-          "x": 421.44873046875,
-          "y": 121.9089,
-          "direction": "right"
+          "x": 1578.55126953125,
+          "y": 156.8459,
+          "direction": "left"
         },
         "end": {
           "tableId": "14a81a21-1e38-42ae-b07b-ae4d6fc5ee28",
           "columnIds": [
             "2a0391c9-23db-4f89-a282-406e8dca7f18"
           ],
-          "x": 767.2927,
-          "y": 142.7542,
-          "direction": "left"
+          "x": 1241.87402734375,
+          "y": 596.9358,
+          "direction": "right"
         },
         "constraintName": "fk_component_to_liver_list",
         "visible": true,
@@ -1508,18 +1508,18 @@
           "columnIds": [
             "da82e946-ff1d-48df-8b41-c683c534617c"
           ],
-          "x": 1131.620840625,
-          "y": 1907.2439,
-          "direction": "right"
+          "x": 1585.255859375,
+          "y": 1144.1941,
+          "direction": "left"
         },
         "end": {
           "tableId": "e539bc5f-db69-451e-a480-3bba6136e639",
           "columnIds": [
             "5ec13ecd-aeca-4a03-a2ac-c15b6b7f64b0"
           ],
-          "x": 1400.145263671875,
-          "y": 896.9835,
-          "direction": "bottom"
+          "x": 1267.38092734375,
+          "y": 1171.5911,
+          "direction": "right"
         },
         "constraintName": "fk_sideeffects_to_recovery_list",
         "visible": true,
@@ -1534,18 +1534,18 @@
           "columnIds": [
             "da82e946-ff1d-48df-8b41-c683c534617c"
           ],
-          "x": 1131.620840625,
-          "y": 1852.2439,
-          "direction": "right"
+          "x": 1585.255859375,
+          "y": 1171.6941,
+          "direction": "left"
         },
         "end": {
           "tableId": "059b638f-965d-4e81-90ce-8da8c607fa72",
           "columnIds": [
             "9d7b6422-95f0-40a7-b230-c85b99a72d04"
           ],
-          "x": 1461.7558,
-          "y": 1400.1353,
-          "direction": "left"
+          "x": 1243.9215273437499,
+          "y": 889.8693,
+          "direction": "right"
         },
         "constraintName": "fk_sideeffects_to_cholesterol_list",
         "visible": true,
@@ -1560,8 +1560,8 @@
           "columnIds": [
             "da82e946-ff1d-48df-8b41-c683c534617c"
           ],
-          "x": 716.8767,
-          "y": 1879.7439,
+          "x": 1585.255859375,
+          "y": 1226.6941,
           "direction": "left"
         },
         "end": {
@@ -1569,8 +1569,8 @@
           "columnIds": [
             "a26bc767-29e2-4c71-b547-d2c6fb9cdb4d"
           ],
-          "x": 364.0480955078125,
-          "y": 699.4775,
+          "x": 1015.419563671875,
+          "y": 336.8207,
           "direction": "bottom"
         },
         "constraintName": "fk_sideeffects_to_eyes_list",
@@ -1586,18 +1586,18 @@
           "columnIds": [
             "da82e946-ff1d-48df-8b41-c683c534617c"
           ],
-          "x": 924.2487703125,
-          "y": 1824.7439,
-          "direction": "top"
+          "x": 1585.255859375,
+          "y": 1199.1941,
+          "direction": "left"
         },
         "end": {
           "tableId": "14a81a21-1e38-42ae-b07b-ae4d6fc5ee28",
           "columnIds": [
             "0896fd45-d590-42fa-a56e-fd14fe450d6c"
           ],
-          "x": 1106.5105955078125,
-          "y": 269.5042,
-          "direction": "bottom"
+          "x": 1241.87402734375,
+          "y": 681.4358,
+          "direction": "right"
         },
         "constraintName": "fk_sideeffects_to_liver_list",
         "visible": true,
@@ -1612,17 +1612,17 @@
           "columnIds": [
             "266e52b2-1642-4310-9b6d-57a112f32a60"
           ],
-          "x": 880.3653318359375,
-          "y": 269.5042,
-          "direction": "bottom"
+          "x": 789.5835,
+          "y": 596.9358,
+          "direction": "left"
         },
         "end": {
           "tableId": "482791bb-b997-4db0-b2a5-8803df3faba2",
           "columnIds": [
             "483096b0-7496-4664-9f72-e5b440d3170a"
           ],
-          "x": 436.90380859375,
-          "y": 1583.758366666667,
+          "x": 478.57050859375,
+          "y": 514.4105999999999,
           "direction": "right"
         },
         "constraintName": "fk_liver_list_to_supp_list",
@@ -1638,18 +1638,18 @@
           "columnIds": [
             "89f3fa58-c107-42e8-b5dd-e47a3d8cccd0"
           ],
-          "x": 137.9028318359375,
-          "y": 699.4775,
-          "direction": "bottom"
+          "x": 789.2743,
+          "y": 210.0707,
+          "direction": "left"
         },
         "end": {
           "tableId": "482791bb-b997-4db0-b2a5-8803df3faba2",
           "columnIds": [
             "b7cc7104-78e8-48a2-afb4-7007a16736cf"
           ],
-          "x": 218.451904296875,
-          "y": 1440.8417,
-          "direction": "top"
+          "x": 478.57050859375,
+          "y": 600.1605999999999,
+          "direction": "right"
         },
         "constraintName": "fk_eyes_list_to_supp_list",
         "visible": true,
@@ -1664,8 +1664,8 @@
           "columnIds": [
             "2ddedfc9-2961-4c21-9b60-e4c373ab2c5a"
           ],
-          "x": 1461.7558,
-          "y": 1484.6353,
+          "x": 791.631,
+          "y": 889.8693,
           "direction": "left"
         },
         "end": {
@@ -1673,8 +1673,8 @@
           "columnIds": [
             "0c34d17c-6dc5-4987-a383-18c4b9053aae"
           ],
-          "x": 436.90380859375,
-          "y": 1526.5917000000002,
+          "x": 478.57050859375,
+          "y": 557.2855999999999,
           "direction": "right"
         },
         "constraintName": "fk_cholesterol_list_to_supp_list",
@@ -1690,8 +1690,8 @@
           "columnIds": [
             "472ccada-813b-4f54-8c4d-04bc4ec21b25"
           ],
-          "x": 1174,
-          "y": 833.6085,
+          "x": 815.0904,
+          "y": 1234.9661,
           "direction": "left"
         },
         "end": {
@@ -1699,8 +1699,8 @@
           "columnIds": [
             "d4d0556d-6838-4086-85ad-c7a75d908ccd"
           ],
-          "x": 436.90380859375,
-          "y": 1469.4250333333334,
+          "x": 478.57050859375,
+          "y": 643.0355999999999,
           "direction": "right"
         },
         "constraintName": "fk_recovery_list_to_supp_list",

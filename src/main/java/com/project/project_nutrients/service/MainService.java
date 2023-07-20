@@ -22,6 +22,8 @@ public class MainService {
     // public Object selectInUID(Map dataMap) {
     //     String sqlMapId = "Infors.selectInUID";
 
+
+    
     //     Object result = sharedDao.getList(sqlMapId, dataMap);
     //     return result;
     // }
@@ -29,6 +31,7 @@ public class MainService {
         public String generateUUID() {
         return UUID.randomUUID().toString();
     }
+
 
     // 검색(조건-?)
     public Map selectSearch(Map dataMap) {
@@ -158,6 +161,7 @@ public class MainService {
         Object result = sharedDao.getList(sqlMapId, dataMap);
         return result;
     }
+
 }
 
 

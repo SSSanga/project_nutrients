@@ -7,52 +7,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nutrient Recommendations Home</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
     <link href="/css/main.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-
-    <style>
-        .nav-link {
-            color: white !important;
-            font-size: 1.33em;
-        }
-
-        #dropdownMenuButton {
-            background-color: green;
-            color: white;
-        }
-
-        .btn-outline-secondary {
-            color: white;
-            border-color: white;
-        }
-    </style>
-
-    <!-- header -->
-    <%@ include file="/WEB-INF/views/project/header.jsp" %>
-
-    <!-- Screen adjust functions -->
-    <script>
-        var zoom = 1;
-
-        function increaseSize() {
-            zoom += 0.1;
-            document.getElementById('zoom-display').innerText = Math.round(zoom * 100) + '%';
-            document.body.style.zoom = zoom;
-        }
-
-        function decreaseSize() {
-            zoom -= 0.1;
-            document.getElementById('zoom-display').innerText = Math.round(zoom * 100) + '%';
-            document.body.style.zoom = zoom;
-        }
-    </script>
-
-
+        <!-- header -->
+        <%@ include file="/WEB-INF/views/project/header.jsp" %>
 
     <style>
         .h3,
@@ -80,20 +40,20 @@
                 <div class="row p-2">
                     <div class="col-md-3">
                         <button type="submit" class="w-100 btn btn-lg btn-outline"
-                            formaction="/administrator/livercare.html">간 기능개선</button>
+                            formaction="/recommendation/effectflag">간 기능개선</button>
                     </div>
                     <div class="col-md-3">
                         <button type="submit" class="w-100 btn btn-lg btn-outline"
-                            formaction="/administrator/recovery.html">피로회복</button>
+                            formaction="/recommendation/effectflag">피로회복</button>
                     </div>
                     <div class="col-md-3">
                         <button type="submit" class="w-100 btn btn-lg btn-outline"
-                            formaction="/administrator/eyes.html">눈 기능
+                            formaction="/recommendation/effectflag">눈 기능
                             향상</button>
                     </div>
                     <div class="col-md-3">
                         <button type="submit" class="w-100 btn btn-lg btn-outline"
-                            formaction="/administrator/cholesterol.html">콜레스테롤 개선</button>
+                            formaction="/recommendation/effectflag">콜레스테롤 개선</button>
                     </div>
                 </div>
             </form>
@@ -103,29 +63,14 @@
 
 
     <style>
-        .carousel-container,
-        .image-container {
-            height: 50vh;
-            /* Adjust this value as needed */
-        }
+ 
 
-        .carousel-container .carousel-inner,
-        .image-container {
-            height: 100%;
-            overflow: hidden;
-        }
 
-        .carousel-container img,
-        .image-container img {
-            max-height: 100%;
-            width: 100%;
-            object-fit: contain;
-        }
     </style>
     <div class="container_img">
-        <div class="container pb-5"> <!-- Added padding-bottom to create space between the container and the footer -->
+        <div class="container"> <!-- Added padding-bottom to create space between the container and the footer -->
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-6 ">
                     <!-- Slide -->
                     <div class="carousel-container">
                         <div id="controlsID-first" class="carousel slide" data-bs-ride="carousel">
@@ -137,16 +82,16 @@
                             </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="/images/pill_3.png" alt="">
+                                    <img class="img-fluid" src="/images/pill_3.png" alt="">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/images/pill_4.png" alt="">
+                                    <img class="img-fluid" src="/images/pill_4.png" alt="">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/images/lee_lutein.png" alt="">
+                                    <img  class="img-fluid" src="/images/lee_lutein.png" alt="">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/images/lemona.png" alt="">
+                                    <img class="img-fluid" src="/images/lemona.png" alt="">
                                 </div>
                             </div>
                             <button data-bs-slide="prev" data-bs-target="#controlsID-first"
@@ -160,7 +105,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <!-- Image -->
                     <div class="image-container">
                         <img src="/images/ad_img.png" alt="AD_Image" class="img-fluid">
@@ -173,52 +118,9 @@
 
     <hr>
 
-    <!-- Footer -->
-    <%@ include file="/WEB-INF/views/project/footer.jsp" %>
-
-        <!-- Code injected by live-server -->
-        <script>
-            // <![CDATA[  <-- For SVG support
-            if ('WebSocket' in window) {
-                (function () {
-                    function refreshCSS() {
-                        var sheets = [].slice.call(document.getElementsByTagName("link"));
-                        var head = document.getElementsByTagName("head")[0];
-                        for (var i = 0; i < sheets.length; ++i) {
-                            var elem = sheets[i];
-                            var parent = elem.parentElement || head;
-                            parent.removeChild(elem);
-                            var rel = elem.rel;
-                            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-                                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-                                elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-                            }
-                            parent.appendChild(elem);
-                        }
-                    }
-                    var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-                    var address = protocol + window.location.host + window.location.pathname + '/ws';
-                    var socket = new WebSocket(address);
-                    socket.onmessage = function (msg) {
-                        if (msg.data == 'reload') window.location.reload();
-                        else if (msg.data == 'refreshcss') refreshCSS();
-                    };
-                    if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-                        console.log('Live reload enabled.');
-                        sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-                    }
-                })();
-            }
-            else {
-                console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-            }
-
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
-    </footer>
-
-    <!-- <script src="../js/carinforwithfunction.js"></script> -->
-    <!-- <script src="../js/carinforwithrest.js"></script> -->
+   <!-- Footer -->
+   <%@ include file="/WEB-INF/views/project/footer.jsp" %>
+   
 </body>
 
 </html>

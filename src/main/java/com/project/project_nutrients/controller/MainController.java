@@ -28,10 +28,10 @@ public class MainController {
 
     @GetMapping({"/", "/home", "/main"})
     public ModelAndView main(ModelAndView modelAndView){
-        modelAndView.addObject("name", "Yojulab!");
         modelAndView.setViewName("/WEB-INF/views/mainpage.jsp");
         return modelAndView;
     }
+
 
     // 검색
     @GetMapping("/selectSearch")
@@ -119,4 +119,6 @@ public class MainController {
     public String generateUUID() {
         return UUID.randomUUID().toString();
     }
+
+
 }

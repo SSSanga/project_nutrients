@@ -87,7 +87,5 @@
             else {
                 console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
             }
-
         </script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
     </footer>
