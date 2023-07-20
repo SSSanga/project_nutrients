@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 3000,
     "height": 3000,
-    "scrollTop": -738,
-    "scrollLeft": -1291,
+    "scrollTop": -779,
+    "scrollLeft": -1220,
     "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
@@ -97,7 +97,7 @@
           "active": false,
           "left": 1754.5,
           "top": 1602.5,
-          "zIndex": 5,
+          "zIndex": 4,
           "widthName": 90.84814453125,
           "widthComment": 67
         },
@@ -159,7 +159,7 @@
           "active": false,
           "left": 1674.5,
           "top": 1389.5,
-          "zIndex": 6,
+          "zIndex": 5,
           "widthName": 60,
           "widthComment": 60
         },
@@ -219,9 +219,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 1874.9444,
-          "top": 753.2775,
-          "zIndex": 13,
+          "left": 1888.6944,
+          "top": 680.7775,
+          "zIndex": 20,
           "widthName": 86.5,
           "widthComment": 60
         },
@@ -283,7 +283,7 @@
           "active": false,
           "left": 1312.3884,
           "top": 610.5273,
-          "zIndex": 22,
+          "zIndex": 11,
           "widthName": 60,
           "widthComment": 70.61181640625
         },
@@ -345,7 +345,7 @@
           "active": false,
           "left": 1182.6111,
           "top": 1832.5,
-          "zIndex": 4,
+          "zIndex": 3,
           "widthName": 60,
           "widthComment": 60
         },
@@ -405,9 +405,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 2026.1968,
-          "top": 1077.5,
-          "zIndex": 10,
+          "left": 2057.4468,
+          "top": 1080,
+          "zIndex": 19,
           "widthName": 91.5654296875,
           "widthComment": 60
         },
@@ -467,9 +467,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 2061.6471,
-          "top": 939.9442,
-          "zIndex": 32,
+          "left": 2010.3971,
+          "top": 894.9442,
+          "zIndex": 18,
           "widthName": 83.630859375,
           "widthComment": 120
         },
@@ -531,7 +531,7 @@
           "active": false,
           "left": 2026.1968,
           "top": 1252.5,
-          "zIndex": 9,
+          "zIndex": 7,
           "widthName": 74.97265625,
           "widthComment": 96.61181640625
         },
@@ -540,7 +540,7 @@
       },
       {
         "name": "SUPP_LIST",
-        "comment": "영양제 리스트",
+        "comment": "영양제 효과 리스트",
         "columns": [
           {
             "id": "7ba0c7f7-0f78-4a8f-9cd3-37fcec613e4a",
@@ -613,12 +613,12 @@
           }
         ],
         "ui": {
-          "active": false,
-          "left": 1260.3052,
-          "top": 867.305,
-          "zIndex": 34,
+          "active": true,
+          "left": 1297.8052,
+          "top": 821.055,
+          "zIndex": 23,
           "widthName": 72.08447265625,
-          "widthComment": 83.61181640625
+          "widthComment": 113.2236328125
         },
         "visible": true,
         "id": "f330c4b2-f0ee-4994-92ea-288cedd95d54"
@@ -970,7 +970,7 @@
           "active": false,
           "left": 848.5,
           "top": 1066,
-          "zIndex": 8,
+          "zIndex": 6,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1145,9 +1145,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 1460.5,
-          "top": 1153,
-          "zIndex": 28,
+          "left": 1395.5,
+          "top": 1085.5,
+          "zIndex": 17,
           "widthName": 80.03173828125,
           "widthComment": 70.61181640625
         },
@@ -1777,7 +1777,7 @@
           "active": false,
           "left": 1103.6111,
           "top": 1393.5,
-          "zIndex": 15,
+          "zIndex": 10,
           "widthName": 137.0654296875,
           "widthComment": 60
         },
@@ -1957,8 +1957,8 @@
           "columnIds": [
             "3ae54a5e-33c0-4965-8573-742574d2fb9a"
           ],
-          "x": 1460.5,
-          "y": 1259.25,
+          "x": 1395.5,
+          "y": 1191.75,
           "direction": "left"
         },
         "end": {
@@ -1983,8 +1983,8 @@
           "columnIds": [
             "3ae54a5e-33c0-4965-8573-742574d2fb9a"
           ],
-          "x": 1894.0078125,
-          "y": 1312.375,
+          "x": 1829.0078125,
+          "y": 1244.875,
           "direction": "right"
         },
         "end": {
@@ -1992,8 +1992,8 @@
           "columnIds": [
             "8cd4e482-0b64-44b4-8494-f92c919d0a1e"
           ],
-          "x": 2061.6471,
-          "y": 994.9442,
+          "x": 2010.3971,
+          "y": 949.9442,
           "direction": "left"
         },
         "constraintName": "",
@@ -2009,17 +2009,17 @@
           "columnIds": [
             "e67615b5-3773-4759-957d-439d49fc9144"
           ],
-          "x": 2303.6231109375003,
-          "y": 808.2775,
-          "direction": "right"
+          "x": 2103.0337554687503,
+          "y": 790.7775,
+          "direction": "bottom"
         },
         "end": {
           "tableId": "9aff2abb-1031-45bb-a856-8f4fd0594a3f",
           "columnIds": [
             "6e4b6514-1692-40ab-834a-e9e3f804f533"
           ],
-          "x": 2276.601445703125,
-          "y": 939.9442,
+          "x": 2225.351445703125,
+          "y": 894.9442,
           "direction": "top"
         },
         "constraintName": "",
@@ -2035,8 +2035,8 @@
           "columnIds": [
             "3ae54a5e-33c0-4965-8573-742574d2fb9a"
           ],
-          "x": 1568.876953125,
-          "y": 1153,
+          "x": 1612.25390625,
+          "y": 1085.5,
           "direction": "top"
         },
         "end": {
@@ -2044,9 +2044,9 @@
           "columnIds": [
             "7ba0c7f7-0f78-4a8f-9cd3-37fcec613e4a"
           ],
-          "x": 1681.55568828125,
-          "y": 932.555,
-          "direction": "right"
+          "x": 1508.430444140625,
+          "y": 951.555,
+          "direction": "bottom"
         },
         "constraintName": "",
         "visible": true,
@@ -2070,8 +2070,8 @@
           "columnIds": [
             "816d4c89-a648-4a03-8b6c-2e1d05c0d406"
           ],
-          "x": 1470.930444140625,
-          "y": 867.305,
+          "x": 1508.430444140625,
+          "y": 821.055,
           "direction": "top"
         },
         "constraintName": "",
@@ -2087,8 +2087,8 @@
           "columnIds": [
             "3ae54a5e-33c0-4965-8573-742574d2fb9a"
           ],
-          "x": 1894.0078125,
-          "y": 1206.125,
+          "x": 1829.0078125,
+          "y": 1138.625,
           "direction": "right"
         },
         "end": {
@@ -2113,8 +2113,8 @@
           "columnIds": [
             "0196c033-18f0-49c3-bb2f-79e57180e2a3"
           ],
-          "x": 2239.3484113281247,
-          "y": 1187.5,
+          "x": 2270.598411328125,
+          "y": 1190,
           "direction": "bottom"
         },
         "end": {

@@ -1,4 +1,5 @@
 package com.project.project_nutrients.controller;
+
 import java.util.Map;
 import java.util.UUID;
 
@@ -24,18 +25,10 @@ import java.util.UUID;
 @RequestMapping("/supp")
 public class ListController {
     @Autowired
-     ListService wholelistservice;
-    
-    // @GetMapping("/wholelist")
-    // public ModelAndView wholelist (@RequestParam Map params, ModelAndView modelAndView){
-    //     Object result = wholelistservice.wholeList(params);
-    //     modelAndView.addObject("params", params);
-    //     modelAndView.addObject("result", result);
-    //     modelAndView.setViewName("/WEB-INF/views/project/supplist/wholelist.jsp");
-    //     return modelAndView;
-    // }
-     @GetMapping("/wholelist")
-    public ModelAndView listpage (@RequestParam Map params, ModelAndView modelAndView){
+    ListService wholelistservice;
+
+    @GetMapping("/wholelist")
+    public ModelAndView wholelist(@RequestParam Map params, ModelAndView modelAndView) {
         Object result = wholelistservice.listWithPaginations(params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
@@ -43,34 +36,37 @@ public class ListController {
         return modelAndView;
     }
 
-    @GetMapping("/spec")
-    public ModelAndView spec (ModelAndView modelAndView){
+    @GetMapping("/specdetail/{SUPP_ID}")
+    public ModelAndView spec(@PathVariable String SUPP_ID, @RequestParam Map params, ModelAndView modelAndView) {
+        Object result = wholelistservice.selectDetail(SUPP_ID, params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
         modelAndView.setViewName("/WEB-INF/views/project/supplist/suppspec.jsp");
         return modelAndView;
     }
 
-        @GetMapping("/listadd")
-    public ModelAndView listadd (ModelAndView modelAndView){
+    @GetMapping("/listadd")
+    public ModelAndView listadd(ModelAndView modelAndView) {
         modelAndView.setViewName("/WEB-INF/views/project/supplist/listadd.jsp");
-        return modelAndView;}
+        return modelAndView;
+    }
 
-             @GetMapping("/insert")
-    public ModelAndView insert (ModelAndView modelAndView){
+    @GetMapping("/insert")
+    public ModelAndView insert(ModelAndView modelAndView) {
         modelAndView.setViewName("/supp/insertandselect");
-        return modelAndView;}
+        return modelAndView;
+    }
 
-        @GetMapping("/insertandselect")
-    public ModelAndView insertandselect (ModelAndView modelAndView){
+    @GetMapping("/insertandselect")
+    public ModelAndView insertandselect(ModelAndView modelAndView) {
         modelAndView.setViewName("/WEB-INF/views/project/supplist/wholelist.jsp");
-        return modelAndView;}
+        return modelAndView;
+    }
 
-        @GetMapping("/about")
-    public ModelAndView about (ModelAndView modelAndView){
+    @GetMapping("/about")
+    public ModelAndView about(ModelAndView modelAndView) {
         modelAndView.setViewName("/WEB-INF/views/about.jsp");
         return modelAndView;
     }
-        
-
-
 
 }

@@ -1,4 +1,5 @@
 package com.project.project_nutrients.controller;
+
 import java.util.Map;
 import java.util.UUID;
 
@@ -15,16 +16,26 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.project.project_nutrients.service.RecommService;
+
 import java.util.UUID;
 
 @Controller
-@RequestMapping ("/recommendation")
+@RequestMapping("/recomm")
 
 public class RecommendationController {
-    @GetMapping("/effectflag")
-    public ModelAndView recommendation (ModelAndView modelAndView){
+    @Autowired
+    RecommService recommservice;
+
+    @GetMapping("/effectflag/{EFFECT_FLAG}")
+    public ModelAndView recommendation(@PathVariable String EFFECT_FLAG, @RequestParam Map parmas,
+            ModelAndView modelAndView) {
+        Object result = recommservice.selectList(EFFECT_FLAG, parmas);
+        modelAndView.addObject("params", parmas);
+        modelAndView.addObject("result", result);
         modelAndView.setViewName("/WEB-INF/views/project/supplist/recommendation.jsp");
         return modelAndView;
     }
-    
+
 }
