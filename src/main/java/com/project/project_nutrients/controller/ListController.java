@@ -34,7 +34,7 @@ public class ListController {
     //     modelAndView.setViewName("/WEB-INF/views/project/supplist/wholelist.jsp");
     //     return modelAndView;
     // }
-     @GetMapping("/listpage")
+     @GetMapping("/wholelist")
     public ModelAndView listpage (@RequestParam Map params, ModelAndView modelAndView){
         Object result = wholelistservice.listWithPaginations(params);
         modelAndView.addObject("params", params);
