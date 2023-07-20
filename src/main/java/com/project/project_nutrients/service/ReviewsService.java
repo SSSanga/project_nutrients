@@ -54,7 +54,7 @@ public class ReviewsService {
         return result;
     }
 
-    public Object reviewinsertAndSelectSearch(Map dataMap) {
+    public Object reviewinsertAndSelect(Map dataMap) {
 
         HashMap result = new HashMap<>();
         result.put("reviewinsertCount", this.reviewinsert(dataMap));
@@ -62,39 +62,66 @@ public class ReviewsService {
         result.putAll(this.reviewselectSearch(dataMap));
         return result;
     }
+     
+      // rest api
+      public Object reviewdelete(Map dataMap) {
+        String sqlMapId = "Reviews.reviewdelete";
+
+        Object result = sharedDao.delete(sqlMapId, dataMap);
+        return result;
+    }
+    public Object reviewdelete(String  REVIEW_ID) {
+        String sqlMapId = "Reviews.reviewdelete";
+        HashMap dataMap = new HashMap<>();
+        dataMap.put(" REVIEW_ID",  REVIEW_ID);
+
+        Object result = sharedDao.delete(sqlMapId, dataMap);
+        return result;
+    }
+
+        // MVC view 회원탈퇴? 악플삭제? admin이 관리
+        public Object reviewdeleteAndSelectSearch(String REVIEW_ID, Map dataMap) {
+            dataMap.put(" REVIEW_ID",  REVIEW_ID);
+    
+            HashMap result = new HashMap<>();
+            result.put("deleteCount", this.reviewdelete(dataMap));
+    
+            result.putAll(this. reviewselectSearch(dataMap));
+            return result;
+        }
 
     
-    //  // 검색(조건-search : TITLE, CONTENT, WRITING_DATE )
-    //  public Map reviewselectSearchWithPagination(Map dataMap) {
-    //     //페이지 형성 위한 계산
-    //     int totalCount = (int) this.reviewselectTotal(dataMap);
+     // 검색(조건-search : TITLE, CONTENT, WRITING_DATE )
+     public Map reviewselectSearchWithPagination(Map dataMap) {
+        //페이지 형성 위한 계산
+        int totalCount = (int) this.reviewselectTotal(dataMap);
         
-    //     int currentPage = 1;
-    //     if(dataMap.get("currentPage") != null) {
-    //         currentPage = Integer.parseInt((String)dataMap.get("currentPage"));    // from client in param
-    //     }
+        int currentPage = 1;
+        if(dataMap.get("currentPage") != null) {
+            currentPage = Integer.parseInt((String)dataMap.get("currentPage"));    // from client in param
+        }
         
-    //     Paginations paginations = new Paginations(totalCount, currentPage);
-    //     HashMap result = new HashMap<>();
-    //     result.put("paginations", paginations); // 페이지에 대한 정보
+        Paginations paginations = new Paginations(totalCount, currentPage);
+        HashMap result = new HashMap<>();
+        result.put("paginations", paginations); // 페이지에 대한 정보
         
-    //     // page record 수
-    //     // Object getOne(String sqlMapId, Object dataMap)
-    //     String sqlMapId = "Reviews.reviewselectSearchWithPagination";
-    //     dataMap.put("pageScale", paginations.getPageScale());
-    //     dataMap.put("pageBegin", paginations.getPageBegin());
+        // page record 수
+        // Object getOne(String sqlMapId, Object dataMap)
+        String sqlMapId = "Reviews.reviewselectSearchWithPagination";
+        dataMap.put("pageScale", paginations.getPageScale());
+        dataMap.put("pageBegin", paginations.getPageBegin());
 
-    //     result.put("resultList", sharedDao.getList(sqlMapId, dataMap)); //표현된 레코드 정보
-    //     return result;
-    // }
+        result.put("resultList", sharedDao.getList(sqlMapId, dataMap)); //표현된 레코드 정보
+        return result;
+    }
 
-    // public Object reviewselectTotal(Map dataMap) {
-    //     String sqlMapId = "Reviews.reviewselectTotal";
-        
-
-    //     Object result = sharedDao.getOne(sqlMapId, dataMap);
-    //     return result;
-    // }    
+   
+    public Object reviewselectTotal(Map dataMap) {
+        String sqlMapId = "Reviews.reviewselectTotal";
+    
+        Object result = sharedDao.getOne(sqlMapId, dataMap);
+        return result;
+    }    
 
     }
 

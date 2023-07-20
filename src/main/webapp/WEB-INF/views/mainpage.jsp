@@ -55,6 +55,10 @@
                         <button type="submit" class="w-100 btn btn-lg btn-outline"
                             formaction="/recommendation/effectflag">콜레스테롤 개선</button>
                     </div>
+                    <div class="col-md-3">
+                        <button type="submit" class="w-100 btn btn-lg btn-outline"
+                            formaction="/reviews/reviewdeleteAndSelectSearch">관리자 테스트</button>
+                    </div>
                 </div>
             </form>
 

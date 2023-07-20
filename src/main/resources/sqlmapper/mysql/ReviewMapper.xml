@@ -15,7 +15,7 @@ WHERE REVIEW_ID = #{REVIEW_ID}
 INSERT INTO REVIEW
 (REVIEW_ID, WRITING_DATE, TITLE, CONTENT, VIEW_COUNT, SUPP_ID, UNIQUE_ID) 
 VALUES
-(#{REVIEW_ID},NOW(), #{TITLE}, #{CONTENT}, 30, #{SUPP_ID}, #{UNIQUE_ID})
+(#{REVIEW_ID}, NOW(), #{TITLE}, #{CONTENT}, 30, #{SUPP_ID}, #{UNIQUE_ID})
 </insert>
 
 <!-- Update --> 
@@ -37,5 +37,20 @@ WHERE REVIEW_ID = #{REVIEW_ID}
 <select id="reviewselect" parameterType="Map" resultType="Map">
 SELECT REVIEW_ID,TITLE,CONTENT
 FROM review 
-	</select>
+</select>
+
+<!-- 검색 with pagination-->
+   <select id="reviewselectSearchWithPagination" parameterType="Map" resultType="Map">
+      SELECT *
+      FROM project_nutrients.review
+      limit #{pageBegin}, #{pageScale}
+      ;
+   </select>
+
+<!-- total count -->
+   <select id="reviewselectTotal" parameterType="Map" resultType="int">
+      SELECT count(*) as cnt
+      FROM project_nutrients.review
+      ;
+   </select>   
 </mapper>
