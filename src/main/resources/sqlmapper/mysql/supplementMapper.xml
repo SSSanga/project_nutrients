@@ -12,12 +12,12 @@
     INNER JOIN effect AS t_EFFECT
     ON t_WHOLELIST.EFFECT_FLAG = t_EFFECT.EFFECT_ID;
 	</select>
-<!-- select_wholelist with pagination -->
 
+<!-- select_wholelist with pagination -->
   <select id="listwithpaginations" parameterType="Map" resultType="Map">
 
-        SELECT DISTINCT t_WHOLELIST.LOCATION, t_WHOLELIST.PRODUCT, t_EFFECT.EFFECT
-        FROM (SELECT t_SPEC.LOCATION, t_SPEC.PRODUCT, t_LIST.EFFECT_FLAG 
+        SELECT DISTINCT t_WHOLELIST.SUPP_ID, t_WHOLELIST.LOCATION, t_WHOLELIST.PRODUCT, t_EFFECT.EFFECT
+        FROM (SELECT t_SPEC.SUPP_ID, t_SPEC.LOCATION, t_SPEC.PRODUCT, t_LIST.EFFECT_FLAG 
         FROM supp_list AS t_LIST
         INNER JOIN supp_spec AS t_SPEC
         ON t_LIST.SUPP_ID = t_SPEC.SUPP_ID) AS t_WHOLELIST
@@ -26,40 +26,20 @@
         LIMIT #{pageBegin},#{pageScale}
         
   </select>
-
-  <!-- select_wholelist with pagination -->
-
-
-
-
-  <select id="suppdetails" parameterType="Map">
-        SELECT t_SUPP_DETAILS.SUPP_ID, t_SUPP_DETAILS.PRODUCT, t_SUPP_DETAILS.MANUFACTURE, t_SUPP_DETAILS.DOSAGE, t_SUPP_DETAILS.FREQUENCY, t_SUPP_DETAILS.COMPONENT, t_SUPP_DETAILS.EFFECT, t_SUPP_DETAILS.SIDEEFFECT
-        FROM 
-        (SELECT supp_spec.SUPP_ID, supp_spec.PRODUCT, supp_spec.MANUFACTURE, supp_spec.DOSAGE, supp_spec.FREQUENCY, t_DETAILS.COMPONENT, t_DETAILS.EFFECT, t_DETAILS.SIDEEFFECT
-        FROM supp_spec
-        INNER JOIN (SELECT t_BADGOODCOM.SUPP_ID, component.COMPONENT, t_BADGOODCOM.SIDEEFFECT, t_BADGOODCOM.EFFECT
-        FROM component
-        INNER JOIN 
-        (SELECT supp_comp.SUPP_ID, supp_comp.COMPONENT_ID,t_BADGOOD.SIDEEFFECT, t_BADGOOD.EFFECT
-        FROM supp_comp
-        INNER JOIN (SELECT t_BAD.SUPP_ID,t_BAD.SIDEEFFECT, t_EFFECT.EFFECT
-        FROM (SELECT SUPP_SIDE.SUPP_ID, SIDEEFFECTS.SIDEEFFECT
-        FROM supp_side
-        INNER JOIN sideeffects
-        ON supp_side.SIDEEFFECT_ID = sideeffects.SIDEEFFECT_ID) AS t_BAD
-        INNER JOIN (SELECT SUPP_LIST.SUPP_ID, EFFECT.EFFECT
+<!-- 추천 누르면 EFFECT_FLAG가 일치할때 나오게끔 -->
+  <select id="recomm" parameterType="Map" resultType="Map">
+        SELECT t_SUPPRECOMM.LOCATION, t_SUPPRECOMM.PRODUCT, t_SUPPRECOMM.LINK
+        FROM (SELECT t_LIST.LOCATION, t_LIST.PRODUCT, t_LIST.LINK, t_LIST.EFFECT_FLAG, effect.EFFECT
+        FROM (SELECT DISTINCT supp_spec.LOCATION, supp_spec.SUPP_ID, supp_list.EFFECT_FLAG, supp_spec.PRODUCT, supp_spec.LINK
         FROM supp_list
+        INNER JOIN supp_spec
+        ON supp_spec.SUPP_ID = supp_list.SUPP_ID) AS t_LIST
         INNER JOIN effect
-        ON SUPP_LIST.EFFECT_ID = EFFECT.EFFECT_ID) AS t_EFFECT
-        ON t_BAD.SUPP_ID = t_EFFECT.SUPP_ID ) AS t_BADGOOD
-        ON supp_comp.SUPP_ID=t_BADGOOD.SUPP_ID) AS t_BADGOODCOM
-        ON component.COMPONENT_ID = t_BADGOODCOM.COMPONENT_ID) AS t_DETAILS
-        ON supp_spec.SUPP_ID = t_DETAILS.SUPP_ID
-        ORDER BY supp_spec.SUPP_ID) AS t_SUPP_DETAILS
-        WHERE t_SUPP_DETAILS.SUPP_ID = #{t_SUPP_DETAILS.SUPP_ID}
+        ON t_LIST.EFFECT_FLAG = effect.EFFECT_ID) AS t_SUPPRECOMM
+        WHERE t_SUPPRECOMM.EFFECT_FLAG = #{EFFECT_FLAG}; 
   </select>
 
-<!-- select_suppdetails -->
+  <!-- select_suppdetails -->
 
       <!-- Update --> 
       <!-- DDL문에서 not null인 값은 업데이트시 꼭 넣어줘야 하는 컬럼 / null값, insert시 생성되는 값들은 update해주지 않아도 됨. -->
@@ -69,20 +49,18 @@
       WHERE REVIEW_ID = #{REVIEW_ID};
       </update>
 
+
+
   <!-- delete -->
   <!-- 유니크 아이디 COMMON_CODE_ID로 delete -->
   <delete id="suppdelete" parameterType="Map">
-      DELETE FROM supp_comp
-      WHERE SUPP_ID = #{SUPP_ID};
+      DELETE supp_comp, supp_list, supp_side, supp_spec
+      FROM supp_comp
+      LEFT JOIN supp_list ON supp_comp.SUPP_ID = supp_list.SUPP_ID
+      LEFT JOIN supp_side ON supp_comp.SUPP_ID = supp_side.SUPP_ID
+      LEFT JOIN supp_spec ON supp_comp.SUPP_ID = supp_spec.SUPP_ID
+      WHERE supp_comp.SUPP_ID = #{SUPP_ID};
 
-      DELETE FROM supp_list
-      WHERE SUPP_ID = #{SUPP_ID};
-
-      DELETE FROM supp_side
-      WHERE SUPP_ID = #{SUPP_ID};
-
-      DELETE FROM supp_spec
-      WHERE SUPP_ID = #{SUPP_ID};
   </delete>
 
   <!-- 검색창 -->
@@ -131,6 +109,41 @@ VALUES (#{SUPP_ID},#{COMPONENT_ID});
           LIMIT #{pageBegin},#{pageScale}
         ;
 	</select>
+
+
+
+
+
+<!-- 상세정보불러오기....각각 하나씩만.....ㅠㅜㅜㅠㅜㅜㅜㅜ -->
+  <select id="suppdetails" parameterType="Map" resultType="Map">
+            SELECT t_SUPP_DETAILS.LOCATION, t_SUPP_DETAILS.SUPP_ID, t_SUPP_DETAILS.PRODUCT, t_SUPP_DETAILS.MANUFACTURE, t_SUPP_DETAILS.DOSAGE, t_SUPP_DETAILS.FREQUENCY, t_SUPP_DETAILS.COMPONENT, t_SUPP_DETAILS.EFFECT, t_SUPP_DETAILS.SIDEEFFECT
+            FROM 
+            (SELECT supp_spec.LOCATION, supp_spec.SUPP_ID, supp_spec.PRODUCT, supp_spec.MANUFACTURE, supp_spec.DOSAGE, supp_spec.FREQUENCY, t_DETAILS.COMPONENT, t_DETAILS.EFFECT, t_DETAILS.SIDEEFFECT
+            FROM supp_spec
+            INNER JOIN (SELECT t_BADGOODCOM.SUPP_ID, component.COMPONENT, t_BADGOODCOM.SIDEEFFECT, t_BADGOODCOM.EFFECT
+            FROM component
+            INNER JOIN 
+            (SELECT supp_comp.SUPP_ID, supp_comp.COMPONENT_ID,t_BADGOOD.SIDEEFFECT, t_BADGOOD.EFFECT
+            FROM supp_comp
+            INNER JOIN (SELECT t_BAD.SUPP_ID,t_BAD.SIDEEFFECT, t_EFFECT.EFFECT
+            FROM (SELECT SUPP_SIDE.SUPP_ID, SIDEEFFECTS.SIDEEFFECT
+            FROM supp_side
+            INNER JOIN sideeffects
+            ON supp_side.SIDEEFFECT_ID = sideeffects.SIDEEFFECT_ID) AS t_BAD
+            INNER JOIN (SELECT SUPP_LIST.SUPP_ID, EFFECT.EFFECT
+            FROM supp_list
+            INNER JOIN effect
+            ON SUPP_LIST.EFFECT_ID = EFFECT.EFFECT_ID) AS t_EFFECT
+            ON t_BAD.SUPP_ID = t_EFFECT.SUPP_ID ) AS t_BADGOOD
+            ON supp_comp.SUPP_ID=t_BADGOOD.SUPP_ID) AS t_BADGOODCOM
+            ON component.COMPONENT_ID = t_BADGOODCOM.COMPONENT_ID) AS t_DETAILS
+            ON supp_spec.SUPP_ID = t_DETAILS.SUPP_ID
+            ORDER BY supp_spec.SUPP_ID) AS t_SUPP_DETAILS
+            WHERE t_SUPP_DETAILS.SUPP_ID = #{SUPP_ID}
+  </select>
+
+
+
 
 
 </mapper>
