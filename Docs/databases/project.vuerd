@@ -631,7 +631,7 @@
             "id": "d1e8c2aa-6906-43b4-a680-11036fcc423e",
             "name": "INQUIRY_ID",
             "comment": "댓글_ID",
-            "dataType": "VARCHAR(500)",
+            "dataType": "INTEGER",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -646,7 +646,7 @@
               "pfk": false,
               "widthName": 76.166015625,
               "widthComment": 60,
-              "widthDataType": 94.94873046875,
+              "widthDataType": 60,
               "widthDefault": 60
             }
           },
@@ -793,7 +793,7 @@
           "active": false,
           "left": 229.3611,
           "top": 1275.75,
-          "zIndex": 28,
+          "zIndex": 33,
           "widthName": 60,
           "widthComment": 60
         },
