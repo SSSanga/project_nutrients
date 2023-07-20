@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ page import="java.util.HashMap, java.util.ArrayList" %>
+  <%@ page import="java.util.HashMap, java.util.ArrayList, com.project.project_nutrients.utils.Paginations" %>
+
 
     <!DOCTYPE html>
     <html lang="en">
@@ -27,7 +28,7 @@
                             for(int i=0; i < resultList.size(); i=i+1){ 
                                 HashMap record=(HashMap)resultList.get(i); %>
                                 <div class="row">
-                                    <button formaction="/reviews/review" class="col-md-6 mx-auto btn btn-none">
+                                    <button formaction="/reviews/reviewselectDetail/<%= result.get("REVIEW_ID") %>" class="col-md-6 mx-auto btn btn-none">
                                         <div class="card mb-4">
                                             <div class="card-body">
                                                 <h5 class="card-title" style="font-weight: bold;">
@@ -44,11 +45,13 @@
                                         </div>
                                         <% } %>
                                     </button>
+                                    
+                                    >
                                         <div class="p-3 justify-content-end">
                                             <button type="submit" class="btn btn-primary"
                                                 formaction="/reviews/reviewwrite">후기 작성 GO!</button>
                                         </div>
-                                </div>
+                                
                     </div>
 
             </form>
