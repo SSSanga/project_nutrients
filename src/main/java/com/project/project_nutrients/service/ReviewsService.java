@@ -21,9 +21,9 @@ public class ReviewsService {
     @Autowired
     SharedDao sharedDao;
 
-    // public String generateUUID() {
-    // return UUID.randomUUID().toString();
-    //     }
+    public String generateUUID() {
+        return UUID.randomUUID().toString();
+    }
 
     // 리뷰 테스트용/ 검색(조건-search:)
     public Map reviewselectSearch(Map dataMap) {
@@ -41,6 +41,26 @@ public class ReviewsService {
     
             Object result = sharedDao.getOne(sqlMapId, dataMap);
             return result;
+    }
+
+    public Object reviewinsert(Map dataMap) {
+        String sqlMapId = "Reviews.reviewinsert";
+        if(dataMap.get("REVIEW_ID").equals("")){
+            String uuid = generateUUID();
+            dataMap.put("REVIEW_ID", uuid);
+        } else{
+        }
+        Object result = sharedDao.insert(sqlMapId, dataMap);
+        return result;
+    }
+
+    public Object reviewinsertAndSelectSearch(Map dataMap) {
+
+        HashMap result = new HashMap<>();
+        result.put("reviewinsertCount", this.reviewinsert(dataMap));
+
+        result.putAll(this.reviewselectSearch(dataMap));
+        return result;
     }
 
     

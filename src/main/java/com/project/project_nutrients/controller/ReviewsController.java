@@ -70,7 +70,7 @@ public class ReviewsController {
         return  modelAndView;
     }
 
-    //  리뷰테스트용 검색 
+
     @GetMapping("/reviewselectSearch")
     public ModelAndView reviewselectSearch(@RequestParam Map params, ModelAndView modelAndView) {
         Object result = reviewsService.reviewselectSearch(params);
@@ -79,5 +79,16 @@ public class ReviewsController {
         
         modelAndView.setViewName("/WEB-INF/views/project/reviews/reviews.jsp");
         return modelAndView;
+    
+    @PostMapping("/reviewinsertAndSelectSearch")
+    public ModelAndView reviewinsertAndSelectSearch(@RequestParam Map params, ModelAndView modelAndView) {
+        Object result = reviewsService.reviewinsertAndSelectSearch(params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+
+        modelAndView.setViewName("/WEB-INF/views/project/reviews/reviewwriting.jsp");
+        return modelAndView;
+   }
+
     }
 }
