@@ -12,8 +12,9 @@
       <link href="./../css/main.css" rel="stylesheet" />
     </head>
 
-    <!-- header -->
-    <%@ include file="/WEB-INF/views/project/header.jsp" %>
+    <body>
+      <!-- header -->
+      <%@ include file="/WEB-INF/views/project/header.jsp" %>
       <!-- Screen adjust functions -->
       <script>
         var zoom = 1;
@@ -44,7 +45,8 @@
                 </tr>
               </thead>
               <tbody class="mt-auto mb-auto">
-                <% HashMap result=(HashMap)request.getAttribute("result"); %>
+                <% HashMap params=(HashMap)request.getAttribute("params"); String searchStr=(String)params.getOrDefault("search", ""
+                ); HashMap result=(HashMap)request.getAttribute("result"); %>
                   <% ArrayList resultList=(ArrayList)result.get("resultList"); for(int i=0; i < resultList.size();
                     i=i+1) { HashMap record=(HashMap)resultList.get(i); %>
                     <tr>
@@ -56,8 +58,8 @@
                       <td>
                         <%= record.get("EFFECT") %>
                       </td>
-                      <td><button class="btn btn-success mt-auto mb-auto" type="submit" formaction="/supp/spec">상세</button></td>
-                      <td><button class="btn btn-success mt-auto mb-auto" type="submit" formaction="/supp/spec">삭제</button></td>
+                      <td><button class="btn btn-success mt-auto mb-auto" type="submit" formaction='/supp/specdetail/<%= record.get("SUPP_ID") %>' value='<%= record.get("SUPP_ID") %>' > 상세</button></td>
+                      <td><button class="btn btn-success mt-auto mb-auto" type="submit" formaction="/supp/wholist">삭제</button></td>
 
                     </tr>
                     <% } %>

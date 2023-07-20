@@ -35,7 +35,7 @@ WHERE REVIEW_ID = #{REVIEW_ID}
 
 <!-- 검색창 -->
 <select id="reviewselect" parameterType="Map" resultType="Map">
-SELECT REVIEW_ID,TITLE,CONTENT
+SELECT REVIEW_ID,TITLE,CONTENT, WRITING_DATE
 FROM review 
 </select>
 
