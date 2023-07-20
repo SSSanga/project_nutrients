@@ -68,5 +68,11 @@ public class ListService {
         result.put("resultList", sharedDao.getList(sqlMapId, dataMap));
         return result;
     }
+    public Object delete(String SUPP_ID, Map dataMap) {
+        String sqlMapId = "Supplement.suppdelete";
+
+        Object result = sharedDao.delete(sqlMapId, dataMap);
+        return result;
+    }
 
 }

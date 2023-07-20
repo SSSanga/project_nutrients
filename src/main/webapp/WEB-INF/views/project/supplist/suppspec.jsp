@@ -12,8 +12,9 @@
       <link href="./../css/main.css" rel="stylesheet" />
     </head>
 
-    <!-- header -->
-    <%@ include file="/WEB-INF/views/project/header.jsp" %>
+    <body>
+      <!-- header -->
+      <%@ include file="/WEB-INF/views/project/header.jsp" %>
       <!-- Screen adjust functions -->
       <script>
         var zoom = 1;
@@ -31,7 +32,7 @@
         }
       </script>
 
-      <body>
+
 
           <div class="container">
             <h1>영양제 정보</h1>

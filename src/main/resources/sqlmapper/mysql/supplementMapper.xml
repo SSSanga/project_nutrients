@@ -60,7 +60,6 @@
       LEFT JOIN supp_side ON supp_comp.SUPP_ID = supp_side.SUPP_ID
       LEFT JOIN supp_spec ON supp_comp.SUPP_ID = supp_spec.SUPP_ID
       WHERE supp_comp.SUPP_ID = #{SUPP_ID};
-
   </delete>
 
   <!-- 검색창 -->

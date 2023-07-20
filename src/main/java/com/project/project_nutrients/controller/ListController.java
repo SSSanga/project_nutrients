@@ -44,6 +44,15 @@ public class ListController {
         modelAndView.setViewName("/WEB-INF/views/project/supplist/suppspec.jsp");
         return modelAndView;
     }
+     @GetMapping("/delete/{SUPP_ID}")
+    public ModelAndView delete(@PathVariable String SUPP_ID
+                        , @RequestParam Map params, ModelAndView modelAndView) {
+        Object result = wholelistservice.delete(SUPP_ID, params);
+        modelAndView.addObject("result", result);
+
+        modelAndView.setViewName("/supp/sholelist");
+        return modelAndView;
+    }
 
     @GetMapping("/listadd")
     public ModelAndView listadd(ModelAndView modelAndView) {
@@ -68,5 +77,6 @@ public class ListController {
         modelAndView.setViewName("/WEB-INF/views/about.jsp");
         return modelAndView;
     }
+
 
 }

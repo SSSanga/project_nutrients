@@ -32,7 +32,7 @@
         }
       </script>
 
-      <body>
+      
         <div class="container p-3">
           <form>
             <table class="table table-striped table-sm">
@@ -58,8 +58,8 @@
                       <td>
                         <%= record.get("EFFECT") %>
                       </td>
-                      <td><button class="btn btn-success mt-auto mb-auto" type="submit" formaction='/supp/specdetail/<%= record.get("SUPP_ID") %>' value='<%= record.get("SUPP_ID") %>' > 상세</button></td>
-                      <td><button class="btn btn-success mt-auto mb-auto" type="submit" formaction="/supp/wholist">삭제</button></td>
+                      <td><button class="btn btn-success mt-auto mb-auto" type="submit" formaction='/supp/specdetail/<%= record.get("SUPP_ID") %>' value='<%= record.get("SUPP_ID") %>' name='SUPP_ID'>상세</button></td>
+                      <td><button class="btn btn-success mt-auto mb-auto" type="submit" formaction='/supp/delete/<%= record.get("SUPP_ID") %>'value='<%= record.get("SUPP_ID") %>' name='SUPP_ID'>삭제</button></td>
 
                     </tr>
                     <% } %>

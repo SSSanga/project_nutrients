@@ -40,20 +40,19 @@
                 <div class="row p-2">
                     <div class="col-md-3">
                         <button type="submit" class="w-100 btn btn-lg btn-outline"
-                            formaction="/recomm/effectflag/EFFECT_01" value="EFFECT_01" name="EFFECT_FLAG">간 기능개선</button>
+                            formaction="/recomm/effectflag/EFFECT_01" value="EFFECT_01" name="EFFECT_FLAG">간이 건강해지고 싶다면?</button>
                     </div>
                     <div class="col-md-3">
                         <button type="submit" class="w-100 btn btn-lg btn-outline"
-                            formaction="/recomm/effectflag/EFFECT_05" value="EFFECT_05" name="EFFECT_FLAG">피로회복</button>
+                            formaction="/recomm/effectflag/EFFECT_05" value="EFFECT_05" name="EFFECT_FLAG">만성 피로에 시달리는 분!!</button>
                     </div>
                     <div class="col-md-3">
                         <button type="submit" class="w-100 btn btn-lg btn-outline"
-                            formaction="/recomm/effectflag/EFFECT_09" value="EFFECT_09" name="EFFECT_FLAG">눈 기능
-                            향상</button>
+                            formaction="/recomm/effectflag/EFFECT_09" value="EFFECT_09" name="EFFECT_FLAG">건강한 혈행을 위해!</button>
                     </div>
                     <div class="col-md-3">
                         <button type="submit" class="w-100 btn btn-lg btn-outline"
-                            formaction="/recomm/effectflag/EFFECT_13" value="EFFECT_13" name="EFFECT_FLAG">콜레스테롤 개선</button>
+                            formaction="/recomm/effectflag/EFFECT_13" value="EFFECT_13" name="EFFECT_FLAG">나도 0.8 시력을 가지고 싶다!!</button>
                     </div>
                 </div>
             </form>

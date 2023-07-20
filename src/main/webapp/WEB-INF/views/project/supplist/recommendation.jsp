@@ -5,33 +5,33 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nutrient Recommendations Home</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
-    <link href="./../css/main.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutrient Recommendations Home</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+  <link href="./../css/main.css" rel="stylesheet" />
 </head>
-
-<body>
   <!-- header -->
   <%@ include file="/WEB-INF/views/project/header.jsp" %>
+  <!-- Screen adjust functions -->
+  <script>
+    var zoom = 1;
 
-    <!-- Screen adjust functions -->
-    <script>
-      var zoom = 1;
+    function increaseSize() {
+      zoom += 0.1;
+      document.getElementById('zoom-display').innerText = Math.round(zoom * 100) + '%';
+      document.body.style.zoom = zoom;
+    }
 
-      function increaseSize() {
-          zoom += 0.1;
-          document.getElementById('zoom-display').innerText = Math.round(zoom * 100) + '%';
-          document.body.style.zoom = zoom;
-      }
-
-      function decreaseSize() {
-          zoom -= 0.1;
-          document.getElementById('zoom-display').innerText = Math.round(zoom * 100) + '%';
-          document.body.style.zoom = zoom;
-      }
+    function decreaseSize() {
+      zoom -= 0.1;
+      document.getElementById('zoom-display').innerText = Math.round(zoom * 100) + '%';
+      document.body.style.zoom = zoom;
+    }
   </script>
+<body>
+
+
 
     <div class="container content-center p-5">
       <div class="h2">혈중 콜레스테롤 개선 영양제 LIST</div>
@@ -61,10 +61,11 @@
       </div>
       <hr>
 
-      <!-- Footer -->
-      <%@ include file="/WEB-INF/views/project/footer.jsp" %>
+
   
 </body>
+      <!-- Footer -->
+      <%@ include file="/WEB-INF/views/project/footer.jsp" %>
 </html>
 
 
