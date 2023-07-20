@@ -40,9 +40,22 @@ public class ReviewsController {
     }
 
     @GetMapping("/review")
-    public ModelAndView review(@RequestParam Map params, ModelAndView modelAndView) {        
+    public ModelAndView review(@RequestParam Map params, ModelAndView modelAndView) {
+        Object result = reviewsService.reviewselectSearch(params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);        
         modelAndView.setViewName("/WEB-INF/views/project/reviews/review1.jsp");
         return  modelAndView;
+    }
+
+    @GetMapping("/reviewselectDetail/{REVIEW_ID}")
+    public ModelAndView reviewselectDetail(@PathVariable String REVIEW_ID
+                        , @RequestParam Map params, ModelAndView modelAndView) {
+        Object result = reviewsService.reviewselectDetail(REVIEW_ID, params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+        modelAndView.setViewName("/WEB-INF/views/project/reviews/review1.jsp");
+        return modelAndView;
     }
 
     @GetMapping("/review2")

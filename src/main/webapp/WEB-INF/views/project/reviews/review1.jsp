@@ -1,4 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+  <%@ page import="java.util.HashMap, java.util.ArrayList, com.project.project_nutrients.utils.Paginations" %>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,25 +17,37 @@
     <!-- header -->
     <%@ include file="/WEB-INF/views/project/header.jsp" %>
     <form class="d-flex" action="" method="">
+        <% HashMap params=(HashMap)request.getAttribute("params"); 
+        String searchStr=(String)params.getOrDefault("search", "" ); 
+        HashMap result=(HashMap)request.getAttribute("result"); %>
+            <% ArrayList resultList=(ArrayList)result.get("resultList"); 
+            for(int i=0; i < resultList.size(); i=i+1){ 
+                HashMap record=(HashMap)resultList.get(i); %>
+    
+    <div class="mb-3">
+            <input class="form-control" type="hidden" id="REVIEW_ID" name="REVIEW_ID">
+    </div>
     <div class="container py-4">
         <h1 class="text-center" style="font-weight: bold;">Reviews</h1>
         <hr style="border-top: 4px solid;">
+        
         <div class="row">
+            <div class="mb-3">
+                <input class="form-control" type="hidden" id="REVIEW_ID" name="REVIEW_ID">
+            </div>
             <div class="col-md-8 mx-auto">
                 <div class="card mb-3">
                     <div class="card-body">
-                        <h5 class="card-title mt-2" style="font-weight: bold;">비타민B복합체 먹었는데 피로 회복 드라마틱해요!!!</h5>
+                        <h5 class="card-title mt-2" style="font-weight: bold;"><%= record.get("TITLE") %></h5>
                     </div>
                 </div>
                 <div class="card mb-4 pt-4">
                     <img src="/images/vitaminB3.PNG" alt="vitaminb3" class="card-img-top" style="width: 100px;">
                     <div class="card-body">
-                        <td class="card-text pb-2">저는 평소에 피로가 항상 쌓여있는 기분이였어요..
-                            주변 지인들이 비타민B를 먹어보라 하더라구요?
-                            검색 중에 nutrient recommendations에서 추천받은 비타민B3를 사먹었는데!
-                            효과 완전 직빵!!!!대박!!한 3일 먹었는데</td>
+                        <td class="card-text pb-2"><%= record.get("CONTENT") %></td>
                     </div>
                 </div>
+                <% } %>
                 <div>
                 <h4 class=" pt-5 mb-3" style="font-weight: bold;">Comment</h4>
                 <hr style="border-top: 3px solid;">
