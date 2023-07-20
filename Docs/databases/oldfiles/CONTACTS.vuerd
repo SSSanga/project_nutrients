@@ -120,7 +120,11 @@
           "active": false,
           "left": 530.9468,
           "top": 629.6147,
+<<<<<<< HEAD:Docs/databases/Contacts.vuerd
+          "zIndex": 1,
+=======
           "zIndex": 2,
+>>>>>>> f72e4a4d78b8d3d4edfebff5278f59b5be35dc6e:Docs/databases/oldfiles/CONTACTS.vuerd
           "widthName": 60,
           "widthComment": 60
         },
@@ -205,7 +209,11 @@
           "active": false,
           "left": 537.347,
           "top": 896.9994,
+<<<<<<< HEAD:Docs/databases/Contacts.vuerd
+          "zIndex": 2,
+=======
           "zIndex": 3,
+>>>>>>> f72e4a4d78b8d3d4edfebff5278f59b5be35dc6e:Docs/databases/oldfiles/CONTACTS.vuerd
           "widthName": 60,
           "widthComment": 60
         },
@@ -382,7 +390,11 @@
           "active": false,
           "left": 1071.4061,
           "top": 716.9146,
+<<<<<<< HEAD:Docs/databases/Contacts.vuerd
+          "zIndex": 3,
+=======
           "zIndex": 4,
+>>>>>>> f72e4a4d78b8d3d4edfebff5278f59b5be35dc6e:Docs/databases/oldfiles/CONTACTS.vuerd
           "widthName": 60,
           "widthComment": 60
         },
@@ -400,7 +412,11 @@
           "active": false,
           "left": 216,
           "top": 553,
+<<<<<<< HEAD:Docs/databases/Contacts.vuerd
+          "zIndex": 4,
+=======
           "zIndex": 1,
+>>>>>>> f72e4a4d78b8d3d4edfebff5278f59b5be35dc6e:Docs/databases/oldfiles/CONTACTS.vuerd
           "width": 259,
           "height": 226
         },
