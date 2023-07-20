@@ -29,9 +29,22 @@ public class ReviewsController {
     @Autowired
     ReviewsService reviewsService;
    
+    // @GetMapping("/reviewlist")
+    // public ModelAndView reviewlist(@RequestParam Map params, ModelAndView modelAndView) {
+    //     Object result = reviewsService.reviewselectSearch(params);
+    //     modelAndView.addObject("params", params);
+    //     modelAndView.addObject("result", result);
+        
+    //     modelAndView.setViewName("/WEB-INF/views/project/reviews/reviews.jsp");
+    //     return modelAndView;
+    // }
+
+    // /selectSearch?search=YEAR&words=2020
+    // /selectSearch/CAR_NAME/소
     @GetMapping("/reviewlist")
-    public ModelAndView reviewlist(@RequestParam Map params, ModelAndView modelAndView) {
-        Object result = reviewsService.reviewselectSearch(params);
+    public ModelAndView reviewselectSearchWithPagination(@RequestParam Map params
+                            , ModelAndView modelAndView) {
+        Object result = reviewsService.reviewselectSearchWithPagination(params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
         
@@ -70,7 +83,7 @@ public class ReviewsController {
         return  modelAndView;
     }
 
-    //  리뷰테스트용 검색 
+
     @GetMapping("/reviewselectSearch")
     public ModelAndView reviewselectSearch(@RequestParam Map params, ModelAndView modelAndView) {
         Object result = reviewsService.reviewselectSearch(params);
@@ -80,4 +93,32 @@ public class ReviewsController {
         modelAndView.setViewName("/WEB-INF/views/project/reviews/reviews.jsp");
         return modelAndView;
     }
+
+    @GetMapping("/reviewinsertAndSelect")
+    public ModelAndView reviewinsertAndSelect(@RequestParam Map params, ModelAndView modelAndView) {
+        Object result = reviewsService.reviewinsertAndSelect(params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+
+        modelAndView.setViewName("/WEB-INF/views/project/reviews/reviews.jsp");
+        return modelAndView;
+   }
+
+    // admin이 관리, admin 완성되면 수정하기!!!!
+    @GetMapping("/reviewdeleteAndSelectSearch")
+    public ModelAndView reviewdeleteAndSelectSearch(@PathVariable String REVIEW_ID
+                           , @RequestParam Map params, ModelAndView modelAndView) {
+        Object result = reviewsService.reviewdeleteAndSelectSearch(REVIEW_ID, params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+   
+        modelAndView.setViewName("/WEB-INF/views/project/admin/admin_reviews.jsp");
+        return modelAndView;
+       }
+   
+
+ 
+
+
+
 }

@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+  <%@ page import="java.util.HashMap, java.util.ArrayList, com.project.project_nutrients.utils.Paginations" %>
     <!DOCTYPE html>
     <html lang="en">
 
@@ -13,11 +14,10 @@
     <body>
         <!-- header -->
         <%@ include file="/WEB-INF/views/project/header.jsp" %>
-            <div class="container text-center">
+           
+        <div class="container text-center">
                 <h1 class="mb-0">자주하는 질문</h1>
             </div>
-
-
             <main class="container mt-4">
                 <div class="d-flex justify-content-end align-items-end">
                     <div class="mb-3 me-2">
@@ -42,32 +42,42 @@
                 </div>
                 <div class="d-flex justify-content-start align-items-end">
                     <div class="mb-3 mt-4">
-                        <p>게시글 총수: <span id="postCount">0</span></p>
+                        <p>게시글 총수: <span id="postCount">20</span></p>
                     </div>
                 </div>
                 <table class="table mt-4">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
+                            <th scope="col">번호</th>
                             <th scope="col">제목</th>
                             <th scope="col">등록일</th>
                             <th scope="col">관리자 댓글</th>
                         </tr>
                     </thead>
+
+
+                    <% HashMap params=(HashMap)request.getAttribute("params"); String searchStr=(String)params.getOrDefault("search", ""
+                    ); HashMap result=(HashMap)request.getAttribute("result"); %>
+
+                    <% ArrayList resultList=(ArrayList)result.get("resultList"); 
+                    for(int i=0; i < resultList.size(); i=i+1){
+                        HashMap record=(HashMap)resultList.get(i); %>
+
                     <tbody id="postTable">
                         <!-- Here is where the posts will go -->
                         <tr>
-                            <td>1</td>
-                            <td>Example Title</td>
-                            <td>2023-07-20</td>
+                            <td><%= record.get("INQUIRY_ID") %></td>
+                            <!-- <td><%= record.get("CONTENT") %></td> -->
+                            <td><a href="/contacts/detail?inquiryId=<%= record.get("INQUIRY_ID") %>"><%= record.get("CONTENT") %></a></td>
+                            <td><%= record.get("WRITING_DATE") %></td>
                             <td>
                                 <div class="d-flex flex-column">
-                                    <div class="mb-2">기존 댓글: 아주 유익한 정보였습니다. 감사합니다.</div>
-                                    <textarea class="form-control" rows="1" placeholder="새로운 댓글을 작성하세요."></textarea>
+                                    <div class="mb-2"><%= record.get("Response") %></div>
                                 </div>
                             </td>
                         </tr>
                     </tbody>
+                    <% } %>
                 </table>
                 <nav aria-label="Page navigation example" class="mt-4">
                     <ul class="pagination justify-content-center">

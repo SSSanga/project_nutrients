@@ -20,9 +20,6 @@
         <% HashMap params=(HashMap)request.getAttribute("params"); 
         String searchStr=(String)params.getOrDefault("search", "" ); 
         HashMap result=(HashMap)request.getAttribute("result"); %>
-            <% ArrayList resultList=(ArrayList)result.get("resultList"); 
-            for(int i=0; i < resultList.size(); i=i+1){ 
-                HashMap record=(HashMap)resultList.get(i); %>
     
     <div class="mb-3">
             <input class="form-control" type="hidden" id="REVIEW_ID" name="REVIEW_ID">
@@ -38,16 +35,16 @@
             <div class="col-md-8 mx-auto">
                 <div class="card mb-3">
                     <div class="card-body">
-                        <h5 class="card-title mt-2" style="font-weight: bold;"><%= record.get("TITLE") %></h5>
+                        <h5 class="card-title mt-2" style="font-weight: bold;"><%= result.get("TITLE") %></h5>
                     </div>
+                </div>
                 </div>
                 <div class="card mb-4 pt-4">
                     <img src="/images/vitaminB3.PNG" alt="vitaminb3" class="card-img-top" style="width: 100px;">
                     <div class="card-body">
-                        <td class="card-text pb-2"><%= record.get("CONTENT") %></td>
+                        <td class="card-text pb-2"><%= result.get("CONTENT") %></td>
                     </div>
                 </div>
-                <% } %>
                 <div>
                 <h4 class=" pt-5 mb-3" style="font-weight: bold;">Comment</h4>
                 <hr style="border-top: 3px solid;">
