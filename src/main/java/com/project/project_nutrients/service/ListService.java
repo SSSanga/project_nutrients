@@ -68,11 +68,24 @@ public class ListService {
         result.put("resultList", sharedDao.getList(sqlMapId, dataMap));
         return result;
     }
-    public Object delete(String SUPP_ID, Map dataMap) {
+// 삭제만 하기
+    public Object delete(Map dataMap) {
         String sqlMapId = "Supplement.suppdelete";
-
+        
         Object result = sharedDao.delete(sqlMapId, dataMap);
         return result;
     }
+// 삭제하고 불러오기
+    public Object deleteAndList(String SUPP_ID, Map dataMap) {
+        dataMap.put("SUPP_ID", SUPP_ID);
+        HashMap result = new HashMap<>();
+
+        result.put("delcnt",this.delete(dataMap));
+        result.putAll(this.listWithPaginations(dataMap));
+
+
+        return result;
+    }
+
 
 }
