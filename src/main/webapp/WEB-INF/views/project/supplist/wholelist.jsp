@@ -57,6 +57,8 @@
                         <%= record.get("EFFECT") %>
                       </td>
                       <td><button class="btn btn-success mt-auto mb-auto" type="submit" formaction="/supp/spec">상세</button></td>
+                      <td><button class="btn btn-success mt-auto mb-auto" type="submit" formaction="/supp/spec">삭제</button></td>
+
                     </tr>
                     <% } %>
               </tbody>
@@ -78,12 +80,12 @@
                 <ul class="pagination">
                   <li class="page-item"><a class="page-link" href="#">Previous</a></li>
                   <% for (int i=paginations.getBlockStart(); i <= paginations.getBlockEnd() ; i=i+1){ %>
-                    <li class="page-item"><a class="page-link" href="/supp/listpage?currentPage=<%= i %>">
+                    <li class="page-item"><a class="page-link" href="/supp/wholelist?currentPage=<%= i %>">
                         <%= i %>
                       </a></li>
                       <% } %>
                       <li class="page-item"><a class="page-link"
-                          href="/supp/listpage?currentPage=<%= paginations.getNextPage() %>">Next</a>
+                          href="/supp/wholelist?currentPage=<%= paginations.getNextPage() %>">Next</a>
                       </li>
                       
                 </ul>

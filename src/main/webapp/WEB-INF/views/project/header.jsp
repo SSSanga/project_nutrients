@@ -39,7 +39,7 @@
                                     formaction="/supp/about">About</button>
                             </li>
                             <li class="nav-item">
-                                <button id="reviewButton" class="nav-link btn btn-none"
+                                <button id="listButton" class="nav-link btn btn-none"
                                     formaction="/supp/wholelist">List</button>
                             </li>
                             <li class="nav-item">

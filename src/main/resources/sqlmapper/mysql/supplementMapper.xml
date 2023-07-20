@@ -5,7 +5,7 @@
 <!-- count for pagination -->
   <select id="selectTotal" parameterType="Map" resultType="int">
     SELECT COUNT(*) AS cnt
-    FROM (SELECT t_SPEC.SUPP_ID, t_LIST.EFFECT_FLAG
+    FROM (SELECT DISTINCT t_SPEC.SUPP_ID, t_LIST.EFFECT_FLAG
     FROM supp_list AS t_LIST
     INNER JOIN supp_spec AS t_SPEC
     ON t_LIST.SUPP_ID = t_SPEC.SUPP_ID) AS t_WHOLELIST
@@ -16,7 +16,7 @@
 
   <select id="listwithpaginations" parameterType="Map" resultType="Map">
 
-        SELECT t_WHOLELIST.LOCATION, t_WHOLELIST.PRODUCT, t_EFFECT.EFFECT
+        SELECT DISTINCT t_WHOLELIST.LOCATION, t_WHOLELIST.PRODUCT, t_EFFECT.EFFECT
         FROM (SELECT t_SPEC.LOCATION, t_SPEC.PRODUCT, t_LIST.EFFECT_FLAG 
         FROM supp_list AS t_LIST
         INNER JOIN supp_spec AS t_SPEC
@@ -29,16 +29,7 @@
 
   <!-- select_wholelist with pagination -->
 
-  <select id="wholelist" parameterType="Map" resultType="Map">
 
-        SELECT t_WHOLELIST.LOCATION, t_WHOLELIST.PRODUCT, t_EFFECT.EFFECT
-        FROM (SELECT t_SPEC.LOCATION, t_SPEC.PRODUCT, t_LIST.EFFECT_FLAG 
-        FROM supp_list AS t_LIST
-        INNER JOIN supp_spec AS t_SPEC
-        ON t_LIST.SUPP_ID = t_SPEC.SUPP_ID) AS t_WHOLELIST
-        INNER JOIN effect AS t_EFFECT
-        ON t_WHOLELIST.EFFECT_FLAG = t_EFFECT.EFFECT_ID
-  </select>
 
 
   <select id="suppdetails" parameterType="Map">
