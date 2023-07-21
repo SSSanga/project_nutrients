@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ page import="java.util.HashMap" %>
+    <%@ page import="java.util.HashMap, java.util.ArrayList, com.project.project_nutrients.utils.Paginations" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,33 +13,59 @@
 <body>
     <!-- header -->
     <%@ include file="/WEB-INF/views/project/header.jsp" %>
-    <div class="container text-center">
-        <h1 class="mb-0">자주하는 질문 상세보기</h1>
-    </div>
+    
     <main class="container mt-4">
-        <% 
-            HashMap record=(HashMap)request.getAttribute("record");
-        %>
-        <table class="table mt-4">
-            <tbody>
-                <tr>
-                    <td>번호</td>
-                    <td><%= record.get("INQUIRY_ID") %></td>
-                </tr>
-                <tr>
-                    <td>제목</td>
-                    <td><%= record.get("CONTENT") %></td>
-                </tr>
-                <tr>
-                    <td>등록일</td>
-                    <td><%= record.get("WRITING_DATE") %></td>
-                </tr>
-                <tr>
-                    <td>관리자 댓글</td>
-                    <td><%= record.get("RESPONSE") %></td>
-                </tr>
+        <% HashMap params=(HashMap)request.getAttribute("params"); String
+        searchStr=(String)params.getOrDefault("search", "" );
+         HashMap
+        result=(HashMap)request.getAttribute("result"); %>
+                                        
+        <table class="table mt-4" >
+            <div class="mb-3">
+                <input class="form-control" type="hidden" id="REVIEW_ID" name="REVIEW_ID">
+            </div>
+            <div class="container py-4">
+                <h1 class="text-center" style="font-weight: bold;">Contacts</h1>
+                <hr style="border-top: 4px solid;">
+           
+
+            <tbody>   
+                 
+                <div class="card mb-2 pt-2" >
+                    <div class="card-body">
+                        <h5 class="card-title mt-2" style="font-weight: bold;">등록일</h5>
+                        <hr>
+                        <span class="card-text pb-2"><%= result.get("WRITING_DATE") %></span>
+                    </div>
+                </div>
+
+                <div class="card mb-2 pt-2">
+                  <div class="card-body">
+                        <h5 class="card-title mt-2" style="font-weight: bold;">문의내용</h5>
+                        <hr>
+                        <span class="card-text pb-2"><%= result.get("CONTENT") %></span>
+                   </div>
+                </div>
+
+                <div class="card mb-2 pt-2">
+                   <div class="card-body">
+                        <h5 class="card-title mt-2" style="font-weight: bold;">관리자 댓글</h5>
+                        <hr>
+                       <span class="card-text pb-2"><%= result.get("RESPONSE") %></span>
+                        <hr>
+                        <h7 class="card-title mt-2" style="font-weight: bold;">관리자 댓글 작성
+                        <input type="text" class ="me-4" style="width: 400px;">
+                        <button type="submit" class="btn btn-primary">저장</button>
+                        </h7>
+                   </div>
+                </div>
+
+
+                <button type="submit" class="btn btn-primary"
+                formaction="/">돌아가기</button>
             </tbody>
         </table>
+        
     </main>
     <!-- Footer -->
     <%@ include file="/WEB-INF/views/project/footer.jsp" %>

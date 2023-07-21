@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="Inquiries">
+
 	<select id="selectInquiry" parameterType="Map" resultType="Map">
 		SELECT Inquiry_ID, WRITING_DATE, CONTENT, RESPONSE, RESPONSE_DATE, ADMINE_ID, UNIQUE_ID
 		FROM project_nutrients.inquiry
@@ -20,9 +21,9 @@
 	</select>
 
 	<select id="selectInquiryDetail" parameterType="Map" resultType="Map">
-		SELECT INQUIRY_ID, WRITING_DATE, CONTENT, RESPONSE, RESPONSE_DATE, ADMINE_ID, UNIQUE_ID
-		FROM project_nutrients.inquiry
-		WHERE INQUIRY_ID = #{inquiryId}
+	SELECT INQUIRY_ID, WRITING_DATE, CONTENT, RESPONSE, RESPONSE_DATE, ADMINE_ID, UNIQUE_ID
+    FROM project_nutrients.inquiry
+	WHERE INQUIRY_ID = #{INQUIRY_ID} ;
 	</select>
 
 	<!-- INSERT -->

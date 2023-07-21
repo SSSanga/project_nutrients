@@ -27,12 +27,15 @@ public class ContactsService {
         return result;
     }
 
-    // 상세 조회
-    public Map ContactsDetail(Map dataMap) {
-        String sqlMapId = "Inquiries.selectInquiryDetail";
 
-        HashMap result = new HashMap<>();
-        result.put("resultList", sharedDao.getList(sqlMapId, dataMap));
+    // 상세 조회 
+      public Object ContactsselectDetail(String INQUIRY_ID, Map dataMap) {
+        // Object getOne(String sqlMapId, Object dataMap)
+        String sqlMapId = "Inquiries.selectInquiryDetail";
+       dataMap.put("INQUIRY_ID", INQUIRY_ID);
+
+        Object result = sharedDao.getOne(sqlMapId, dataMap);
         return result;
     }
 }
+

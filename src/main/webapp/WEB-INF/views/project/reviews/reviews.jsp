@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
     <%@ page import="java.util.HashMap, java.util.ArrayList, com.project.project_nutrients.utils.Paginations" %>
 
-
         <!DOCTYPE html>
         <html lang="en">
 
@@ -25,8 +24,8 @@
                            
                                     <div class="row">
                                         <% HashMap params=(HashMap)request.getAttribute("params"); String
-                                        searchStr=(String)params.getOrDefault("search", "" ); HashMap
-                                        result=(HashMap)request.getAttribute("result"); %>
+                                        searchStr=(String)params.getOrDefault("search", "" ); 
+                                        HashMap result=(HashMap)request.getAttribute("result"); %>
                                         <% ArrayList resultList=(ArrayList)result.get("resultList"); for(int i=0; i <
                                             resultList.size(); i=i+1){ HashMap record=(HashMap)resultList.get(i); %>
                                         <button formaction='/reviews/reviewselectDetail/<%= record.get("REVIEW_ID") %>'

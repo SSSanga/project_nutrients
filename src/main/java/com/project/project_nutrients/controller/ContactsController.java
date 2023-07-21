@@ -8,9 +8,13 @@ import com.project.project_nutrients.service.ContactsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+
+
+import com.project.project_nutrients.service.ContactsService;
 
 @Controller
 @RequestMapping("/contacts")
@@ -29,12 +33,30 @@ public class ContactsController {
         return modelAndView;
     }
 
-    public ModelAndView contactsDetail(@RequestParam Map params
-    , ModelAndView modelAndView) {
-        Object record = contactsService.ContactsDetail(params);
-        modelAndView.addObject("record", record);
-        modelAndView.setViewName("/WEB-INF/views/project/contacts/contactDetail.jsp");
+
+    @GetMapping("/ContactsselectDetail/{INQUIRY_ID}")
+    public ModelAndView ContactsselectDetail(@PathVariable String INQUIRY_ID
+                        ,@RequestParam Map params, ModelAndView modelAndView) {
+        Object result = contactsService.ContactsselectDetail(INQUIRY_ID, params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+        modelAndView.setViewName("/WEB-INF/views/project/contacts/contactsdetail.jsp");
         return modelAndView;
     }
+
+
+//    // admin이 관리, admin 완성되면 수정하기!!!!
+//    @GetMapping("/reviewdeleteAndSelectSearch")
+//    public ModelAndView reviewdeleteAndSelectSearch(@PathVariable String REVIEW_ID
+//                           , @RequestParam Map params, ModelAndView modelAndView) {
+//        Object result = contactsService.reviewdeleteAndSelectSearch(REVIEW_ID, params);
+//        modelAndView.addObject("params", params);
+//        modelAndView.addObject("result", result);
+  
+//        modelAndView.setViewName("/WEB-INF/views/project/admin/admin_reviews.jsp");
+//        return modelAndView;
+//       }
+
+
 }
 
