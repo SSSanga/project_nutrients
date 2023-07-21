@@ -59,15 +59,7 @@ public class ListService {
         return result;
     }
 
-    // 상세_specdetail-SUPP_ID
-    public Object selectDetail(String SUPP_ID, Map dataMap) {
-        // Object getOne(String sqlMapId, Object dataMap)
-        String sqlMapId = "Supplement.suppdetails";
-        dataMap.put("SUPP_ID", SUPP_ID);
-        HashMap result = new HashMap<>();
-        result.put("resultList", sharedDao.getList(sqlMapId, dataMap));
-        return result;
-    }
+
 // 삭제만 하기
     public Object delete(Map dataMap) {
         String sqlMapId = "Supplement.suppdelete";
@@ -84,6 +76,55 @@ public class ListService {
         result.putAll(this.listWithPaginations(dataMap));
 
 
+        return result;
+    }
+    public Object selectSpec(String SUPP_ID, Map dataMap) {
+        dataMap.put("SUPP_ID", SUPP_ID);
+        HashMap result = new HashMap<>();
+
+        result.putAll(this.selectID(SUPP_ID, dataMap)); // SUPP_ID 기본 정보 
+        result.putAll(this.selectEffect(SUPP_ID, dataMap)); // Update the method call with SUPP_ID_관련 효과
+        result.putAll(this.selectComp(SUPP_ID, dataMap));   // Update the method call with SUPP_ID_관련 성분
+        result.putAll(this.selectBad(SUPP_ID, dataMap)); // Update the method call with SUPP_ID_관련 부작용
+    
+        return result;
+    }
+     // 기본정보_SUPP_SPEC
+        public Map selectID(String SUPP_ID, Map dataMap) {
+        // Object getOne(String sqlMapId, Object dataMap)
+        String sqlMapId = "Supplement.selectspec";
+        dataMap.put("SUPP_ID", SUPP_ID);
+        HashMap result = new HashMap<>(); 
+        result.put ("resultID", sharedDao.getList(sqlMapId, dataMap));
+        
+        return result;
+    }   
+    
+    // 상세정보_effect-SUPP_ID
+    public Map selectEffect(String SUPP_ID, Map dataMap) {
+        // Object getOne(String sqlMapId, Object dataMap)
+        String sqlMapId = "Supplement.selecteffect";
+        dataMap.put("SUPP_ID", SUPP_ID);
+        HashMap result = new HashMap<>();
+        result.put("resultEffect", sharedDao.getList(sqlMapId, dataMap));
+        return result;
+    }
+        // 상세정보_component-SUPP_ID
+    public Map selectComp(String SUPP_ID, Map dataMap) {
+        // Object getOne(String sqlMapId, Object dataMap)
+        String sqlMapId = "Supplement.selectcomp";
+        dataMap.put("SUPP_ID", SUPP_ID);
+        HashMap result = new HashMap<>();
+        result.put("resultComp", sharedDao.getList(sqlMapId, dataMap));
+        return result;
+    }
+            // 상세정보_sidebad-SUPP_ID
+    public Map selectBad(String SUPP_ID, Map dataMap) {
+        // Object getOne(String sqlMapId, Object dataMap)
+        String sqlMapId = "Supplement.selectbad";
+        dataMap.put("SUPP_ID", SUPP_ID);
+        HashMap result = new HashMap<>();
+        result.put("resultBad", sharedDao.getList(sqlMapId, dataMap));
         return result;
     }
 
