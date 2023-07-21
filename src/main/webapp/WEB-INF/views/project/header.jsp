@@ -8,20 +8,30 @@
 
         <style>
             .nav-link {
-                color: white !important;
-                font-size: 1.33em;
+              color: white !important;
+              font-size: 1.33em;
             }
-
+          
             #dropdownMenuButton {
-                background-color: green;
-                color: white;
+              background-color: white;
+              color: green;
             }
-
+          
             .btn-outline-secondary {
-                color: white;
-                border-color: white;
+              color: white;
+              border-color: white;
             }
-        </style>
+          
+            /* 추가된 스타일 */
+            body {
+              border-top: 4px solid green;
+              border-bottom: 4px solid green;
+            }
+          
+            .navbar {
+              border-bottom: 4px solid green;
+            }
+          </style>
         
             <nav class="navbar navbar-expand justify-content-between">
                 <form class="d-flex" action="" method="">

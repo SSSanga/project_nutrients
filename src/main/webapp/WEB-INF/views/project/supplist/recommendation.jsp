@@ -14,39 +14,26 @@
     <body>
       <!-- header -->
       <%@ include file="/WEB-INF/views/project/header.jsp" %>
-      <!-- Screen adjust functions -->
-      <script>
-        var zoom = 1;
 
-        function increaseSize() {
-          zoom += 0.1;
-          document.getElementById('zoom-display').innerText = Math.round(zoom * 100) + '%';
-          document.body.style.zoom = zoom;
-        }
-
-        function decreaseSize() {
-          zoom -= 0.1;
-          document.getElementById('zoom-display').innerText = Math.round(zoom * 100) + '%';
-          document.body.style.zoom = zoom;
-        }
-      </script>
-
-    <div class="container content-center p-5">
-      <div class="h2">혈중 콜레스테롤 개선 영양제 LIST</div>
-      <br>
       <form>
+    <div class="container content-center p-5">
+      
+      <div class="h2">혈중 콜레스테롤 개선 영양제 LIST</div>
+      
+      
       <table class="table table-striped table-sm">
-          <tr>
-            <th></th>
-            <th class="text-center">이름</th>
-            <th>링크</th>
-          </tr>
-          <% HashMap params=(HashMap)request.getAttribute("params"); String searchStr=(String)params.getOrDefault("search", ""
+        <% HashMap params=(HashMap)request.getAttribute("params"); String searchStr=(String)params.getOrDefault("search", ""
           ); HashMap result=(HashMap)request.getAttribute("result"); %>
           <%= result.get("NAME") %>
           <% ArrayList resultList=(ArrayList)result.get("resultList"); 
           for(int i=0; i < resultList.size(); i=i+1){
               HashMap record=(HashMap)resultList.get(i); %>
+          <tr>
+            <th></th>
+            <th class="text-center">이름</th>
+            <th>링크</th>
+          </tr>
+          
 
           <tr>
             <td><img src='<%= record.get("LOCATION") %>' alt="<%= record.get("PRODUCT") %>" class="square-image" width="100px" height="100%"></td>
@@ -55,9 +42,9 @@
           </tr>
           <% } %>
         </table>
-        </form>
+        
       </div>
-
+    </form>
 
         <!-- Footer -->
         <%@ include file="/WEB-INF/views/project/footer.jsp" %>
