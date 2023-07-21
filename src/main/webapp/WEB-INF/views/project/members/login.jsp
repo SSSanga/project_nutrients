@@ -23,11 +23,11 @@
                 <img class="mb-4" src="/images/drug_img.png" alt="" width="72" height="57">
                 <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
                 <div class="form-floating">
-                    <input type="email" class="form-control" id="floatingInput">
-                    <label for="floatingInput">Email address</label>
+                    <input type="id" class="form-control" id="username" name="username">
+                    <label for="floatingInput">ID</label>
                 </div>
                 <div class="form-floating">
-                    <input type="password" class="form-control" id="floatingPassword">
+                    <input type="password" class="form-control" id="password" name="password">
                     <label for="floatingPassword">Password</label>
                 </div>
                 <div class="checkbox mb-3">
@@ -35,7 +35,7 @@
                         <input type="checkbox" value="remember-me">Remember me
                     </label>
                 </div>
-                <button class="w-100 btn btn-lg btn-success" type="submit">
+                <button class="w-100 btn btn-lg btn-success" type="submit" formaction="/main/main">
                     Sign in
                 </button>
                 <p class="mt-5 mb-3 text-muted">© 2023</p>
