@@ -60,6 +60,14 @@
       WHERE REVIEW_ID = #{REVIEW_ID};
       </update>
 
+ <!-- 여기부터 SUPP_ID 기반으로 상세 정보 불러오기       -->
+<!-- 상세정보_기본 이미지 +a -->
+      <select id="selectspec" parameterType="Map" resultType="Map">
+      SELECT LOCATION,SUPP_ID,PRODUCT,MANUFACTURE,LINK, DOSAGE, FREQUENCY
+      FROM supp_spec
+      WHERE SUPP_ID = #{SUPP_ID}
+      </select>
+
       <!-- 상세정보_effect-->
   <select id="selecteffect" parameterType="Map" resultType="Map">
         SELECT t_SPECLIST.SUPP_ID, effect.EFFECT

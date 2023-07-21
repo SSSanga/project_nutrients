@@ -37,9 +37,9 @@ public class ListController {
         return modelAndView;
     }
 
-    @GetMapping("/specdetail/{SUPP_ID}")
+    @GetMapping("/selectspec/{SUPP_ID}")
     public ModelAndView spec(@PathVariable String SUPP_ID, @RequestParam Map params, ModelAndView modelAndView) {
-        Object result = wholelistservice.selectDetail(SUPP_ID, params);
+        Object result = wholelistservice.selectSpec(SUPP_ID, params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
         modelAndView.setViewName("/WEB-INF/views/project/supplist/suppspec.jsp");

@@ -50,7 +50,7 @@
                   <% ArrayList resultList=(ArrayList)result.get("resultList"); for(int i=0; i < resultList.size();
                     i=i+1) { HashMap record=(HashMap)resultList.get(i); %>
                     <tr>
-                      <td><img src="<%= record.get("LOCATION") %>" alt="<%= record.get("PRODUCT") %>"
+                      <td><img src='<%= record.get("LOCATION") %>' alt='<%= record.get("PRODUCT") %>'
                           class="square-image" width="100px" height="100%" ></td>
                       <td>
                         <%= record.get("PRODUCT") %>
@@ -58,7 +58,7 @@
                       <td>
                         <%= record.get("EFFECT") %>
                       </td>
-                      <td><button class="btn btn-success mt-auto mb-auto" type="submit" formaction='/supp/specdetail/<%= record.get("SUPP_ID") %>' value='<%= record.get("SUPP_ID") %>' name='SUPP_ID'>상세</button></td>
+                      <td><button class="btn btn-success mt-auto mb-auto" type="submit" formaction='/supp/selectspec/<%= record.get("SUPP_ID") %>' value='<%= record.get("SUPP_ID") %>' name='SUPP_ID'>상세</button></td>
 
                     </tr>
                     <% } %>
@@ -72,14 +72,14 @@
               </div>
               <nav aria-label="Page navigation">
                 <ul class="pagination">
-                  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                  <li class="page-item"><a class="page-link" href='/supp/wholelist?currentPage=<%= paginations.getPreviousPage() %>'>Previous</a></li>
                   <% for (int i=paginations.getBlockStart(); i <= paginations.getBlockEnd() ; i=i+1){ %>
-                    <li class="page-item"><a class="page-link" href="/supp/wholelist?currentPage=<%= i %>">
+                    <li class="page-item"><a class="page-link" href='/supp/wholelist?currentPage=<%= i %>'>
                         <%= i %>
                       </a></li>
                       <% } %>
                       <li class="page-item"><a class="page-link"
-                          href="/supp/wholelist?currentPage=<%= paginations.getNextPage() %>">Next</a>
+                          href='/supp/wholelist?currentPage=<%= paginations.getNextPage() %>'>Next</a>
                       </li>
                       
                 </ul>
