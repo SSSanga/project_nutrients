@@ -42,6 +42,7 @@
                   <th>제품명</th>
                   <th>대표 효과</th>
                   <th>상세</th>
+                  <th>삭제</th>
                 </tr>
               </thead>
               <tbody class="mt-auto mb-auto">
@@ -59,12 +60,20 @@
                         <%= record.get("EFFECT") %>
                       </td>
                       <td><button class="btn btn-success mt-auto mb-auto" type="submit" formaction='/supp/specdetail/<%= record.get("SUPP_ID") %>' value='<%= record.get("SUPP_ID") %>' name='SUPP_ID'>상세</button></td>
+                      <td><button class="btn btn-success mt-auto mb-auto" type="submit" formaction='/supp/deleteandlist/<%= record.get("SUPP_ID") %>'value='<%= record.get("SUPP_ID") %>' name='SUPP_ID'>삭제</button></td>
 
                     </tr>
                     <% } %>
               </tbody>
             </table>
 
+            <div class="container-fluid">
+              <div class="row justify-content-start align-items-center">
+                <div class="col-3">
+                  <button class="btn btn-success mt-auto mb-auto" type="subtmit" formaction="/supp/listadd">추가</button>
+                </div>
+              </div>
+            </div>
             <!-- pagination을 loop로 뽑아내기 -->
 
             <% Paginations paginations=(Paginations)result.get("paginations"); %>
@@ -72,14 +81,14 @@
               </div>
               <nav aria-label="Page navigation">
                 <ul class="pagination">
-                  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                  <li class="page-item"><a class="page-link" href='/supp/adminwholelist?currentPage=<%= paginations.getPreviousPage() %>'>Previous</a></li>
                   <% for (int i=paginations.getBlockStart(); i <= paginations.getBlockEnd() ; i=i+1){ %>
-                    <li class="page-item"><a class="page-link" href="/supp/wholelist?currentPage=<%= i %>">
+                    <li class="page-item"><a class="page-link" href='/supp/adminwholelist?currentPage=<%= i %>'>
                         <%= i %>
                       </a></li>
                       <% } %>
                       <li class="page-item"><a class="page-link"
-                          href="/supp/wholelist?currentPage=<%= paginations.getNextPage() %>">Next</a>
+                          href='/supp/adminwholelist?currentPage=<%= paginations.getNextPage() %>'>Next</a>
                       </li>
                       
                 </ul>

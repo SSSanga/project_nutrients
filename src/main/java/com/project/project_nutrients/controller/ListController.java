@@ -27,6 +27,7 @@ public class ListController {
     @Autowired
     ListService wholelistservice;
 
+    // anyone 
     @GetMapping("/wholelist")
     public ModelAndView wholelist(@RequestParam Map params, ModelAndView modelAndView) {
         Object result = wholelistservice.listWithPaginations(params);
@@ -44,6 +45,17 @@ public class ListController {
         modelAndView.setViewName("/WEB-INF/views/project/supplist/suppspec.jsp");
         return modelAndView;
     }
+
+    // admin 권한인 list
+    @GetMapping("/adminwholelist")
+    public ModelAndView adminwholelist(@RequestParam Map params, ModelAndView modelAndView) {
+        Object result = wholelistservice.listWithPaginations(params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+        modelAndView.setViewName("/WEB-INF/views/project/admin/admin_wholelist.jsp");
+        return modelAndView;
+    }
+    //admin 권한으로 작동되야함. 
      @GetMapping("/deleteandlist/{SUPP_ID}")
     public ModelAndView deleteandlist(@PathVariable String SUPP_ID
                         , @RequestParam Map params, ModelAndView modelAndView) {
@@ -51,10 +63,10 @@ public class ListController {
          modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
 
-        modelAndView.setViewName("/WEB-INF/views/project/supplist/wholelist.jsp");
+        modelAndView.setViewName("/WEB-INF/views/project/admin/admin_wholelist.jsp");
         return modelAndView;
     }
-
+// admin 권한으로 영양제도 추가해야함. 
     @GetMapping("/listadd")
     public ModelAndView listadd(ModelAndView modelAndView) {
         modelAndView.setViewName("/WEB-INF/views/project/supplist/listadd.jsp");
@@ -69,7 +81,7 @@ public class ListController {
 
     @GetMapping("/insertandselect")
     public ModelAndView insertandselect(ModelAndView modelAndView) {
-        modelAndView.setViewName("/WEB-INF/views/project/supplist/wholelist.jsp");
+        modelAndView.setViewName("/WEB-INF/views/project/admin/admin_wholelist.jsp");
         return modelAndView;
     }
 
