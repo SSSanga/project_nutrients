@@ -1,6 +1,8 @@
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ page import="java.util.HashMap, java.util.ArrayList" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
         <!-- Font Awesome -->
+        <sec:authentication property="principal" var="userDetailsBean" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
 
@@ -69,17 +71,23 @@
                             회원관리
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <sec:authorize access="isAuthenticated()">
                             <li><button id="mypageButton" class="dropdown-item" formaction="/members/mypageForm"
                                 style="font-size: 20px;">마이페이지</button></li>
+                            </sec:authorize>
+                                <sec:authorize access="isAnonymous()">
                             <li><button id="loginButton" class="dropdown-item" formaction="/members/loginForm"
                                 style="font-size: 20px;">로그인</button></li>
                             <li><button id="singupButton" class="dropdown-item" formaction="/members/signupForm"
                                 style="font-size: 20px;">회원가입</button></li>
+                            </sec:authorize>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
+                            <sec:authorize access="isAuthenticated()">
                             <li><button id="singupButton" class="dropdown-item" formaction="/main/main" style="font-size: 20px;">로그아웃</button>
                             </li>
+                        </sec:authorize>
                         </ul>
                         </button>
                     </div>

@@ -20,24 +20,24 @@
         <div class="text-center mt-4 mb-4 h1">회 원 가 입</div>
     </div>
     <div class="container">
-        <form id="insertForm" action="/main/insert" method="post">
+        <form id="insertForm" action="/members/signupProc" method="">
             <div class="mb-3">
-                <label class="form-label" for="commonCodeId">COMMON_CODE_ID:</label>
-                <input class="form-control" type="text" id="commonCodeId" name="COMMON_CODE_ID" placeholder="유니크 아이디 입니다. 손대지 마세요. type을 hidden으로 하고 데이터를 uuid로 받을까 고민중입니다.">
+                <label class="form-label" for="commonCodeId">UNIQUE_ID</label>
+                <input class="form-control" type="text" id="commonCodeId" name="UNIQUE_ID" placeholder="유니크 아이디 입니다. 손대지 마세요. type을 hidden으로 하고 데이터를 uuid로 받을까 고민중입니다.">
             </div>
             <div class="mb-3">
                 <label class="form-label" for="">NAME</label>
-                <input class="form-control" type="text" id="name" name="" placeholder="이름을 입력해 주세요.">
+                <input class="form-control" type="text" id="name" name="NAME" placeholder="이름을 입력해 주세요.">
                 <div id="nameError" class="error-message"></div>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="r">ID</label>
-                <input class="form-control" id="ID" type="id" name="" placeholder="아이디를 입력해 주세요.">
+                <input class="form-control" id="ID" type="id" name="ID" placeholder="아이디를 입력해 주세요.">
                 <div id="idError" class="error-message"></div>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="r">PASSWORD</label>
-                <input class="form-control" id="password" type="password" name="" placeholder="비밀번호를 입력해 주세요.">
+                <input class="form-control" id="password" type="password" name="PASSWORD" placeholder="비밀번호를 입력해 주세요.">
                 <div id="passwordError" class="error-message"></div>
             </div>
             <div class="mb-3">
@@ -45,20 +45,29 @@
                 <input class="form-control" id="passwordCheck" type="password" name="" placeholder="비밀번호를 다시 입력해 주세요." >
             </div>
             <div class="mb-3">
+                <label class="form-label" for="r">BIRTHDATE</label>
+                <input class="form-control" id="BIRTHDATE" type="date" name="BIRTHDATE" placeholder="생년월일을 입력해 주세요.">
+                <div id="passwordError" class="error-message"></div>
+            </div>
+            <div class="mb-3">
                 <label class="form-label" for="r">e-mail</label>
-                <input class="form-control" id="e-mail" type="email" name="" placeholder="ex) 1234@example.com">
+                <input class="form-control" id="e-mail" type="email" name="EMAIL" placeholder="ex) 1234@example.com">
                 <div id="e-mailError" class="error-message"></div>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="systemCodeYn">PONE NUMBER</label>
-                <input class="form-control" type="tel" id="tel" name="" placeholder="휴대폰 번호를 입력해 주세요.">
+                <input class="form-control" type="tel" id="tel" name="PHONE" placeholder="휴대폰 번호를 입력해 주세요.">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="systemCodeYn">질병 이력</label>
+                <input class="form-control" type="text" id="HISTORY_ID" name="HISTORY_ID" placeholder="질병을 입력해 주세요.">
             </div>
             <!-- 수정해야 합니다. -->
             <div class="mb-3">
                 <label class="form-label" for="useYn">ADDRESS</label>
                 <input type="text" id="addressInput" />
                 <button onclick="searchAddress()">주소 검색</button>
-                <input class="form-control" type="text" id="addre" name="">
+                <input class="form-control" type="text" id="addre" name="ADDRESS">
             </div>
             <!-- 여기까지 -->
             <div class="radio-field mt-4 mb-4">
@@ -68,25 +77,24 @@
                 <label for="gender_woman h1">여성</label>
                 <div id="genderError" class="error-message"></div>
             </div>
-            <div class="input-field">
-                <input id="phone1" type="text" size="1" maxlength="3" oninput="changePhone1()"> -
-                <input id="phone2" type="text" size="3" maxlength="4" oninput="changePhone2()"> -
-                <input id="phone3" type="text" size="3" maxlength="4" oninput="changePhone3()">
-            </div>
-            <div class="auth-field">
-                <div id="certificationNumber">000000</div>
-                <button disabled id="sendMessage" onclick="getToken()">인증번호 전송</button>
-            </div>
-        
-            <div class="timer-field">
-                <div id="timeLimit">03:00</div>
-                <button disabled id="completion" onclick="checkCompletion()">인증확인</button>
-            </div>
+            <label for="auth" class="sr-only">Auth</label>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="auth" id="SYSTEM_MANAGER" value="SYSTEM_MANAGER">
+                <label class="form-check-label" for="ROLE_MANAGER">SYSTEM MANAGER</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="auth" id="ROLE_ADMIN" value="ROLE_ADMIN">
+                <label class="form-check-label" for="ROLE_ADMIN">ADMIN</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="auth" id="USER" value="ROLE_USER">
+                <label class="form-check-label" for="USER">USER</label>
+              </div>
             <div class="line">
                 <hr>
             </div>
             <div class="text-center mb-4">
-                <button class="btn btn-primary" type="submit" formaction="/main/insertAndSelectSearch">Submit</button>
+                <button class="btn btn-primary" type="submit" formaction="/members/signupProc">Submit</button>
             </div>
         </form>
     </div>

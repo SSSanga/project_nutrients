@@ -13,9 +13,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.project.project_nutrients.service.MembersService;
+
 import java.util.UUID;
 
 
@@ -23,8 +27,8 @@ import java.util.UUID;
 @RequestMapping("/members")
 
 public class MembersController {
-//     @Autowired
-//      MembersService membersService;
+    @Autowired
+     MembersService membersService;
 
 //     @PostMapping("/insertAndSelectSearch")
 //     public ModelAndView insertAndSelectSearch(@RequestParam Map params, ModelAndView modelAndView) {
@@ -40,6 +44,15 @@ public class MembersController {
     public ModelAndView signupForm(@RequestParam Map params, ModelAndView modelAndView) {
         modelAndView.setViewName("/WEB-INF/views/project/members/signup.jsp");
         return  modelAndView;
+    }
+
+    //회원가입 폼을 작성해서 제출 버튼을 누르면 비밀번호를 암호화로 넘기는 컨트롤러
+    @GetMapping("/signupProc")
+    public ModelAndView signupProc(@RequestParam Map params, ModelAndView modelAndView){
+        Object result = membersService.insertWithAuths(params);
+        String viewName = ("/WEB-INF/views/mainpage.jsp");
+        modelAndView.setViewName(viewName);
+        return modelAndView;
     }
 
     // main 화면에서 마이페이지 버튼 누를 때 거쳐가는 controller임/ mypage.jsp로 가기 위한 경로
