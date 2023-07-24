@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nutrient Recommendations Home</title>
-    <link href="/css/main.css" rel="stylesheet">
+   
 </head>
 
 <body>
@@ -94,7 +94,8 @@
                                     <img  class="img-fluid" src="/images/lee_lutein.png" alt="">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="img-fluid" src="/images/lemona.png" alt="">
+                                    <a href="https://www.consumer.go.kr/user/ftc/consumer/cnsmrBBS/80/selectInfoCmprDetail.do?infoId=A1079150&page=1&row=10&searchCnsmrClId=&searchCnsmrClType=&upperProductClId=&searchGbn=REGIST_DT&cntntsNm=&upperCntntsNm=&rnum=5&infoTyIdList=&cntntsId=00000205&infoRealmIdList=C060000&infoPrdlstIdList=C060500&searchRange=searchRangeAll&searchKeyword=">
+                                        <img class="img-fluid" src="/images/milkthistle_info.png" alt=""></a>
                                 </div>
                             </div>
                             <button data-bs-slide="prev" data-bs-target="#controlsID-first"
@@ -125,5 +126,5 @@
    <%@ include file="/WEB-INF/views/project/footer.jsp" %>
    
 </body>
-
+<!-- <link href="/css/main.css" rel="stylesheet"> -->
 </html>

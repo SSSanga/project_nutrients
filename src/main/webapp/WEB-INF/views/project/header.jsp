@@ -3,12 +3,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
         <!-- Font Awesome -->
         <sec:authentication property="principal" var="userDetailsBean" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
 
         <style>
             .nav-link {
-              color: white !important;
+              color: rgb(250, 234, 144) !important;
               font-size: 1.33em;
             }
           
@@ -29,7 +28,7 @@
             }
           
             .navbar {
-              border-bottom: 4px solid green;
+              border-bottom: 4px solid rgb(7, 36, 75);
             }
           </style>
         
@@ -114,7 +113,7 @@
                 </div>
             
         </form>
-    </nav>
+
 
         <!-- Screen adjust functions -->
         <script>
@@ -133,3 +132,4 @@
             }
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    </nav>

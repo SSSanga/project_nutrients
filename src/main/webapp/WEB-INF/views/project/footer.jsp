@@ -1,7 +1,7 @@
 <%@ page import="java.util.HashMap, java.util.ArrayList" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
     <!-- Footer -->
-    <footer class="p-5 d-flex justify-content-between align-items-center font-size: 0.8rem footer-green">
+    <footer class="p-5 d-flex justify-content-between align-items-center font-size: 0.8rem footer-Teal">
         <div class="row">
             <div class="">
                 <div class="">

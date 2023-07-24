@@ -33,10 +33,11 @@
     color: white;
 }
 
-.footer-green {
-    background-color: green;
-    color: white;
+.footer-teal {
+    background-color: teal; /* 또는 원하는 Teal 색상 코드로 변경 */
+    color: white; /* 텍스트 색상도 흰색으로 설정되어 있는지 확인 */
 }
-.footer-green a {
-    color: white;
+
+.footer-teal a {
+    color: white; /* 하이퍼링크의 색상도 흰색으로 설정되어 있는지 확인 */
 }
