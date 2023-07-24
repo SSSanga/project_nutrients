@@ -91,8 +91,8 @@ public class ContactsService {
 
         HashMap result = new HashMap<>();
         result.put("contactsinsertCount", this.contactsinsert(dataMap));
+        result.putAll(this.contactselectSearchWithPagination(dataMap));
 
-        result.putAll(this.contactsSearch(dataMap));
         return result;
     }
 }
