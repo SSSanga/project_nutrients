@@ -23,15 +23,11 @@
                     <form>
                         <div class="mb-3">
                             <label for="content" class="form-label">문의 아이디</label>
-                            <input class="form-control" id="content" rows="5" name="INQUIRY_ID" >
+                            <input class="form-control" id="content" rows="5" name="INQUIRY_ID">
                         </div>
                         <div class="mb-3">
                             <label for="content" class="form-label">내용</label>
                             <input class="form-control" id="content" rows="5" style="height: 300px;" name="CONTENT">
-                        </div>
-                        <div class="mb-3">
-                            <label for="content" class="form-label">영양제 아이디</label>
-                            <input class="form-control" id="content" rows="5" name="SUPP_ID">
                         </div>
                         <div class="mb-3">
                             <label for="content" class="form-label">멤버 아이디</label>

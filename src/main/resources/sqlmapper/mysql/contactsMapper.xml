@@ -45,10 +45,10 @@
 
 	<!-- INSERT -->
 	<insert id="insertInquiry" parameterType="Map">
-		INSERT INTO INQUIRIES
+		INSERT INTO inquiry
 		(INQUIRY_ID, WRITING_DATE, CONTENT, RESPONSE, RESPONSE_DATE, ADMINE_ID, UNIQUE_ID)
 		VALUES
-		(#{INQUIRY_ID}, NOW(), #{CONTENT}, #{RESPONSE}, #{RESPONSE_DATE}, #{ADMINE_ID}, #{UNIQUE_ID})
+		(#{INQUIRY_ID}, NOW(), #{CONTENT}, YES, now(), admin, #{UNIQUE_ID})
 	</insert>
     
 	<!-- UPDATE -->

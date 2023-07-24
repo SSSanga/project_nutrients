@@ -53,7 +53,7 @@ VALUES
 ('MEMB_19', '박서준', 'parksj', 'qwer1234', '1990-01-10', 32, '남성', '경기도 부천시', '010-5678-9012', '2020-04-02', 'parksj@example.com', 'admine', 'history_04'),
 ('MEMB_20', '김지윤', 'kimjy', '98765432', '1994-02-26', 29, '여성', '대구시 동구', '010-7890-1234', '2016-01-15', 'kimjy@example.com', 'admine', 'history_05');
 
-INSERT INTO project_nutrients.inquiry (inquiry_ID, Writing_Date, Content, Response, Response_Date, Admine_ID, Unique_ID) VALUES
+INSERT INTO inquiry (INQUIRY_ID, WRITING_DATE, CONTENT, RESPONSE, RESPONSE_DATE, ADMINE_ID, UNIQUE_ID) VALUES
 (1, NOW(), '비타민C 제품의 성분은 무엇인가요?', '제품은 고품질 비타민C와 다양한 필수 영양소를 함유하고 있습니다.', '2023-07-20', 'admine', 'MEMB_01'),
 (2, NOW(),'서울까지 배송은 얼마나 걸리나요?', '주문 후 일반적으로 2-3일 내로 배송됩니다.', '2023-07-21', 'admine', 'MEMB_02'),
 (3, NOW(),'환불하려면 어떻게 해야 하나요?', '원하시는 환불 사유를 적어 고객센터에 문의해주시면 됩니다.', '2023-07-22', 'admine', 'MEMB_03'),
