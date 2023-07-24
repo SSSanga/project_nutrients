@@ -27,45 +27,33 @@
                                     <option>내용</option>
                                 </select>
                             </div>
+
                             <div class="mb-3 me-2">
                                 <label for="search" class="form-label">&nbsp;</label>
                                 <input type="text" id="search" class="form-control" placeholder="검색어를 입력하세요">
                             </div>
                             <button type="button" class="btn btn-primary mb-3 me-2">검색</button>
-                            <div class="mb-3 me-2">
-                                <select class="form-control" id="viewCount">
-                                    <option>10개씩</option>
-                                    <option>20개씩</option>
-                                    <option>30개씩</option>
-                                </select>
-                            </div>
-                            <button type="button" class="btn btn-primary mb-3">보기</button>
                         </div>
                         <div class="d-flex justify-content-start align-items-end">
-                            <div class="mb-3 mt-4">
-                                <p>게시글 총수: <span id="postCount">20</span></p>
-                            </div>
                         </div>
                         <table class="table mt-4">
-                            <thead>
+                               <thead>
                                 <tr>
                                     <th scope="col">번호</th>
                                     <th scope="col">제목</th>
                                     <th scope="col">등록일</th>
                                     <th scope="col">관리자 댓글</th>
                                 </tr>
-                            </thead>
-
-
+                               </thead>
+                            
+                            <tbody id="postTable"> 
                             <% HashMap params=(HashMap)request.getAttribute("params"); String
                                 searchStr=(String)params.getOrDefault("search", "" ); HashMap
                                 result=(HashMap)request.getAttribute("result"); %>
 
                                 <% ArrayList resultList=(ArrayList)result.get("resultList"); for(int i=0; i <
                                     resultList.size(); i=i+1){ HashMap record=(HashMap)resultList.get(i); %>
-                                    <button formaction='/contacts/ContactsselectDetail/<%= record.get("INQUIRY_ID") %>'>
-
-                                        <tbody id="postTable">
+                                    
                                             <!-- Here is where the posts will go -->
                                             <tr>
                                                 <td>
@@ -85,40 +73,45 @@
                                                         </div>
                                                     </div>
                                                 </td>
-
-                                            </tr>
-
-                                        </tbody>
-                                    </button>
+                                                <td><button class= "btn btn-success mt-auto mb-auto" formaction='/contacts/contactsselectDetail/<%= record.get("INQUIRY_ID") %>' value='<%= record.get("INQUIRY_ID") %>' name='INQUIRY_ID'>상세 </button></td>
+                                            </tr>  
                                     <% } %>
-                        </table>
-                        <nav aria-label="Page navigation example" class="mt-4">
-                            <ul class="pagination justify-content-center">
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
+                                </tbody>
+                               
+                            </table>
+
+
+                            <div class="p-5 justify-content-end">
+                                <button type="submit" class="btn btn-primary"
+                                    formaction="/contacts/contactswrite">문의 작성 GO!</button>
+                              </div>
+                          
+                        <% Paginations paginations=(Paginations)result.get("paginations"); %>
+                            <div> 게시글 총수: <%= paginations.getTotalCount() %>
+                            </div>
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                    <% for (int i=paginations.getBlockStart(); i <=paginations.getBlockEnd() ; i=i+1){
+                                        %>
+                                        <li class="page-item"><a class="page-link"
+                                                href="/contacts/contactslist?currentPage=<%= i %>">
+                                                <%= i %>
+                                            </a></li>
+                                        <% } %>
+                                            <li class="page-item"><a class="page-link"
+                                                    href="/contacts/contactslist?currentPage=<%= paginations.getNextPage() %>">Next</a>
+                                            </li>
+
+                                </ul>
+                            </nav>
                     </main>
                 </form>
                 <hr>
                 <!-- Footer -->
                 <%@ include file="/WEB-INF/views/project/footer.jsp" %>
 
-                    <!-- <script src="../js/carinforwithfunction.js"></script> -->
-                    <!-- <script src="../js/carinforwithrest.js"></script> -->
+    
         </body>
 
         </html>

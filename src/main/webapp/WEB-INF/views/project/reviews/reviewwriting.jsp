@@ -22,19 +22,19 @@
                 <div class="col-md-8 mx-auto">
                     <form>
                         <div class="mb-3">
-                            <label for="content" class="form-label">리뷰 아이디</label>
+                            <label for="content" class="form-label">아이디</label>
                             <input class="form-control" id="content" rows="5" name="REVIEW_ID" >
                         </div>
                         <div class="mb-3">
-                            <label for="title" class="form-label">제목</label>
+                            <label for="title" class="form-label">제목 </label>
                             <input type="text" class="form-control" id="title" name="TITLE">
                         </div>
                         <div class="mb-3">
-                            <label for="content" class="form-label">내용</label>
+                            <label for="content" class="form-label">내용 </label>
                             <input class="form-control" id="content" rows="5" style="height: 300px;" name="CONTENT">
                         </div>
                         <div class="mb-3">
-                            <label for="content" class="form-label">영양제 아이디</label>
+                            <label for="content" class="form-label">영양제 아이디 </label>
                             <input class="form-control" id="content" rows="5" name="SUPP_ID">
                         </div>
                         <div class="mb-3">
