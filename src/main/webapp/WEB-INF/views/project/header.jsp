@@ -38,7 +38,7 @@
                 <!-- Brand image -->
                 <div class="navbar-brand justify-content-center ms-4">
                     <button id="aboutButton" class="nav-link btn btn-none" formaction="/main/main">
-                        <img src="/images/drug_img.png" alt="" width="200" height="150">
+                        <img src="/images/drug_img.PNG" alt="" width="200" height="150">
                     </button>
                 </div>
                 <!-- Navigation Links -->
@@ -67,12 +67,15 @@
                 </div>
 
                 <!-- Search bar -->
-
-                <input class="form-control me-2 mt-auto mb-auto" type="search" placeholder="Search..." aria-label="Search"
-                    style="font-size: 10px; width:400px; height: 50px;">
-                <button class="btn btn-outline-success mt-auto mb-auto" type="submit" formaction="/search"
-                    style="font-size: 10px; background-color: white; height: 50px;"><i class="fas fa-search"></i>검색</button>
-
+                <div style="font-size: 25px; width:400px; height: 50px;">
+                    <select class="form-select" name="search">
+                        <option>카테고리 선택</option>
+                        <option value="EFFECT">효과</option>
+                        <option value="MANUFACTURE">제조사</option>
+                        <input class="form-control me-2 mt-auto mb-auto" name="words" type="search" placeholder="Search..." aria-label="Search" id="keydownEnter">                
+                        <button class="btn btn-light btn-outline-success mt-auto mb-auto" type="submit" formaction="/search/selectsupp" id="keydownEnter">검색</button>
+                    </select>
+                </div>
                 <!-- User management dropdown -->
                 <div class="d-flex me-2 align-items-center">
                     <div class="dropdown">

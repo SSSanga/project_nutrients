@@ -59,7 +59,7 @@
                       <td>
                         <%= record.get("EFFECT") %>
                       </td>
-                      <td><button class="btn btn-success mt-auto mb-auto" type="submit" formaction='/supp/specdetail/<%= record.get("SUPP_ID") %>' value='<%= record.get("SUPP_ID") %>' name='SUPP_ID'>상세</button></td>
+                      <td><button class="btn btn-success mt-auto mb-auto" type="submit" formaction='/supp/selectspec/<%= record.get("SUPP_ID") %>' value='<%= record.get("SUPP_ID") %>' name='SUPP_ID'>상세</button></td>
                       <td><button class="btn btn-success mt-auto mb-auto" type="submit" formaction='/supp/deleteandlist/<%= record.get("SUPP_ID") %>'value='<%= record.get("SUPP_ID") %>' name='SUPP_ID'>삭제</button></td>
 
                     </tr>

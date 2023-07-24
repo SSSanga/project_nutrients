@@ -72,19 +72,18 @@ public class ListController {
         modelAndView.setViewName("/WEB-INF/views/project/supplist/listadd.jsp");
         return modelAndView;
     }
-
-    @GetMapping("/insert")
-    public ModelAndView insert(ModelAndView modelAndView) {
-        modelAndView.setViewName("/supp/insertandselect");
-        return modelAndView;
-    }
-
+// admin 권한으로 영양제 추가할거임. 
+    
     @GetMapping("/insertandselect")
-    public ModelAndView insertandselect(ModelAndView modelAndView) {
+    public ModelAndView insertandselect(@RequestParam Map params, ModelAndView modelAndView) {
+        Object result = wholelistservice.listinsertandselect(params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
         modelAndView.setViewName("/WEB-INF/views/project/admin/admin_wholelist.jsp");
         return modelAndView;
     }
 
+    // TAB 메인의 about 
     @GetMapping("/about")
     public ModelAndView about(ModelAndView modelAndView) {
         modelAndView.setViewName("/WEB-INF/views/about.jsp");

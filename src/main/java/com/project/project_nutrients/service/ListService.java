@@ -128,5 +128,60 @@ public class ListService {
         return result;
     }
 
+    public String generateUUID() {
+        return UUID.randomUUID().toString();
+    }
+// insert 시작ㅠㅠ xml을 따로따로 갔다와야함. 아놔.. 망할. 
+    public Object insertpk(Map dataMap) {
+        String sqlMapId = "Supplement.insertpk";
+        if(dataMap.get("SUPP_ID").equals("")){
+            String uuid = generateUUID();
+            dataMap.put("SUPP_ID", uuid);
+        } else{
+        }
+        Object result = sharedDao.insert(sqlMapId, dataMap);
+        return result;
+    }
+    public Object insertbad(Map dataMap) {
+        String sqlMapId = "Supplement.insertbad";
+        if(dataMap.get("SUPP_ID").equals("")){
+            String uuid = generateUUID();
+            dataMap.put("SUPP_ID", uuid);
+        } else{
+        }
+        Object result = sharedDao.insert(sqlMapId, dataMap);
+        return result;
+    }
+    public Object insertcomp(Map dataMap) {
+        String sqlMapId = "Supplement.insertcomp";
+        if(dataMap.get("SUPP_ID").equals("")){
+            String uuid = generateUUID();
+            dataMap.put("SUPP_ID", uuid);
+        } else{
+        }
+        Object result = sharedDao.insert(sqlMapId, dataMap);
+        return result;
+    }
+    public Object insertlist(Map dataMap) {
+        String sqlMapId = "Supplement.insertlist";
+        if(dataMap.get("SUPP_ID").equals("")){
+            String uuid = generateUUID();
+            dataMap.put("SUPP_ID", uuid);
+        } else{
+        }
+        Object result = sharedDao.insert(sqlMapId, dataMap);
+        return result;
+    }
+
+    public Object listinsertandselect (Map dataMap){
+        HashMap result = new HashMap<>();
+        result.put("insertpk", this.insertpk(dataMap));
+        result.put("insertbad", this.insertbad(dataMap));
+        result.put("insertcomp", this.insertcomp(dataMap));
+        result.put("insertlist", this.insertlist(dataMap));
+        result.putAll(this.listWithPaginations(dataMap));
+        return result;
+    }
+
 
 }

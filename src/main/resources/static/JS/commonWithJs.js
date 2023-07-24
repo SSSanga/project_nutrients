@@ -25,8 +25,8 @@ function searchList() {
   
   searchList();
   
-  // add keydown Event
-  // let keydownObject = document.querySelector("#temp");
+  // // add keydown Event
+  // let keydownObject = document.querySelector("#keydownEnter");
   
   // keydownObject.addEventListener('keydown', (event) => {
   //   if (event.code == 'Enter') {

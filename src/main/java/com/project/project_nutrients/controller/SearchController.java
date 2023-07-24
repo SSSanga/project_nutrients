@@ -16,6 +16,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.project.project_nutrients.service.SearchService;
+
 import java.util.UUID;
 
 @Controller
@@ -23,8 +26,15 @@ import java.util.UUID;
 
 public class SearchController {
 
-    @GetMapping("")
-    public ModelAndView listadd(ModelAndView modelAndView) {
+   @Autowired
+SearchService searchservice;
+
+    @GetMapping("/selectsupp")
+    public ModelAndView selectsupp(@RequestParam Map params, ModelAndView modelAndView) {
+        Object result = searchservice.selectSearch(params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+        
         modelAndView.setViewName("/WEB-INF/views/project/supplist/searchresult.jsp");
         return modelAndView;
     }
