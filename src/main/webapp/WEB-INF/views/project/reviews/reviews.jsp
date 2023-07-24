@@ -21,13 +21,13 @@
                         <div class="container py-4">
                             <h1 class="text-center" style="font-weight: bold;">Reviews</h1>
                             <hr style="border-top: 4px solid;">
-                           
-                                    <div class="row">
-                                        <% HashMap params=(HashMap)request.getAttribute("params"); String
-                                        searchStr=(String)params.getOrDefault("search", "" ); 
-                                        HashMap result=(HashMap)request.getAttribute("result"); %>
-                                        <% ArrayList resultList=(ArrayList)result.get("resultList"); for(int i=0; i <
-                                            resultList.size(); i=i+1){ HashMap record=(HashMap)resultList.get(i); %>
+
+                            <div class="row">
+                                <% HashMap params=(HashMap)request.getAttribute("params"); String
+                                    searchStr=(String)params.getOrDefault("search", "" ); HashMap
+                                    result=(HashMap)request.getAttribute("result"); %>
+                                    <% ArrayList resultList=(ArrayList)result.get("resultList"); for(int i=0; i <
+                                        resultList.size(); i=i+1){ HashMap record=(HashMap)resultList.get(i); %>
                                         <button formaction='/reviews/reviewselectDetail/<%= record.get("REVIEW_ID") %>'
                                             class="col-md-6 mx-auto btn btn-none">
                                             <div class="card mb-4">
@@ -52,34 +52,38 @@
                                                     formaction="/reviews/reviewwrite">후기 작성 GO!</button>
                                             </div>
 
-                                    </div>
+                            </div>
 
-                                    <% Paginations paginations=(Paginations)result.get("paginations"); %>
-                                    <div> 총 리뷰 수 : <%= paginations.getTotalCount() %>
-                                    </div>
-                                        <nav aria-label="Page navigation">
-                                          <ul class="pagination">
-                                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                                                    <% for (int i=paginations.getBlockStart(); i <= paginations.getBlockEnd() ; i=i+1){ %>
-                                                        <li class="page-item"><a class="page-link" href="/reviews/reviewselectSearchWithPagination?currentPage=<%= i %>">
-                                                            <%= i %>
-                                                        </a></li>
-                                                        <% } %>
-                                                        <li class="page-item"><a class="page-link"
-                                                            href="/reviews/reviewselectSearchWithPagination?currentPage=<%= paginations.getNextPage() %>">Next</a>
-                                                        </li>
-                                              
-                                        </ul>
-                                    </nav>
+                            <% Paginations paginations=(Paginations)result.get("paginations"); %>
+                                <div> 총 리뷰 수 : <%= paginations.getTotalCount() %>
+                                </div>
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination">
+                                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                        <% for (int i=paginations.getBlockStart(); i <=paginations.getBlockEnd() ;
+                                            i=i+1){ %>
+                                            <li class="page-item"><a class="page-link"
+                                                    href="/reviews/reviewlist?currentPage=<%= i %>">
+                                                    <%= i %>
+                                                </a></li>
+                                            <% } %>
+                                                <li class="page-item"><a class="page-link"
+                                                        href="/reviews/reviewlist?currentPage=<%= paginations.getNextPage() %>">Next</a>
+                                                </li>
 
+                                    </ul>
+                                </nav>
+                        </div>
+                    </div>
 
 
 
                 </form>
+                <!-- Footer -->
+                <%@ include file="/WEB-INF/views/project/footer.jsp" %>
 
-        <!-- Footer -->
-        <%@ include file="/WEB-INF/views/project/footer.jsp" %>
+
 
         </body>
-        
+
         </html>

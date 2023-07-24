@@ -2,13 +2,34 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="Reviews">
 
-
+<!-- SELECT -->
 <!-- 검색 -->
 <select id="reviewselectDetail" parameterType="Map" resultType="Map">
 SELECT TITLE, CONTENT,REVIEW_ID
 FROM project_nutrients.review
 WHERE REVIEW_ID = #{REVIEW_ID}
 </select>
+
+<!-- 검색창 -->
+<select id="reviewselect" parameterType="Map" resultType="Map">
+SELECT REVIEW_ID,TITLE,CONTENT, WRITING_DATE
+FROM review 
+</select>
+
+<!-- 검색 with pagination-->
+   <select id="reviewselectSearchWithPagination" parameterType="Map" resultType="Map">
+      SELECT *
+      FROM project_nutrients.review
+      limit #{pageBegin}, #{pageScale}
+      ;
+   </select>
+
+<!-- total count -->
+   <select id="reviewselectTotal" parameterType="Map" resultType="int">
+      SELECT count(*) as cnt
+      FROM project_nutrients.review
+      ;
+   </select>  
 
 <!-- insert -->
 <insert id="reviewinsert" parameterType="Map">
@@ -33,24 +54,5 @@ DELETE FROM REVIEW
 WHERE REVIEW_ID = #{REVIEW_ID}
 </delete>
 
-<!-- 검색창 -->
-<select id="reviewselect" parameterType="Map" resultType="Map">
-SELECT REVIEW_ID,TITLE,CONTENT, WRITING_DATE
-FROM review 
-</select>
-
-<!-- 검색 with pagination-->
-   <select id="reviewselectSearchWithPagination" parameterType="Map" resultType="Map">
-      SELECT *
-      FROM project_nutrients.review
-      limit #{pageBegin}, #{pageScale}
-      ;
-   </select>
-
-<!-- total count -->
-   <select id="reviewselectTotal" parameterType="Map" resultType="int">
-      SELECT count(*) as cnt
-      FROM project_nutrients.review
-      ;
-   </select>   
+ 
 </mapper>

@@ -23,26 +23,54 @@ public class ContactsController {
     @Autowired
     ContactsService contactsService;
    
+    // @GetMapping("/contactslist")
+    // public ModelAndView contactslist(@RequestParam Map params
+    // , ModelAndView modelAndView) {
+    //     Object result = contactsService.ContactsSearch(params);
+    //     modelAndView.addObject("params", params);
+    //     modelAndView.addObject("result", result);
+    //     modelAndView.setViewName("/WEB-INF/views/project/contacts/contactslist.jsp");
+    //     return modelAndView;
+    // }
+    
     @GetMapping("/contactslist")
-    public ModelAndView contactslist(@RequestParam Map params
-    , ModelAndView modelAndView) {
-        Object result = contactsService.ContactsSearch(params);
+    public ModelAndView contactselectSearchWithPagination(@RequestParam Map params
+                            , ModelAndView modelAndView) {
+        Object result = contactsService.contactselectSearchWithPagination(params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
+        
         modelAndView.setViewName("/WEB-INF/views/project/contacts/contactslist.jsp");
         return modelAndView;
     }
 
 
-    @GetMapping("/ContactsselectDetail/{INQUIRY_ID}")
-    public ModelAndView ContactsselectDetail(@PathVariable String INQUIRY_ID
+    @GetMapping("/contactsselectDetail/{INQUIRY_ID}")
+    public ModelAndView contactsselectDetail(@PathVariable String INQUIRY_ID
                         ,@RequestParam Map params, ModelAndView modelAndView) {
-        Object result = contactsService.ContactsselectDetail(INQUIRY_ID, params);
+        Object result = contactsService.contactsselectDetail(INQUIRY_ID, params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
         modelAndView.setViewName("/WEB-INF/views/project/contacts/contactsdetail.jsp");
         return modelAndView;
     }
+
+
+    @GetMapping("/contactsinsertAndSelect")
+    public ModelAndView contactsinsertAndSelect(@RequestParam Map params, ModelAndView modelAndView) {
+        Object result = contactsService.contactsinsertAndSelect(params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+
+        modelAndView.setViewName("/WEB-INF/views/project/contacts/contactslist.jsp");
+        return modelAndView;
+   }
+
+   @GetMapping("/contactswrite")
+   public ModelAndView contactswrite(@RequestParam Map params, ModelAndView modelAndView) {
+       modelAndView.setViewName("/WEB-INF/views/project/contacts/contactswriting.jsp");
+       return  modelAndView;
+   }
 
 
 //    // admin이 관리, admin 완성되면 수정하기!!!!

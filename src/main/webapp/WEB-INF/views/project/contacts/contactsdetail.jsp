@@ -11,6 +11,8 @@
     <link href="/css/main.css" rel="stylesheet" />
 </head>
 <body>
+
+    
     <!-- header -->
     <%@ include file="/WEB-INF/views/project/header.jsp" %>
     
@@ -22,7 +24,7 @@
                                         
         <table class="table mt-4" >
             <div class="mb-3">
-                <input class="form-control" type="hidden" id="REVIEW_ID" name="REVIEW_ID">
+                <input class="form-control" type="hidden" id="INQUIRY_ID" name="INQUIRY_ID">
             </div>
             <div class="container py-4">
                 <h1 class="text-center" style="font-weight: bold;">Contacts</h1>
@@ -32,7 +34,9 @@
             <tbody>   
                  
                 <div class="card mb-2 pt-2" >
+                    <input class="form-control" type="hidden" id="REVIEW_ID" name="REVIEW_ID">
                     <div class="card-body">
+                       
                         <h5 class="card-title mt-2" style="font-weight: bold;">등록일</h5>
                         <hr>
                         <span class="card-text pb-2"><%= result.get("WRITING_DATE") %></span>
@@ -60,14 +64,16 @@
                    </div>
                 </div>
 
-
-                <button type="submit" class="btn btn-primary"
-                formaction="/">돌아가기</button>
+           
+                <form> <button type="submit" class="btn btn-primary"
+                formaction="/contacts/contactslist">돌아가기</button>
+                </form>
             </tbody>
         </table>
         
     </main>
+
     <!-- Footer -->
-    <%@ include file="/WEB-INF/views/project/footer.jsp" %>
+   <%@ include file="/WEB-INF/views/project/footer.jsp" %>
 </body>
 </html>
