@@ -24,7 +24,7 @@ public class ContactsService {
     }
 
 
-    // 검색(조건-?)
+    // 검색
     public Map contactsSearch(Map dataMap) {
         String sqlMapId = "Inquiries.selectInquiryList";
 
@@ -33,7 +33,8 @@ public class ContactsService {
         return result;
     }
 
-    // 검색(조건-search : TITLE, CONTENT, WRITING_DATE )
+    // contactlist 불러올 때 사용
+    // contactwriting 후에 작성된 문의가 contactlist에 추가 될 때 사용
     public Map contactselectSearchWithPagination(Map dataMap) {
         // 페이지 형성 위한 계산
         int totalCount = (int) this.contactsSelectTotal(dataMap);
@@ -57,7 +58,7 @@ public class ContactsService {
         return result;
     }
 
-    // total count
+    // 문의 게시글 총 개수 total count
     public Object contactsSelectTotal(Map dataMap) {
         String sqlMapId = "Inquiries.contactselectTotal";
 
@@ -65,7 +66,7 @@ public class ContactsService {
         return result;
     }
 
-    // 상세 조회
+    // 문의 내역 상세 조회
     public Object contactsselectDetail(String INQUIRY_ID, Map dataMap) {
         // Object getOne(String sqlMapId, Object dataMap)
         String sqlMapId = "Inquiries.selectInquiryDetail";
@@ -75,7 +76,7 @@ public class ContactsService {
         return result;
     }
 
-
+    // 문의 작성(contactwriting) 후 db 던지기 
     public Object contactsinsert(Map dataMap) {
         String sqlMapId = "Inquiries.insertInquiry";
         if(dataMap.get("INQUIRY_ID").equals("")){
@@ -87,6 +88,7 @@ public class ContactsService {
         return result;
     }
 
+    // 문의 작성(contactwriting) 후 contactlist로 돌아오기 
     public Object contactsinsertAndSelect(Map dataMap) {
 
         HashMap result = new HashMap<>();
