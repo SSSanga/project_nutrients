@@ -964,6 +964,29 @@
               "widthDataType": 94.94873046875,
               "widthDefault": 60
             }
+          },
+          {
+            "name": "IMAGES",
+            "comment": "이미지 ",
+            "dataType": "VARCHAR(500)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 94.94873046875,
+              "widthDefault": 60
+            },
+            "id": "2dcb7b79-8fa1-4d7d-8b53-f595c97db6d8"
           }
         ],
         "ui": {
@@ -1954,7 +1977,7 @@
             "804a4e12-1886-4581-b947-9fa068646d17"
           ],
           "x": 1270.9375,
-          "y": 1225.375,
+          "y": 1240.75,
           "direction": "right"
         },
         "constraintName": "",
@@ -1980,7 +2003,7 @@
             "d8913c12-26c6-4446-b22f-448f22766cf6"
           ],
           "x": 1270.9375,
-          "y": 1119.125,
+          "y": 1124.25,
           "direction": "right"
         },
         "constraintName": "",

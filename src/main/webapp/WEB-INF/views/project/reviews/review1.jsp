@@ -42,8 +42,10 @@
                                     </div>
                                 </div>
                                 <div class="card mb-4 pt-4">
-                                    <img src="/images/vitaminB3.PNG" alt="vitaminb3" class="card-img-top"
-                                        style="width: 100px;">
+                                    <td>
+                                    <img src='<%= result.get("IMAGES") %>' alt='<%= result.get("REVIEW_ID") %>' class="card-img-top"
+                                            style="width: 100px;">
+                                    </td>
                                     <div class="card-body">
                                         <td class="card-text pb-2">
                                             <%= result.get("CONTENT") %>

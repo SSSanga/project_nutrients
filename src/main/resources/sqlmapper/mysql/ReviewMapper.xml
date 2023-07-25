@@ -5,13 +5,13 @@
 <!-- SELECT -->
 <!-- 검색 -->
 <select id="reviewselectDetail" parameterType="Map" resultType="Map">
-SELECT TITLE, CONTENT,REVIEW_ID
+SELECT TITLE, CONTENT,REVIEW_ID, IMAGES
 FROM project_nutrients.review
 WHERE REVIEW_ID = #{REVIEW_ID}
 </select>
 
 <select id="wholelistselectDetail" parameterType="Map" resultType="Map">
-SELECT TITLE, CONTENT,REVIEW_ID, SUPP_ID
+SELECT TITLE, CONTENT,REVIEW_ID, SUPP_ID, IMAGES
 FROM project_nutrients.review
 WHERE SUPP_ID = #{SUPP_ID}
 </select>
