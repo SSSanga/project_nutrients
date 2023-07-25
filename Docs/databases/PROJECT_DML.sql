@@ -469,28 +469,27 @@ INSERT INTO supp_list (SUPP_ID, EFFECT_ID, EFFECT_FLAG) VALUES
 ('SUPP_40', 'EFFECT_06', 'EFFECT_13'),
 ('SUPP_40', 'EFFECT_14', 'EFFECT_13');
 
-
 INSERT INTO REVIEW 
-(REVIEW_ID, WRITING_DATE, TITLE, CONTENT, VIEW_COUNT, SUPP_ID, UNIQUE_ID) 
+(REVIEW_ID, WRITING_DATE, TITLE, CONTENT, VIEW_COUNT, SUPP_ID, UNIQUE_ID, IMAGES) 
 VALUES
-('REVIEW_01', NOW(), '간건강엔 옥외씨슬', '간건강엔 옥외씨슬에 대한 리뷰입니다.', '100', 'SUPP_01', 'MEMB_03'),
-('REVIEW_02', NOW(), '더 스포츠 비타민', '더 스포츠 의학적인 비타민 B Complex에 대한 리뷰입니다.', '150', 'SUPP_02', 'MEMB_02'),
-('REVIEW_03', NOW(), '간기보 리뷰', '간기보에 대한 리뷰입니다.', '200', 'SUPP_03', 'MEMB_04'),
-('REVIEW_04', NOW(), '동국내다 옥내씨슬', '동국내다 옥내씨슬에 대한 리뷰입니다.', '120', 'SUPP_04', 'MEMB_09'),
-('REVIEW_05', NOW(), '닥터 쎈 실리마린', '닥터 쎈 실리마린 간건강 스파급수에 대한 리뷰입니다.', '180', 'SUPP_05', 'MEMB_08'),
-('REVIEW_06', NOW(), '좋은 실리마린', '보다 좋은 실리마린 옥외씨슬에 대한 리뷰입니다.', '90', 'SUPP_06', 'MEMB_19'),
-('REVIEW_07', NOW(), '간과 시기에 좋습니다', '간과 시기에 좋습니다 아파트씨슬, 홍경천에 대한 리뷰입니다.', '110', 'SUPP_07', 'MEMB_14'),
-('REVIEW_08', NOW(), '드리내 간건강', '드리내 간건강 실리마린 아우씨 아연슬에 대한 리뷰입니다.', '130', 'SUPP_08', 'MEMB_12'),
-('REVIEW_09', NOW(), '균형:간건강', '균형:간건강에 대한 리뷰입니다.', '95', 'SUPP_09', 'MEMB_12'),
-('REVIEW_10', NOW(), '듀오락 간케어', '듀오락 간케어에 대한 리뷰입니다.', '140', 'SUPP_10', 'MEMB_11'),
-('REVIEW_11', NOW(), '솔브앤고 뜸&스트레스 케어', '솔브앤고 뜸&스트레스 케어에 대한 리뷰입니다.', '160', 'SUPP_11', 'MEMB_13'),
-('REVIEW_12', NOW(), '곰피로간건강+', '곰피로간건강+에 대한 리뷰입니다.', '105', 'SUPP_12', 'MEMB_19'),
-('REVIEW_13', NOW(), '마이니 슈퍼비', '마이니 슈퍼비 긴장 케어에 대한 리뷰입니다.', '170', 'SUPP_13', 'MEMB_17'),
-('REVIEW_14', NOW(), '뜸날린', '뜸날린에 대한 리뷰입니다.', '200', 'SUPP_14', 'MEMB_10'),
-('REVIEW_15', NOW(), '피로개선 비타민', '피로개선 활력비타민에 대한 리뷰입니다.', '120', 'SUPP_15', 'MEMB_14'),
-('REVIEW_16', NOW(), '바이탈헬스 올인원', '바이탈헬스 피로개선 올인원에 대한 리뷰입니다.', '130', 'SUPP_16', 'MEMB_02'),
-('REVIEW_17', NOW(), '피로 바이타민 B', '피로 바이타민 B-컴플렉스에 대한 리뷰입니다.', '110', 'SUPP_17', 'MEMB_07'),
-('REVIEW_18', NOW(), '피로아웃티', '피로아웃티에 대한 리뷰입니다.', '90', 'SUPP_18', 'MEMB_06'),
-('REVIEW_19', NOW(), '경희 피로가라', '경희 피로가라에 대한 리뷰입니다.', '100', 'SUPP_19', 'MEMB_05'),
-('REVIEW_20', NOW(), '프리미엄 피로개선', '프리미엄 피로개선 홍경천 플러스에 대한 리뷰입니다.', '150', 'SUPP_20', 'MEMB_01'),
-('REVIEW_21', NOW(), '지큐랩 콜레스테롤', '지큐랩 콜레스테롤 솔루션 300억에 대한 리뷰입니다.', '130', 'SUPP_21', 'MEMB_20');
+('REVIEW_01', NOW(), '간건강엔 옥외씨슬', '간건강엔 옥외씨슬에 대한 리뷰입니다.', '100', 'SUPP_01', 'MEMB_03', '/images/iamcat.png'),
+('REVIEW_02', NOW(), '더 스포츠 비타민', '더 스포츠 의학적인 비타민 B Complex에 대한 리뷰입니다.', '150', 'SUPP_02', 'MEMB_02', '/images/iamcat2.png'),
+('REVIEW_03', NOW(), '간기보 리뷰', '간기보에 대한 리뷰입니다.', '200', 'SUPP_03', 'MEMB_04', '/image/lc_1.png'),
+('REVIEW_04', NOW(), '동국내다 옥내씨슬', '동국내다 옥내씨슬에 대한 리뷰입니다.', '120', 'SUPP_04', 'MEMB_09', '/image/omega3.png'),
+('REVIEW_05', NOW(), '닥터 쎈 실리마린', '닥터 쎈 실리마린 간건강 스파급수에 대한 리뷰입니다.', '180', 'SUPP_05', 'MEMB_08', '/images/iamcat.png'),
+('REVIEW_06', NOW(), '좋은 실리마린', '보다 좋은 실리마린 옥외씨슬에 대한 리뷰입니다.', '90', 'SUPP_06', 'MEMB_19', '/images/iamcat2.png'),
+('REVIEW_07', NOW(), '간과 시기에 좋습니다', '간과 시기에 좋습니다 아파트씨슬, 홍경천에 대한 리뷰입니다.', '110', 'SUPP_07', 'MEMB_14', '/image/lc_1.png'),
+('REVIEW_08', NOW(), '드리내 간건강', '드리내 간건강 실리마린 아우씨 아연슬에 대한 리뷰입니다.', '130', 'SUPP_08', 'MEMB_12', '/image/omega3.png'),
+('REVIEW_09', NOW(), '균형:간건강', '균형:간건강에 대한 리뷰입니다.', '95', 'SUPP_09', 'MEMB_12', '/images/iamcat.png'),
+('REVIEW_10', NOW(), '듀오락 간케어', '듀오락 간케어에 대한 리뷰입니다.', '140', 'SUPP_10', 'MEMB_11', '/images/iamcat2.png'),
+('REVIEW_11', NOW(), '솔브앤고 뜸&스트레스 케어', '솔브앤고 뜸&스트레스 케어에 대한 리뷰입니다.', '160', 'SUPP_11', 'MEMB_13', '/image/lc_1.png'),
+('REVIEW_12', NOW(), '곰피로간건강+', '곰피로간건강+에 대한 리뷰입니다.', '105', 'SUPP_12', 'MEMB_19', '/image/omega3.png'),
+('REVIEW_13', NOW(), '마이니 슈퍼비', '마이니 슈퍼비 긴장 케어에 대한 리뷰입니다.', '170', 'SUPP_13', 'MEMB_17', '/images/iamcat.png'),
+('REVIEW_14', NOW(), '뜸날린', '뜸날린에 대한 리뷰입니다.', '200', 'SUPP_14', 'MEMB_10', '/images/iamcat2.png'),
+('REVIEW_15', NOW(), '피로개선 비타민', '피로개선 활력비타민에 대한 리뷰입니다.', '120', 'SUPP_15', 'MEMB_14', '/image/lc_1.png'),
+('REVIEW_16', NOW(), '바이탈헬스 올인원', '바이탈헬스 피로개선 올인원에 대한 리뷰입니다.', '130', 'SUPP_16', 'MEMB_02', '/image/omega3.png'),
+('REVIEW_17', NOW(), '피로 바이타민 B', '피로 바이타민 B-컴플렉스에 대한 리뷰입니다.', '110', 'SUPP_17', 'MEMB_07', '/images/iamcat.png'),
+('REVIEW_18', NOW(), '피로아웃티', '피로아웃티에 대한 리뷰입니다.', '90', 'SUPP_18', 'MEMB_06', '/images/iamcat2.png'),
+('REVIEW_19', NOW(), '경희 피로가라', '경희 피로가라에 대한 리뷰입니다.', '100', 'SUPP_19', 'MEMB_05', '/image/lc_1.png'),
+('REVIEW_20', NOW(), '프리미엄 피로개선', '프리미엄 피로개선 홍경천 플러스에 대한 리뷰입니다.', '150', 'SUPP_20', 'MEMB_01', '/image/omega3.png'),
+('REVIEW_21', NOW(), '지큐랩 콜레스테롤', '지큐랩 콜레스테롤 솔루션 300억에 대한 리뷰입니다.', '130', 'SUPP_21', 'MEMB_20', '/images/iamcat2.png');
