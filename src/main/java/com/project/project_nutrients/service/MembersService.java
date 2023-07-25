@@ -61,7 +61,16 @@ public class MembersService {
 
     public Object selectByUIDWithAuths(Map dataMap) {
         Map result = (Map) this.selectByUID(dataMap);
+        dataMap.put("UNIQUE_ID", result.get("UNIQUE_ID"));
         result.putAll(authsService.selectWithUSERNAME(dataMap));
+        return result;
+    }
+
+    public Object mypageDetail(Map dataMap) {
+        // Object getOne(String sqlMapId, Object dataMap)
+        String sqlMapId = "Members.mypageDetail";
+
+        Object result = sharedDao.getOne(sqlMapId, dataMap);
         return result;
     }
 }

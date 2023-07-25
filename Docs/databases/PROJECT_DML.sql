@@ -11,6 +11,15 @@ select 'System_Code_Yes','Yes',1,NULL,NULL,'Sytem Using Yes','System_Code_Yes','
 select 'System_Code_No','No',2,NULL,NULL,'Sytem Using No','System_Code_Yes','Yes','System_Code_YN','UUID-1111-1111111',now(),'UUID-1111-1111111',now() from dual 
 ;
 
+insert into auth_names 
+(AUTH_NAME, UNIQUE_ID)
+values
+('SYSTEM_MANAGER','ROLE_MANAGER'),
+('ADMIN','ROLE_ADMIN'),
+('USER','ROLE_USER'),
+('GUEST','ROLE_GUEST')
+;
+
 INSERT INTO history (DISEASE, HISTORY_ID)
 VALUES
 ('고혈압', 'history_01'),

@@ -25,7 +25,7 @@
             <% if ("true".equals(fail)) { %>            
             <div><font color="red"> Login Fail ! </font></div>
             <% } %>
-        <form class="form-signin" method="post" action="/login"> 
+        <form class="form-signin" method="post" action="/login">
                 <img class="mb-4" src="/images/drug_img.png" alt="" width="72" height="57">
                 <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
                 <div class="form-floating">
@@ -44,6 +44,7 @@
                 <button class="w-100 btn btn-lg btn-success" type="submit">
                     Sign in
                 </button>
+
                 <p class="mt-5 mb-3 text-muted">© 2023</p>
             </form>
         </main>

@@ -16,4 +16,8 @@ INSERT INTO membersandadmin
     (#{UNIQUE_ID}, #{NAME}, #{ID}, #{PASSWORD}, #{BIRTHDATE}, '30', #{SEX}, #{ADDRESS}, #{PHONE}, NOW(), #{EMAIL}, 'admin', #{HISTORY_ID})
 </insert>
 
+<select id="mypageDetail" parameterType="Map" resultType="Map">
+    SELECT NAME, ID, PASSWORD, BIRTHDATE, AGE, SEX, ADDRESS, PHONE, REGISTRATIONDATE, EMAIL, ADMINE_ID, HISTORY_ID
+    FROM membersandadmin
+</select>
 </mapper>
