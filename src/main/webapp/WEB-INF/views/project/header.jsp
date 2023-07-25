@@ -57,10 +57,12 @@
                                 <button id="reviewButton" class="nav-link btn btn-none"
                                     formaction="/reviews/reviewlist">Reviews</button>
                             </li>
+                            <sec:authorize access="hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')">
                             <li class="nav-item">
                                 <button id="contactsButton" class="nav-link btn btn-none"
                                     formaction="/contacts/contactslist">Contacts</button>
                             </li>
+                            </sec:authorize>
                         </ul>
                     </div>
                 </div>
@@ -75,6 +77,12 @@
                         <button class="btn btn-light btn-outline-success mt-auto mb-auto" type="submit" formaction="/search/selectsupp" id="keydownEnter">검색</button>
                     </select>
                 </div>
+                <sec:authorize access="isAuthenticated()">
+                <li class = "nav-link">
+                    <div>User ID : ${userDetailsBean.memberID}</div>
+                    <div>Name : ${userDetailsBean.memberName}</div>
+                </li>
+                </sec:authorize>
                 <!-- User management dropdown -->
                 <div class="d-flex me-2 align-items-center">
                     <div class="dropdown">
@@ -93,11 +101,8 @@
                             <li><button id="singupButton" class="dropdown-item" formaction="/members/signupForm"
                                 style="font-size: 20px;">회원가입</button></li>
                             </sec:authorize>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
                             <sec:authorize access="isAuthenticated()">
-                            <li><button id="singupButton" class="dropdown-item" formaction="/main/main" style="font-size: 20px;">로그아웃</button>
+                            <li><button id="singupButton" class="dropdown-item"  method="post" formaction ="/logout" style="font-size: 20px;">로그아웃</button>
                             </li>
                         </sec:authorize>
                         </ul>

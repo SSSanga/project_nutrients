@@ -58,6 +58,9 @@ public class MembersController {
     // main 화면에서 마이페이지 버튼 누를 때 거쳐가는 controller임/ mypage.jsp로 가기 위한 경로
     @GetMapping("/mypageForm")
     public ModelAndView mypageForm(@RequestParam Map params, ModelAndView modelAndView) {
+        Object result = membersService.mypageDetail(params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
         modelAndView.setViewName("/WEB-INF/views/project/members/mypage.jsp");
         return  modelAndView;
     }

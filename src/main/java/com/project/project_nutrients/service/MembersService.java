@@ -35,7 +35,7 @@ public class MembersService {
 
     public Object membersinsert(Map dataMap) {
         String PASSWORD = (String) dataMap.get("PASSWORD");
-        // dataMap.put("PASSWORD", bCryptPasswordEncoder.encode(PASSWORD));
+        dataMap.put("PASSWORD", bCryptPasswordEncoder.encode(PASSWORD));
         String sqlMapId = "Members.membersinsert";
         if(dataMap.get("UNIQUE_ID").equals("")){
         String uuid = generateUUID();
@@ -53,7 +53,7 @@ public class MembersService {
     }
 
     public Object selectByUID(Map dataMap) {
-        String sqlMapId = "Users.selectByUID";
+        String sqlMapId = "Members.selectByUID";
 
         Object result = sharedDao.getOne(sqlMapId, dataMap);
         return result;
@@ -61,7 +61,16 @@ public class MembersService {
 
     public Object selectByUIDWithAuths(Map dataMap) {
         Map result = (Map) this.selectByUID(dataMap);
+        dataMap.put("UNIQUE_ID", result.get("UNIQUE_ID"));
         result.putAll(authsService.selectWithUSERNAME(dataMap));
+        return result;
+    }
+
+    public Object mypageDetail(Map dataMap) {
+        // Object getOne(String sqlMapId, Object dataMap)
+        String sqlMapId = "Members.mypageDetail";
+
+        Object result = sharedDao.getOne(sqlMapId, dataMap);
         return result;
     }
 }

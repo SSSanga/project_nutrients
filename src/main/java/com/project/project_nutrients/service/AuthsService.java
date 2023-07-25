@@ -24,7 +24,7 @@ public class AuthsService {
 
     public Object authsinsert(Map dataMap) {
         List authList = new ArrayList<>();
-        authList.add("ROLE_USER");  // default auth
+        authList.add("ROLE_GUEST");  // default auth
         authList.add(dataMap.get("auth"));  // choosed auth  화면에 권한 선택하는거 넣으면 주석 풀어라
         dataMap.put("authList", authList);
 
