@@ -6,7 +6,7 @@
         FROM auths
                 inner JOIN auth_names
         ON auths.UNIQUE_ID_AUTH_NAMES = auth_names.UNIQUE_ID
-        AND auths.UNIQUE_ID = #{USERNAME}
+        AND auths.UNIQUE_ID = #{UNIQUE_ID}
         ;
         </select>
 

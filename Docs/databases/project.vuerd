@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 3000,
     "height": 3000,
-    "scrollTop": -1111,
-    "scrollLeft": -552,
+    "scrollTop": -1348,
+    "scrollLeft": -758,
     "zoomLevel": 0.9,
     "show": {
       "tableComment": true,
@@ -73,7 +73,7 @@
             "id": "5d4a778d-5959-4d25-99a9-bd5ca850018e",
             "name": "UNIQUE_ID",
             "comment": "접근권한 대표값",
-            "dataType": "VARCHAR(500)",
+            "dataType": "VARCHAR(200)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -97,7 +97,7 @@
           "active": false,
           "left": 1754.5,
           "top": 1602.5,
-          "zIndex": 4,
+          "zIndex": 34,
           "widthName": 90.84814453125,
           "widthComment": 67
         },
@@ -112,7 +112,7 @@
             "id": "29446c07-3430-4935-9c51-e685d957dbbd",
             "name": "UNIQUE_ID_AUTH_NAMES",
             "comment": "접근권한 대표값",
-            "dataType": "VARCHAR(500)",
+            "dataType": "VARCHAR(200)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -135,19 +135,19 @@
             "id": "84086351-05b6-47a3-91a3-2038e0a86640",
             "name": "UNIQUE_ID",
             "comment": "유니크ID",
-            "dataType": "VARCHAR(500)",
+            "dataType": "VARCHAR(200)",
             "default": "",
             "option": {
               "autoIncrement": false,
-              "primaryKey": false,
+              "primaryKey": true,
               "unique": false,
               "notNull": true
             },
             "ui": {
               "active": false,
               "pk": false,
-              "fk": true,
-              "pfk": false,
+              "fk": false,
+              "pfk": true,
               "widthName": 72.7890625,
               "widthComment": 60,
               "widthDataType": 94.94873046875,
@@ -159,7 +159,7 @@
           "active": false,
           "left": 1674.5,
           "top": 1389.5,
-          "zIndex": 5,
+          "zIndex": 28,
           "widthName": 60,
           "widthComment": 60
         },
@@ -221,7 +221,7 @@
           "active": false,
           "left": 1888.6944,
           "top": 680.7775,
-          "zIndex": 13,
+          "zIndex": 10,
           "widthName": 86.5,
           "widthComment": 60
         },
@@ -283,7 +283,7 @@
           "active": false,
           "left": 1312.3884,
           "top": 610.5273,
-          "zIndex": 9,
+          "zIndex": 6,
           "widthName": 60,
           "widthComment": 70.61181640625
         },
@@ -345,7 +345,7 @@
           "active": false,
           "left": 1182.6111,
           "top": 1832.5,
-          "zIndex": 3,
+          "zIndex": 1,
           "widthName": 60,
           "widthComment": 60
         },
@@ -407,7 +407,7 @@
           "active": false,
           "left": 2057.4468,
           "top": 1080,
-          "zIndex": 12,
+          "zIndex": 9,
           "widthName": 91.5654296875,
           "widthComment": 60
         },
@@ -469,7 +469,7 @@
           "active": false,
           "left": 2010.3971,
           "top": 894.9442,
-          "zIndex": 11,
+          "zIndex": 8,
           "widthName": 83.630859375,
           "widthComment": 120
         },
@@ -531,7 +531,7 @@
           "active": false,
           "left": 2026.1968,
           "top": 1252.5,
-          "zIndex": 7,
+          "zIndex": 4,
           "widthName": 74.97265625,
           "widthComment": 96.61181640625
         },
@@ -616,7 +616,7 @@
           "active": false,
           "left": 1297.8052,
           "top": 821.055,
-          "zIndex": 14,
+          "zIndex": 11,
           "widthName": 72.08447265625,
           "widthComment": 113.2236328125
         },
@@ -769,7 +769,7 @@
             "id": "170040ec-f43a-486d-a7f8-1fe7aef4f153",
             "name": "UNIQUE_ID",
             "comment": "유니크ID",
-            "dataType": "VARCHAR(500)",
+            "dataType": "VARCHAR(200)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -793,7 +793,7 @@
           "active": false,
           "left": 525.6111,
           "top": 1442,
-          "zIndex": 25,
+          "zIndex": 12,
           "widthName": 60,
           "widthComment": 60
         },
@@ -946,7 +946,7 @@
             "id": "804a4e12-1886-4581-b947-9fa068646d17",
             "name": "UNIQUE_ID",
             "comment": "유니크ID",
-            "dataType": "VARCHAR(500)",
+            "dataType": "VARCHAR(200)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -970,7 +970,7 @@
           "active": false,
           "left": 848.5,
           "top": 1066,
-          "zIndex": 6,
+          "zIndex": 3,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1147,7 +1147,7 @@
           "active": false,
           "left": 1395.5,
           "top": 1085.5,
-          "zIndex": 10,
+          "zIndex": 7,
           "widthName": 80.03173828125,
           "widthComment": 70.61181640625
         },
@@ -1156,7 +1156,7 @@
       },
       {
         "name": "COMMONS_CODE",
-        "comment": "",
+        "comment": "나중에 현업에서 이 테이블이 있으면 참고해라",
         "columns": [
           {
             "id": "578c86d4-762f-4c3c-b00a-541c38f2204f",
@@ -1461,10 +1461,10 @@
         "ui": {
           "active": false,
           "left": 516.6111,
-          "top": 1790.5,
-          "zIndex": 1,
+          "top": 1779.3889,
+          "zIndex": 15,
           "widthName": 116.1181640625,
-          "widthComment": 60
+          "widthComment": 120
         },
         "visible": true,
         "id": "8223d71f-72fd-4a5a-811e-e9628d299149"
@@ -1477,7 +1477,7 @@
             "id": "ebe934be-40dc-44f4-8083-3c71eb0dad36",
             "name": "UNIQUE_ID",
             "comment": "유니크ID",
-            "dataType": "VARCHAR(500)",
+            "dataType": "VARCHAR(200)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -1777,7 +1777,7 @@
           "active": false,
           "left": 1103.6111,
           "top": 1393.5,
-          "zIndex": 8,
+          "zIndex": 31,
           "widthName": 137.0654296875,
           "widthComment": 60
         },
@@ -1788,7 +1788,20 @@
     "indexes": []
   },
   "memo": {
-    "memos": []
+    "memos": [
+      {
+        "value": "COMMONS_CODE로 성별을 가지고 가는건 저희가 못 할거라고해서 성별 테이블 새로 만들겠습니다.",
+        "ui": {
+          "active": false,
+          "left": 365.1111111111108,
+          "top": 1777.555555555555,
+          "zIndex": 14,
+          "width": 127,
+          "height": 100
+        },
+        "id": "7073e9d6-9288-4678-b154-3cf81a013169"
+      }
+    ]
   },
   "relationship": {
     "relationships": [
@@ -1819,7 +1832,7 @@
         "id": "ffc3f87d-9ffe-4aa5-9d90-2011ae0b2d82"
       },
       {
-        "identification": false,
+        "identification": true,
         "relationshipType": "ZeroN",
         "startRelationshipType": "Dash",
         "start": {
@@ -1854,7 +1867,7 @@
             "578c86d4-762f-4c3c-b00a-541c38f2204f"
           ],
           "x": 1065.23219375,
-          "y": 1790.5,
+          "y": 1779.3889,
           "direction": "top"
         },
         "end": {
@@ -1863,7 +1876,7 @@
             "c5263f96-b6bf-4567-a97f-752db0fbf49f"
           ],
           "x": 1085.23219375,
-          "y": 1810.5,
+          "y": 1799.3889,
           "direction": "right"
         },
         "constraintName": "",
