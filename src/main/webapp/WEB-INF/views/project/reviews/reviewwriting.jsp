@@ -50,8 +50,8 @@
                           
                         </div> 
                         <div class="mb-3">
-                            <label for="image" class="form-label">이미지 첨부</label>
-                            <input class="form-control" type="file" id="image">
+                            <label for="image" class="form-label">이미지 </label>
+                            <input class="form-control" type="file" id="image"  rows="5" name="IMAGE">
                             
                         
                         </div>
