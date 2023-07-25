@@ -102,6 +102,10 @@
                                 style="font-size: 20px;">회원가입</button></li>
                             </sec:authorize>
                             <sec:authorize access="isAuthenticated()">
+                                <sec:authorize access="hasRole('ROLE_ADMIN')">
+                                <li><button id="singupButton" class="dropdown-item" formaction ="/members/memberList" style="font-size: 20px;">회원List</button>
+                                </li>
+                                </sec:authorize>   
                             <li><button id="singupButton" class="dropdown-item"  method="post" formaction ="/logout" style="font-size: 20px;">로그아웃</button>
                             </li>
                         </sec:authorize>

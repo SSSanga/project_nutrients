@@ -20,4 +20,15 @@ INSERT INTO membersandadmin
     SELECT NAME, ID, PASSWORD, BIRTHDATE, AGE, SEX, ADDRESS, PHONE, REGISTRATIONDATE, EMAIL, ADMINE_ID, HISTORY_ID
     FROM membersandadmin
 </select>
+
+<select id="memberList" parameterType="Map" resultType="Map">
+    SELECT UNIQUE_ID, NAME, ID, PASSWORD, BIRTHDATE, AGE, SEX, ADDRESS, PHONE, REGISTRATIONDATE, EMAIL, ADMINE_ID, HISTORY_ID  
+    FROM membersandadmin
+</select>
+
+<delete id="memberdelete" parameterType="Map">
+  DELETE FROM membersandadmin
+  WHERE UNIQUE_ID = #{UNIQUE_ID}
+</delete>
+
 </mapper>

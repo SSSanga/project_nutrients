@@ -22,4 +22,9 @@
         ;
     </insert>
 
+<delete id="deleteauths" parameterType="Map">
+  DELETE FROM auths
+  WHERE UNIQUE_ID = #{UNIQUE_ID}
+</delete>
+
 </mapper>
