@@ -29,7 +29,7 @@
                             <hr style="border-top: 4px solid;">
 
                             <div class="row">
-                                <div class="mb-3">
+                                <div class="mb-3 pt-3">
                                     <input class="form-control" type="hidden" id="REVIEW_ID" name="REVIEW_ID">
                                 </div>
                                 <div class="col-md-8 mx-auto">

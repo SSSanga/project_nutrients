@@ -27,6 +27,7 @@
                   <th>제품명</th>
                   <th>대표 효과</th>
                   <th>상세</th>
+                  <th>리뷰</th>
                 </tr>
               </thead>
               <tbody class="mt-auto mb-auto">
@@ -44,7 +45,8 @@
                         <%= record.get("EFFECT") %>
                       </td>
                       <td><button class="btn btn-success mt-auto mb-auto" type="submit" formaction='/supp/selectspec/<%= record.get("SUPP_ID") %>' value='<%= record.get("SUPP_ID") %>' name='SUPP_ID'>상세</button></td>
-
+                      <td><button class="btn btn-success mt-auto mb-auto" type="submit" formaction='/reviews/wholelistselectDetail/<%= record.get("SUPP_ID") %>' value='<%= record.get("SUPP_ID") %>' name='SUPP_ID'>리뷰</button></td>
+                     
                     </tr>
                     <% } %>
               </tbody>
