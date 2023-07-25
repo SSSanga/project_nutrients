@@ -51,8 +51,8 @@
             <h2 class="card-title" style="font-size: 1.25rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">We care about your health</h2>
           </div>
           <div class="card-body">
-            <p class="card-text">건강한 삶 저희와 함께하세요!</p>
-            <p class="card-text">우리의 제품은 철저한 연구와 개발을 통해 만들어졌으며, 고객들의 다양한 건강 요구에 부합하는 다양한 종류의 영양제를 보유하고 있습니다.</p>
+            <p class="card-text">반갑습니다. 오늘도 건강한 삶 TAB과 함께하세요!</p>
+            <p class="card-text"></p>
           </div>
         </div>
       </div>
@@ -64,7 +64,7 @@
             <h2 class="card-title" style="font-size: 1.25rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Love your body</h2>
           </div>
           <div class="card-body">
-            <p class="card-text">각 제품은 식품 및 의약품 관리청(FDA)의 규정을 준수하며, 효과적인 성분과 안전성을 확보하기 위해 엄격한 품질 관리 절차를 따릅니다.</p>
+            <p class="card-text"> TAB은 사용자들의 편의성을 위해 직관적인 인터페이스와 쉬운 사용법을 제공합니다.</p>
           </div>
         </div>
       </div>
@@ -76,7 +76,7 @@
             <h2 class="card-title" style="font-size: 1.25rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Innovative products</h2>
           </div>
           <div class="card-body">
-            <p class="card-text">우리는 항상 최신 연구 동향을 파악하고 최신 기술을 활용하여 영양제를 개발합니다. 우리의 연구진은 건강과 영양에 대한 깊은 이해를 바탕으로 혁신적인 제품을 개발하고 있습니다.</p>
+            <p class="card-text"> TAB이 추천하는 영양제는 식품의약품안전처의 인증 마크를 받은 안전한 제품만을 출시하고 있습니다.</p>
           </div>
         </div>
       </div>

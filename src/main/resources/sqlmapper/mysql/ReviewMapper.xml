@@ -22,6 +22,7 @@ SELECT REVIEW_ID,TITLE,CONTENT, WRITING_DATE
 FROM review 
 </select>
 
+
 <!-- 검색 with pagination-->
    <select id="reviewselectSearchWithPagination" parameterType="Map" resultType="Map">
       SELECT *
