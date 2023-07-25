@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.css">
-    <link href="/css/main.css" rel="stylesheet" />
+
     <title>login</title>
   </head>
 
@@ -20,7 +20,7 @@
         <main class="form-signin w-50 m-auto">
             <form action="/WEB-INF/views/mainpage.jsp">
               
-                <img class="mb-4" src="/images/drug_img.png" alt="" width="72" height="57">
+                <img class="mb-4" src="/images/drug_img.png" alt="">
                 <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
                 <div class="form-floating">
                     <input type="email" class="form-control" id="floatingInput">
