@@ -1,5 +1,7 @@
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-    <%@ page import="java.util.HashMap, java.util.ArrayList, com.project.project_nutrients.utils.Paginations" %>
+<%@ page import="java.util.HashMap, java.util.ArrayList, com.project.project_nutrients.utils.Paginations" %>
+<sec:authentication property="principal" var="userDetailsBean" />
 
 <!DOCTYPE html>
 <html lang="en">
@@ -56,10 +58,12 @@
                         <h5 class="card-title mt-2" style="font-weight: bold;">관리자 댓글</h5>
                         <hr>
                        <span class="card-text pb-2"><%= result.get("RESPONSE") %></span>
+                       <sec:authorize access="hasRole('ROLE_ADMIN')">
                         <hr>
                         <h7 class="card-title mt-2" style="font-weight: bold;">관리자 댓글 작성
                         <input type="text" class ="me-4" style="width: 400px;">
                         <button type="submit" class="btn btn-primary">저장</button>
+                    </sec:authorize>
                         </h7>
                    </div>
                 </div>

@@ -2,12 +2,33 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="Members">
 
+	<select id="selectByUID" parameterType="Map" resultType="Map">
+    SELECT * 
+    FROM membersandadmin
+    where ID = #{ID}
+	</select>
+
 <!-- sing up -->
 <insert id="membersinsert" parameterType="Map">
 INSERT INTO membersandadmin
     (UNIQUE_ID, NAME, ID, PASSWORD, BIRTHDATE, AGE, SEX, ADDRESS, PHONE, REGISTRATIONDATE, EMAIL, ADMINE_ID, HISTORY_ID)
     VALUES
-    (#{UNIQUE_ID}, #{NAME}, #{ID}, #{PASSWORD}, #{BIRTHDATE}, '30', '여성', #{ADDRESS}, #{PHONE}, NOW(), #{EMAIL}, 'admin', #{HISTORY_ID})
+    (#{UNIQUE_ID}, #{NAME}, #{ID}, #{PASSWORD}, #{BIRTHDATE}, '30', #{SEX}, #{ADDRESS}, #{PHONE}, NOW(), #{EMAIL}, 'admin', #{HISTORY_ID})
 </insert>
+
+<select id="mypageDetail" parameterType="Map" resultType="Map">
+    SELECT NAME, ID, PASSWORD, BIRTHDATE, AGE, SEX, ADDRESS, PHONE, REGISTRATIONDATE, EMAIL, ADMINE_ID, HISTORY_ID
+    FROM membersandadmin
+</select>
+
+<select id="memberList" parameterType="Map" resultType="Map">
+    SELECT UNIQUE_ID, NAME, ID, PASSWORD, BIRTHDATE, AGE, SEX, ADDRESS, PHONE, REGISTRATIONDATE, EMAIL, ADMINE_ID, HISTORY_ID  
+    FROM membersandadmin
+</select>
+
+<delete id="memberdelete" parameterType="Map">
+  DELETE FROM membersandadmin
+  WHERE UNIQUE_ID = #{UNIQUE_ID}
+</delete>
 
 </mapper>

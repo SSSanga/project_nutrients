@@ -33,6 +33,18 @@ public class ContactsService {
         return result;
     }
 
+
+    public Map contactsselectSearch(Map dataMap) {
+        // Object getOne(String sqlMapId, Object dataMap)
+        String sqlMapId = "Inquiries.contactsselectSearch";
+        HashMap result = new HashMap<>();
+        
+        result.put("resultList",sharedDao.getList(sqlMapId, dataMap));
+        return result;
+    }
+
+
+
     // contactlist 불러올 때 사용
     // contactwriting 후에 작성된 문의가 contactlist에 추가 될 때 사용
     public Map contactselectSearchWithPagination(Map dataMap) {
@@ -97,4 +109,36 @@ public class ContactsService {
 
         return result;
     }
+
+          // rest api
+          public Object contactsdelete(Map dataMap) {
+            String sqlMapId = "Inquiries.deleteInquiry";
+    
+            Object result = sharedDao.delete(sqlMapId, dataMap);
+            return result;
+        }
+    
+    // rest api
+    public Object contactsdelete(String INQUIRY_ID ) {
+        String sqlMapId = "Inquiries.deleteInquiry";
+        HashMap dataMap = new HashMap<>();
+        dataMap.put("INQUIRY_ID", INQUIRY_ID);
+
+        Object result = sharedDao.delete(sqlMapId, dataMap);
+        return result;
+    }
+
+
+    // MVC view 회원탈퇴? 악플삭제? admin이 관리
+      public Object contactsdeleteAndSelectSearch(String INQUIRY_ID, Map dataMap) {
+            dataMap.put("INQUIRY_ID", INQUIRY_ID);
+    
+            HashMap result = new HashMap<>();
+            result.put("deleteCount", this.contactsdelete(dataMap));
+    
+            result.putAll(this.contactselectSearchWithPagination(dataMap));
+            return result;
+        }
+    
+
 }

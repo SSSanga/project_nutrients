@@ -71,9 +71,9 @@
             </div>
             <!-- 여기까지 -->
             <div class="radio-field mt-4 mb-4">
-                <input id="gender_man" type="radio" name="gender">
+                <input id="gender_man" type="radio" name="SEX", value="남성">
                 <label for="gender_man h1">남성</label>
-                <input id="gender_woman" type="radio" name="gender">
+                <input id="gender_woman" type="radio" name="SEX", value="여성">
                 <label for="gender_woman h1">여성</label>
                 <div id="genderError" class="error-message"></div>
             </div>
@@ -87,7 +87,7 @@
                 <label class="form-check-label" for="ROLE_ADMIN">ADMIN</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="auth" id="USER" value="ROLE_USER">
+                <input class="form-check-input" type="radio" name="auth" id="ROLE_USER" value="ROLE_USER">
                 <label class="form-check-label" for="USER">USER</label>
               </div>
             <div class="line">

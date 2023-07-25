@@ -43,6 +43,16 @@ public class ReviewsService {
             return result;
     }
 
+    
+    public Object wholelistselectDetail(String SUPP_ID, Map dataMap) {
+            // Object getOne(String sqlMapId, Object dataMap)
+            String sqlMapId = "Reviews.wholelistselectDetail";
+            dataMap.put("SUPP_ID", SUPP_ID);
+    
+            Object result = sharedDao.getOne(sqlMapId, dataMap);
+            return result;
+    }
+
     public Object reviewinsert(Map dataMap) {
         String sqlMapId = "Reviews.reviewinsert";
         if(dataMap.get("REVIEW_ID").equals("")){
@@ -79,7 +89,7 @@ public class ReviewsService {
         return result;
     }
 
-        // MVC view 회원탈퇴? 악플삭제? admin이 관리
+     // MVC view 회원탈퇴? 악플삭제? admin이 관리
         public Object reviewdeleteAndSelectSearch(String REVIEW_ID, Map dataMap) {
             dataMap.put("REVIEW_ID",  REVIEW_ID);
     
@@ -91,9 +101,9 @@ public class ReviewsService {
         }
 
     
-     // 검색(조건-search : TITLE, CONTENT, WRITING_DATE )
+    
      public Map reviewselectSearchWithPagination(Map dataMap) {
-        //페이지 형성 위한 계산
+       //페이지 형성 위한 계산
         int totalCount = (int) this.reviewselectTotal(dataMap);
         
         int currentPage = 1;

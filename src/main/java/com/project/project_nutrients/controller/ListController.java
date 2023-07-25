@@ -63,7 +63,7 @@ public class ListController {
          modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
 
-        modelAndView.setViewName("/WEB-INF/views/project/admin/admin_wholelist.jsp");
+        modelAndView.setViewName("/WEB-INF/views/project/supplist/wholelist.jsp");
         return modelAndView;
     }
 // admin 권한으로 영양제도 추가해야함. 

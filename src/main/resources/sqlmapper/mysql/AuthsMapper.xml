@@ -4,9 +4,9 @@
         <select id="selectWithUSERNAME" parameterType="Map" resultType="Map">
         SELECT auth_names.AUTH_NAME, auth_names.UNIQUE_ID
         FROM auths
-                inner JOIN auth_names
+        inner JOIN auth_names
         ON auths.UNIQUE_ID_AUTH_NAMES = auth_names.UNIQUE_ID
-        AND auths.UNIQUE_ID = #{USERNAME}
+        AND auths.UNIQUE_ID = #{UNIQUE_ID}
         ;
         </select>
 
@@ -21,5 +21,10 @@
         </foreach>        
         ;
     </insert>
+
+<delete id="deleteauths" parameterType="Map">
+  DELETE FROM auths
+  WHERE UNIQUE_ID = #{UNIQUE_ID}
+</delete>
 
 </mapper>

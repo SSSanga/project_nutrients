@@ -27,6 +27,18 @@
 		</choose>
 	</select>
 
+
+<select id="contactsselectSearch" parameterType="Map" resultType="Map">
+    SELECT INQUIRY_ID, WRITING_DATE, CONTENT, RESPONSE, RESPONSE_DATE, ADMINE_ID, UNIQUE_ID
+	FROM project_nutrients.inquiry
+    WHERE 1=1 
+    <choose>
+        <when test="searchType == 'CONTENT'">
+            and CONTENT LIKE CONCAT('%', #{words}, '%')
+        </when>
+        <!-- 필요한 다른 검색 조건이 있다면 추가 가능 -->
+    </choose>
+</select>
    
    <!-- 검색 with pagination-->
    <select id="contactsselectSearchWithPagination" parameterType="Map" resultType="Map">
@@ -53,7 +65,7 @@
     
 	<!-- UPDATE -->
 	<update id="updateInquiry" parameterType="Map">
-		UPDATE INQUIRIES
+		UPDATE inquiry
 		SET
 		WRITING_DATE = NOW(),
 		CONTENT = #{CONTENT},
@@ -65,7 +77,7 @@
 
 	<!-- DELETE -->
 	<delete id="deleteInquiry" parameterType="Map">
-		DELETE FROM INQUIRIES
+		DELETE FROM inquiry
 		WHERE INQUIRY_ID = #{INQUIRY_ID}
 	</delete>
 </mapper>

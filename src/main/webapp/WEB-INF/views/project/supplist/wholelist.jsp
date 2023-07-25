@@ -1,6 +1,7 @@
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-  <%@ page import="java.util.HashMap, java.util.ArrayList, com.project.project_nutrients.utils.Paginations" %>
-
+<%@ page import="java.util.HashMap, java.util.ArrayList, com.project.project_nutrients.utils.Paginations" %>
+<sec:authentication property="principal" var="userDetailsBean" />
     <!DOCTYPE html>
     <html lang="en">
 
@@ -9,7 +10,6 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Nutrient Recommendations Home</title>
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
-      <!-- <link href="./../css/main.css" rel="stylesheet" /> -->
     </head>
 
     <body>
@@ -26,6 +26,12 @@
                   <th>제품명</th>
                   <th>대표 효과</th>
                   <th>상세</th>
+                  <sec:authorize access="hasRole('ROLE_USER')">
+                  <th>리뷰</th>
+                  </sec:authorize>
+                  <sec:authorize access="hasRole('ROLE_ADMIN')">
+                  <th>삭제</th>
+                </sec:authorize>
                 </tr>
               </thead>
               <tbody class="mt-auto mb-auto">
@@ -43,12 +49,25 @@
                         <%= record.get("EFFECT") %>
                       </td>
                       <td><button class="btn btn-success mt-auto mb-auto" type="submit" formaction='/supp/selectspec/<%= record.get("SUPP_ID") %>' value='<%= record.get("SUPP_ID") %>' name='SUPP_ID'>상세</button></td>
-
+                      <sec:authorize access="hasRole('ROLE_USER')">
+                      <td><button class="btn btn-success mt-auto mb-auto" type="submit" formaction='/reviews/wholelistselectDetail/<%= record.get("SUPP_ID") %>' value='<%= record.get("SUPP_ID") %>' name='SUPP_ID'>리뷰</button></td>
+                    </sec:authorize>
+                      <sec:authorize access="hasRole('ROLE_ADMIN')">
+                      <td><button class="btn btn-success mt-auto mb-auto" type="submit" formaction='/supp/deleteandlist/<%= record.get("SUPP_ID") %>' value='<%= record.get("SUPP_ID") %>' name='SUPP_ID'>삭제</button></td>
+                    </sec:authorize>
                     </tr>
                     <% } %>
               </tbody>
             </table>
-
+            <sec:authorize access="hasRole('ROLE_ADMIN')">
+            <div class="container-fluid">
+              <div class="row justify-content-start align-items-center">
+                <div class="col-3">
+                  <button class="btn btn-success mt-auto mb-auto" type="subtmit" formaction="/supp/listadd">추가</button>
+                </div>
+              </div>
+            </div>
+          </sec:authorize>
             <!-- pagination을 loop로 뽑아내기 -->
 
             <% Paginations paginations=(Paginations)result.get("paginations"); %>

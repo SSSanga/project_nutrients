@@ -1,6 +1,7 @@
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-    <%@ page import="java.util.HashMap, java.util.ArrayList, com.project.project_nutrients.utils.Paginations" %>
-
+<%@ page import="java.util.HashMap, java.util.ArrayList, com.project.project_nutrients.utils.Paginations" %>
+<sec:authentication property="principal" var="userDetailsBean" />
         <!DOCTYPE html>
         <html lang="en">
 
@@ -45,11 +46,12 @@
                                             </div>
                                         </a>
                                         <% } %>
-                                        
+                                        <sec:authorize access="hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')">
                                             <div class="p-3 justify-content-end">
                                                 <button type="submit" class="btn btn-primary"
                                                     formaction="/reviews/reviewwrite">후기 작성 GO!</button>
                                             </div>
+                                        </sec:authorize>
 
                             </div>
 

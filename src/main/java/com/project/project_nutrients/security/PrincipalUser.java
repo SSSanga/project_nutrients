@@ -20,6 +20,10 @@ public class PrincipalUser implements UserDetails{
         return (String) userInfo.get("NAME");
     }
 
+    public String getMemberID() {
+        return (String) userInfo.get("ID");
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
 // 권한들

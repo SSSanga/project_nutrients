@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="java.util.HashMap, java.util.ArrayList, com.project.project_nutrients.utils.Paginations" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,40 +17,46 @@
     <%@ include file="/WEB-INF/views/project/header.jsp" %>
     <div class="container mt-5">
         <div class="card">
-            <div class="card-header text-center" style="font-size: 1.5em;">회원정보 수정</div>
+            <div class="card-header text-center" style="font-size: 1.5em;">회원정보</div>
             <div class="card-body">
+                <% HashMap params=(HashMap)request.getAttribute("params"); String searchStr=(String)params.getOrDefault("search", ""
+                ); HashMap result=(HashMap)request.getAttribute("result"); %>
                 <form action="#">
-                    <div class="form-group">
-                        <label for="name">이름:</label>
-                        <input type="text" id="name" name="name" class="form-control">
+                    <div class="mb-3">
+                        <input class="form-control" type="hidden" id="UNIQUEID" name="UNIQUE_ID">
                     </div>
                     <div class="form-group">
-                        <label for="id">아이디:</label>
-                        <input type="text" id="id" name="id" class="form-control">
+                        <label for="name">이름</label>
+                        <div class="mb-3 border rounded p-2">
+                            <div><%= result.get("NAME") %></div>
                     </div>
                     <div class="form-group">
-                        <label for="pwd">비밀번호:</label>
-                        <input type="password" id="pwd" name="pwd" class="form-control">
+                        <label for="id">아이디</label>
+                        <div class="mb-3 border rounded p-2">
+                            <div><%= result.get("ID") %></div>
                     </div>
                     <div class="form-group">
-                        <label for="edit_pwd">비밀번호 수정:</label>
-                        <input type="password" id="edit_pwd" name="edit_pwd" class="form-control">
-                       
+                        <label for="pwd">비밀번호</label>
+                        <div class="mb-3 border rounded p-2">
+                            <div><%= result.get("PASSWORD") %></div>
                     </div>
                     <div class="form-group">
-                        <label for="phone">핸드폰 번호:</label>
-                        <input type="tel" id="phone" name="phone" class="form-control">
+                        <label for="phone">핸드폰 번호</label>
+                        <div class="mb-3 border rounded p-2">
+                            <div><%= result.get("PHONE") %></div>
                     </div>
                     <div class="form-group">
-                        <label for="dob">생년월일:</label>
-                        <input type="date" id="dob" name="dob" class="form-control">
+                        <label for="dob">생년월일</label>
+                        <div class="mb-3 border rounded p-2">
+                            <div><%= result.get("BIRTHDATE") %></div>
                     </div>
                     <div class="form-group">
-                        <label for="address">주소:</label>
-                        <input type="text" id="address" name="address" class="form-control">
+                        <label for="address">주소</label>
+                        <div class="mb-3 border rounded p-2">
+                            <div><%= result.get("ADDRESS") %></div>
                     </div>
                     <div class="form-group">
-                        <label for="medicalHistory">질병력:</label>
+                        <label for="medicalHistory">질병력</label>
                         <select id="medicalHistory" name="medicalHistory" class="form-control">
                             <option value="None">없음</option>
                             <option value="Diabetes">당뇨</option>
@@ -59,7 +66,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="allergyHistory">알레르기 반응:</label>
+                        <label for="allergyHistory">알레르기 반응</label>
                         <select id="allergyHistory" name="allergyHistory" class="form-control">
                             <option value="None">없음</option>
                             <option value="Peanuts">견과류</option>
@@ -70,15 +77,13 @@
                     </div>
                     <div class="form-group">
                         <label for="email">E-mail:</label>
-                        <input type="email" id="email" name="email" class="form-control">
+                        <div class="mb-3 border rounded p-2">
+                            <div><%= result.get("EMAIL") %></div>
                     </div>
-                    <div class="form-group">
-                        <label for="paymentInfo">지불 정보:</label>
-                        <input type="text" id="paymentInfo" name="paymentInfo" class="form-control">
+                    <div class="text-center">
+                        <button class="btn btn-primary" type="submit" formaction="/main/">back</button>
+                        <button class="btn btn-primary" formaction='/main/updateForm/<%= result.get("COMMON_CODE_ID") %>'>updete</button>
                     </div>
-                    <input type="submit" value="제출" class="btn btn-success mt-3">
-
-                    <div>비밀번호 수정을 원할 때는 update로 한다.</div>
                 </form>
             </div>
         </div>
