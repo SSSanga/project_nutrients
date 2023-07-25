@@ -55,7 +55,7 @@
                                     <th scope="col">번호</th>
                                     <th scope="col">제목</th>
                                     <th scope="col">등록일</th>
-                                    <th scope="col">상세</th>
+                                    <th scope="col">관리자 댓글</th>
                                 </tr>
                                </thead>
                             
@@ -67,6 +67,7 @@
                                 <% ArrayList resultList=(ArrayList)result.get("resultList"); for(int i=0; i <
                                     resultList.size(); i=i+1){ HashMap record=(HashMap)resultList.get(i); %>
      
+                                    
                                             <!-- Here is where the posts will go -->
                                             <tr>
                                                 <td>
@@ -79,8 +80,14 @@
                                                 <td>
                                                     <%= record.get("WRITING_DATE") %>
                                                 </td>
+                                                <td>
+                                                    <div class="d-flex flex-column">
+                                                        <div class="mb-2">
+                                                            <%= record.get("Response") %>
+                                                        </div>
+                                                    </div>
+                                                </td>
                                                 <td><button class= "btn btn-success mt-auto mb-auto" formaction='/contacts/contactsselectDetail/<%= record.get("INQUIRY_ID") %>' value='<%= record.get("INQUIRY_ID") %>' name='INQUIRY_ID'>상세 </button></td>
-                                                <td><button class= "btn btn-success mt-auto mb-auto" formaction='/contacts/contactsdeleteAndSelectSearch/<%= record.get("INQUIRY_ID") %>' value='<%= record.get("INQUIRY_ID") %>' name='INQUIRY_ID'>삭제 </button></td>
                                             </tr>  
                                     <% } %>
                                 </tbody>
@@ -93,25 +100,7 @@
                                     formaction="/contacts/contactswrite">문의 작성 GO!</button>
                               </div>
                           
-                        <% Paginations paginations=(Paginations)result.get("paginations"); %>
-                            <div> 게시글 총수: <%= paginations.getTotalCount() %>
-                            </div>
-                            <nav aria-label="Page navigation">
-                                <ul class="pagination">
-                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                                    <% for (int i=paginations.getBlockStart(); i <=paginations.getBlockEnd() ; i=i+1){
-                                        %>
-                                        <li class="page-item"><a class="page-link"
-                                                href="/contacts/contactslist?currentPage=<%= i %>">
-                                                <%= i %>
-                                            </a></li>
-                                        <% } %>
-                                            <li class="page-item"><a class="page-link"
-                                                    href="/contacts/contactslist?currentPage=<%= paginations.getNextPage() %>">Next</a>
-                                            </li>
-
-                                </ul>
-                            </nav>
+                        
                     </main>
                 </form>
                 <hr>
