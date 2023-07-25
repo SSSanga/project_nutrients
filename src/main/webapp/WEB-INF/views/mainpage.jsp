@@ -7,6 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nutrient Recommendations Home</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cafe24D&display=swap">
+
    
 </head>
 
@@ -14,22 +16,6 @@
         <!-- header -->
         <%@ include file="/WEB-INF/views/project/header.jsp" %>
 
-    <style>
-        .h3,
-        .btn-outline {
-            color: black !important;
-        }
-
-        .btn-outline {
-            border-color: black !important;
-        }
-
-        .btn-outline:active {
-            color: white !important;
-            background-color: green !important;
-            border-color: green !important;
-        }
-    </style>
 
     <!-- Menu -->
     <div class="d-flex justify-content-center">
@@ -48,11 +34,11 @@
                     </div>
                     <div class="col-md-3">
                         <button type="submit" class="w-100 btn btn-lg btn-outline"
-                            formaction="/recomm/effectflag/EFFECT_09" value="EFFECT_09" name="EFFECT_FLAG">혈중 콜레스테롤 개선</button>
+                            formaction="/recomm/effectflag/EFFECT_09" value="EFFECT_09" name="EFFECT_FLAG">콜레스테롤 개선</button>
                     </div>
                     <div class="col-md-3">
                         <button type="submit" class="w-100 btn btn-lg btn-outline"
-                            formaction="/recomm/effectflag/EFFECT_13" value="EFFECT_13" name="EFFECT_FLAG">눈 기능회복</button>
+                            formaction="/recomm/effectflag/EFFECT_13" value="EFFECT_13" name="EFFECT_FLAG">눈 기능 회복</button>
                     </div>
                     <div class="col-md-3">
                         <button type="submit" class="w-100 btn btn-lg btn-outline"
@@ -65,11 +51,6 @@
     </div>
 
 
-    <style>
- 
-
-
-    </style>
     <div class="container_img">
         <div class="container"> <!-- Added padding-bottom to create space between the container and the footer -->
             <div class="row">

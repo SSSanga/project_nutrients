@@ -9,29 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nutrient Recommendations Home</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
-    <link href="./../css/main.css" rel="stylesheet" />
+    <!-- <link href="./../css/main.css" rel="stylesheet" /> -->
 </head>
 
 <body>
                     <!-- header -->
     <%@ include file="/WEB-INF/views/project/header.jsp" %>
-    <!-- Screen adjust functions -->
-    <script>
-      var zoom = 1;
-
-      function increaseSize() {
-          zoom += 0.1;
-          document.getElementById('zoom-display').innerText = Math.round(zoom * 100) + '%';
-          document.body.style.zoom = zoom;
-      }
-
-      function decreaseSize() {
-          zoom -= 0.1;
-          document.getElementById('zoom-display').innerText = Math.round(zoom * 100) + '%';
-          document.body.style.zoom = zoom;
-      }
-  </script>
-
+   
 <% HashMap params=(HashMap)request.getAttribute("params"); 
 HashMap result=(HashMap)request.getAttribute("result"); %>
 

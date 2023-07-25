@@ -105,14 +105,15 @@ public class ReviewsController {
    }
 
     // admin이 관리, admin 완성되면 수정하기!!!!
-    @GetMapping("/reviewdeleteAndSelectSearch")
+    // 0725_REVIWS DELETE 완료
+    @GetMapping("/reviewdeleteAndSelectSearch/{REVIEW_ID}")
     public ModelAndView reviewdeleteAndSelectSearch(@PathVariable String REVIEW_ID
                            , @RequestParam Map params, ModelAndView modelAndView) {
         Object result = reviewsService.reviewdeleteAndSelectSearch(REVIEW_ID, params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
    
-        modelAndView.setViewName("/WEB-INF/views/project/admin/admin_reviews.jsp");
+        modelAndView.setViewName("/WEB-INF/views/project/reviews/reviews.jsp");
         return modelAndView;
        }
    

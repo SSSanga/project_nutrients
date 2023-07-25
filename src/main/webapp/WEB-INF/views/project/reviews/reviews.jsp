@@ -28,25 +28,24 @@
                                     result=(HashMap)request.getAttribute("result"); %>
                                     <% ArrayList resultList=(ArrayList)result.get("resultList"); for(int i=0; i <
                                         resultList.size(); i=i+1){ HashMap record=(HashMap)resultList.get(i); %>
-                                        <button formaction='/reviews/reviewselectDetail/<%= record.get("REVIEW_ID") %>'
-                                            class="col-md-6 mx-auto btn btn-none">
+                                            <a href='/reviews/reviewselectDetail/<%= record.get("REVIEW_ID") %>' class="col-md-6 mx-auto btn btn-none btn-sm">                                            
                                             <div class="card mb-4">
                                                 <div class="card-body">
-                                                    <h5 class="card-title" style="font-weight: bold;">
-                                                        <%= record.get("TITLE") %>
-                                                    </h5>
+                                                    <div class="row">
+                                                    <div class="col"><h5 class="card-title" style="font-weight: bold;"><%= record.get("TITLE") %></h5></div>
+                                                    <div class="col-12"><button class="btn btn-outline-secondary" formaction='/reviews/reviewdeleteAndSelectSearch/<%= record.get("REVIEW_ID") %>'>삭제</button></div>
+                                                    </div>
                                                     <hr>
-                                                    <p class="card-text">
-                                                        <%= record.get("CONTENT") %>
-                                                    </p>
-                                                    <small class="text-muted">
-                                                        <%= record.get("WRITING_DATE") %>
-                                                    </small>
+                                                    <div>
+                                                    <div><p class="card-text"><%= record.get("CONTENT") %></p></div>
+                                                    <div><small class="text-muted"><%= record.get("WRITING_DATE") %></small></div>
                                                 </div>
+                                                </div>
+                                           
                                             </div>
-
-                                        </button>
+                                        </a>
                                         <% } %>
+                                        
                                             <div class="p-3 justify-content-end">
                                                 <button type="submit" class="btn btn-primary"
                                                     formaction="/reviews/reviewwrite">후기 작성 GO!</button>

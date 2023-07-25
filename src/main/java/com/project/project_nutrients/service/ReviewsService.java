@@ -73,7 +73,7 @@ public class ReviewsService {
     public Object reviewdelete(String  REVIEW_ID) {
         String sqlMapId = "Reviews.reviewdelete";
         HashMap dataMap = new HashMap<>();
-        dataMap.put(" REVIEW_ID",  REVIEW_ID);
+        dataMap.put("REVIEW_ID",  REVIEW_ID);
 
         Object result = sharedDao.delete(sqlMapId, dataMap);
         return result;
@@ -81,12 +81,12 @@ public class ReviewsService {
 
         // MVC view 회원탈퇴? 악플삭제? admin이 관리
         public Object reviewdeleteAndSelectSearch(String REVIEW_ID, Map dataMap) {
-            dataMap.put(" REVIEW_ID",  REVIEW_ID);
+            dataMap.put("REVIEW_ID",  REVIEW_ID);
     
             HashMap result = new HashMap<>();
             result.put("deleteCount", this.reviewdelete(dataMap));
     
-            result.putAll(this. reviewselectSearch(dataMap));
+            result.putAll(this.reviewselectSearchWithPagination(dataMap));
             return result;
         }
 
