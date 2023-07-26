@@ -60,10 +60,14 @@
                                                                     <div><small class="text-muted">
                                                                             <%= record.get("WRITING_DATE") %>
                                                                         </small></div>
-                                                                    <div class="col-12"><button
+                                                                    
+                                                                   <sec:authorize access="hasRole('ROLE_ADMIN')">
+                                                                    <div class="col-12">
+                                                                        <button
                                                                             class="btn btn-outline-secondary"
                                                                             formaction='/reviews/reviewdeleteAndSelectSearch/<%= record.get("REVIEW_ID") %>'>삭제</button>
                                                                     </div>
+                                                                  </sec:authorize>
                                                                 </div>
                                                             </div>
                                                         </div>
