@@ -23,18 +23,11 @@
           <img src="../images/drug_img.png" alt="" width="400" height="400">
         </div>
 
-        <div class="container-fluid p-3 d-flex align-items-center justify-content-center">
-          <div class="row justify-content-center">
-            <img class="col-4 mb-4" src='../images/about_1.png' alt='' width="300" height="300">
-            <img class="col-4 mb-4" src='../images/about_2.png' alt='' width="300" height="300">
-            <img class="col-4 mb-4" src='../images/about_3.png' alt='' width="300" height="300">
-          </div>
-        </div>
-
         <div class="container  p-3 d-flex align-items-center justify-content-center p-2">
           <div class="row">
           <div class="col-md-6 col-lg-4">
-            <div class="card p-3">
+            <div class="card p-3" style="height: 500px;">
+              <div class=" card-title text-center"><img src='../images/about_1.png' alt='' width="300" height="300"></div>
               <div class="card-header text-center">
                 <i class="fas fa-star fa-4x mb-3" style="color: #fff;"></i>
                 <h2 class="card-title"
@@ -44,13 +37,14 @@
 
               <div class="card-body">
                 <p class="card-text">건강한 삶 TAB과 함께하세요!</p>
-                <p class="card-text"></p>
+                
               </div>
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-4">
-            <div class="card p-3">
+          <div class="col-md-6 col-lg-4 ">
+            <div class="card p-3" style="height: 500px;">
+              <div class=" card-title text-center"><img src='../images/about_2.png' alt='' width="300" height="300"></div>
               <div class="card-header text-center">
                 <i class="fas fa-heart fa-4x mb-3" style="color: #fff;"></i>
                 <h2 class="card-title"
@@ -59,12 +53,15 @@
               </div>
               <div class="card-body">
                 <p class="card-text"> TAB은 사용자들의 편의성을 위해 직관적인 인터페이스와 쉬운 사용법을 제공합니다.</p>
+           
+            
               </div>
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-4">
-            <div class="card p-3">
+          <div class="col-md-6 col-lg-4 ">
+            <div class="card p-3" style="height: 500px;">
+              <div class=" card-title text-center"><img src='../images/about_3.png' alt='' width="300" height="300"></div>
               <div class="card-header text-center">
                 <i class="far fa-lightbulb fa-4x mb-3" style="color: #fff;"></i>
                 <h2 class="card-title"
