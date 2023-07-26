@@ -17,21 +17,6 @@
       <!-- header -->
       <%@ include file="/WEB-INF/views/project/header.jsp" %>
         <!-- Screen adjust functions -->
-        <script>
-          var zoom = 1;
-
-          function increaseSize() {
-            zoom += 0.1;
-            document.getElementById('zoom-display').innerText = Math.round(zoom * 100) + '%';
-            document.body.style.zoom = zoom;
-          }
-
-          function decreaseSize() {
-            zoom -= 0.1;
-            document.getElementById('zoom-display').innerText = Math.round(zoom * 100) + '%';
-            document.body.style.zoom = zoom;
-          }
-        </script>
 
 
         <div class="container p-2 d-flex align-items-center justify-content-center">
@@ -106,6 +91,5 @@
         <%@ include file="/WEB-INF/views/project/footer.jsp" %>
 
     </body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
 
     </html>
