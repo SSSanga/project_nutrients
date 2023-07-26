@@ -37,10 +37,12 @@
                                         <button id="reviewButton" class="nav-link btn btn-none"
                                             formaction="/reviews/reviewlist">Reviews</button>
                                     </li>
+                                    <sec:authorize access="hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')">
                                     <li class="nav">
                                         <button id="contactsButton" class="nav-link btn btn-none"
                                             formaction="/contacts/contactslist">Contacts</button>
                                     </li>
+                                </sec:authorize>
                                 </ul>
                             </form>
                         
@@ -100,7 +102,12 @@
                                             <hr class="dropdown-divider">
                                         </li>
                                         <sec:authorize access="isAuthenticated()">
-                                            <li><button id="singupButton" class="dropdown-item" formaction="/main/main"
+                                            <sec:authorize access="hasRole('ROLE_ADMIN')">
+                                            <li><button id="singupButton" class="dropdown-item" formaction="/members/memberList"
+                                                style="font-size: 20px;">회원 List</button>
+                                        </li>
+                                        </sec:authorize>
+                                            <li><button id="singupButton" class="dropdown-item" method="post" formaction="/logout"
                                                     style="font-size: 20px;">로그아웃</button>
                                             </li>
                                         </sec:authorize>
