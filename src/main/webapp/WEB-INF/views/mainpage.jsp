@@ -40,10 +40,6 @@
                         <button type="submit" class="w-100 btn btn-lg btn-outline"
                             formaction="/recomm/effectflag/EFFECT_13" value="EFFECT_13" name="EFFECT_FLAG">눈 기능 회복</button>
                     </div>
-                    <div class="col-md-3">
-                        <button type="submit" class="w-100 btn btn-lg btn-outline"
-                            formaction="/reviews/reviewdeleteAndSelectSearch">관리자 테스트</button>
-                    </div>
                 </div>
             </form>
 

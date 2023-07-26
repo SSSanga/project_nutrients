@@ -56,13 +56,33 @@ public ModelAndView signupProc(@RequestParam Map params, ModelAndView modelAndVi
 }
 
 // main 화면에서 마이페이지 버튼 누를 때 거쳐가는 controller임/ mypage.jsp로 가기 위한 경로
-@GetMapping("/mypageForm/{UNIQUE_ID}")
+@GetMapping("/mypageForm")
 public ModelAndView mypageForm(@RequestParam Map params, ModelAndView modelAndView) {
     Object result = membersService.mypageDetail(params);
     modelAndView.addObject("params", params);
     modelAndView.addObject("result", result);
     modelAndView.setViewName("/WEB-INF/views/project/members/mypage.jsp");
     return  modelAndView;
+}
+
+@PostMapping("/memberUpdateForm/{UNIQUE_ID}")
+public ModelAndView updateForm(@PathVariable String UNIQUE_ID, @RequestParam Map params, ModelAndView modelAndView) {
+    Object result = membersService.mypageDetail(params);
+    modelAndView.addObject("params", params);
+    modelAndView.addObject("result", result);
+     modelAndView.setViewName("/WEB-INF/views/project/members/memberupdate.jsp");
+    return  modelAndView;
+}
+
+@PostMapping("/memberUpdateAndMypage/{UNIQUE_ID}")
+public ModelAndView memberUpdateAndMypage(@PathVariable String UNIQUE_ID
+                    , @RequestParam Map params, ModelAndView modelAndView) {
+    Object result = membersService.memberUpdateAndMypage(UNIQUE_ID, params);
+    modelAndView.addObject("params", params);
+    modelAndView.addObject("result", result);
+
+    modelAndView.setViewName("/WEB-INF/views/project/members/mypage.jsp");
+    return modelAndView;
 }
 
     // main 화면에서 로그인 버튼 누를 때 거쳐가는 controller임/ login.jsp로 가기 위한 경로
@@ -103,6 +123,7 @@ public ModelAndView membersinfoForm(@RequestParam Map params, ModelAndView model
 
 }
 
+// 관리자가 관리할 수 있는 회원 리스트
 @GetMapping("/memberList")
 public ModelAndView memberList(@RequestParam Map params
                         , ModelAndView modelAndView) {
@@ -114,6 +135,7 @@ public ModelAndView memberList(@RequestParam Map params
     return modelAndView;
 }
 
+// 회원 정보 삭제(리뷰, 문의를 등록하면 삭제가 안됨)
 @PostMapping("/deleteAndmemberList/{UNIQUE_ID}")
 public ModelAndView deleteAndmemberList(@PathVariable String UNIQUE_ID
                     , @RequestParam Map params, ModelAndView modelAndView) {
@@ -125,6 +147,7 @@ public ModelAndView deleteAndmemberList(@PathVariable String UNIQUE_ID
     return modelAndView;
 }
 
+//회원 권한 삭제
 @PostMapping("/deleteAndmemberauths/{UNIQUE_ID}")
 public ModelAndView deleteAndmemberauths(@PathVariable String UNIQUE_ID
                     , @RequestParam Map params, ModelAndView modelAndView) {
@@ -135,6 +158,8 @@ public ModelAndView deleteAndmemberauths(@PathVariable String UNIQUE_ID
     modelAndView.setViewName("/WEB-INF/views/project/members/memberlist.jsp");
     return modelAndView;
 }
+
+
 
 
 

@@ -19,6 +19,15 @@ INSERT INTO membersandadmin
 <select id="mypageDetail" parameterType="Map" resultType="Map">
     SELECT NAME, ID, PASSWORD, BIRTHDATE, AGE, SEX, ADDRESS, PHONE, REGISTRATIONDATE, EMAIL, ADMINE_ID, HISTORY_ID
     FROM membersandadmin
+    WHERE 1 = 1 
+    <choose>
+        <when test="ID == UNIQUE_ID">
+            AND ID = #{ID} 
+        </when>
+        <when test="UNIQUE_ID == UNIQUE_ID">
+            AND UNIQUE_ID = #{UNIQUE_ID}
+        </when>
+    </choose>
 </select>
 
 <select id="memberList" parameterType="Map" resultType="Map">
@@ -30,5 +39,21 @@ INSERT INTO membersandadmin
   DELETE FROM membersandadmin
   WHERE UNIQUE_ID = #{UNIQUE_ID}
 </delete>
+
+<update id="memberupdate" parameterType="Map">
+  UPDATE membersandadmin
+  SET
+    NAME = #{NAME},
+    ID = #{ID},
+    PASSWORD = #{PASSWORD},
+    BIRTHDATE = #{BIRTHDATE},
+    SEX = #{SEX},
+    ADDRESS = #{ADDRESS},
+    PHONE = #{PHONE},
+    EMAIL = #{EMAIL},
+    HISTORY_ID= #{HISTORY_ID},
+    MODIFY_DATE = NOW()   <!-- 수정시 현재 날짜로 나오도록 하드코딩 -->
+  WHERE UNIQUE_ID = #{UNIQUE_ID}
+</update>
 
 </mapper>

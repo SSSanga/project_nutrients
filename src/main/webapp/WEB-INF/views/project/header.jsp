@@ -60,7 +60,7 @@
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                         <sec:authorize access="isAuthenticated()">
                                             <li><button id="mypageButton" class="dropdown-item"
-                                                    formaction="/members/mypageForm"
+                                                method="post" formaction="/members/mypageForm" 
                                                     style="font-size: 20px; font-weight: bold;">마이페이지</button>
                                             </li>
                                         </sec:authorize>
@@ -74,9 +74,6 @@
                                                     style="font-size: 20px; font-weight: bold;">회원가입</button>
                                             </li>
                                         </sec:authorize>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
                                         <sec:authorize access="isAuthenticated()">
                                             <sec:authorize access="hasRole('ROLE_ADMIN')">
                                             <li><button id="singupButton" class="dropdown-item" formaction="/members/memberList"
