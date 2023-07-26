@@ -20,7 +20,7 @@
                 <form class="d-flex" action="" method="">
                     <div class="container">
                         <div class="container py-4">
-                            <h1 class="text-center" style="font-weight: bold;">Reviews</h1>
+                            <h1 class="text-center" style="font-weight: bold;">Review list</h1>
                             <hr style="border-top: 4px solid;">
 
                             <div class="row">
@@ -48,38 +48,36 @@
                                         </a>
                                         <% } %>
                                         <sec:authorize access="hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')">
-                                            <div class="p-3 justify-content-end">
-                                                <button type="submit" class="btn btn-primary"
+                                            <div class="d-flex justify-content-end align-items-end">
+                                                <button type="submit" class="btn btn-success"
                                                     formaction="/reviews/reviewwrite">후기 작성 GO!</button>
                                             </div>
                                         </sec:authorize>
 
                             </div>
-
+                            <div class="d-flex justify-content-center mt-4">
                             <% Paginations paginations=(Paginations)result.get("paginations"); %>
                                 <div> 총 리뷰 수 : <%= paginations.getTotalCount() %>
                                 </div>
                                 <nav aria-label="Page navigation">
                                     <ul class="pagination">
-                                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                        <li class="page-item"><a class="page-link" href="#" style="color: green;">Previous</a></li>
                                         <% for (int i=paginations.getBlockStart(); i <=paginations.getBlockEnd() ;
                                             i=i+1){ %>
                                             <li class="page-item"><a class="page-link"
-                                                    href="/reviews/reviewlist?currentPage=<%= i %>">
+                                                    href="/reviews/reviewlist?currentPage=<%= i %>" style="color: green;">
                                                     <%= i %>
                                                 </a></li>
                                             <% } %>
                                                 <li class="page-item"><a class="page-link"
-                                                        href="/reviews/reviewlist?currentPage=<%= paginations.getNextPage() %>">Next</a>
+                                                        href="/reviews/reviewlist?currentPage=<%= paginations.getNextPage() %>" style="color: green;">Next</a>
                                                 </li>
 
                                     </ul>
                                 </nav>
-                        </div>
+                          </div>
                     </div>
-
-
-
+                </div>
                 </form>
                 <!-- Footer -->
                 <%@ include file="/WEB-INF/views/project/footer.jsp" %>

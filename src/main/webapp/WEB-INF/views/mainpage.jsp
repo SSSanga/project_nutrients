@@ -100,6 +100,6 @@
                 <%@ include file="/WEB-INF/views/project/footer.jsp" %>
 
         </body>
-        <!-- <link href="/css/main.css" rel="stylesheet"> -->
+
 
         </html>
