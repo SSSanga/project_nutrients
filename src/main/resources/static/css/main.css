@@ -1,13 +1,13 @@
                 /* 나브 메뉴 글자 색상 */
                 .nav-link {
-                    color: rgb(4, 138, 15) !important; 
+                    color: rgb(0, 60, 128) !important; 
                     font-size: 1.33em;
                     font-weight: bold;
                 }
 
                 #dropdownMenuButton {
                     background-color: rgb(255, 255, 255);
-                    color: rgb(4, 138, 15);
+                    color: rgb(0, 60, 128);
                     font-weight: bold;
                     
                 }
@@ -19,12 +19,12 @@
                     
                 }
 
-                /* 추가된 스타일
+                추가된 스타일
             body {
               border-top: 4px solid rgb(128, 0, 53);
               border-bottom: 4px solid rgb(128, 0, 107);
             }
-           */
+          
 
                 /* 이거슨 navbar아래 line 긋기 */
                 /* .navbar::after {
@@ -39,10 +39,10 @@
                 .container.col select,
                 .container.col input.form-control,
                 .container.col button {
-                 border-radius: 10px; /* 원하는 둥근 정도를 설정합니다. */
+                 border-radius: 15px; /* 원하는 둥근 정도를 설정합니다. */
                 }
 
-        .h3,
+        .h3,.h4,.h5, .p2, .p3, .p4, .p5, 
         .btn-outline {
             color: rgb(0, 60, 128) !important;}
 

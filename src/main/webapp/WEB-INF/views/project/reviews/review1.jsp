@@ -43,7 +43,7 @@
                               
                                 <div class="card mb-3 pt-3">
                                     <td>
-                                    <img src='<%= result.get("IMAGES") %>' alt='<%= result.get("REVIEW_ID") %>' class="card-img-top"
+                                    <img src='<%= result.get("IMAGES") %>' id="IMAGES" name="IMAGES" alt='<%= result.get("REVIEW_ID") %>' class="card-img-top"
                                             style="width: 100px;">
                                     </td>
                                     <div class="card-body">

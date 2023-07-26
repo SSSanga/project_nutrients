@@ -76,18 +76,19 @@ public class MembersService {
     }
 
     public Object update(Map dataMap) {
+        dataMap.put("UNIQUE_ID", commonUtils.getUserID());
+        String PASSWORD = (String) dataMap.get("PASSWORD");
+        dataMap.put("PASSWORD", bCryptPasswordEncoder.encode(PASSWORD));
         String sqlMapId = "Members.memberupdate";
         Object result = sharedDao.update(sqlMapId, dataMap);
         return result;
     }
 
-    public Object memberUpdateAndMypage(String UNIQUE_ID,Map dataMap) {
+    public Object memberUpdateAndMypage(String UNIQUE_ID, Map dataMap) {
         dataMap.put("UNIQUE_ID", UNIQUE_ID);
-        
         HashMap result = new HashMap<>();
         result.put("updateCount", this.update(dataMap));
-
-        result.putAll(this.memberList(dataMap));
+        result.putAll((Map) this.mypageDetail(dataMap));
         return result;
     }
 

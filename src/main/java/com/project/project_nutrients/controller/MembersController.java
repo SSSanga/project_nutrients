@@ -56,7 +56,7 @@ public ModelAndView signupProc(@RequestParam Map params, ModelAndView modelAndVi
 }
 
 // main 화면에서 마이페이지 버튼 누를 때 거쳐가는 controller임/ mypage.jsp로 가기 위한 경로
-@GetMapping("/mypageForm")
+@RequestMapping("/mypageForm")
 public ModelAndView mypageForm(@RequestParam Map params, ModelAndView modelAndView) {
     Object result = membersService.mypageDetail(params);
     modelAndView.addObject("params", params);
@@ -65,22 +65,20 @@ public ModelAndView mypageForm(@RequestParam Map params, ModelAndView modelAndVi
     return  modelAndView;
 }
 
-@PostMapping("/memberUpdateForm/{UNIQUE_ID}")
-public ModelAndView updateForm(@PathVariable String UNIQUE_ID, @RequestParam Map params, ModelAndView modelAndView) {
+@PostMapping("/memberUpdateForm")
+public ModelAndView updateForm(@RequestParam Map params, ModelAndView modelAndView) {
     Object result = membersService.mypageDetail(params);
     modelAndView.addObject("params", params);
     modelAndView.addObject("result", result);
-     modelAndView.setViewName("/WEB-INF/views/project/members/memberupdate.jsp");
+    modelAndView.setViewName("/WEB-INF/views/project/members/memberupdate.jsp");
     return  modelAndView;
 }
 
 @PostMapping("/memberUpdateAndMypage/{UNIQUE_ID}")
-public ModelAndView memberUpdateAndMypage(@PathVariable String UNIQUE_ID
-                    , @RequestParam Map params, ModelAndView modelAndView) {
+public ModelAndView memberUpdateAndMypage(@PathVariable String UNIQUE_ID, @RequestParam Map params, ModelAndView modelAndView) {
     Object result = membersService.memberUpdateAndMypage(UNIQUE_ID, params);
     modelAndView.addObject("params", params);
     modelAndView.addObject("result", result);
-
     modelAndView.setViewName("/WEB-INF/views/project/members/mypage.jsp");
     return modelAndView;
 }
