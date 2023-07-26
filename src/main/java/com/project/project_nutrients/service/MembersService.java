@@ -70,7 +70,7 @@ public class MembersService {
     public Object mypageDetail(Map dataMap) {
         // Object getOne(String sqlMapId, Object dataMap)
         String sqlMapId = "Members.mypageDetail";
-
+        dataMap.put("ID", commonUtils.getUserID());
         Object result = sharedDao.getOne(sqlMapId, dataMap);
         return result;
     }
