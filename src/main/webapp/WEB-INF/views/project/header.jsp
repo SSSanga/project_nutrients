@@ -49,30 +49,6 @@
                     </div>
 
 
-
-                        <!-- Search bar 여긴 검색 -->
-                        <div class="d-flex align-items-center mx-2">
-                            <form action="" method="">
-                                <select class="form-select mx-2" name="search" style="font-size: 25px; width: 300px; height: 50px; font-weight: bold;">
-                                    <option >카테고리 선택</option>
-                                    <option value="EFFECT">효과</option>
-                                    <option value="MANUFACTURE">제조사</option>
-                                </select>
-                                
-                                <input class="form-control me-2 mt-auto mb-auto" style="font-size: 25px; width: 150px; height: 50px; font-weight: bold;" name="words" type="search"
-                                    placeholder="Search..." aria-label="Search" id="keydownEnter">
-                                    <button class="btn btn-light btn-outline-success mt-auto mb-auto font-weight-bold"
-                                    type="submit" formaction="/search/selectsupp" id="keydownEnter" style="font-size: 25px; width: 100px; height: 50px; font-weight: bold;">검색</button>
-                                
-                               
-                                
-                            </form>
-                        </div>
-
-                    
-
-                   
-
                         <!-- User management dropdown 여긴 회원관리 -->
                         <div class="align-items-center">
                             <form action="" method="">
