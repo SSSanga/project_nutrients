@@ -25,7 +25,7 @@
                             <input class="form-control" type="hidden" id="REVIEW_ID" name="REVIEW_ID">
                         </div>
                         <div class="container py-4">
-                            <h1 class="text-center" style="font-weight: bold;">Reviews</h1>
+                            <h1 class="text-center" style="font-weight: bold;">Review</h1>
                             <hr style="border-top: 4px solid;">
 
                             <div class="row">

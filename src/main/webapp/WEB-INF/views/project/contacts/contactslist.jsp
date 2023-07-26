@@ -31,7 +31,18 @@
                                 <button class="btn btn-light btn-outline-success mt-auto mb-auto font-weight-bold" type="submit" 
                                 formaction="/contacts/contactsselectSearch" style="font-size: 25px; width: 100px; height: 50px; font-weight: bold;">검색</button>
                             </div>
-
+                            <% HashMap params=(HashMap)request.getAttribute("params"); String
+                                        searchStr=(String)params.getOrDefault("search", "" ); HashMap
+                                        result=(HashMap)request.getAttribute("result"); %>
+                                    
+                                    <% Paginations paginations=(Paginations)result.get("paginations"); %>
+                                               <sec:authorize access="hasRole('ROLE_ADMIN')">
+                                                <div class="card m-3 p-3 justify-content-center" style="font-weight: bold">
+                                                    <div>총 문의 수 :
+                                                      <%= paginations.getTotalCount() %>
+                                                    </div>
+                                                  </div>
+                                                </sec:authorize>
                             <div class="d-flex justify-content-center align-items-end m-3">
                             
                             <table class="table table-sm">
@@ -46,13 +57,12 @@
                                 </thead>
 
                                 <tbody id="postTable">
-                                    <% HashMap params=(HashMap)request.getAttribute("params"); String
-                                        searchStr=(String)params.getOrDefault("search", "" ); HashMap
-                                        result=(HashMap)request.getAttribute("result"); %>
+                                    
+
 
                                         <% ArrayList resultList=(ArrayList)result.get("resultList"); for(int i=0; i <
                                             resultList.size(); i=i+1){ HashMap record=(HashMap)resultList.get(i); %>
-
+    
                                             <!-- Here is where the posts will go -->
                                             <tr>
                                                 <td class="align-middle">
@@ -86,8 +96,6 @@
                             </div>
 
                             <div class="d-flex justify-content-center mt-4">
-                                <% Paginations paginations=(Paginations)result.get("paginations"); %>
-                                <div class= "mx-2" style="font-weight: bold"> 게시글 총수: <%= paginations.getTotalCount() %></div>
                             
                                     <nav aria-label="Page navigation">
                                         <ul class="pagination">
