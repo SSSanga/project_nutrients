@@ -52,7 +52,7 @@ INSERT INTO membersandadmin
     PHONE = #{PHONE},
     EMAIL = #{EMAIL},
     HISTORY_ID= #{HISTORY_ID},
-    MODIFY_DATE = NOW()   <!-- 수정시 현재 날짜로 나오도록 하드코딩 -->
+    REGISTRATIONDATE = NOW()   <!-- 수정시 현재 날짜로 나오도록 하드코딩 -->
   WHERE UNIQUE_ID = #{UNIQUE_ID}
 </update>
 

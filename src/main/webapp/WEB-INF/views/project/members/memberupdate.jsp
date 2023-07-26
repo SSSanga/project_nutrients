@@ -1,4 +1,5 @@
-<%@ page import="java.util.HashMap, java.util.ArrayList, com.project.project_nutrients.utils.Paginations" %>
+<%@ page import="java.util.HashMap, java.util.ArrayList" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,18 +12,15 @@
 </head>
 
 <body>
+    <% HashMap params=(HashMap)request.getAttribute("params"); String searchStr=(String)params.getOrDefault("search", ""
+    ); HashMap result=(HashMap)request.getAttribute("result"); %>
     <div class="container">
-        <div class="text-center mt-4 mb-4 h1">Update Form</div>
+        <div class="text-center mt-4 mb-4 h1">회원정보 수정</div>
     </div>
     <div class="container">
         <form id="updateForm" action="/members/updateForm" method="post">
-            <% HashMap params=(HashMap)request.getAttribute("params"); String searchStr=(String)params.getOrDefault("search", ""
-            ); HashMap result=(HashMap)request.getAttribute("result"); %>
             <div class="mb-3">
-                <input class="form-control" type="hidden" id="UNIQUE_ID" name="UNIQUE_ID">
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="name">ID</label>
+                <label class="form-label" for="name">NAME</label>
                 <input class="form-control" type="text" id="name" name="NAME" placeholder='<%= result.get("NAME") %>'>
             </div>
             <div class="mb-3">
@@ -39,7 +37,7 @@
             </div>
             <div class="mb-3">
                 <label class="form-label" for="SEX">SEX</label>
-                <input class="form-control" type="text" id="SEX" name="SEX" placeholder='<%= result.get("NAME") %>'>
+                <input class="form-control" type="text" id="SEX" name="SEX" placeholder='<%= result.get("SEX") %>'>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="ADDRESS">ADDRESS</label>
@@ -51,14 +49,14 @@
             </div>
             <div class="mb-3">
                 <label class="form-label" for="EMAIL">EMAIL</label>
-                <input class="form-control" type="text" id="EMAIL" name="EMAIL" placeholder='<%= result.get("NAME") %>'>
+                <input class="form-control" type="text" id="EMAIL" name="EMAIL" placeholder='<%= result.get("EMAIL") %>'>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="HISTORY_ID">HISTORY_ID</label>
-                <input class="form-control" type="text" id="HISTORY_ID" name="HISTORY_ID" placeholder='<%= result.get("NAME") %>'>
+                <input class="form-control" type="text" id="HISTORY_ID" name="HISTORY_ID" placeholder='<%= result.get("HISTORY_ID") %>'>
             </div>
             <div class="text-center">
-                <button class="btn btn-primary" type="submit" formaction="/members/memberUpdateAndMypage/${UNIQUE_ID}">Submit</button>
+                <button class="btn btn-primary" type="submit" formaction='/members/memberUpdateAndMypage/<%= result.get("UNIQUE_ID") %>'>Submit</button>
                 <button class="btn btn-primary" type="submit" formaction="/members/mypageForm">back</button>
             </div>
         </form>

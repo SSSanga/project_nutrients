@@ -19,9 +19,9 @@
         <div class="card">
             <div class="card-header text-center" style="font-size: 1.5em;">회원정보</div>
             <div class="card-body">
-                <% HashMap params=(HashMap)request.getAttribute("params"); String searchStr=(String)params.getOrDefault("search", ""
-                ); HashMap result=(HashMap)request.getAttribute("result"); %>
                 <form action="#" method="post">
+                    <% HashMap params=(HashMap)request.getAttribute("params"); String searchStr=(String)params.getOrDefault("search", ""
+                    ); HashMap result=(HashMap)request.getAttribute("result"); %>
                     <div class="mb-3">
                         <input class="form-control" type="hidden" id="UNIQUEID" name="UNIQUE_ID">
                     </div>
@@ -83,7 +83,7 @@
                 </div>
                     <div class="text-center">
                         <button class="btn btn-primary" type="submit" formaction="/main/">back</button>
-                        <button class="btn btn-primary" method="post" formaction='/members/memberUpdateForm/<%= result.get("UNIQUE_ID") %>'>updete</button>
+                        <button class="btn btn-primary" method="post" formaction='/members/memberUpdateForm'>updete</button>
                     </div>
                 </form>
             </div>
