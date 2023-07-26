@@ -29,7 +29,7 @@ public class SearchController {
    @Autowired
 SearchService searchservice;
 
-    @GetMapping("/selectsupp")
+    @PostMapping("/selectsupp")
     public ModelAndView selectsupp(@RequestParam Map params, ModelAndView modelAndView) {
         Object result = searchservice.selectSearch(params);
         modelAndView.addObject("params", params);

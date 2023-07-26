@@ -41,9 +41,9 @@ FROM review
 <!-- insert -->
 <insert id="reviewinsert" parameterType="Map">
 INSERT INTO REVIEW
-(REVIEW_ID, WRITING_DATE, TITLE, CONTENT, VIEW_COUNT, SUPP_ID, UNIQUE_ID) 
+(REVIEW_ID, WRITING_DATE, TITLE, CONTENT, VIEW_COUNT, SUPP_ID, UNIQUE_ID, IMAGES) 
 VALUES
-(#{REVIEW_ID}, NOW(), #{TITLE}, #{CONTENT}, 30, #{SUPP_ID}, #{UNIQUE_ID})
+(#{REVIEW_ID}, NOW(), #{TITLE}, #{CONTENT}, 30, #{SUPP_ID}, #{UNIQUE_ID}, CONCAT('/images/', #{IMAGES}))
 </insert>
 
 <!-- Update --> 

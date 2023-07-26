@@ -34,12 +34,13 @@
                                                 <div class="card-body">
                                                     <div class="row">
                                                     <div class="col"><h5 class="card-title" style="font-weight: bold;"><%= record.get("TITLE") %></h5></div>
-                                                    <div class="col-12"><button class="btn btn-outline-secondary" formaction='/reviews/reviewdeleteAndSelectSearch/<%= record.get("REVIEW_ID") %>'>삭제</button></div>
-                                                    </div>
+                                                    
                                                     <hr>
                                                     <div>
                                                     <div><p class="card-text"><%= record.get("CONTENT") %></p></div>
                                                     <div><small class="text-muted"><%= record.get("WRITING_DATE") %></small></div>
+                                                    <div class="col-12"><button class="btn btn-outline-secondary" formaction='/reviews/reviewdeleteAndSelectSearch/<%= record.get("REVIEW_ID") %>'>삭제</button></div>
+                                                </div>
                                                 </div>
                                                 </div>
                                            

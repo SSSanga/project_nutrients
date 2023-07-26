@@ -37,7 +37,7 @@ public class ListController {
         return modelAndView;
     }
 
-    @GetMapping("/selectspec/{SUPP_ID}")
+    @PostMapping("/selectspec/{SUPP_ID}")
     public ModelAndView spec(@PathVariable String SUPP_ID, @RequestParam Map params, ModelAndView modelAndView) {
         Object result = wholelistservice.selectSpec(SUPP_ID, params);
         modelAndView.addObject("params", params);
