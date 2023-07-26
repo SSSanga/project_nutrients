@@ -48,7 +48,7 @@
                                         <% } %>
                                         <sec:authorize access="hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')">
                                             <div class="d-flex justify-content-end align-items-end">
-                                                <button type="submit" class="btn btn-success"
+                                                <button type="submit" class="btn btn-outline-success"
                                                     formaction="/reviews/reviewwrite">후기 작성 GO!</button>
                                             </div>
                                         </sec:authorize>
@@ -56,7 +56,7 @@
                             </div>
                             <div class="d-flex justify-content-center mt-4">
                             <% Paginations paginations=(Paginations)result.get("paginations"); %>
-                                <div> 총 리뷰 수 : <%= paginations.getTotalCount() %>
+                                <div class= "mx-3" style="font-weight: bold"> 총 리뷰 수 : <%= paginations.getTotalCount() %>
                                 </div>
                                 <nav aria-label="Page navigation">
                                     <ul class="pagination">

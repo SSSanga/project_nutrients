@@ -55,7 +55,7 @@
                             
                         
                         </div>
-                         <button type="submit" class="btn btn-primary" formaction="/reviews/reviewinsertAndSelect">저장하기</button>
+                         <button type="submit" class="btn btn-outline-success" formaction="/reviews/reviewinsertAndSelect">저장하기</button>
                     </form>
                 </div>
             </div>

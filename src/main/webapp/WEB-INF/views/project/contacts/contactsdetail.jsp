@@ -12,19 +12,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
     <link href="/css/main.css" rel="stylesheet" />
 </head>
-<body>
 
-    
-    <!-- header -->
+<body>
+  <!-- header -->
     <%@ include file="/WEB-INF/views/project/header.jsp" %>
     
-    <main class="container mt-4">
+     <main class="container">
         <% HashMap params=(HashMap)request.getAttribute("params"); String
         searchStr=(String)params.getOrDefault("search", "" );
          HashMap
         result=(HashMap)request.getAttribute("result"); %>
-                                        
-        <table class="table mt-4" >
+                                
+        <table class="table mt-3" >
             <div class="mb-3">
                 <input class="form-control" type="hidden" id="INQUIRY_ID" name="INQUIRY_ID">
             </div>
@@ -62,20 +61,22 @@
                         <hr>
                         <h7 class="card-title mt-2" style="font-weight: bold;">관리자 댓글 작성
                         <input type="text" class ="me-4" style="width: 400px;">
-                        <button type="submit" class="btn btn-primary">저장</button>
+                        <button type="submit" class="btn btn-outline-success">저장</button>
                     </sec:authorize>
                         </h7>
                    </div>
                 </div>
 
            
-                <form> <button type="submit" class="btn btn-primary"
+                <form> <button type="submit" class="btn btn-outline-success"
                 formaction="/contacts/contactslist">돌아가기</button>
                 </form>
             </tbody>
+            </div>
         </table>
-        
-    </main>
+       
+     </main>
+    
 
     <!-- Footer -->
    <%@ include file="/WEB-INF/views/project/footer.jsp" %>

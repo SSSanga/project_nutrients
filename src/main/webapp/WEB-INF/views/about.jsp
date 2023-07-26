@@ -11,19 +11,16 @@
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
     </head>
 
-
     <body>
 
       <!-- header -->
       <%@ include file="/WEB-INF/views/project/header.jsp" %>
         <!-- Screen adjust functions -->
-
-
-        <div class="container p-2 d-flex align-items-center justify-content-center">
+        <div class="container d-flex align-items-center justify-content-center">
           <img src="../images/drug_img.png" alt="" width="400" height="400">
         </div>
 
-        <div class="container  p-3 d-flex align-items-center justify-content-center p-2">
+        <div class="container p-3 d-flex align-items-center justify-content-center p-2">
           <div class="row">
           <div class="col-md-6 col-lg-4">
             <div class="card p-3" style="height: 500px;">
