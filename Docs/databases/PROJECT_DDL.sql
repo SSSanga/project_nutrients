@@ -1,3 +1,4 @@
+use project_nutrients;
 
 CREATE TABLE AUTH_NAMES
 (

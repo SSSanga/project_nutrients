@@ -53,7 +53,9 @@
                                         <th scope="col">내용</th>
                                         <th scope="col">등록일</th>
                                         <th scope="col">상세</th>
+                                        <sec:authorize access="hasRole('ROLE_ADMIN')">  
                                         <th scope="col">삭제</th>
+                                        </sec:authorize>
                                     </tr>
                                 </thead>
 
@@ -80,10 +82,12 @@
                                                         formaction='/contacts/contactsselectDetail/<%= record.get("INQUIRY_ID") %>'
                                                         value='<%= record.get("INQUIRY_ID") %>' name='INQUIRY_ID'>상세
                                                     </button></td>
+                                                    <sec:authorize access="hasRole('ROLE_ADMIN')">    
                                                 <td><button class="btn btn-outline-danger mt-auto mb-auto"
                                                         formaction='/contacts/contactsdeleteAndSelectSearch/<%= record.get("INQUIRY_ID") %>'
                                                         value='<%= record.get("INQUIRY_ID") %>' name='INQUIRY_ID'>삭제
                                                     </button></td>
+                                                </sec:authorize>
                                             </tr>
                                             <% } %>
                                 </tbody>
