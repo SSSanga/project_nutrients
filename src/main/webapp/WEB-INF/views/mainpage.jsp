@@ -62,7 +62,7 @@
                                                     <img class="img-fluid" src="/images/pill_4.png" alt="">
                                                 </div>
                                                 <div class="carousel-item">
-                                                    <img class="img-fluid" src="/images/lee_lutein.png" alt="">
+                                                    <img class="img-fluid" src="/images/main_6070.png" alt="">
                                                 </div>
                                                 <div class="carousel-item">
                                                     <button type="submit">
