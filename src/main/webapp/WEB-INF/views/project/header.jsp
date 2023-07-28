@@ -50,12 +50,12 @@
                         </div>
                         <div class="d-flex m-3">
                         <sec:authorize access="isAuthenticated()">
-                <li class = "nav-link">
-                    <div>User ID : ${userDetailsBean.username}</div>
-                    <div>Name : ${userDetailsBean.memberName}</div>
-                </li>
-            </sec:authorize>
-        </div>
+                        <li class = "nav-link">
+                        <div>User ID : ${userDetailsBean.username}</div>
+                        <div>Name : ${userDetailsBean.memberName}</div>
+                        </li>
+                        </sec:authorize>
+                        </div>
                         <!-- User management dropdown 여긴 회원관리 -->
                         <div class="d-flex m-3">
                         <div class="collapse navbar-collapse justify-content-center">
