@@ -36,7 +36,6 @@
                         </div>
                     </div>
                     </form>
-
                     <div class="container_img">
                         <div class="container">
                             <!-- Added padding-bottom to create space between the container and the footer -->

@@ -23,23 +23,24 @@
 
             <form>
               <!-- Search bar 여긴 검색 -->
-              <div class="container m-2" style="font-weight: bold;">
-                <div class="d-flex m-3 align-items-center">
-
-                  <select class="form-select mx-2" name="search"
-                    style="font-size: 20px; width: 180px; height: 50px; font-weight: bold;">
-                    <option>카테고리 선택</option>
-                    <option value="EFFECT">효과</option>
-                    <option value="MANUFACTURE">제조사</option>
-                  </select>
-
-                  <input class="form-control me-2 mt-auto mb-auto" style="font-size: 20px; width: 150px; height: 50px; "
-                    name="words" type="search" placeholder="Search..." aria-label="Search" id="keydownEnter">
-                  <button class="btn btn-light btn-outline-secondary mt-auto mb-auto" type="submit"
-                    formaction="/search/selectsupp" id="keydownEnter"
-                    style="font-size: 20px; width: 100px; height: 50px;">검색</button>
-
+              <div class="container row m-3">
+                <div class="col-3">
+                    <select class="form-select mx-2" name="search" style="font-size: 20px; font-weight: bold;">
+                        <option>카테고리 선택</option>
+                        <option value="EFFECT">효과</option>
+                        <option value="MANUFACTURE">제조사</option>
+                    </select>
                 </div>
+                <div class="col-3">
+                    <input class="form-control me-2 mt-auto mb-auto" style="font-size: 20px; width:200px;"
+                        name="words" type="search" placeholder="Search..." aria-label="Search"
+                        id="keydownEnter">
+                </div>
+                <div class="col-6">
+                    <button class="btn btn-outline-secondary" type="submit" formaction="/search/selectsupp" formmethod="post"
+                        id="keydownEnter" style="font-size: 20px; width:200px;">검색</button>
+                </div>
+            </div>
 
                 <% HashMap params=(HashMap)request.getAttribute("params"); String
                   searchStr=(String)params.getOrDefault("search", "" ); HashMap
@@ -54,50 +55,41 @@
                         </div>
                       </div>
                     </sec:authorize>
-                    <div class="container p-3">
-                      <table>
-                        <thead>
-                          <tr class="h5 align-middle p-2">
+                    <div class="container p-2">
+                      <table class="table table-hover p-2">
+                        <thead class="table-primary">
+                          <tr class="h5 align-middle">
                             <th></th>
                             <th style="font-weight: bold;">제품명</th>
                             <th style="font-weight: bold;">대표 효과</th>
                             <th style="font-weight: bold;">상세</th>
-                            <sec:authorize access="hasRole('ROLE_USER')">
-                              <th>리뷰</th>
-                            </sec:authorize>
                             <sec:authorize access="hasRole('ROLE_ADMIN')">
                               <th>삭제</th>
                             </sec:authorize>
                           </tr>
                         </thead>
-                        <tbody class="mt-auto mb-auto">
+                        <tbody>
                           <% ArrayList resultList=(ArrayList)result.get("resultList"); for(int i=0; i <
                             resultList.size(); i=i+1) { HashMap record=(HashMap)resultList.get(i); %>
 
                             <tr>
-
-                              <td class="align-middle p-2">
+                              <label for="suppdetail">
+                              <td class="align-middle">
                                 <img src='<%= record.get("LOCATION") %>' alt='<%= record.get("PRODUCT") %>'
                                   class="img-fluid rounded" width="200">
                               </td>
-                              <td class="align-middle p-2">
+                              <td class="align-middle">
                                 <%= record.get("PRODUCT") %>
                               </td>
-                              <td class="align-middle p-2">
+                              <td class="align-middle">
                                 <%= record.get("EFFECT") %>
                               </td>
-                              <td class="align-middle p-2"><button class="btn btn-outline-primary mt-auto mb-auto" type="submit"
+                              <td class="align-middle"><button class="btn btn-outline-primary mt-auto mb-auto" type="submit"
                                   formaction='/supp/selectspec/<%= record.get("SUPP_ID") %>'
                                   value='<%= record.get("SUPP_ID") %>' name='SUPP_ID' id="suppdetail"
                                   style="font-weight: bold;" type="hidden" formmethod="post">상세</button></td>
-                              <sec:authorize access="hasRole('ROLE_USER')">
-                                <td class="align-middle p-2"><button class="btn btn-outline-primary mt-auto mb-auto" type="submit"
-                                    formaction='/reviews/wholelistselectDetail/<%= record.get("SUPP_ID") %>'
-                                    value='<%= record.get("SUPP_ID") %>' name='SUPP_ID'
-                                    style="font-weight: bold;"type="hidden" formmethod="post">리뷰</button></td>
-                              </sec:authorize>
                               <sec:authorize access="hasRole('ROLE_ADMIN')">
-                                <td class="align-middle p-2"><button class="btn btn-outline-danger mt-auto mb-auto" type="submit"
+                                <td class="align-middle"><button class="btn btn-outline-danger mt-auto mb-auto" type="submit"
                                     formaction='/supp/deleteandlist/<%= record.get("SUPP_ID") %>'
                                     value='<%= record.get("SUPP_ID") %>' name='SUPP_ID'
                                     style="font-weight: bold;"type="hidden" formmethod="post">삭제</button></td>

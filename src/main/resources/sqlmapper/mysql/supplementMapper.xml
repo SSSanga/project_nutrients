@@ -28,7 +28,7 @@
   </select>
 <!-- 추천 누르면 EFFECT_FLAG가 일치할때 나오게끔 -->
   <select id="recomm" parameterType="Map" resultType="Map">
-        SELECT t_SUPPRECOMM.LOCATION, t_SUPPRECOMM.PRODUCT, t_SUPPRECOMM.LINK
+        SELECT t_SUPPRECOMM.LOCATION, t_SUPPRECOMM.PRODUCT, t_SUPPRECOMM.LINK, t_SUPPRECOMM.EFFECT_FLAG
         FROM (SELECT t_LIST.LOCATION, t_LIST.PRODUCT, t_LIST.LINK, t_LIST.EFFECT_FLAG, effect.EFFECT
         FROM (SELECT DISTINCT supp_spec.LOCATION, supp_spec.SUPP_ID, supp_list.EFFECT_FLAG, supp_spec.PRODUCT, supp_spec.LINK
         FROM supp_list

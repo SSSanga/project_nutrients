@@ -18,7 +18,7 @@
       <form>
     <div class="container content-center p-5">
       
-      <div class="h2">혈중 콜레스테롤 개선 영양제 LIST</div>
+      <div class="h2"><%= record.get("EFFECT_FLAG") %></div>
       
       
       <table class="table table-striped table-sm">

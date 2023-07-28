@@ -12,9 +12,9 @@
                     <form action="" method="">
                         <div class="d-flex m-3">
                             <!-- Brand image -->
-                            <div class="d-flex m-3">
-                            <div class="navbar-brand ms-5">
-                                <button id="aboutButton" class="nav-link btn btn-none" formaction="/main/main">
+                            <div class="d-flex ms-3">
+                            <div class="navbar-brand">
+                                <button id="aboutButton" class="nav-link btn btn-none" formaction="/">
                                     <img src="/images/drug_img.png" alt="" width="200" height="200">
                                 </button>
                             </div>
@@ -30,6 +30,10 @@
                                     <li class="nav-item">
                                         <button id="listButton" class="nav-link btn btn-none"
                                             formaction="/supp/wholelist">List</button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button id="listButton" class="nav-link btn btn-none"
+                                            formaction="/recomm/list">Recommendation</button>
                                     </li>
                                     <li class="nav-item">
                                         <button id="reviewButton" class="nav-link btn btn-none"
@@ -90,8 +94,10 @@
                         </div>
                     </div>
                 </div>
+               
+                </form>
             </div>
-                    </form>
+                    
                      <!-- 이건 줌인아웃 -->
                     <!-- Screen adjust buttons -->
                     
@@ -106,3 +112,4 @@
                </nav>
               
         </div>
+        

@@ -24,7 +24,7 @@
           <div class="row">
           <div class="col-md-6 col-lg-4">
             <div class="card p-3" style="height: 500px;">
-              <div class=" card-title text-center"><img src='../images/about_1.png' alt='' width="300" height="300"></div>
+              <div class=" card-title text-center"><img src='/images/about_1.png' alt='' width="300" height="300"></div>
               <div class="card-header text-center">
                 <i class="fas fa-star fa-4x mb-3" style="color: #fff;"></i>
                 <h2 class="card-title"
@@ -41,7 +41,7 @@
 
           <div class="col-md-6 col-lg-4 ">
             <div class="card p-3" style="height: 500px;">
-              <div class=" card-title text-center"><img src='../images/about_2.png' alt='' width="300" height="300"></div>
+              <div class=" card-title text-center"><img src='/images/about_2.png' alt='' width="300" height="300"></div>
               <div class="card-header text-center">
                 <i class="fas fa-heart fa-4x mb-3" style="color: #fff;"></i>
                 <h2 class="card-title"
@@ -56,9 +56,9 @@
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-4 ">
+          <div class="col-md-6 col-lg-4">
             <div class="card p-3" style="height: 500px;">
-              <div class=" card-title text-center"><img src='../images/about_3.png' alt='' width="300" height="300"></div>
+              <div class=" card-title text-center"><img src='/images/about_3.png' alt='' width="300" height="300"></div>
               <div class="card-header text-center">
                 <i class="far fa-lightbulb fa-4x mb-3" style="color: #fff;"></i>
                 <h2 class="card-title"

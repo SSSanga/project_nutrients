@@ -27,6 +27,7 @@
 
                 <% ArrayList resultID=(ArrayList)result.get("resultID"); for(int i=0; i < resultID.size(); i=i+1) {
                   HashMap record=(HashMap)resultID.get(i); %>
+                  <div class="container">
                   <div class="d-flex justify-content-center">
                     <img src='<%= record.get("LOCATION") %>' alt='<%= record.get("SUPP_ID") %>' class="square-image"
                       width="200px" height="100%">
@@ -49,10 +50,11 @@
                               <%= record.get("FREQUENCY") %></div>
 
                     </div>
+                  
                     <div class="col">
                       <a class="btn btn-primary" href='<%= record.get("LINK") %>' role="button">추천사이트</a>
                     </div>
-                  
+                  </div>
                   <% } %>
 
                       <div class="fw-bold mt-3">효과:</div>

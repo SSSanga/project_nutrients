@@ -125,7 +125,7 @@ public ModelAndView membersinfoForm(@RequestParam Map params, ModelAndView model
 @GetMapping("/memberList")
 public ModelAndView memberList(@RequestParam Map params
                         , ModelAndView modelAndView) {
-    Object result = membersService.memberList(params);
+    Object result = membersService.membslistWithPaginations (params);
     modelAndView.addObject("params", params);
     modelAndView.addObject("result", result);
     
