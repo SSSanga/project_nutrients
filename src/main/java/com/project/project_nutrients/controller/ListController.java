@@ -56,7 +56,7 @@ public class ListController {
         return modelAndView;
     }
     //admin 권한으로 작동되야함. 
-     @GetMapping("/deleteandlist/{SUPP_ID}")
+     @PostMapping("/deleteandlist/{SUPP_ID}")
     public ModelAndView deleteandlist(@PathVariable String SUPP_ID
                         , @RequestParam Map params, ModelAndView modelAndView) {
         Object result = wholelistservice.deleteAndList(SUPP_ID, params);
