@@ -88,7 +88,7 @@
 
                                             <nav aria-label="Page navigation">
                                                 <ul class="pagination">
-                                                    <li class="page-item"><a class="page-link" href="#"
+                                                    <li class="page-item"><a class="page-link" href="/reviews/reviewlist?currentPage=<%= paginations.getPreviousPage() %>"
                                                             style="color: green;">Previous</a></li>
                                                     <% for (int i=paginations.getBlockStart(); i
                                                         <=paginations.getBlockEnd() ; i=i+1){ %>
