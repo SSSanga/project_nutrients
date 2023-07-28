@@ -69,7 +69,7 @@ public class ReviewsService {
         HashMap result = new HashMap<>();
         result.put("reviewinsertCount", this.reviewinsert(dataMap));
 
-        result.putAll(this.reviewselectSearch(dataMap));
+        result.putAll(this.reviewselectSearchWithPagination(dataMap));
         return result;
     }
      
