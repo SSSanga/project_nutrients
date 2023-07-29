@@ -24,13 +24,13 @@
 
                         <main class="container p-3">
                             <div class="d-flex align-items-center mx-2">
-                                <select class="form-select mx-2" name="searchType" style="font-size: 25px; width: 150px; height: 50px; font-weight: bold;">
+                                <select class="form-select mx-2" name="searchType" style="font-size: 15px; width: 100px; height: 40px; font-weight: bold;">
                                     <option value="CONTENT">내용</option>
                                 </select>
                                 <input type="search" name="words" value="" class="form-control me-2 mt-auto mb-auto" placeholder="Search..." 
-                                style="font-size: 25px; width: 150px; height: 50px; font-weight: bold;" aria-label="Search" id="keydownEnter">
-                                <button class="btn btn-light btn-outline-success mt-auto mb-auto font-weight-bold" type="submit" 
-                                formaction="/contacts/contactsselectSearch" style="font-size: 25px; width: 100px; height: 50px; font-weight: bold;">검색</button>
+                                style="font-size: 15px; height: 40px; font-weight: bold;" aria-label="Search" id="keydownEnter">
+                                <button class="btn btn-outline-secondary mt-auto mb-auto font-weight-bold" type="submit" 
+                                formaction="/contacts/contactsselectSearch" style="font-size: 15px; width: 100px; height: 40px; font-weight: bold;">검색</button>
                             </div>
                             <% HashMap params=(HashMap)request.getAttribute("params"); String
                                         searchStr=(String)params.getOrDefault("search", "" ); HashMap
@@ -78,12 +78,12 @@
                                                 <td class="align-middle">
                                                     <%= record.get("WRITING_DATE") %>
                                                 </td>
-                                                <td><button class="btn btn-outline-success mt-auto mb-auto"
+                                                <td><button class="btn btn-outline-secondary mt-auto mb-auto"
                                                         formaction='/contacts/contactsselectDetail/<%= record.get("INQUIRY_ID") %>'
                                                         value='<%= record.get("INQUIRY_ID") %>' name='INQUIRY_ID'>상세
                                                     </button></td>
-                                                    <sec:authorize access="hasRole('ROLE_ADMIN')">    
-                                                <td><button class="btn btn-outline-danger mt-auto mb-auto"
+                                                <sec:authorize access="hasRole('ROLE_ADMIN')">    
+                                                <td><button class="btn btn-outline-secondary mt-auto mb-auto"
                                                         formaction='/contacts/contactsdeleteAndSelectSearch/<%= record.get("INQUIRY_ID") %>'
                                                         value='<%= record.get("INQUIRY_ID") %>' name='INQUIRY_ID'>삭제
                                                     </button></td>
@@ -96,32 +96,31 @@
                         </div>
 
                             <div class="d-flex justify-content-end align-items-end">
-                                <button type="submit" class="btn btn-outline-success" formaction="/contacts/contactswrite">문의 작성
-                                    GO!</button>
+                                <button type="submit" class="btn btn-outline-secondary" formaction="/contacts/contactswrite">문의 작성
+                                </button>
                             </div>
 
                             <div class="d-flex justify-content-center mt-4">
-                            
-                                    <nav aria-label="Page navigation">
-                                        <ul class="pagination">
-                                            <li class="page-item"><a class="page-link" href="#"
-                                                    style="color: green;">Previous</a></li>
-                                            <% for (int i=paginations.getBlockStart(); i <=paginations.getBlockEnd() ;
-                                                i=i+1){ %>
-                                                <li class="page-item"><a class="page-link"
-                                                        href="/contacts/contactslist?currentPage=<%= i %>"
-                                                        style="color: green;">
-                                                        <%= i %>
-                                                    </a></li>
-                                                <% } %>
-                                                    <li class="page-item"><a class="page-link"
-                                                            href="/contacts/contactslist?currentPage=<%= paginations.getNextPage() %>"
-                                                            style="color: green;">Next</a>
-                                                    </li>
 
-                                        </ul>
-                                    </nav>
-                                    
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination">
+                                        <li class="page-item"><a class="page-link" href="/reviews/reviewlist?currentPage=<%= paginations.getPreviousPage() %>"
+                                                style="padding: 10px 20px; border: 1px solid #6c757d; color: red; background-color: transparent; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer; border-radius: 4px; font-weight: bold;">Previous</a></li>
+                                        <% for (int i=paginations.getBlockStart(); i
+                                            <=paginations.getBlockEnd() ; i=i+1){ %>
+                                            <li class="page-item"><a class="page-link"
+                                                    href="/reviews/reviewlist?currentPage=<%= i %>"
+                                                    style="padding: 10px 20px; border: 1px solid #6c757d; color: red;  background-color: transparent; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer; border-radius: 4px; font-weight: bold;">
+                                                    <%= i %>
+                                                </a></li>
+                                            <% } %>
+                                                <li class="page-item"><a class="page-link"
+                                                        href="/reviews/reviewlist?currentPage=<%= paginations.getNextPage() %>"
+                                                        style="padding: 10px 20px; border: 1px solid #6c757d; color: red; background-color: transparent; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer; border-radius: 4px; font-weight: bold;">Next</a>
+                                                </li>
+
+                                    </ul>
+                                </nav>
                             </div>
                         </main>
                     </form>
