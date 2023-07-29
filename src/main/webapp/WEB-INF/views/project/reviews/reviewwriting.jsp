@@ -41,11 +41,6 @@
                            
                         </div>
                         <div class="mb-3">
-                            <label for="content" class="form-label">영양제 아이디 </label>
-                            <input class="form-control" id="content" rows="5" name="SUPP_ID">
-                           
-                        </div>
-                        <div class="mb-3">
                             <label for="content" class="form-label">멤버 아이디</label>
                             <input class="form-control" id="content" rows="5" name="UNIQUE_ID">
                           

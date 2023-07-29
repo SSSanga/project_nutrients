@@ -104,18 +104,18 @@
 
                                 <nav aria-label="Page navigation">
                                     <ul class="pagination">
-                                        <li class="page-item"><a class="page-link" href="/reviews/reviewlist?currentPage=<%= paginations.getPreviousPage() %>"
+                                        <li class="page-item"><a class="page-link" href="/contacts/contactslist?currentPage=<%= paginations.getPreviousPage() %>"
                                                 style="padding: 10px 20px; border: 1px solid #6c757d; color: red; background-color: transparent; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer; border-radius: 4px; font-weight: bold;">Previous</a></li>
                                         <% for (int i=paginations.getBlockStart(); i
                                             <=paginations.getBlockEnd() ; i=i+1){ %>
                                             <li class="page-item"><a class="page-link"
-                                                    href="/reviews/reviewlist?currentPage=<%= i %>"
+                                                    href="/contacts/contactslist?currentPage=<%= i %>"
                                                     style="padding: 10px 20px; border: 1px solid #6c757d; color: red;  background-color: transparent; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer; border-radius: 4px; font-weight: bold;">
                                                     <%= i %>
                                                 </a></li>
                                             <% } %>
                                                 <li class="page-item"><a class="page-link"
-                                                        href="/reviews/reviewlist?currentPage=<%= paginations.getNextPage() %>"
+                                                        href="/contacts/contactslist?currentPage=<%= paginations.getNextPage() %>"
                                                         style="padding: 10px 20px; border: 1px solid #6c757d; color: red; background-color: transparent; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer; border-radius: 4px; font-weight: bold;">Next</a>
                                                 </li>
 

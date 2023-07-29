@@ -43,15 +43,15 @@ public class ReviewsService {
             return result;
     }
 
+    // review erd에서 SUPP_ID 지움 
+    // public Object wholelistselectDetail(String SUPP_ID, Map dataMap) {
+    //         // Object getOne(String sqlMapId, Object dataMap)
+    //         String sqlMapId = "Reviews.wholelistselectDetail";
+    //         dataMap.put("SUPP_ID", SUPP_ID);
     
-    public Object wholelistselectDetail(String SUPP_ID, Map dataMap) {
-            // Object getOne(String sqlMapId, Object dataMap)
-            String sqlMapId = "Reviews.wholelistselectDetail";
-            dataMap.put("SUPP_ID", SUPP_ID);
-    
-            Object result = sharedDao.getOne(sqlMapId, dataMap);
-            return result;
-    }
+    //         Object result = sharedDao.getOne(sqlMapId, dataMap);
+    //         return result;
+    // }
 
     public Object reviewinsert(Map dataMap) {
         String sqlMapId = "Reviews.reviewinsert";

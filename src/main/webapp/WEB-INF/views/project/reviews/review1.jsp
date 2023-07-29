@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-    <%@ page import="java.util.HashMap, java.util.ArrayList, com.project.project_nutrients.utils.Paginations" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+    <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+        <%@ page import="java.util.HashMap, java.util.ArrayList, com.project.project_nutrients.utils.Paginations" %>
 
         <!DOCTYPE html>
         <html lang="en">
@@ -25,7 +26,7 @@
                             <input class="form-control" type="hidden" id="REVIEW_ID" name="REVIEW_ID">
                         </div>
                         <div class="container py-4">
-                            <h1 class="text-center" style="font-weight: bold;">Review</h1>
+                            <h1 class=" text-center mt-2" style="font-weight: bold;">Review</h1>
                             <hr style="border-top: 4px solid;">
 
                             <div class="row">
@@ -35,7 +36,7 @@
                                 
                                     <div class="card mb-3 pt-3">
                                         <div class="card-body">
-                                            <h5 class="card-title text-center mt-2" style="font-weight: bold;">
+                                            <h5 class="card-title mt-2" style="font-weight: bold;">
                                                 <%= result.get("TITLE") %>
                                             </h5>
                                         </div>
@@ -44,8 +45,11 @@
                                 <div class="card mb-3 pt-3">
                                     <td>
                                     <img src='<%= result.get("IMAGES") %>' id="IMAGES" name="IMAGES" alt='<%= result.get("REVIEW_ID") %>' class="card-img-top"
-                                            style="width: 100px;">
+                                            style="width: 200px;">
                                     </td>
+
+                                      </td>
+
                                     <div class="card-body">
                                         <td class="card-text pb-2">
                                             <%= result.get("CONTENT") %>

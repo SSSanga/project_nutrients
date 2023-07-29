@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -592,
-    "scrollLeft": -96,
-    "zoomLevel": 0.9,
+    "scrollTop": -539,
+    "scrollLeft": -887,
+    "zoomLevel": 1,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -1097,29 +1097,6 @@
             }
           },
           {
-            "id": "6e013ea1-8967-4888-85f6-cd21f6542bb8",
-            "name": "SUPP_ID",
-            "comment": "영양제_ID",
-            "dataType": "VARCHAR(500)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 61.22998046875,
-              "widthDataType": 94.94873046875,
-              "widthDefault": 60
-            }
-          },
-          {
             "id": "e301f206-4b60-48fc-b875-d2da80c841ff",
             "name": "UNIQUE_ID",
             "comment": "유니크ID",
@@ -1168,9 +1145,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 1127,
-          "top": 598.5,
-          "zIndex": 14,
+          "left": 1231,
+          "top": 680.5,
+          "zIndex": 16,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1850,7 +1827,7 @@
           "columnIds": [
             "31a1ece5-5a34-44b8-b91b-d1bc5c469df8"
           ],
-          "x": 1118.5218912760415,
+          "x": 1080.5697021484375,
           "y": 897.5,
           "direction": "top"
         },
@@ -1937,7 +1914,7 @@
           "columnIds": [
             "886562c3-70c3-47f4-8677-f6ec776bdd51"
           ],
-          "x": 966.7131347656249,
+          "x": 852.8565673828125,
           "y": 897.5,
           "direction": "top"
         },
@@ -1954,48 +1931,22 @@
           "columnIds": [
             "31a1ece5-5a34-44b8-b91b-d1bc5c469df8"
           ],
-          "x": 814.9043782552083,
-          "y": 897.5,
-          "direction": "top"
+          "x": 1194.42626953125,
+          "y": 1065.25,
+          "direction": "right"
         },
         "end": {
           "tableId": "ae8f7f7c-1fde-4d91-92c3-1b6e33fc2e01",
           "columnIds": [
             "e301f206-4b60-48fc-b875-d2da80c841ff"
           ],
-          "x": 1127,
-          "y": 773.25,
+          "x": 1231,
+          "y": 786.75,
           "direction": "left"
         },
         "constraintName": "",
         "visible": true,
         "id": "8a66c8cf-3842-4c96-943f-54172d7e9f0e"
-      },
-      {
-        "identification": false,
-        "relationshipType": "ZeroN",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "9377a5bc-5f23-49de-a3e5-d1de66894590",
-          "columnIds": [
-            "eed6a1a0-e5c5-45cf-a779-d1e5df7daf69"
-          ],
-          "x": 1032.5078125,
-          "y": 651.625,
-          "direction": "right"
-        },
-        "end": {
-          "tableId": "ae8f7f7c-1fde-4d91-92c3-1b6e33fc2e01",
-          "columnIds": [
-            "6e013ea1-8967-4888-85f6-cd21f6542bb8"
-          ],
-          "x": 1127,
-          "y": 656.75,
-          "direction": "left"
-        },
-        "constraintName": "",
-        "visible": true,
-        "id": "995b8d16-cf70-40e6-9265-b1b9f36539d2"
       },
       {
         "identification": false,
@@ -2059,7 +2010,7 @@
             "eed6a1a0-e5c5-45cf-a779-d1e5df7daf69"
           ],
           "x": 1032.5078125,
-          "y": 757.875,
+          "y": 704.75,
           "direction": "right"
         },
         "end": {
