@@ -68,8 +68,8 @@
                                         <h6 class=" pt-5 mb-3" style="font-weight: bold;">Comment</h6>
                                         <input type="text" class="form-control" id="comment" rows="3"></input>
                                     </div>
-                                    <button type="submit" class="btn btn-outline-success">댓글 등록</button>
-                                    <button type="submit" class="btn btn-outline-success"
+                                    <button type="submit" class="btn btn-outline-secondary">댓글 등록</button>
+                                    <button type="submit" class="btn btn-outline-secondary"
                                         formaction="/reviews/reviewlist">돌아가기</button>
                                     <!-- 이게 댓글로 어떻게 달리는거지? -->
                                     <!-- Add more comments as needed -->

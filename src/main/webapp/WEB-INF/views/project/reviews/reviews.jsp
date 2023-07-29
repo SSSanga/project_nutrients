@@ -78,8 +78,8 @@
                                                     <sec:authorize
                                                         access="hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')">
                                                         <div class="d-flex justify-content-end align-items-end">
-                                                            <button type="submit" class="btn btn-outline-success"
-                                                                formaction="/reviews/reviewwrite">후기 작성 GO!</button>
+                                                            <button type="submit" class="btn btn-outline-secondary"
+                                                                formaction="/reviews/reviewwrite">후기 작성</button>
                                                         </div>
                                                     </sec:authorize>
 
@@ -89,18 +89,18 @@
                                             <nav aria-label="Page navigation">
                                                 <ul class="pagination">
                                                     <li class="page-item"><a class="page-link" href="/reviews/reviewlist?currentPage=<%= paginations.getPreviousPage() %>"
-                                                            style="color: green;">Previous</a></li>
+                                                            style="padding: 10px 20px; border: 1px solid #6c757d; color: red; background-color: transparent; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer; border-radius: 4px; font-weight: bold;">Previous</a></li>
                                                     <% for (int i=paginations.getBlockStart(); i
                                                         <=paginations.getBlockEnd() ; i=i+1){ %>
                                                         <li class="page-item"><a class="page-link"
                                                                 href="/reviews/reviewlist?currentPage=<%= i %>"
-                                                                style="color: green;">
+                                                                style="padding: 10px 20px; border: 1px solid #6c757d; color: red;  background-color: transparent; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer; border-radius: 4px; font-weight: bold;">
                                                                 <%= i %>
                                                             </a></li>
                                                         <% } %>
                                                             <li class="page-item"><a class="page-link"
                                                                     href="/reviews/reviewlist?currentPage=<%= paginations.getNextPage() %>"
-                                                                    style="color: green;">Next</a>
+                                                                    style="padding: 10px 20px; border: 1px solid #6c757d; color: red; background-color: transparent; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer; border-radius: 4px; font-weight: bold;">Next</a>
                                                             </li>
 
                                                 </ul>

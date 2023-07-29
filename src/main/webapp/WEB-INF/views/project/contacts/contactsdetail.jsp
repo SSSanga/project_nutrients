@@ -61,14 +61,14 @@
                         <hr>
                         <h7 class="card-title mt-2" style="font-weight: bold;">관리자 댓글 작성
                         <input type="text" class ="me-4" style="width: 400px;">
-                        <button type="submit" class="btn btn-outline-success">저장</button>
+                        <button type="submit" class="btn btn-outline-secondary ">저장</button>
                     </sec:authorize>
                         </h7>
                    </div>
                 </div>
 
            
-                <form> <button type="submit" class="btn btn-outline-success"
+                <form> <button type="submit" class="btn btn-outline-secondary"
                 formaction="/contacts/contactslist">돌아가기</button>
                 </form>
             </tbody>
