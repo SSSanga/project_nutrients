@@ -116,9 +116,7 @@
 ❗ [membersMapper.xml](https://github.com/SSSanga/project_nutrients/blob/main/src/main/resources/sqlmapper/mysql/membersMapper.xml)
 </details>
 
-## 실습 소감
-
-- 기간: 7월 7일~ 7월 28일
+## 프로젝트 진행 소감 및 본인 Favorite Code
 
 ### 💊김상아 
 ⁉️
