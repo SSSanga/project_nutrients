@@ -60,7 +60,7 @@
                   <label for="card_checkbox_3" class="card-link">
                     <div class="card-body">
                       <div class="card-title h4"><button type="submit" class="btn btn-outline" formaction="/recomm/effectflag/EFFECT_09"
-                        value="EFFECT_09" name="EFFECT_FLAG">눈 기능 향상</button></div>
+                        value="EFFECT_09" name="EFFECT_FLAG">콜레스테롤 개선</button></div>
                       
                     </div>
                   </label>
@@ -75,8 +75,8 @@
                   <input type="checkbox" id="card_checkbox_4" style="display: none;">
                   <label for="card_checkbox_4" class="card-link">
                     <div class="card-body">
-                      <div class="card-title h4"><button type="submit" class="btn btn-outline" formaction="/recomm/effectflag/EFFECT_09"
-                        value="EFFECT_13" name="EFFECT_FLAG">콜레스테롤 개선</button></div>
+                      <div class="card-title h4"><button type="submit" class="btn btn-outline" formaction="/recomm/effectflag/EFFECT_13"
+                        value="EFFECT_13" name="EFFECT_FLAG">눈 기능 향상</button></div>
                     </div>
                   </label>
                 </div>           

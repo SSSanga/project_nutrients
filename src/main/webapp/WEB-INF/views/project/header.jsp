@@ -20,7 +20,7 @@
                             </div>
                         </div>
                             <!-- Navigation Links -->
-                            <div class="d-flex m-3">
+                            <div class="d-flex m-2">
                             <div class="navbar navbar-expand" id="navbarSupportedContent">
                                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                     <li class="nav-item">
@@ -48,16 +48,15 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="nav-link d-flex m-3">
+                        <div class="d-flex small-font">
                         <sec:authorize access="isAuthenticated()">
                         <li class = "nav-link">
-                        User ID : ${userDetailsBean.memberID}
-                        Name : ${userDetailsBean.memberName}
+                        Name : ${userDetailsBean.memberName}, User ID : ${userDetailsBean.memberID}
                         </li>
                         </sec:authorize>
                         </div>
                         <!-- User management dropdown 여긴 회원관리 -->
-                        <div class="d-flex m-3">
+                        <div class="container-fluid d-flex">
                         <div class="collapse navbar-collapse justify-content-center">
                             <div class="dropdown">
                                 <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"

@@ -45,7 +45,10 @@
         .h3,.h4,.h5, .p2, .p3, .p4, .p5, 
         .btn-outline {
             color: rgb(0, 60, 128) !important;}
-
+        .small-font {
+                font-size: smaller;
+              }
+              
         .btn-outline {
             border-color: rgb(0, 60, 128) !important;
             outline: 1.5px solid rgb(0, 60, 128) ;
