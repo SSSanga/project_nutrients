@@ -59,7 +59,36 @@
 </details>
 
 김하늘
-[code base]
+-[code base]
+
+<details>
+<summary>메인</summary>
+[MainController.java](https://github.com/SSSanga/project_nutrients/blob/main/src/main/java/com/project/project_nutrients/controller/MainController.java)
+[MainService.java](https://github.com/SSSanga/project_nutrients/blob/main/src/main/java/com/project/project_nutrients/service/MainService.java)
+[exampleMapper.xml]https://github.com/SSSanga/project_nutrients/blob/main/src/main/resources/sqlmapper/mysql/exampleMapper.xml
+</details>
+
+
+<details>
+<summary>로그인</summary>
+[]
+[]
+[]
+
+</details>
+
+<details>
+<summary>회원가입</summary>
+
+</details>
+
+<details>
+<summary>관리자 회원 정보 조회 및 수정</summary>
+
+
+</details>
+
+
 <details>
 <summary>MEMBERS</summary>
 [MembersController.java] (https://github.com/SSSanga/project_nutrients/blob/main/src/main/java/com/project/project_nutrients/controller/MembersController.java)
