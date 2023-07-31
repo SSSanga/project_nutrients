@@ -4,11 +4,14 @@
 
 ## 의뢰팀 홈페이지 의뢰서
 
+![image](https://github.com/SSSanga/project_nutrients/assets/132973456/90cd604f-37b0-4b76-8967-2950aa8d53b4)
+![image](https://github.com/SSSanga/project_nutrients/assets/132973456/1c049123-9104-4e51-98c2-f1cd241ec178)
+
+## 홈페이지 및 주요 구현 화면
 [TAB_영양제 추천 사이트](http://192.168.0.70:8080/)
 
+![image](https://github.com/SSSanga/project_nutrients/assets/132973456/983f20c4-92c3-4190-8a1f-e287314b3abd)
 
-## 주요 구현 화면
-![main page base](https:/images/main page base.PNG)
 
 ## 팀원 및 역할
 
