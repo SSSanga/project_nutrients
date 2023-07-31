@@ -13,9 +13,9 @@
 
 
 ## 🐾 홈페이지 및 주요 구현 화면
--[TAB_영양제 추천 사이트_guest](https://www.youtube.com/watch?v=5T-7S3QLbT8)
--[TAB_영양제 추천 사이트_user02](https://www.youtube.com/watch?v=HiZz9Xk2vTc)
--[TAB_영양제 추천 사이트_admin](https://www.youtube.com/watch?v=7gwySh57mhw)
+[TAB_영양제 추천 사이트_guest](https://www.youtube.com/watch?v=5T-7S3QLbT8)
+/[TAB_영양제 추천 사이트_user02](https://www.youtube.com/watch?v=HiZz9Xk2vTc)
+/[TAB_영양제 추천 사이트_admin](https://www.youtube.com/watch?v=7gwySh57mhw)
 
 ![image](https://github.com/SSSanga/project_nutrients/assets/132973456/983f20c4-92c3-4190-8a1f-e287314b3abd)
 
