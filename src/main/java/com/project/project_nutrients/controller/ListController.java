@@ -79,7 +79,7 @@ public class ListController {
         Object result = wholelistservice.listinsertandselect(params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
-        modelAndView.setViewName("/WEB-INF/views/project/admin/admin_wholelist.jsp");
+        modelAndView.setViewName("/WEB-INF/views/project/supplist/wholelist.jsp");
         return modelAndView;
     }
 
