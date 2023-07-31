@@ -8,8 +8,7 @@
 
 
 ## 구현 화면
-![Main page](https:/images/main page base.PNG)
-
+![main page base](https:/images/main page base.PNG)
 
 
 
@@ -22,11 +21,24 @@
 
 
 - 나현탁
-- [Main page base] 
+- [Main page base]
 - [CSS]
 
 - 조아라
-- [Reviews]
+<details>
+<summary>Reviews</summary>
+</details>
+
+
+<details>
+<summary>Contacts</summary>
+</details>
+
+<details>
+<summary>MEMBERS</summary>
+
+</details>
+
 - [Contacts]
 
 - 김하늘
