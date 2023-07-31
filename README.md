@@ -9,6 +9,11 @@
 ![image](https://github.com/SSSanga/project_nutrients/assets/132973456/1c049123-9104-4e51-98c2-f1cd241ec178)
 
 
+## ERD
+
+![image](https://github.com/SSSanga/project_nutrients/assets/132973289/fa853d04-8e7e-4da1-bc85-1c65b701d5e6)
+
+
 ##
 
 
