@@ -26,7 +26,7 @@
             <div><font color="red"> Login Fail ! </font></div>
             <% } %>
         <form class="form-signin" method="post" action="/login">
-                <img class="mb-4" src="/images/drug_img.png" alt="" width="72" height="57">
+                <img class="mb-4" src="/images/drug_img.png" alt="">
                 <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
                 <div class="form-floating">
                     <input type="id" class="form-control" id="username" name="username">

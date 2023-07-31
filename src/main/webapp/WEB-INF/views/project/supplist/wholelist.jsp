@@ -19,105 +19,115 @@
 
           <div class="container p-3">
 
+
+
             <form>
               <!-- Search bar 여긴 검색 -->
-              <div class="d-flex align-items-center mx-2">
+              <div class="container m-2" style="font-weight: bold;">
+                <div class="d-flex m-3 align-items-center">
 
-                <select class="form-select mx-2" name="search"
-                  style="font-size: 25px; width: 300px; height: 50px; font-weight: bold;">
-                  <option>카테고리 선택</option>
-                  <option value="EFFECT">효과</option>
-                  <option value="MANUFACTURE">제조사</option>
-                </select>
+                  <select class="form-select mx-2" name="search"
+                    style="font-size: 20px; width: 180px; height: 50px; font-weight: bold;">
+                    <option>카테고리 선택</option>
+                    <option value="EFFECT">효과</option>
+                    <option value="MANUFACTURE">제조사</option>
+                  </select>
 
-                <input class="form-control me-2 mt-auto mb-auto"
-                  style="font-size: 25px; width: 150px; height: 50px; font-weight: bold;" name="words" type="search"
-                  placeholder="Search..." aria-label="Search" id="keydownEnter">
-                <button class="btn btn-light btn-outline-success mt-auto mb-auto font-weight-bold" type="submit"
-                  formaction="/search/selectsupp" id="keydownEnter"
-                  style="font-size: 25px; width: 100px; height: 50px; font-weight: bold;">검색</button>
+                  <input class="form-control me-2 mt-auto mb-auto" style="font-size: 20px; width: 150px; height: 50px; "
+                    name="words" type="search" placeholder="Search..." aria-label="Search" id="keydownEnter">
+                  <button class="btn btn-light btn-outline-secondary mt-auto mb-auto" type="submit"
+                    formaction="/search/selectsupp" id="keydownEnter"
+                    style="font-size: 20px; width: 100px; height: 50px;" formmethod="post">검색</button>
+
+                </div>
+
+                <% HashMap params=(HashMap)request.getAttribute("params"); String
+                  searchStr=(String)params.getOrDefault("search", "" ); HashMap
+                  result=(HashMap)request.getAttribute("result"); %>
 
 
-
-
-              </div>
-              <table class="table table-striped table-sm">
-                <thead>
-                  <tr>
-                    <th></th>
-                    <th>제품명</th>
-                    <th>대표 효과</th>
-                    <th>상세</th>
-                    <sec:authorize access="hasRole('ROLE_USER')">
-                      <th>리뷰</th>
-                    </sec:authorize>
+                  <% Paginations paginations=(Paginations)result.get("paginations"); %>
                     <sec:authorize access="hasRole('ROLE_ADMIN')">
-                      <th>삭제</th>
+                      <div class="card m-3 p-3 justify-content-center">
+                        <div>총 레코드 수 :
+                          <%= paginations.getTotalCount() %>
+                        </div>
+                      </div>
                     </sec:authorize>
-                  </tr>
-                </thead>
-                <tbody class="mt-auto mb-auto">
-                  <% HashMap params=(HashMap)request.getAttribute("params"); String
-                    searchStr=(String)params.getOrDefault("search", "" ); HashMap
-                    result=(HashMap)request.getAttribute("result"); %>
-                    <% ArrayList resultList=(ArrayList)result.get("resultList"); for(int i=0; i < resultList.size();
-                      i=i+1) { HashMap record=(HashMap)resultList.get(i); %>
-                      <tr>
-                        <td><img src='<%= record.get("LOCATION") %>' alt='<%= record.get("PRODUCT") %>'
-                            class="square-image" width="100px" height="100%"></td>
-                        <td>
-                          <%= record.get("PRODUCT") %>
-                        </td>
-                        <td>
-                          <%= record.get("EFFECT") %>
-                        </td>
-                        <td><button class="btn btn-success mt-auto mb-auto" type="submit"
-                            formaction='/supp/selectspec/<%= record.get("SUPP_ID") %>'
-                            value='<%= record.get("SUPP_ID") %>' name='SUPP_ID'>상세</button></td>
-                        <sec:authorize access="hasRole('ROLE_USER')">
-                          <td><button class="btn btn-success mt-auto mb-auto" type="submit"
-                              formaction='/reviews/wholelistselectDetail/<%= record.get("SUPP_ID") %>'
-                              value='<%= record.get("SUPP_ID") %>' name='SUPP_ID'>리뷰</button></td>
-                        </sec:authorize>
-                        <sec:authorize access="hasRole('ROLE_ADMIN')">
-                          <td><button class="btn btn-success mt-auto mb-auto" type="submit"
-                              formaction='/supp/deleteandlist/<%= record.get("SUPP_ID") %>'
-                              value='<%= record.get("SUPP_ID") %>' name='SUPP_ID'>삭제</button></td>
-                        </sec:authorize>
-                      </tr>
-                      <% } %>
-                </tbody>
-              </table>
-              <sec:authorize access="hasRole('ROLE_ADMIN')">
-                <div class="container-fluid">
-                  <div class="row justify-content-start align-items-center">
-                    <div class="col-3">
-                      <button class="btn btn-success mt-auto mb-auto" type="subtmit"
-                        formaction="/supp/listadd">추가</button>
+                    <div class="container content-center p-5">
+                      <table class="table table-hover p-2">
+                        <thead class="table-primary">
+                          <tr class="h5 align-middle">
+                            <th></th>
+                            <th style="font-weight: bold;">제품명</th>
+                            <th style="font-weight: bold;">대표 효과</th>
+                            <th style="font-weight: bold;">상세</th>
+                            
+                            <sec:authorize access="hasRole('ROLE_ADMIN')">
+                              <th>삭제</th>
+                            </sec:authorize>
+                          </tr>
+                        </thead>
+                        <tbody class="">
+                          <% ArrayList resultList=(ArrayList)result.get("resultList"); for(int i=0; i <
+                            resultList.size(); i=i+1) { HashMap record=(HashMap)resultList.get(i); %>
+
+                            <tr>
+
+                              <td class="align-middle">
+                                <img src='<%= record.get("LOCATION") %>' alt='<%= record.get("PRODUCT") %>'
+                                  class="img-fluid rounded" width="200">
+                              </td>
+                              <td class="align-middle">
+                                <%= record.get("PRODUCT") %>
+                              </td>
+                              <td class="align-middle">
+                                <%= record.get("EFFECT") %>
+                              </td>
+                              <td class="align-middle"><button class="btn btn-outline-primary mt-auto mb-auto" type="submit"
+                                  formaction='/supp/selectspec/<%= record.get("SUPP_ID") %>'
+                                  value='<%= record.get("SUPP_ID") %>' name='SUPP_ID' id="suppdetail"
+                                  style="font-weight: bold;" type="hidden" formmethod="post">상세</button></td>
+                              
+                              <sec:authorize access="hasRole('ROLE_ADMIN')">
+                                <td class="align-middle"><button class="btn btn-outline-danger mt-auto mb-auto" type="submit"
+                                    formaction='/supp/deleteandlist/<%= record.get("SUPP_ID") %>'
+                                    value='<%= record.get("SUPP_ID") %>' name='SUPP_ID'
+                                    style="font-weight: bold;"type="hidden" formmethod="post">삭제</button></td>
+                              </sec:authorize>
+                            </tr>
+                            <% } %>
+                        </tbody>
+                      </table>
                     </div>
-                  </div>
-                </div>
-              </sec:authorize>
-              <!-- pagination을 loop로 뽑아내기 -->
+              </div>
 
-              <% Paginations paginations=(Paginations)result.get("paginations"); %>
-                <div> 총 레코드 수 : <%= paginations.getTotalCount() %>
+              
+                <div class="m-3">
+                  <sec:authorize access="hasRole('ROLE_ADMIN')">
+                    <button class="d-block mx-auto btn btn-success align-middle p-2" type="subtmit"
+                      formaction="/supp/listadd">추가</button>
+                  </sec:authorize>
+                  <!-- pagination을 loop로 뽑아내기 -->
                 </div>
-                <nav aria-label="Page navigation">
-                  <ul class="pagination">
-                    <li class="page-item"><a class="page-link"
-                        href='/supp/wholelist?currentPage=<%= paginations.getPreviousPage() %>'>Previous</a></li>
-                    <% for (int i=paginations.getBlockStart(); i <=paginations.getBlockEnd() ; i=i+1){ %>
-                      <li class="page-item"><a class="page-link" href='/supp/wholelist?currentPage=<%= i %>'>
-                          <%= i %>
-                        </a></li>
-                      <% } %>
-                        <li class="page-item"><a class="page-link"
-                            href='/supp/wholelist?currentPage=<%= paginations.getNextPage() %>'>Next</a>
-                        </li>
+                <div class="m-3">
+                  <nav aria-label="Page navigation">
+                    <ul class="justify-content-center pagination align-middle p-2">
+                      <li class="page-item"><a class="page-link"
+                          href='/supp/wholelist?currentPage=<%= paginations.getPreviousPage() %>'>Previous</a></li>
+                      <% for (int i=paginations.getBlockStart(); i <=paginations.getBlockEnd() ; i=i+1){ %>
+                        <li class="page-item"><a class="page-link" href='/supp/wholelist?currentPage=<%= i %>'>
+                            <%= i %>
+                          </a></li>
+                        <% } %>
+                          <li class="page-item"><a class="page-link"
+                              href='/supp/wholelist?currentPage=<%= paginations.getNextPage() %>'>Next</a>
+                          </li>
 
-                  </ul>
-                </nav>
+                    </ul>
+                  </nav>
+                </div>
+              
 
 
             </form>

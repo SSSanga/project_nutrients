@@ -67,8 +67,6 @@
 	<update id="updateInquiry" parameterType="Map">
 		UPDATE inquiry
 		SET
-		WRITING_DATE = NOW(),
-		CONTENT = #{CONTENT},
 		RESPONSE = #{RESPONSE},
 		RESPONSE_DATE = #{RESPONSE_DATE},
 		ADMINE_ID = #{ADMINE_ID}

@@ -27,9 +27,9 @@ public class SecurityConfiguration {
             httpSecurity.formLogin(login -> login.loginPage("/members/loginForm") // 로그인 하지 않은 사람이 로그인한 후에 접근 가능한 페이지를 눌렀을때 로그인 폼을 띄워라
                             .failureUrl("/members/loginForm?fail=true")  // 이게 맞는 건가?
                             .loginProcessingUrl("/login") //바꾸면 안됨 절대로
-                            .defaultSuccessUrl("/main/main")); //로그인 성공하고 넘어가는 페이지 컨트롤러
+                            .defaultSuccessUrl("/")); //로그인 성공하고 넘어가는 페이지 컨트롤러
             httpSecurity.logout(logout -> logout
-                            .logoutSuccessUrl("/main/main")
+                            .logoutSuccessUrl("/")
                             .invalidateHttpSession(true)
                             .deleteCookies("JSESSIONID"));
 

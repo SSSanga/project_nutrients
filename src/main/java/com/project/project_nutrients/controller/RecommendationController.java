@@ -28,6 +28,13 @@ public class RecommendationController {
     @Autowired
     RecommService recommservice;
 
+    @GetMapping("/list")
+    public ModelAndView wholelist(@RequestParam Map params, ModelAndView modelAndView) {
+        
+        modelAndView.setViewName("/WEB-INF/views/project/supplist/recommenlist.jsp");
+        return modelAndView;
+    }
+
     @GetMapping("/effectflag/{EFFECT_FLAG}")
     public ModelAndView recommendation(@PathVariable String EFFECT_FLAG, @RequestParam Map parmas,
             ModelAndView modelAndView) {

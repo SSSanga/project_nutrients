@@ -1,5 +1,5 @@
-<%@ page import="java.util.HashMap, java.util.ArrayList" %>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="java.util.HashMap, java.util.ArrayList, com.project.project_nutrients.utils.Paginations" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,10 +16,19 @@
 <%@ include file="/WEB-INF/views/project/header.jsp" %>
 
     <% HashMap params=(HashMap)request.getAttribute("params"); String searchStr=(String)params.getOrDefault("search", ""
-        ); HashMap result=(HashMap)request.getAttribute("result"); %>                            
+        ); HashMap result=(HashMap)request.getAttribute("result"); %>
+        
+        <% Paginations paginations=(Paginations)result.get("paginations"); %>
+          
+                                
         <form action="" method="">
         <div class="container">
-                        <h2>MembersList</h2>
+            <h2>MembersList</h2>
+            <div class="card m-3 p-3 justify-content-center">
+                <div>총 회원 수 : <%= paginations.getTotalCount() %> 명
+                </div>
+              </div>  
+                        
                         <table class="table">
                             <thead>
                                 <tr>
@@ -88,12 +97,12 @@
                             </tbody>
                         </table>
                         <nav aria-label="Page navigation">
-                            <ul class="pagination">
-                                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item"><a class="page-link" href='/members/memberList?currentPage=<%= paginations.getPreviousPage() %>'>Previous</a></li>
+                                <% for (int i=paginations.getBlockStart(); i <=paginations.getBlockEnd() ; i=i+1){ %>
+                                <li class="page-item"><a class="page-link" href='/members/memberList?currentPage=<%= i %>'><%= i %></a></li>
+                                <% } %>
+                                <li class="page-item"><a class="page-link" href='/members/memberList?currentPage=<%= paginations.getNextPage() %>'>Next</a></li>
                             </ul>
                         </nav>
                     </div>

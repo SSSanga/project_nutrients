@@ -20,13 +20,13 @@ import java.util.UUID;
 import com.project.project_nutrients.service.MainService;
 
 @Controller
-@RequestMapping("/main")
+@RequestMapping("")
 
 public class MainController {
     @Autowired
     MainService mainService;
 
-    @GetMapping({"/", "/home", "/main"})
+    @GetMapping("/")
     public ModelAndView main(ModelAndView modelAndView){
         modelAndView.setViewName("/WEB-INF/views/mainpage.jsp");
         return modelAndView;

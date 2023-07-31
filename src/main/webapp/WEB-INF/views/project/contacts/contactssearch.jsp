@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-    <%@ page import="java.util.HashMap, java.util.ArrayList, com.project.project_nutrients.utils.Paginations" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+    <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+        <%@ page import="java.util.HashMap, java.util.ArrayList, com.project.project_nutrients.utils.Paginations" %>
         <!DOCTYPE html>
         <html lang="en">
 
@@ -34,17 +35,15 @@
                             <button type="button" class="btn btn-primary mb-3 me-2">검색</button>
                            </div> -->
 
-                      
-                            <div class="input-group mb-3">
-                                <form>
-                                    <select class="form-select" name="searchType">
-        
-                                        <option value="CONTENT">내용</option>
-                                    </select>
-                                    <input type="search" name="words" value="" class="form-control" placeholder="Search..." id="keydownEnter">
-                                    <button class="btn btn-primary" type="submit" formaction="/contacts/contactsselectSearch">검색</button>
-                                </form>
-                            </div>
+                           <div class="d-flex align-items-center mx-2">
+                            <select class="form-select mx-2" name="searchType" style="font-size: 15px; width: 100px; height: 40px; font-weight: bold;">
+                                <option value="CONTENT">내용</option>
+                            </select>
+                            <input type="search" name="words" value="" class="form-control me-2 mt-auto mb-auto" placeholder="Search..." 
+                            style="font-size: 15px; height: 40px; font-weight: bold;" aria-label="Search" id="keydownEnter">
+                            <button class="btn btn-outline-secondary mt-auto mb-auto font-weight-bold" type="submit" 
+                            formaction="/contacts/contactsselectSearch" style="font-size: 15px; width: 100px; height: 40px; font-weight: bold;">검색</button>
+                         </div>
 
                           
                         <div class="d-flex justify-content-start align-items-end">
@@ -56,6 +55,9 @@
                                     <th scope="col">제목</th>
                                     <th scope="col">등록일</th>
                                     <th scope="col">관리자 댓글</th>
+                                    <sec:authorize access="hasRole('ROLE_ADMIN')">  
+                                    <th scope="col">삭제</th>
+                                    </sec:authorize>
                                 </tr>
                                </thead>
                             
@@ -80,25 +82,26 @@
                                                 <td>
                                                     <%= record.get("WRITING_DATE") %>
                                                 </td>
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <div class="mb-2">
-                                                            <%= record.get("Response") %>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td><button class= "btn btn-success mt-auto mb-auto" formaction='/contacts/contactsselectDetail/<%= record.get("INQUIRY_ID") %>' value='<%= record.get("INQUIRY_ID") %>' name='INQUIRY_ID'>상세 </button></td>
-                                            </tr>  
-                                    <% } %>
+                                                <td><button class="btn btn-outline-secondary mt-auto mb-auto"
+                                                    formaction='/contacts/contactsselectDetail/<%= record.get("INQUIRY_ID") %>'
+                                                    value='<%= record.get("INQUIRY_ID") %>' name='INQUIRY_ID'>상세
+                                                </button></td>
+                                            <sec:authorize access="hasRole('ROLE_ADMIN')">    
+                                            <td><button class="btn btn-outline-secondary mt-auto mb-auto"
+                                                    formaction='/contacts/contactsdeleteAndSelectSearch/<%= record.get("INQUIRY_ID") %>'
+                                                    value='<%= record.get("INQUIRY_ID") %>' name='INQUIRY_ID'>삭제
+                                                </button></td>
+                                            </sec:authorize>
+                                        </tr>
+                                        <% } %>
                                 </tbody>
                                
                             </table>
 
-
-                            <div class="p-5 justify-content-end">
-                                <button type="submit" class="btn btn-primary"
-                                    formaction="/contacts/contactswrite">문의 작성 GO!</button>
-                              </div>
+                              <div class="d-flex justify-content-end align-items-end">
+                                <button type="submit" class="btn btn-outline-secondary" formaction="/contacts/contactswrite">문의 작성
+                                </button>
+                            </div>
                           
                         
                     </main>

@@ -7,6 +7,7 @@
     FROM membersandadmin
     where ID = #{ID}
 	</select>
+ 
 
 <!-- sing up -->
 <insert id="membersinsert" parameterType="Map">
@@ -34,6 +35,17 @@ INSERT INTO membersandadmin
     SELECT UNIQUE_ID, NAME, ID, PASSWORD, BIRTHDATE, AGE, SEX, ADDRESS, PHONE, REGISTRATIONDATE, EMAIL, ADMINE_ID, HISTORY_ID  
     FROM membersandadmin
 </select>
+<!-- 마이페이지 페이지네이션을 위한 카운트 =  총 회원수 -->
+    <select id="selectcount" parameterType="Map" resultType="int">
+    SELECT COUNT(*)
+    FROM membersandadmin;
+    </select>
+    <!-- 마이페이지 페이지네이션을 위한 페이지 limit -->
+    <select id="selectwithPagination" parameterType="Map" resultType="Map">
+    SELECT UNIQUE_ID, NAME, ID, PASSWORD, BIRTHDATE, AGE, SEX, ADDRESS, PHONE, REGISTRATIONDATE, EMAIL, ADMINE_ID, HISTORY_ID  
+    FROM membersandadmin
+    LIMIT #{pageBegin},#{pageScale}
+    </select>
 
 <delete id="memberdelete" parameterType="Map">
   DELETE FROM membersandadmin

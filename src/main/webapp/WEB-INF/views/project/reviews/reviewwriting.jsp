@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+    <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+        <%@ page import="java.util.HashMap, java.util.ArrayList, com.project.project_nutrients.utils.Paginations" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,22 +41,17 @@
                            
                         </div>
                         <div class="mb-3">
-                            <label for="content" class="form-label">영양제 아이디 </label>
-                            <input class="form-control" id="content" rows="5" name="SUPP_ID">
-                           
-                        </div>
-                        <div class="mb-3">
                             <label for="content" class="form-label">멤버 아이디</label>
                             <input class="form-control" id="content" rows="5" name="UNIQUE_ID">
                           
                         </div> 
                         <div class="mb-3">
                             <label for="image" class="form-label">이미지 </label>
-                            <input class="form-control" type="file" id="image"  rows="5" name="IMAGE">
+                            <input class="form-control" type="file" id="image"  value ="" rows="5" name="IMAGES">
                             
                         
                         </div>
-                         <button type="submit" class="btn btn-primary" formaction="/reviews/reviewinsertAndSelect">저장하기</button>
+                         <button type="submit" class="btn btn-outline-secondary" formaction="/reviews/reviewinsertAndSelect">저장하기</button>
                     </form>
                 </div>
             </div>

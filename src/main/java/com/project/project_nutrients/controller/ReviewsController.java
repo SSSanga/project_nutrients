@@ -71,15 +71,16 @@ public class ReviewsController {
         return modelAndView;
     }
 
-    @GetMapping("/wholelistselectDetail/{SUPP_ID}")
-    public ModelAndView wholelistselectDetail(@PathVariable String SUPP_ID
-                        , @RequestParam Map params, ModelAndView modelAndView) {
-        Object result = reviewsService.wholelistselectDetail(SUPP_ID, params);
-        modelAndView.addObject("params", params);
-        modelAndView.addObject("result", result);
-        modelAndView.setViewName("/WEB-INF/views/project/reviews/review1.jsp");
-        return modelAndView;
-    }
+        // review erd에서 SUPP_ID 지움 
+    // @GetMapping("/wholelistselectDetail/{SUPP_ID}")
+    // public ModelAndView wholelistselectDetail(@PathVariable String SUPP_ID
+    //                     , @RequestParam Map params, ModelAndView modelAndView) {
+    //     Object result = reviewsService.wholelistselectDetail(SUPP_ID, params);
+    //     modelAndView.addObject("params", params);
+    //     modelAndView.addObject("result", result);
+    //     modelAndView.setViewName("/WEB-INF/views/project/reviews/review1.jsp");
+    //     return modelAndView;
+    // }
 
 
     @GetMapping("/review2")

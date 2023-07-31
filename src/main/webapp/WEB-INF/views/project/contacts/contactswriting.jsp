@@ -1,4 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+    <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+        <%@ page import="java.util.HashMap, java.util.ArrayList, com.project.project_nutrients.utils.Paginations" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,7 +36,7 @@
                             <input class="form-control" id="content" rows="5" name="UNIQUE_ID">
                         </div>
                         
-                        <button type="submit" class="btn btn-primary" formaction="/contacts/contactsinsertAndSelect">저장하기</button>
+                        <button type="submit"  class="btn btn-outline-secondary" formaction="/contacts/contactsinsertAndSelect">저장하기</button>
                     </form>
                 </div>
             </div>

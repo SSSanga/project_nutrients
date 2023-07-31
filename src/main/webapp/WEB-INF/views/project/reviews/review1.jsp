@@ -1,6 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-    <%@ page import="java.util.HashMap, java.util.ArrayList, com.project.project_nutrients.utils.Paginations" %>
-
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+    <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+        <%@ page import="java.util.HashMap, java.util.ArrayList, com.project.project_nutrients.utils.Paginations" %>
 
         <!DOCTYPE html>
         <html lang="en">
@@ -17,6 +17,7 @@
             <!-- header -->
             <%@ include file="/WEB-INF/views/project/header.jsp" %>
                 <form class="d-flex" action="" method="">
+                    
                     <% HashMap params=(HashMap)request.getAttribute("params"); String
                         searchStr=(String)params.getOrDefault("search", "" ); HashMap
                         result=(HashMap)request.getAttribute("result"); %>
@@ -25,27 +26,30 @@
                             <input class="form-control" type="hidden" id="REVIEW_ID" name="REVIEW_ID">
                         </div>
                         <div class="container py-4">
-                            <h1 class="text-center" style="font-weight: bold;">Reviews</h1>
+                            <h1 class=" text-center mt-2" style="font-weight: bold;">Review</h1>
                             <hr style="border-top: 4px solid;">
 
                             <div class="row">
-                                <div class="mb-3 pt-3">
+                                <div class="mb-3 pt-3 ">
                                     <input class="form-control" type="hidden" id="REVIEW_ID" name="REVIEW_ID">
                                 </div>
-                                <div class="col-md-8 mx-auto">
-                                    <div class="card mb-4 pt-4">
+                                
+                                    <div class="card mb-3 pt-3">
                                         <div class="card-body">
                                             <h5 class="card-title mt-2" style="font-weight: bold;">
                                                 <%= result.get("TITLE") %>
                                             </h5>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="card mb-4 pt-4">
+                              
+                                <div class="card mb-3 pt-3">
                                     <td>
-                                    <img src='<%= result.get("IMAGES") %>' alt='<%= result.get("REVIEW_ID") %>' class="card-img-top"
-                                            style="width: 100px;">
+                                    <img src='<%= result.get("IMAGES") %>' id="IMAGES" name="IMAGES" alt='<%= result.get("REVIEW_ID") %>' class="card-img-top"
+                                            style="width: 200px;">
                                     </td>
+
+                                      </td>
+
                                     <div class="card-body">
                                         <td class="card-text pb-2">
                                             <%= result.get("CONTENT") %>
@@ -68,8 +72,8 @@
                                         <h6 class=" pt-5 mb-3" style="font-weight: bold;">Comment</h6>
                                         <input type="text" class="form-control" id="comment" rows="3"></input>
                                     </div>
-                                    <button type="submit" class="btn btn-primary">댓글 등록</button>
-                                    <button type="submit" class="btn btn-primary"
+                                    <button type="submit" class="btn btn-outline-secondary">댓글 등록</button>
+                                    <button type="submit" class="btn btn-outline-secondary"
                                         formaction="/reviews/reviewlist">돌아가기</button>
                                     <!-- 이게 댓글로 어떻게 달리는거지? -->
                                     <!-- Add more comments as needed -->
@@ -79,8 +83,7 @@
                         </div>
                 </form>
 
-                <!-- Footer -->
-                <%@ include file="/WEB-INF/views/project/footer.jsp" %>
+        <!-- Footer -->
+        <%@ include file="/WEB-INF/views/project/footer.jsp" %>
         </body>
-
         </html>

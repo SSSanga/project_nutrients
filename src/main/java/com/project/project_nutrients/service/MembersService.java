@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.project.project_nutrients.dao.SharedDao;
 import com.project.project_nutrients.utils.Commons;
+import com.project.project_nutrients.utils.Paginations;
 
 @Service
 @Transactional
@@ -97,6 +98,37 @@ public class MembersService {
         
         HashMap result = new HashMap<>();
         result.put("resultList", sharedDao.getList(sqlMapId, dataMap));
+        return result;
+    }
+    // 1. 페이지네이션 위한 count
+    public Object memberCnt (Map dataMap){
+        String sqlMapId = "Members.selectcount";
+
+        Object result = sharedDao.getOne(sqlMapId, dataMap);
+        return result;
+    }
+    // 2. memberlist + pagination 사용
+    public Map membslistWithPaginations(Map dataMap) {
+       
+        String sqlMapId = "Members.selectwithPagination"; // list 불러오기 + pagination
+        int totalCount = (int) this.memberCnt(dataMap); // count
+
+        int currentPage = 1;
+        if (dataMap.get("currentPage") != null) {
+            currentPage = Integer.parseInt((String) dataMap.get("currentPage")); // from client in param
+        }
+        // from client의 params로 들어올것.
+        Paginations paginations = new Paginations(totalCount, currentPage);
+        HashMap result = new HashMap<>();
+
+        result.put("paginations", paginations); // paginations 전체 내역 포함 = 페이지에 대한 정보.
+        // datamap 위치에서 limit 시작레코드 위치, 몇개 출력할건지의 정보 이건 paginations 안에 있음.
+        // paginations의 pageScale = 레코드 표현개수, pageBegin = 페이지 개수
+        dataMap.put("pageScale", paginations.getPageScale());
+        dataMap.put("pageBegin", paginations.getPageBegin());
+
+        result.put("resultList", sharedDao.getList(sqlMapId, dataMap)); // 표현된 레코드 정보.
+
         return result;
     }
 
