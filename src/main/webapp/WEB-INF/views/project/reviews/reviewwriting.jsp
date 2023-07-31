@@ -1,6 +1,7 @@
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
     <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
         <%@ page import="java.util.HashMap, java.util.ArrayList, com.project.project_nutrients.utils.Paginations" %>
+        <sec:authentication property="principal" var="userDetailsBean" />
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,9 +27,7 @@
                     <form>
                         
                         <div class="mb-3">
-                            <label for="content" class="form-label">아이디</label>
-                            <input class="form-control" id="content" rows="5" name="REVIEW_ID" >
-                            
+                            <input class="form-control" id="content" type="hidden" rows="5" name="REVIEW_ID" >                            
                         </div>
                         <div class="mb-3">
                             <label for="title" class="form-label">제목 </label>
@@ -41,8 +40,8 @@
                            
                         </div>
                         <div class="mb-3">
-                            <label for="content" class="form-label">멤버 아이디</label>
-                            <input class="form-control" id="content" rows="5" name="UNIQUE_ID">
+                            <label for="content" class="form-label">회원 아이디</label>
+                            <input class="form-control" id="content" rows="5" name="UNIQUE_ID" value="${userDetailsBean.memberID}"> 
                           
                         </div> 
                         <div class="mb-3">
