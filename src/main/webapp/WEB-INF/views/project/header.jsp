@@ -48,11 +48,11 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="d-flex m-3">
+                        <div class="nav-link d-flex m-3">
                         <sec:authorize access="isAuthenticated()">
                         <li class = "nav-link">
-                        <div>User ID : ${userDetailsBean.username}</div>
-                        <div>Name : ${userDetailsBean.memberName}</div>
+                        User ID : ${userDetailsBean.memberID}
+                        Name : ${userDetailsBean.memberName}
                         </li>
                         </sec:authorize>
                         </div>
