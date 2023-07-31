@@ -8,7 +8,7 @@
 
 
 ## 구현 화면
-![Main page](https:src/main/resources/static/images/main page base.PNG)
+![Main page](https:/images/main page base.PNG)
 
 
 
