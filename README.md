@@ -6,9 +6,9 @@
 
 [TAB_영양제 추천 사이트](http://192.168.0.70:8080/)
 
-## 구현 화면
 
-<img src="/Docs/databases/![main page](https:/images/main page base.PNG)"  width="700" height="400">
+## 구현 화면
+![Main page](https:src/main/resources/static/images/main page base.PNG)
 
 
 
