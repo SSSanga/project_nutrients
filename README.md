@@ -9,8 +9,7 @@
 
 ## 구현 화면
 
-![image](https://github.com/SSSanga/project_nutrients/assets/132973289/0dc71236-4382-4bc9-869d-ada6678814a6)
-
+![image](https://github.com/SSSanga/project_nutrients/assets/132973289/a6ea1c72-920e-4b2c-b332-b2915cdec0ec)
 
 
 
