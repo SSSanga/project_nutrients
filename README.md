@@ -89,7 +89,9 @@
 [membersMapper.xml]https://github.com/SSSanga/project_nutrients/blob/main/src/main/resources/sqlmapper/mysql/membersMapper.xml
 details>
 
-## 실습소감
+## 실습 소감
+
+- 기간: 7월 7일~ 7월 28일
 
 ### 💊김상아 
 ### 💊조아라
