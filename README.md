@@ -31,7 +31,7 @@
 
 나현탁
 <details>
-<summary>Main</summary>
+<summary>Main page base </summary>
 [mainpage.jsp](https://github.com/SSSanga/project_nutrients/blob/main/src/main/webapp/WEB-INF/views/mainpage.jsp)
 [main.css](https://github.com/SSSanga/project_nutrients/tree/main/src/main/resources/static/css)
 [signup.css](https://github.com/SSSanga/project_nutrients/blob/main/src/main/resources/static/css/signup.css) 
@@ -53,16 +53,18 @@
 [contactsMapper.xml](https://github.com/SSSanga/project_nutrients/blob/main/src/main/resources/sqlmapper/mysql/contactsMapper.xml)
 </details>
 
+<details>
+<summary>MEMBERS</summary>
+[memberslist.jsp](https://github.com/SSSanga/project_nutrients/blob/main/src/main/webapp/WEB-INF/views/project/members/memberslist.jsp)
+</details>
 
 김하늘
-- [code base]
+[code base]
 <details>
 <summary>MEMBERS</summary>
 [MembersController.java] (https://github.com/SSSanga/project_nutrients/blob/main/src/main/java/com/project/project_nutrients/controller/MembersController.java)
 [MembersService.java] (https://github.com/SSSanga/project_nutrients/blob/main/src/main/java/com/project/project_nutrients/service/MembersService.java)
-[memberslist.jsp]
 </details>
-
 
 
 
