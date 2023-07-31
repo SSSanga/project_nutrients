@@ -80,9 +80,7 @@
                                                 style="font-size: 20px; font-weight: bold;">회원가입</button>
                                         </li>
                                     </sec:authorize>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
+
                                     <sec:authorize access="isAuthenticated()">
                                         <sec:authorize access="hasRole('ROLE_ADMIN')">
                                             <li class="dropdown-item"><button id="singupButton" class="dropdown-item"
