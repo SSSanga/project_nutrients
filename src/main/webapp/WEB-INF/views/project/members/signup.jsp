@@ -22,66 +22,93 @@
     <div class="container">
         <form id="insertForm" action="/members/signupProc" method="">
             <div class="mb-3">
-                <label class="form-label" for="commonCodeId">UNIQUE_ID</label>
-                <input class="form-control" type="text" id="commonCodeId" name="UNIQUE_ID" placeholder="유니크 아이디 입니다. 손대지 마세요. type을 hidden으로 하고 데이터를 uuid로 받을까 고민중입니다.">
+                <input class="form-control" type="hidden" id="commonCodeId" name="UNIQUE_ID">
             </div>
             <div class="mb-3">
-                <label class="form-label" for="">NAME</label>
+                <label class="form-label" for=""><strong>NAME</strong></label>
                 <input class="form-control" type="text" id="name" name="NAME" placeholder="이름을 입력해 주세요.">
                 <div id="nameError" class="error-message"></div>
             </div>
             <div class="mb-3">
-                <label class="form-label" for="r">ID</label>
+                <label class="form-label" for="r"><strong>ID</strong></label>
                 <input class="form-control" id="ID" type="id" name="ID" placeholder="아이디를 입력해 주세요.">
                 <div id="idError" class="error-message"></div>
             </div>
             <div class="mb-3">
-                <label class="form-label" for="r">PASSWORD</label>
+                <label class="form-label" for="r"><strong>PASSWORD</strong></label>
                 <input class="form-control" id="password" type="password" name="PASSWORD" placeholder="비밀번호를 입력해 주세요.">
                 <div id="passwordError" class="error-message"></div>
             </div>
             <div class="mb-3">
-                <label class="form-label" for="">PASSWORD CHECK</label>
+                <label class="form-label" for=""><strong>PASSWORD CHECK</strong></label>
                 <input class="form-control" id="passwordCheck" type="password" name="" placeholder="비밀번호를 다시 입력해 주세요." >
             </div>
             <div class="mb-3">
-                <label class="form-label" for="r">BIRTHDATE</label>
+                <label class="form-label" for="r"><strong>BIRTHDATE</strong></label>
                 <input class="form-control" id="BIRTHDATE" type="date" name="BIRTHDATE" placeholder="생년월일을 입력해 주세요.">
                 <div id="passwordError" class="error-message"></div>
             </div>
             <div class="mb-3">
-                <label class="form-label" for="r">e-mail</label>
+                <label class="form-label" for="r"><strong>e-mail</strong></label>
                 <input class="form-control" id="e-mail" type="email" name="EMAIL" placeholder="ex) 1234@example.com">
                 <div id="e-mailError" class="error-message"></div>
             </div>
             <div class="mb-3">
-                <label class="form-label" for="systemCodeYn">PONE NUMBER</label>
+                <label class="form-label" for="systemCodeYn"><strong>PONE NUMBER</strong></label>
                 <input class="form-control" type="tel" id="tel" name="PHONE" placeholder="휴대폰 번호를 입력해 주세요.">
             </div>
             <div class="mb-3">
-                <label class="form-label" for="systemCodeYn">질병 이력</label>
-                <input class="form-control" type="text" id="HISTORY_ID" name="HISTORY_ID" placeholder="질병을 입력해 주세요.">
+                <label class="form-label" for="systemCodeYn"><strong>질병 이력</strong></label>
+                <div class="radio-field mb-4">
+                    <input id="gender_woman" type="radio" name="HISTORY_ID", value="history_01">
+                    <label for="gender_woman h1 " class="me-4">고혈압</label>
+                    <input id="gender_woman" type="radio" name="HISTORY_ID", value="history_02">
+                    <label for="gender_woman h1" class="me-4">심장병</label>
+                    <input id="gender_woman" type="radio" name="HISTORY_ID", value="history_03">
+                    <label for="gender_woman h1" class="me-4">당뇨</label>
+                    <input id="gender_woman" type="radio" name="HISTORY_ID", value="history_04">
+                    <label for="gender_woman h1" class="me-4">계란알레르기</label>
+                    <input id="gender_woman" type="radio" name="HISTORY_ID", value="history_05">
+                    <label for="gender_woman h1" class="me-4">해산물알레르기</label>
+                    <input id="gender_woman" type="radio" name="HISTORY_ID", value="history_06">
+                    <label for="gender_woman h1" class="me-4">갑각류알레르기</label>
+                    <input id="gender_woman" type="radio" name="HISTORY_ID", value="history_07">
+                    <label for="gender_woman h1" class="me-4">견과류알레르기</label>
+                    <input id="gender_woman" type="radio" name="HISTORY_ID", value="history_08">
+                    <label for="gender_woman h1" class="me-4">천식</label>
+                    <input id="gender_woman" type="radio" name="HISTORY_ID", value="history_09">
+                    <label for="gender_woman h1" class="me-4">신장질환</label>
+                    <input id="gender_woman" type="radio" name="HISTORY_ID", value="history_10">
+                    <label for="gender_woman h1" class="me-4">간질환</label>
+                    <div class="mt-3">
+                    <input id="gender_woman" type="radio" name="HISTORY_ID", value="history_11">
+                    <label for="gender_woman h1" class="me-4">혈관질환</label>
+                    <input id="gender_woman" type="radio" name="HISTORY_ID", value="history_12">
+                    <label for="gender_woman h1" class="me-4">비염</label>
+                    <input id="gender_woman" type="radio" name="HISTORY_ID", value="history_13">
+                    <label for="gender_woman h1" class="me-4">꽃가루알레르기</label>
+                    <input id="gender_woman" type="radio" name="HISTORY_ID", value="history_14">
+                    <label for="gender_woman h1" class="me-4">등푸른생선알레르기</label>
+                    <input id="gender_woman" type="radio" name="HISTORY_ID", value="history_15">
+                    <label for="gender_woman h1" class="me-4">과일알레르기</label>
+                </div>
+            </div>
             </div>
             <!-- 수정해야 합니다. -->
             <div class="mb-3">
-                <label class="form-label" for="useYn">ADDRESS</label>
-                <input type="text" id="addressInput" />
-                <button onclick="searchAddress()">주소 검색</button>
+                <label class="form-label" for="useYn"><strong>ADDRESS</strong></label>
                 <input class="form-control" type="text" id="addre" name="ADDRESS">
             </div>
             <!-- 여기까지 -->
-            <div class="radio-field mt-4 mb-4">
+            <label class="form-label" for="systemCodeYn"><strong>성별 선택</strong></label>
+            <div class="radio-field mb-4">
                 <input id="gender_man" type="radio" name="SEX", value="남성">
                 <label for="gender_man h1">남성</label>
                 <input id="gender_woman" type="radio" name="SEX", value="여성">
                 <label for="gender_woman h1">여성</label>
                 <div id="genderError" class="error-message"></div>
             </div>
-            <label for="auth" class="sr-only">Auth</label>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="auth" id="SYSTEM_MANAGER" value="SYSTEM_MANAGER">
-                <label class="form-check-label" for="ROLE_MANAGER">SYSTEM MANAGER</label>
-              </div>
+            <label for="auth" class="sr-only"><strong>Auth</strong></label>
               <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="auth" id="ROLE_ADMIN" value="ROLE_ADMIN">
                 <label class="form-check-label" for="ROLE_ADMIN">ADMIN</label>
@@ -98,22 +125,6 @@
             </div>
         </form>
     </div>
-    <script>
-        function searchAddress() {
-          var address = document.getElementById("addressInput").value;
-          
-          // 카카오 맵 API를 사용하여 주소 검색 로직을 구현합니다.
-          // 예시로서, 주소를 검색하고 결과를 콘솔에 출력하는 기능을 수행합니다.
-          var geocoder = new kakao.maps.services.Geocoder();
-          geocoder.addressSearch(address, function (result, status) {
-            if (status === kakao.maps.services.Status.OK) {
-              console.log(result);
-            } else {
-              console.log("검색에 실패했습니다.");
-            }
-          });
-        }
-      </script>
           <!-- Footer -->
     <%@ include file="/WEB-INF/views/project/footer.jsp" %>
 </body>
