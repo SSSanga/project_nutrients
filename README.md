@@ -143,7 +143,9 @@
 ⁉️ 팀프로젝트를 통해 vscode에서 controller, service, xml,jsp와 databases 연동을 시키는 것 혼자 했으면 에러상황을 해결하지 못하고 포기했을 것 같은데 팀원들 덕분에 오류해결하는 방법들이 나에게 큰도움이 되었다.
 
 ### 💊김하늘
-![image](https://github.com/SSSanga/project_nutrients/assets/132973456/d4352988-67aa-443e-a348-b7829affadd0)
+
+![image](https://github.com/SSSanga/project_nutrients/assets/132973456/981d9e5d-9fbf-4bcc-9f0f-424b739c8717)
+
 
 ⁉️ 저는 이번 프로젝트를 하면서 비밀번호를 암호화 하고, 회원가입시 UUID를 데이터 베이스로 받는 과정이 매우 복잡하고 어려워서 오래 붙들고 있었기 때문에 애정이 가서 Favorite 코드로 선택했습니다.
 프로젝트 하는 내내 모두 각자의 자리에서 한사람도 부족함 없이 최선을 다해 본인의 역할을 해줘서 너무 고마웠습니다. 갑자기 sample code를 맡게 되서 막막했지만, 팀원들이 코드에만 집중할 수 있는 환경을 만들어 줬으며 제 컨디션을 위해 노력해줘서 너무 감동이었고 팀원들 덕분에 sample code를 완성할 수 있었습니다.
