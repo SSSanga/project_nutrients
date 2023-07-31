@@ -18,6 +18,7 @@
 <details>
 <summary>영양제 검색</summary>
 * [SearchController.java](https://github.com/SSSanga/project_nutrients/blob/main/src/main/java/com/project/project_nutrients/controller/SearchController.java)
+  
 * [SearchService.java](https://github.com/SSSanga/project_nutrients/blob/main/src/main/java/com/project/project_nutrients/service/SearchService.java)
 </details>
 
