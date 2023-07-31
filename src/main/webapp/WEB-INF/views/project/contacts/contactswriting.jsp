@@ -24,17 +24,17 @@
                 <div class="col-md-8 mx-auto">
                     <form>
                         <div class="mb-3">
-                            <label for="content" class="form-label">문의 아이디</label>
-                            <input class="form-control" id="content" rows="5" name="INQUIRY_ID">
+                            <input class="form-control" id="content" rows="5" name="INQUIRY_ID" type="hidden">
                         </div>
                         <div class="mb-3">
                             <label for="content" class="form-label">내용</label>
                             <input class="form-control" id="content" rows="5" style="height: 300px;" name="CONTENT">
                         </div>
                         <div class="mb-3">
-                            <label for="content" class="form-label">멤버 아이디</label>
-                            <input class="form-control" id="content" rows="5" name="UNIQUE_ID">
-                        </div>
+                            <label for="content" class="form-label">회원 아이디</label>
+                            <div class="form-control" id="content" rows="5" name="UNIQUE_ID" value="${userDetailsBean.username}">
+                                ${userDetailsBean.memberID}  </div>
+                            </div>
                         
                         <button type="submit"  class="btn btn-outline-secondary" formaction="/contacts/contactsinsertAndSelect">저장하기</button>
                     </form>

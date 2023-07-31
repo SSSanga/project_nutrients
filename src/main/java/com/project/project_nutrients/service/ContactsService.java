@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.project.project_nutrients.dao.SharedDao;
+import com.project.project_nutrients.utils.Commons;
 import com.project.project_nutrients.utils.Paginations;
 
 @Service
@@ -18,6 +19,9 @@ import com.project.project_nutrients.utils.Paginations;
 public class ContactsService {
     @Autowired
     SharedDao sharedDao;
+
+    @Autowired
+    Commons commonUtils;
 
     public String generateUUID() {
         return UUID.randomUUID().toString();
@@ -96,6 +100,7 @@ public class ContactsService {
             dataMap.put("INQUIRY_ID", uuid);
         } else{
         }
+        dataMap.put("UNIQUE_ID", commonUtils.getUserID());
         Object result = sharedDao.insert(sqlMapId, dataMap);
         return result;
     }
