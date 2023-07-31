@@ -89,7 +89,7 @@
 
 ❗ [MainService.java](https://github.com/SSSanga/project_nutrients/blob/main/src/main/java/com/project/project_nutrients/service/MainService.java)
 
-❗ [exampleMapper.xml]https://github.com/SSSanga/project_nutrients/blob/main/src/main/resources/sqlmapper/mysql/exampleMapper.xml
+❗ [exampleMapper.xml](https://github.com/SSSanga/project_nutrients/blob/main/src/main/resources/sqlmapper/mysql/exampleMapper.xml)
 </details>
 
 
@@ -109,12 +109,12 @@
 <details>
 <summary>회원가입/회원목록/로그인</summary>
   
-❗ [MembersController.java] (https://github.com/SSSanga/project_nutrients/blob/main/src/main/java/com/project/project_nutrients/controller/MembersController.java)
+❗ [MembersController.java](https://github.com/SSSanga/project_nutrients/blob/main/src/main/java/com/project/project_nutrients/controller/MembersController.java)
 
-❗ [MembersService.java] (https://github.com/SSSanga/project_nutrients/blob/main/src/main/java/com/project/project_nutrients/service/MembersService.java)
+❗ [MembersService.java](https://github.com/SSSanga/project_nutrients/blob/main/src/main/java/com/project/project_nutrients/service/MembersService.java)
 
-❗ [membersMapper.xml]https://github.com/SSSanga/project_nutrients/blob/main/src/main/resources/sqlmapper/mysql/membersMapper.xml
-details>
+❗ [membersMapper.xml](https://github.com/SSSanga/project_nutrients/blob/main/src/main/resources/sqlmapper/mysql/membersMapper.xml)
+</details>
 
 ## 실습 소감
 
