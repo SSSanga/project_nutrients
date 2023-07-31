@@ -41,8 +41,9 @@
                         </div>
                         <div class="mb-3">
                             <label for="content" class="form-label">회원 아이디</label>
-                            <input class="form-control" id="content" rows="5" name="UNIQUE_ID" value="${userDetailsBean.memberID}"> 
-                          
+                            <div class="mb-3 border rounded p-2" name="UNIQUE_ID" value="${userDetailsBean.username}">
+                                <div>${userDetailsBean.memberID}</div>
+                            </div>
                         </div> 
                         <div class="mb-3">
                             <label for="image" class="form-label">이미지 </label>
