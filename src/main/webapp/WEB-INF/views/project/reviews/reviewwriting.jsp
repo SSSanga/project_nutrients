@@ -42,14 +42,11 @@
                         <div class="mb-3">
                             <label for="content" class="form-label">회원 아이디</label>
                             <div class="mb-3 border rounded p-2" name="UNIQUE_ID" value="${userDetailsBean.username}">
-                                <div>${userDetailsBean.memberID}</div>
-                            </div>
+                            ${userDetailsBean.memberID} </div>
                         </div> 
                         <div class="mb-3">
                             <label for="image" class="form-label">이미지 </label>
                             <input class="form-control" type="file" id="image"  value ="" rows="5" name="IMAGES">
-                            
-                        
                         </div>
                          <button type="submit" class="btn btn-outline-secondary" formaction="/reviews/reviewinsertAndSelect">저장하기</button>
                     </form>
