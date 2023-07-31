@@ -138,7 +138,7 @@ public class MembersService {
         HashMap result = new HashMap<>();
         result.put("deleteCount", this.delete(dataMap));
 
-        result.putAll(this.memberList(dataMap));
+        result.putAll(this.membslistWithPaginations(dataMap));
         return result;
     }
 
@@ -154,7 +154,7 @@ public class MembersService {
 
         HashMap result = new HashMap<>();
         result.put("deleteCount", this.deleteauths(dataMap));
-        result.putAll(this.memberList(dataMap));
+        result.putAll(this.membslistWithPaginations(dataMap));
         return result;
     }
 

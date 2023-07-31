@@ -22,7 +22,7 @@ public class SecurityConfiguration {
                     .requestMatchers("/admin*").hasRole("ADMIN")
                     .requestMatchers("/carInfor/map/selectSearch").authenticated() // 로그인한 대상
                     .requestMatchers("/carInfor/map/*").hasRole("USER")
-            .anyRequest().permitAll() ; //그외 전체 대상
+                                .anyRequest().permitAll() ; //그외 전체 대상
 
             httpSecurity.formLogin(login -> login.loginPage("/members/loginForm") // 로그인 하지 않은 사람이 로그인한 후에 접근 가능한 페이지를 눌렀을때 로그인 폼을 띄워라
                             .failureUrl("/members/loginForm?fail=true")  // 이게 맞는 건가?
