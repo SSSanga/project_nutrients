@@ -27,9 +27,9 @@
 - 조아라
 <details>
 <summary>Reviews</summary>
-[ReviewsController.java] 
-[ReviewsService.java]
-[ReviewMapper.xml] 
+[ReviewsController.java](https://github.com/SSSanga/project_nutrients/blob/main/src/main/java/com/project/project_nutrients/controller/ReviewsController.java)
+[ReviewsService.java](https://github.com/SSSanga/project_nutrients/blob/main/src/main/java/com/project/project_nutrients/service/ReviewsService.java)
+[ReviewMapper.xml](https://github.com/SSSanga/project_nutrients/blob/main/src/main/resources/sqlmapper/mysql/ReviewMapper.xml)
 </details>
 
 
