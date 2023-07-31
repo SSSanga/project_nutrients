@@ -8,7 +8,8 @@
 
 
 ## 구현 화면
-![Main page](https:/images/main page base.PNG)
+
+![image](https://github.com/SSSanga/project_nutrients/assets/132973289/0dc71236-4382-4bc9-869d-ada6678814a6)
 
 
 
