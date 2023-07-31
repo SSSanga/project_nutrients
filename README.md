@@ -4,25 +4,35 @@
 
 ## 의뢰서
 
-- TAB_영양제 추천 사이트
+[TAB_영양제 추천 사이트](http://192.168.0.70:8080/)
+
+## 구현 화면
+
+<img src="/Docs/databases/![main page](https:/images/main page base.PNG)"  width="700" height="400">
+
+
+
 
 ## 팀원 및 역할
 
 - 김상아
-  - [Reviews]
-  - []
+- [Nutrients list]
+- [Recommendation]
+- [PM]
+
 
 - 나현탁
- - [Main & Detail] 
- - []
+- [Main page base] 
+- [CSS]
 
 - 조아라
-- [KeywordLists]
-- []
+- [Reviews]
+- [Contacts]
 
 - 김하늘
+- [Member]
 - [code base]
-- []
+
 
 
 ## 실습소감
