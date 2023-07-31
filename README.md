@@ -54,7 +54,8 @@
 </details>
 
 
-- 김하늘
+김하늘
+- [code base]
 <details>
 <summary>MEMBERS</summary>
 [MembersController.java] (https://github.com/SSSanga/project_nutrients/blob/main/src/main/java/com/project/project_nutrients/controller/MembersController.java)
@@ -62,7 +63,7 @@
 [memberslist.jsp]
 </details>
 
-- [code base]
+
 
 
 ## 실습소감
