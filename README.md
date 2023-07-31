@@ -24,6 +24,9 @@
 
 ## 🐾 팀원 및 역할
 
+![image](https://github.com/SSSanga/project_nutrients/assets/132973456/658fe7fb-a8b0-45ac-9b8f-480966e21a59)
+
+
 ### 💊김상아 
 -[PM]
 
