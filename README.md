@@ -16,23 +16,29 @@
 
 김상아 
 -[PM]
-
 <details>
 <summary>Nutrients list</summary>
-
+[ListController.java](https://github.com/SSSanga/project_nutrients/blob/main/src/main/java/com/project/project_nutrients/controller/ListController.java)
+[ListService.java](https://github.com/SSSanga/project_nutrients/blob/main/src/main/java/com/project/project_nutrients/service/ListService.java)
+[supplementMapper.xml](https://github.com/SSSanga/project_nutrients/blob/main/src/main/resources/sqlmapper/mysql/supplementMapper.xml)
 </details>
 
 <details>
 <summary>Recommendation</summary>
+[RecommendationController.java](https://github.com/SSSanga/project_nutrients/blob/main/src/main/java/com/project/project_nutrients/controller/RecommendationController.java)
+[RecommService.java](https://github.com/SSSanga/project_nutrients/blob/main/src/main/java/com/project/project_nutrients/service/RecommService.java) 
+</details> 
 
+나현탁
+<details>
+<summary>Main</summary>
+[mainpage.jsp](https://github.com/SSSanga/project_nutrients/blob/main/src/main/webapp/WEB-INF/views/mainpage.jsp)
+[main.css](https://github.com/SSSanga/project_nutrients/tree/main/src/main/resources/static/css)
+[signup.css](https://github.com/SSSanga/project_nutrients/blob/main/src/main/resources/static/css/signup.css) 
 </details> 
 
 
-- 나현탁
-- [Main page base]
-- [CSS]
-
-- 조아라
+조아라
 <details>
 <summary>Reviews</summary>
 [ReviewsController.java](https://github.com/SSSanga/project_nutrients/blob/main/src/main/java/com/project/project_nutrients/controller/ReviewsController.java)
