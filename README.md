@@ -12,7 +12,7 @@
 
 ## 팀원 및 역할
 
-### 😊김상아 
+### 💊김상아 
 -[PM]
 
 <details>
@@ -34,7 +34,7 @@
 [RecommService.java](https://github.com/SSSanga/project_nutrients/blob/main/src/main/java/com/project/project_nutrients/service/RecommService.java) 
 </details> 
 
-### ❓나현탁
+### 💊나현탁
 <details>
 <summary>메인 페이지 기초</summary>
 [mainpage.jsp](https://github.com/SSSanga/project_nutrients/blob/main/src/main/webapp/WEB-INF/views/mainpage.jsp)
@@ -42,7 +42,7 @@
 [signup.css](https://github.com/SSSanga/project_nutrients/blob/main/src/main/resources/static/css/signup.css) 
 </details> 
 
-### 😂조아라
+### 💊조아라
 <details>
 <summary>리뷰</summary>
 [ReviewsController.java](https://github.com/SSSanga/project_nutrients/blob/main/src/main/java/com/project/project_nutrients/controller/ReviewsController.java)
@@ -62,7 +62,7 @@
 [memberslist.jsp](https://github.com/SSSanga/project_nutrients/blob/main/src/main/webapp/WEB-INF/views/project/members/memberslist.jsp)
 </details>
 
-### 😁김하늘
+### 💊김하늘
 -[code base]
 
 <details>
@@ -92,7 +92,10 @@ details>
 
 
 ## 실습소감
+### 💊김상아 
+### 💊조아라
+팀프로젝트를 시작하며 백엔드 구현과 프론트 
 
-
+### 💊김하늘
 
 
