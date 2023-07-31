@@ -1,9 +1,9 @@
-## 🐾프로젝트 기간
+## 🐾 프로젝트 기간
 
 - 기간: 7월 7일~ 7월 28일
   
 
-## 🐾의뢰팀 홈페이지 의뢰서
+## 🐾 의뢰팀 홈페이지 의뢰서
 
 ![image](https://github.com/SSSanga/project_nutrients/assets/132973456/90cd604f-37b0-4b76-8967-2950aa8d53b4)
 ![image](https://github.com/SSSanga/project_nutrients/assets/132973456/1c049123-9104-4e51-98c2-f1cd241ec178)
@@ -12,7 +12,7 @@
 ##
 
 
-## ✔️홈페이지 및 주요 구현 화면
+## 🐾 홈페이지 및 주요 구현 화면
 [TAB_영양제 추천 사이트](http://192.168.0.70:8080/)
 
 ![image](https://github.com/SSSanga/project_nutrients/assets/132973456/983f20c4-92c3-4190-8a1f-e287314b3abd)
@@ -22,7 +22,7 @@
 
 ##
 
-## ✔️팀원 및 역할
+## 🐾 팀원 및 역할
 
 ### 💊김상아 
 -[PM]
@@ -128,7 +128,7 @@
 ❗ [membersMapper.xml](https://github.com/SSSanga/project_nutrients/blob/main/src/main/resources/sqlmapper/mysql/membersMapper.xml)
 </details>
 
-## ✔️프로젝트 진행 소감 및 본인 Favorite Code
+## 🐾 프로젝트 진행 소감 및 본인 Favorite Code
 
 ### 💊김상아 
 ⁉️
