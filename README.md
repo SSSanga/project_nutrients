@@ -4,11 +4,13 @@
 
 ## 의뢰서
 
-[TAB_영양제 추천 사이트](http://192.168.0.70:8080/)
+[TAB_영양제 추천 사이트](http://192.168.0.70:8080/){:target="_blank"}
 
-## 화면구현
+## 구현 화면
 
-(main page base.png)
+// 태그 형식
+<img src="/Docs/databases/![alt](https:/images/main page base.PNG)"  width="700" height="400">
+
 
 
 
