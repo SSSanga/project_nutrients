@@ -143,6 +143,7 @@
 ⁉️ 팀프로젝트를 통해 vscode에서 controller, service, xml,jsp와 databases 연동을 시키는 것 혼자 했으면 에러상황을 해결하지 못하고 포기했을 것 같은데 팀원들 덕분에 오류해결하는 방법들이 나에게 큰도움이 되었다.
 
 ### 💊김하늘
+![image](https://github.com/SSSanga/project_nutrients/assets/132973456/5f8c21ab-30ef-41ba-80ab-295f4d038bbf)
 
 ![image](https://github.com/SSSanga/project_nutrients/assets/132973456/981d9e5d-9fbf-4bcc-9f0f-424b739c8717)
 
