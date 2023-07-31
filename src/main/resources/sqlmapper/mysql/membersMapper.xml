@@ -18,8 +18,10 @@ INSERT INTO membersandadmin
 </insert>
 
 <select id="mypageDetail" parameterType="Map" resultType="Map">
-    SELECT NAME, ID, PASSWORD, BIRTHDATE, AGE, SEX, ADDRESS, PHONE, REGISTRATIONDATE, EMAIL, ADMINE_ID, HISTORY_ID
-    FROM membersandadmin
+    SELECT mem.NAME, mem.ID, mem.PASSWORD, mem.BIRTHDATE, mem.AGE, mem.SEX, mem.ADDRESS, mem.PHONE, mem.REGISTRATIONDATE, mem.EMAIL, mem.ADMINE_ID, history.DISEASE
+    FROM membersandadmin AS mem
+	inner join history
+    on mem.HISTORY_ID = history.HISTORY_ID
     WHERE 1 = 1 
     <choose>
         <when test="ID == UNIQUE_ID">
