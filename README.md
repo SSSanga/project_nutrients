@@ -142,21 +142,24 @@
 ## 🐾 프로젝트 진행 소감 및 본인 Favorite Code
 
 ### 💊김상아 
-⁉️
+
+![image](https://github.com/SSSanga/project_nutrients/assets/132973387/e939a42e-0edc-4173-8f13-6b0575c5bef5)
+
+
+⁉️ 가장 Favorite Code 로 영양제 상세를 눌렀을때 불러오는 code를 선택했습니다. 맡은 부분의 CRUD를 작성하고 xml부터 Controller까지 만들 수 있게 Sample Code를 완벽하게 작성해준 하늘님에게 매우 큰 영광을 돌립니다. 아라님과 둘이 머리 맞대로 오류 부분 찾아서 해결 할때마다 서로 조금씩 성장해나가는것 같아 뿌듯했습니다. 앞으로 빅데이터를 배우고나서 더 발전되는 사이트를 만들기위해 우리 팀원들 모두!! 화이팅합시다!!아자 아자!!
 
 ### 💊조아라
+
 ![image](https://github.com/SSSanga/project_nutrients/assets/132973289/46de6fde-8ee5-4681-b4e4-856d958852be)
+
 
 ⁉️ 팀프로젝트를 통해 vscode에서 controller, service, xml,jsp와 databases 연동을 시키는 것 혼자 했으면 에러상황을 해결하지 못하고 포기했을 것 같은데 팀원들 덕분에 오류해결하는 방법들이 나에게 큰도움이 되었다.
 PM님이 pagination 게시물 총개수 적용, 게시물 개수 설정 적용하는 것을 알려주었고 하늘님이 CRUD를 알려주었다. 모두들 나에게 선생님 같은 분들이다. 덕분에 탈주하지 않고 팀플을 할 수 있었다. 0124 최고당!   
 
 
-
-
 ### 💊김하늘
 
 ![image](https://github.com/SSSanga/project_nutrients/assets/132973456/b99ac9b9-239a-4a49-baf7-9656b80832e0)
-
 
 
 ⁉️ 저는 이번 프로젝트를 하면서 비밀번호를 암호화 하고, 회원가입시 UUID를 데이터 베이스로 받는 과정이 매우 복잡하고 어려워서 오래 붙들고 있었기 때문에 애정이 가서 Favorite 코드로 선택했습니다.
