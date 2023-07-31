@@ -56,24 +56,9 @@
                     </div>
                 </div>
                     <div class="form-group">
-                        <label for="medicalHistory">질병력</label>
-                        <select id="medicalHistory" name="medicalHistory" class="form-control">
-                            <option value="None">없음</option>
-                            <option value="Diabetes">당뇨</option>
-                            <option value="Hypertension">고혈압</option>
-                            <option value="Cancers">암</option>
-                            <!-- Add more options as needed -->
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="allergyHistory">알레르기 반응</label>
-                        <select id="allergyHistory" name="allergyHistory" class="form-control">
-                            <option value="None">없음</option>
-                            <option value="Peanuts">견과류</option>
-                            <option value="Dairy">유제품</option>
-                            <option value="Shellfish">갑각류</option>
-                            <!-- Add more options as needed -->
-                        </select>
+                        <label for="medicalHistory">질병/알레르기</label>
+                        <div class="mb-3 border rounded p-2">
+                            <div><%= result.get("DISEASE") %></div>
                     </div>
                     <div class="form-group">
                         <label for="email">E-mail:</label>
@@ -82,7 +67,7 @@
                     </div>
                 </div>
                     <div class="text-center">
-                        <button class="btn btn-primary" type="submit" formaction="/main/">back</button>
+                        <button class="btn btn-primary" type="submit" formaction="/">back</button>
                         <button class="btn btn-primary" method="post" formaction='/members/memberUpdateForm'>updete</button>
                     </div>
                 </form>

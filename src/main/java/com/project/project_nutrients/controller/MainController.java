@@ -26,7 +26,7 @@ public class MainController {
     @Autowired
     MainService mainService;
 
-    @GetMapping("/")
+    @RequestMapping("/")
     public ModelAndView main(ModelAndView modelAndView){
         modelAndView.setViewName("/WEB-INF/views/mainpage.jsp");
         return modelAndView;
