@@ -140,7 +140,13 @@
 ⁉️
 
 ### 💊조아라
+![image](https://github.com/SSSanga/project_nutrients/assets/132973289/46de6fde-8ee5-4681-b4e4-856d958852be)
+
 ⁉️ 팀프로젝트를 통해 vscode에서 controller, service, xml,jsp와 databases 연동을 시키는 것 혼자 했으면 에러상황을 해결하지 못하고 포기했을 것 같은데 팀원들 덕분에 오류해결하는 방법들이 나에게 큰도움이 되었다.
+PM님이 pagination 게시물 총개수 적용, 게시물 개수 설정 적용하는 것을 알려주었고 하늘님이 CRUD를 알려주었다. 모두들 나에게 선생님 같은 분들이다. 덕분에 탈주하지 않고 팀플을 할 수 있었다. 0124 최고당!   
+
+
+
 
 ### 💊김하늘
 
