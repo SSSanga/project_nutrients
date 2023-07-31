@@ -67,7 +67,7 @@
                     </div>
                 </div>
                     <div class="text-center">
-                        <button class="btn btn-primary" type="submit" formaction="/main/">back</button>
+                        <button class="btn btn-primary" type="submit" formaction="/">back</button>
                         <button class="btn btn-primary" method="post" formaction='/members/memberUpdateForm'>updete</button>
                     </div>
                 </form>
