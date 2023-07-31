@@ -42,13 +42,12 @@
   <!-- delete -->
   <!-- 유니크 아이디 COMMON_CODE_ID로 delete -->
   <delete id="suppdelete" parameterType="Map">
-      DELETE review, supp_comp, supp_list, supp_side, supp_spec
-      FROM review
-      LEFT JOIN supp_comp ON review.SUPP_ID = supp_comp.SUPP_ID
-      LEFT JOIN supp_list ON review.SUPP_ID = supp_list.SUPP_ID
-      LEFT JOIN supp_side ON review.SUPP_ID = supp_side.SUPP_ID
-      LEFT JOIN supp_spec ON review.SUPP_ID = supp_spec.SUPP_ID
-      WHERE review.SUPP_ID = #{SUPP_ID};
+      DELETE supp_comp, supp_list, supp_side, supp_spec
+      FROM supp_comp
+      LEFT JOIN supp_list ON supp_comp.SUPP_ID = supp_list.SUPP_ID
+      LEFT JOIN supp_side ON supp_comp.SUPP_ID = supp_side.SUPP_ID
+      LEFT JOIN supp_spec ON supp_comp.SUPP_ID = supp_spec.SUPP_ID
+      WHERE supp_comp.SUPP_ID = #{SUPP_ID};
   </delete>
 
   <!-- select_suppdetails -->
