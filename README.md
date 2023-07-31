@@ -89,9 +89,7 @@
 [membersMapper.xml]https://github.com/SSSanga/project_nutrients/blob/main/src/main/resources/sqlmapper/mysql/membersMapper.xml
 details>
 
-
-
-### 실습소감
+## 실습소감
 
 ### 💊김상아 
 ### 💊조아라
