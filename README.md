@@ -14,10 +14,18 @@
 
 ## 팀원 및 역할
 
-- 김상아
-- [Nutrients list]
-- [Recommendation]
-- [PM]
+김상아 
+-[PM]
+
+<details>
+<summary>Nutrients list</summary>
+
+</details>
+
+<details>
+<summary>Recommendation</summary>
+
+</details> 
 
 
 - 나현탁
@@ -32,25 +40,22 @@
 [ReviewMapper.xml](https://github.com/SSSanga/project_nutrients/blob/main/src/main/resources/sqlmapper/mysql/ReviewMapper.xml)
 </details>
 
-
 <details>
 <summary>Contacts</summary>
-[ContactsController.java]  
-[ContactsService.java]
-[contactsMapper.xml]  
-</details>
-
-
-<details>
-<summary>MEMBERS</summary>
-[MembersController.java]
-[MembersService.java]
-[memberslist.jsp]
+[ContactsController.java](https://github.com/SSSanga/project_nutrients/blob/main/src/main/java/com/project/project_nutrients/controller/ContactsController.java)  
+[ContactsService.java](https://github.com/SSSanga/project_nutrients/blob/main/src/main/java/com/project/project_nutrients/service/ContactsService.java)
+[contactsMapper.xml](https://github.com/SSSanga/project_nutrients/blob/main/src/main/resources/sqlmapper/mysql/contactsMapper.xml)
 </details>
 
 
 - 김하늘
-- [Member]
+<details>
+<summary>MEMBERS</summary>
+[MembersController.java] (https://github.com/SSSanga/project_nutrients/blob/main/src/main/java/com/project/project_nutrients/controller/MembersController.java)
+[MembersService.java] (https://github.com/SSSanga/project_nutrients/blob/main/src/main/java/com/project/project_nutrients/service/MembersService.java)
+[memberslist.jsp]
+</details>
+
 - [code base]
 
 
