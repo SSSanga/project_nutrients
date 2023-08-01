@@ -61,7 +61,7 @@
                       <% ArrayList resultEffect=(ArrayList)result.get("resultEffect"); for(int i=0; i <
                       resultEffect.size(); i=i+1) { HashMap effect=(HashMap)resultEffect.get(i); %>
 
-                      <span class="fw-bold">
+                      <span class="col fw-bold">
                         <%= effect.get("EFFECT") %>
                       </span>
                       <% } %>
@@ -70,7 +70,7 @@
                           <div class="col fw-bold">성분:</div>
                           <% ArrayList resultComp=(ArrayList)result.get("resultComp"); for(int i=0; i < resultComp.size();
                           i=i+1) { HashMap component=(HashMap)resultComp.get(i); %>
-                          <span class="fw-bold">
+                          <span class="col fw-bold">
                             <%= component.get("COMPONENT") %>
                           </span>
                           <% } %>
@@ -80,7 +80,7 @@
                               <% ArrayList resultBad=(ArrayList)result.get("resultBad"); for(int i=0; i <
                               resultBad.size(); i=i+1) { HashMap bad=(HashMap)resultBad.get(i); %>
 
-                              <span class="fw-bold">
+                              <span class="col fw-bold">
                                 <%= bad.get("SIDEEFFECT") %>
                               </span>
                               <% } %>
