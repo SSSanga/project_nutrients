@@ -48,20 +48,20 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="d-flex small-font">
-                        <sec:authorize access="isAuthenticated()">
-                        <li class = "nav-link">
-                        Name : ${userDetailsBean.memberName}, User ID : ${userDetailsBean.memberID}
-                        </li>
-                        </sec:authorize>
-                        </div>
+                        
+                        
+                        
+                            
                         <!-- User management dropdown 여긴 회원관리 -->
-                        <div class="container-fluid d-flex">
-                        <div class="collapse navbar-collapse justify-content-center">
+                        <div class="container d-flex ml-auto ">
+                            
+                        <div class="container collapse navbar-collapse">
                             <div class="dropdown">
-                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
                                     data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 20px;">
-                                    회원관리
+                                    <div class="small-font">                                    <sec:authorize access="isAuthenticated()">
+                                        Name : ${userDetailsBean.memberName}, ID : ${userDetailsBean.memberID}
+                                        </sec:authorize></div> 회원관리
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <sec:authorize access="isAuthenticated()">
@@ -105,7 +105,7 @@
                      <!-- 이건 줌인아웃 -->
                     <!-- Screen adjust buttons -->
                     
-                    <div class="container-fluid navbar justify-content-center m-5">
+                    <div class="container navbar justify-content-center">
                         <div id="zoom-display" class="me-3 text-danger font-weight">100%</div>
                         <button class="me-2 btn btn-outline-secondary btn-lg" onclick="increaseSize()"
                             style="font-size: 15px;">크게</button>
@@ -114,6 +114,6 @@
                     </div>
                 
                </nav>
-              
-        </div>
+            </div>
+   
         

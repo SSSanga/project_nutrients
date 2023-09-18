@@ -50,38 +50,42 @@
                               <%= record.get("FREQUENCY") %></div>
 
                     </div>
-                  
-                    <div class="col">
+                  <div class="row mt-3">
+                    <div class="col fw-bold">
                       <a class="btn btn-primary" href='<%= record.get("LINK") %>' role="button">추천사이트</a>
                     </div>
                   </div>
                   <% } %>
-
-                      <div class="fw-bold mt-3">효과:</div>
+                  <div class="row mt-3">
+                      <div class="col fw-bold">효과:</div>
                       <% ArrayList resultEffect=(ArrayList)result.get("resultEffect"); for(int i=0; i <
                       resultEffect.size(); i=i+1) { HashMap effect=(HashMap)resultEffect.get(i); %>
 
-                      <div>
+                      <span class="col fw-bold">
                         <%= effect.get("EFFECT") %>
-                      </div>
+                      </span>
                       <% } %>
-
-                          <div class="fw-bold mt-3">성분:</div>
+                    </div>
+                    <div class="row mt-3">
+                          <div class="col fw-bold">성분:</div>
                           <% ArrayList resultComp=(ArrayList)result.get("resultComp"); for(int i=0; i < resultComp.size();
                           i=i+1) { HashMap component=(HashMap)resultComp.get(i); %>
-                          <div>
+                          <span class="col fw-bold">
                             <%= component.get("COMPONENT") %>
-                          </div>
+                          </span>
                           <% } %>
-
-                              <div class="fw-bold mt-3">부작용: </div>
+                        </div>
+                        <div class="row mt-3">
+                              <div class="col fw-bold">부작용: </div>
                               <% ArrayList resultBad=(ArrayList)result.get("resultBad"); for(int i=0; i <
                               resultBad.size(); i=i+1) { HashMap bad=(HashMap)resultBad.get(i); %>
 
-                              <div>
+                              <span class="col fw-bold">
                                 <%= bad.get("SIDEEFFECT") %>
-                              </div>
+                              </span>
                               <% } %>
+                            </div>
+                            </div>
             </div>
           </form>
         </div>
