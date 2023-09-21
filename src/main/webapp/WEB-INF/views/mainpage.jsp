@@ -16,29 +16,14 @@
             <!-- header -->
             <%@ include file="/WEB-INF/views/project/header.jsp" %>
                 <div class="container">
-                <form action="" method="post">
-                    <div class="container row m-3">
-                        <div class="col-3">
-                            <select class="form-select mx-2" name="search" style="font-size: 20px; font-weight: bold;">
-                                <option>카테고리 선택</option>
-                                <option value="EFFECT">효과</option>
-                                <option value="MANUFACTURE">제조사</option>
-                            </select>
-                        </div>
-                        <div class="col-3">
-                            <input class="form-control me-2 mt-auto mb-auto" style="font-size: 20px; width:200px;"
-                                name="words" type="search" placeholder="Search..." aria-label="Search"
-                                id="keydownEnter">
-                        </div>
-                        <div class="col-6">
-                            <button class="btn btn-outline-secondary" type="submit" formaction="/search/selectsupp"
-                                id="keydownEnter" style="font-size: 20px; width:200px;">검색</button>
-                        </div>
-                    </div>
-                    </form>
                     <div class="container_img">
-                        <div class="container">
+                        <div class="container" style="margin-bottom: 5%;">
                             <!-- Added padding-bottom to create space between the container and the footer -->
+                            <hr>
+                            <div class="mainText">
+                                <div><span class="mainStart">빅데이터(Big Data)</span>를 통해 내 몸에 필요한 <span class="mainStart">맞춤 영양제</span>를 추천 및 구매사이트를 추천하고,</div>
+                                <div>건강 관리를 도와주는 서비스를 제공하는 사이트입니다.</div>
+                            </div>
                             <div class="row">
                                 <div class="col-md-6 ">
                                     <!-- Slide -->
@@ -66,9 +51,10 @@
                                                 </div>
                                                 <div class="carousel-item">
                                                     <button type="submit">
-                                                        <a href="https://www.consumer.go.kr/user/ftc/consumer/cnsmrBBS/80/selectInfoCmprDetail.do?infoId=A1079150&page=1&row=10&searchCnsmrClId=&searchCnsmrClType=&upperProductClId=&searchGbn=REGIST_DT&cntntsNm=&upperCntntsNm=&rnum=5&infoTyIdList=&cntntsId=00000205&infoRealmIdList=C060000&infoPrdlstIdList=C060500&searchRange=searchRangeAll&searchKeyword=">
-                                                        <img class="img-fluid" src="/images/milkthistle_info.png"
-                                                            alt=""></a></button>
+                                                        <a
+                                                            href="https://www.consumer.go.kr/user/ftc/consumer/cnsmrBBS/80/selectInfoCmprDetail.do?infoId=A1079150&page=1&row=10&searchCnsmrClId=&searchCnsmrClType=&upperProductClId=&searchGbn=REGIST_DT&cntntsNm=&upperCntntsNm=&rnum=5&infoTyIdList=&cntntsId=00000205&infoRealmIdList=C060000&infoPrdlstIdList=C060500&searchRange=searchRangeAll&searchKeyword=">
+                                                            <img class="img-fluid" src="/images/milkthistle_info.png"
+                                                                alt=""></a></button>
                                                 </div>
                                             </div>
                                             <button data-bs-slide="prev" data-bs-target="#controlsID-first"
