@@ -29,8 +29,9 @@
                   <select class="form-select mx-2" name="search"
                     style="font-size: 20px; width: 180px; height: 50px; font-weight: bold;">
                     <option>카테고리 선택</option>
-                    <option value="EFFECT">효과</option>
-                    <option value="MANUFACTURE">제조사</option>
+                    <option value="MANUFACTURE" <%=(searchStr.equals("MANUFACTURE")) ? "selected" : "" %>>제조사</option>
+                    <option value="PRODUCT" <%=(searchStr.equals("PRODUCT")) ? "selected" : "" %>>제품명</option>
+                    <option value="EFFECT" <%=(searchStr.equals("EFFECT")) ? "selected" : "" %>>효과</option>
                   </select>
 
                   <input class="form-control me-2 mt-auto mb-auto" style="font-size: 20px; width: 150px; height: 50px; "
