@@ -28,8 +28,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="id"><strong>ID</strong></label>
-                        <input class="form-control" id="id" type="text" name="ID" value="${ID}" placeholder="아이디를 입력해 주세요.">
-                        <div id="idError" class="error"></div>
+                        <input class="form-control" id="id" type="text" name="ID" placeholder="아이디를 입력해 주세요.">
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="r"><strong>PASSWORD</strong></label>
@@ -122,7 +121,7 @@
                         <label class="form-check-label" for="USER">USER</label>
                     </div>
                     <div class="text-center mb-4">
-                        <button class="btn btn-primary" type="submit" onclick="signUpCheck();">Submit</button>
+                        <button class="btn btn-primary" type="submit">Submit</button>
                     </div>
                 </form>
             </div>
