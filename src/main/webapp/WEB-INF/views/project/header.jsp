@@ -6,6 +6,9 @@
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
             <script src="https://kit.fontawesome.com/cbad40f422.js" crossorigin="anonymous"></script>
             <link href="/css/main.css" rel="stylesheet" />
+            <script src="/JS/commonWithJs.js"></script>
+
+            <script>var zoom = 1;</script>
 
             <div class="container">
                 <nav class="navbar navbar-expand">
@@ -15,7 +18,7 @@
                                 <!-- Brand image -->
                                 <div class="d-flex ms-3">
                                     <div class="navbar-brand">
-                                        <button id="aboutButton" class="nav-link btn btn-none" formaction="/">
+                                        <button class="nav-link btn btn-none" formaction="/">
                                             <img src="/images/drug_img.png" alt="" width="200" height="200">
                                         </button>
                                     </div>
@@ -25,15 +28,15 @@
                                     <div class="navbar navbar-expand" id="navbarSupportedContent">
                                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                             <li class="nav-item">
-                                                <button id="aboutButton" class="nav-link btn btn-none"
+                                                <button class="nav-link btn btn-none"
                                                     formaction="/supp/about">About</button>
                                             </li>
                                             <li class="nav-item">
-                                                <button id="listButton" class="nav-link btn btn-none"
+                                                <button class="nav-link btn btn-none"
                                                     formaction="/supp/wholelist">List</button>
                                             </li>
                                             <li class="nav-item">
-                                                <button id="listButton" class="nav-link btn btn-none"
+                                                <button class="nav-link btn btn-none"
                                                     formaction="/recomm/list">Recommendation</button>
                                             </li>
                                             <li class="nav-item">
@@ -68,7 +71,7 @@
                                                     회원관리
                                                 </sec:authorize>
                                             </button>
-                                        </button>
+                                            </button>
                                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                                 <sec:authorize access="isAuthenticated()">
                                                     <li class="dropdown-item"><button id="mypageButton"

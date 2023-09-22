@@ -47,10 +47,19 @@ public ModelAndView signupForm(@RequestParam Map params, ModelAndView modelAndVi
 }
 
 //회원가입 폼을 작성해서 제출 버튼을 누르면 비밀번호를 암호화로 넘기는 컨트롤러
-@GetMapping("/signupProc")
-public ModelAndView signupProc(@RequestParam Map params, ModelAndView modelAndView){
+// @GetMapping("/signupProc")
+// public ModelAndView signupProc(@RequestParam Map params, ModelAndView modelAndView){
+//     Object result = membersService.insertWithAuths(params);
+//     String viewName = ("/WEB-INF/views/mainpage.jsp");
+//     modelAndView.setViewName(viewName);
+//     return modelAndView;
+// }
+
+@RequestMapping(value = "/signupProc", method = RequestMethod.POST)
+public ModelAndView signupProc(@RequestParam Map params, ModelAndView modelAndView)
+{
     Object result = membersService.insertWithAuths(params);
-    String viewName = ("/WEB-INF/views/mainpage.jsp");
+    String viewName = "/WEB-INF/views/mainpage.jsp";
     modelAndView.setViewName(viewName);
     return modelAndView;
 }

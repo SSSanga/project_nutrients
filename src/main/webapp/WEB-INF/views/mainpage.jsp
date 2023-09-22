@@ -7,9 +7,6 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Nutrient Recommendations Home</title>
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cafe24D&display=swap">
-
-
         </head>
 
         <body>
