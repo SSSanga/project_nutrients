@@ -1,21 +1,6 @@
 <%@ page import="java.util.HashMap, java.util.ArrayList" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!-- Screen adjust functions -->
-<script>
-    var zoom = 1;
-
-    function increaseSize() {
-        zoom += 0.1;
-        document.getElementById('zoom-display').innerText = Math.round(zoom * 100) + '%';
-        document.body.style.zoom = zoom;
-    }
-
-    function decreaseSize() {
-        zoom -= 0.1;
-        document.getElementById('zoom-display').innerText = Math.round(zoom * 100) + '%';
-        document.body.style.zoom = zoom;
-    }
-</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Footer -->
     <footer class="p-5 d-flex justify-content-between align-items-center font-size: 0.8rem footer-Teal">
@@ -66,43 +51,4 @@
         <div class="row">
             <img src="/images/drug_img.png" alt="logo" height="130rem">
         </div>
-
-
-        <!-- Code injected by live-server -->
-        <script>
-            // <![CDATA[  <-- For SVG support
-            if ('WebSocket' in window) {
-                (function () {
-                    function refreshCSS() {
-                        var sheets = [].slice.call(document.getElementsByTagName("link"));
-                        var head = document.getElementsByTagName("head")[0];
-                        for (var i = 0; i < sheets.length; ++i) {
-                            var elem = sheets[i];
-                            var parent = elem.parentElement || head;
-                            parent.removeChild(elem);
-                            var rel = elem.rel;
-                            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-                                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-                                elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-                            }
-                            parent.appendChild(elem);
-                        }
-                    }
-                    var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-                    var address = protocol + window.location.host + window.location.pathname + '/ws';
-                    var socket = new WebSocket(address);
-                    socket.onmessage = function (msg) {
-                        if (msg.data == 'reload') window.location.reload();
-                        else if (msg.data == 'refreshcss') refreshCSS();
-                    };
-                    if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-                        console.log('Live reload enabled.');
-                        sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-                    }
-                })();
-            }
-            else {
-                console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-            }
-        </script>
     </footer>

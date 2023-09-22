@@ -1,4 +1,3 @@
-/* 나브 메뉴 글자 색상 */
 .nav-link {
     color: rgb(0, 60, 128);
     font-size: 1.33em;
@@ -43,6 +42,24 @@ hr {
     font-weight: bolder;
 }
 
+.register {
+    font-size: 200%;
+    font-weight: bold;
+    letter-spacing: 7px;
+}
+
+.registerMain {
+    font-size: 130%;
+}
+
+label {
+    margin-right: 2%;
+}
+
+.gender {
+    width: 100%;
+}
+
 .h3,
 .h4,
 .h5,
@@ -50,7 +67,7 @@ hr {
 .p3,
 .p4,
 .p5 {
-    color: rgb(0, 60, 128);
+    color: rgb(0, 102, 128)
 }
 
 /* 줌인줌아웃 +- 색상 및 테두리 */
