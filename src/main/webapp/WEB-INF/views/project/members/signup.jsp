@@ -36,25 +36,25 @@
                         <label class="form-label" for="r"><strong>PASSWORD</strong></label>
                         <input class="form-control" id="password" type="password" name="PASSWORD"
                             placeholder="비밀번호를 입력해 주세요.">
-                            <div id="passwordError" class="error"></div>
+                        <div id="passwordError" class="error"></div>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for=""><strong>PASSWORD CHECK</strong></label>
                         <input class="form-control" id="passwordCheck" type="password" name=""
                             placeholder="비밀번호를 다시 입력해 주세요.">
-                            <div id="passwordCheckError" class="error"></div>
+                        <div id="passwordCheckError" class="error"></div>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="r"><strong>BIRTHDATE</strong></label>
                         <input class="form-control" id="BIRTHDATE" type="date" name="BIRTHDATE"
                             placeholder="생년월일을 입력해 주세요.">
-                            <div id="BIRTHDATEError" class="error"></div>
+                        <div id="BIRTHDATEError" class="error"></div>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="r"><strong>E-mail</strong></label>
                         <input class="form-control" id="e-mail" type="email" name="EMAIL"
                             placeholder="ex) 1234@example.com">
-                            <div id="emailError" class="error"></div>
+                        <div id="emailError" class="error"></div>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="systemCodeYn"><strong>PHONE NUMBER</strong></label>

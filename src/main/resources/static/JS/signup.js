@@ -13,7 +13,6 @@ function checkForm()
     {
         document.getElementById("nameError").innerHTML="이름을 입력해주세요."
         event.preventDefault();
-        return false;
     }
 
     else
@@ -25,7 +24,6 @@ function checkForm()
     {
         document.getElementById("idError").innerHTML="아이디를 입력해주세요."
         event.preventDefault();
-        return false;
     }
 
     else
@@ -37,7 +35,6 @@ function checkForm()
     {
         document.getElementById("passwordError").innerHTML="비밀번호를 입력해주세요."
         event.preventDefault();
-        return false;
     }
 
     else
@@ -49,7 +46,6 @@ function checkForm()
     {
         document.getElementById("passwordCheckError").innerHTML="비밀번호가 일치하지 않습니다."
         event.preventDefault();
-        return false;
     }
 
     else
@@ -61,7 +57,6 @@ function checkForm()
     {
         document.getElementById("BIRTHDATEError").innerHTML="생년월일을 입력해주세요."
         event.preventDefault();
-        return false;
     }
 
     else
@@ -78,14 +73,12 @@ function checkForm()
     {
         document.getElementById("emailError").innerHTML="이메일 형식에 맞지 않습니다."
         event.preventDefault();
-        return false;
     }
 
     if (tel === "")
     {
         document.getElementById("telError").innerHTML="전화번호를 입력해주세요."
         event.preventDefault();
-        return false;
     }
 
     else
@@ -97,7 +90,6 @@ function checkForm()
     {
         document.getElementById("addreError").innerHTML="주소지를 입력해주세요."
         event.preventDefault();
-        return false;
     }
 
     else
