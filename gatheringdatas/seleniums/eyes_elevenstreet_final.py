@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # In[1]:
-
+## 눈 개선 영양제는 댓글을 최대 210으로 제한함.. 너무 느려서 그렇게 진행함.. 
 
 from selenium import webdriver
 import time
@@ -104,7 +104,7 @@ current_page = 1
 while current_page <= loop_count_int:
     try:
         
-        for i in range(3, 61):  # 1부터 60까지 순회합니다.
+        for i in range(13, 61):  # 1부터 60까지 순회합니다.
             try:
                 time.sleep(5)
                 product_page = f'#section_commonPrd > div.c-search-list > ul > li:nth-child({i}) > div > a'
@@ -119,6 +119,7 @@ while current_page <= loop_count_int:
                 print(product_name)
                 # 리뷰보기 클릭 불필요
                 browser.switch_to.frame('ifrmReview')
+                click_count = 0
                 while True:
                     try:
                         # 리뷰 더보기 버튼을 찾습니다.
@@ -128,7 +129,12 @@ while current_page <= loop_count_int:
                         
                         # 리뷰 더보기 버튼을 클릭합니다.
                         button_click.click()
-                        time.sleep(15)
+                        
+                        click_count += 1  # 클릭 횟수 증가
+        
+                        # 만약 클릭 횟수가 15번 이상이면 반복 종료
+                        if click_count >= 20:
+                            break
                     except:
                         # 리뷰 더보기 버튼을 더 이상 찾을 수 없으면 반복 종료합니다.
                         print('리뷰 더보기 버튼을 더 이상 찾을 수 없음')
@@ -138,15 +144,19 @@ while current_page <= loop_count_int:
                 review_total_count_text = browser.find_element_by_css_selector('h4 > span > i').text
                     
                 ## 혜인설명: 총 댓글 수를 정규화로 뽑아냄 .
-                import re # reqexpress function
+                # 정규 표현식을 사용하여 숫자 추출 (',' 포함)
+                import re
                 result_list = re.findall(r'\d+', review_total_count_text)
-                # print(result_list[0], int(result_list[0]))
-                        
-                review_total_count = int(result_list[0])  # 리뷰 총 갯수 
+
+                # 추출된 숫자들을 하나의 문자열로 결합하고 ',' 제거
+                review_count = ''.join(result_list)
+
+                # 문자열을 정수로 변환
+                review_total_count = int(review_count)  # 리뷰 총 갯수 
                 print(review_total_count)
-                
+                time.sleep(3)
                 # 리뷰 50개 이상이면 돌린다. 
-                if review_total_count > 400:
+                if review_total_count != 0:
                     ##리뷰 번들
                     reviews_bundle = browser.find_elements_by_css_selector('.review_list_element')
                     len(reviews_bundle)
@@ -187,7 +197,7 @@ while current_page <= loop_count_int:
                     df_reviews = pd.DataFrame(data=reviews_list, columns=eyes_product_columns_name)
                     data_dict = df_reviews.to_dict(orient='records')
                     collection.insert_many(data_dict)
-                    time.sleep(5)
+                    
                     print(len(reviews_list))
                     # Check again after the inner loop to break from the outer loop
                     if len(reviews_list) == len(reviews_bundle):
@@ -201,10 +211,10 @@ while current_page <= loop_count_int:
                 browser.close()
                 # 다음 상품을 클릭하기 전에 원래의 창으로 다시 전환합니다.
                 browser.switch_to.window(browser.window_handles[0])
-                time.sleep(10)          
+                time.sleep(5)          
             except:
-                if review_total_count < 401:
-                    print('리뷰가 없어 종료합니다.')
+                if review_total_count < 51:
+                    print('리뷰가 적어서 종료합니다.')
                     break
         if review_total_count < 51:
             break  # 외부 루프 종료
