@@ -25,35 +25,41 @@
                     <div class="mb-3">
                         <label class="form-label" for=""><strong>NAME</strong></label>
                         <input class="form-control" type="text" id="name" name="NAME" placeholder="이름을 입력해 주세요.">
+                        <div id="nameError" class="error"></div>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="id"><strong>ID</strong></label>
-                        <input class="form-control" id="id" type="text" name="ID" value="${ID}" placeholder="아이디를 입력해 주세요.">
+                        <input class="form-control" id="id" type="text" name="ID" placeholder="아이디를 입력해 주세요.">
                         <div id="idError" class="error"></div>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="r"><strong>PASSWORD</strong></label>
                         <input class="form-control" id="password" type="password" name="PASSWORD"
                             placeholder="비밀번호를 입력해 주세요.">
+                        <div id="passwordError" class="error"></div>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for=""><strong>PASSWORD CHECK</strong></label>
                         <input class="form-control" id="passwordCheck" type="password" name=""
                             placeholder="비밀번호를 다시 입력해 주세요.">
+                        <div id="passwordCheckError" class="error"></div>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="r"><strong>BIRTHDATE</strong></label>
                         <input class="form-control" id="BIRTHDATE" type="date" name="BIRTHDATE"
                             placeholder="생년월일을 입력해 주세요.">
+                        <div id="BIRTHDATEError" class="error"></div>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="r"><strong>E-mail</strong></label>
                         <input class="form-control" id="e-mail" type="email" name="EMAIL"
                             placeholder="ex) 1234@example.com">
+                        <div id="emailError" class="error"></div>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="systemCodeYn"><strong>PHONE NUMBER</strong></label>
                         <input class="form-control" type="tel" id="tel" name="PHONE" placeholder="휴대폰 번호를 입력해 주세요.">
+                        <div id="telError" class="error"></div>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="systemCodeYn"><strong>질병 이력</strong></label>
@@ -98,6 +104,7 @@
                     <div class="mb-3">
                         <label class="form-label" for="useYn"><strong>ADDRESS</strong></label>
                         <input class="form-control" type="text" id="addre" name="ADDRESS">
+                        <div id="addreError" class="error"></div>
                     </div>
                     <!-- 여기까지 -->
                     <label class="form-label" for="systemCodeYn"><strong>성별 선택</strong></label>
@@ -122,7 +129,7 @@
                         <label class="form-check-label" for="USER">USER</label>
                     </div>
                     <div class="text-center mb-4">
-                        <button class="btn btn-primary" type="submit" onclick="signUpCheck();">Submit</button>
+                        <button class="btn btn-primary" type="submit" id="submit" onclick="checkForm()">Submit</button>
                     </div>
                 </form>
             </div>
