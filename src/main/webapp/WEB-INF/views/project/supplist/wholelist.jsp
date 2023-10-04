@@ -15,12 +15,10 @@
       <body>
         <!-- header -->
         <%@ include file="/WEB-INF/views/project/header.jsp" %>
-
-
+        <% HashMap params=(HashMap)request.getAttribute("params"); String
+        searchStr=(String)params.getOrDefault("search", "" ); HashMap
+        result=(HashMap)request.getAttribute("result"); %>
           <div class="container p-3">
-
-
-
             <form>
               <!-- Search bar 여긴 검색 -->
               <div class="container m-2" style="font-weight: bold;">
@@ -35,17 +33,11 @@
                   </select>
 
                   <input class="form-control me-2 mt-auto mb-auto" style="font-size: 20px; width: 150px; height: 50px; "
-                    name="words" type="search" placeholder="Search..." aria-label="Search" id="keydownEnter">
+                    name="words" type="text" placeholder="Search..." aria-label="Search" id="keydownEnter" value='<%= params.getOrDefault("words", "") %>'>
                   <button class="btn btn-light btn-outline-secondary mt-auto mb-auto" type="submit"
-                    formaction="/search/selectsupp" id="keydownEnter"
-                    style="font-size: 20px; width: 100px; height: 50px;" formmethod="post">검색</button>
-
+                    formaction="/supp/wholelist" id="keydownEnter"
+                    style="font-size: 20px; width: 100px; height: 50px;" formmethod="get">검색</button>
                 </div>
-
-                <% HashMap params=(HashMap)request.getAttribute("params"); String
-                  searchStr=(String)params.getOrDefault("search", "" ); HashMap
-                  result=(HashMap)request.getAttribute("result"); %>
-
 
                   <% Paginations paginations=(Paginations)result.get("paginations"); %>
                     <sec:authorize access="hasRole('ROLE_ADMIN')">
@@ -76,8 +68,7 @@
                             <tr>
 
                               <td class="align-middle">
-                                <img src='<%= record.get("LOCATION") %>' alt='<%= record.get("PRODUCT") %>'
-                                  class="img-fluid rounded" width="200">
+                                <img src='<%= record.get("LOCATION") %>' class="img-fluid rounded" width="200">
                               </td>
                               <td class="align-middle">
                                 <%= record.get("PRODUCT") %>
