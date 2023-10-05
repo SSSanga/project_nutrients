@@ -9,6 +9,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Nutrient Recommendations Home</title>
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/css/wholelist.css">
     </head>
 
     <body>
@@ -18,10 +19,7 @@
         <div class="container">
           <div class="h3 m-3">영양제 정보</div>
           <form>
-
-
             <div class="card m-3 p-3">
-
               <% HashMap params=(HashMap)request.getAttribute("params"); HashMap
                 result=(HashMap)request.getAttribute("result"); %>
 
@@ -33,73 +31,66 @@
                         width="200px" height="100%">
                     </div>
                     <div class="row mt-3">
-                      <div class="col">
-                        <span class="fw-bold">영양제 코드: </span>
-                        <%= record.get("SUPP_ID") %>
-                      </div>
-                      <div class="col">
-                        <span class="fw-bold">제품명: </span>
-                        <%= record.get("PRODUCT") %>
-                      </div>
-                      <div class="col">
-                        <span class="fw-bold">제조사: </span>
-                        <%= record.get("MANUFACTURE") %>
-                      </div>
-                      </div>
-                      <div class="row mt-3">
-                      <div class="col">
-                        <span class="fw-bold">복용량: </span>
-                        <%= record.get("DOSAGE") %>
-                      </div>
-                      <div class="col">
-                        <span class="fw-bold">복용횟수: </span>
-                        <%= record.get("FREQUENCY") %>
-                      </div>
-                      <div class="col fw-bold">
-                        <a class="btn btn-primary" href='<%= record.get("LINK") %>' role="button">추천사이트</a>
-                      </div>
-                    <% } %>
-                  </div>
-                      <div class="container">
-
-                        <div class="row fw-bold">효과:
-                          <% ArrayList resultEffect=(ArrayList)result.get("resultEffect"); for(int i=0; i <
-                            resultEffect.size(); i=i+1) { HashMap effect=(HashMap)resultEffect.get(i); %>
-
-                            <span class="fw-bold">
-                              <%= effect.get("EFFECT") %>
-                            </span>
-                            <% } %>
+                      <!-- <sec:authorize access="hasRole('ROLE_ADMIN')">
+                        <div class="col">
+                          <span class="fw-bold">영양제 코드: </span>
+                          <%= record.get("SUPP_ID") %>
                         </div>
-
-
-                        <div class="row fw-bold">성분:
-                          <% ArrayList resultComp=(ArrayList)result.get("resultComp"); for(int i=0; i <
-                            resultComp.size(); i=i+1) { HashMap component=(HashMap)resultComp.get(i); %>
-                            <span class="fw-bold">
-                              <%= component.get("COMPONENT") %>
-                            </span>
-                            <% } %>
-                        </div>
-
-
-                        <div class="row fw-bold">부작용:
-                          <% ArrayList resultBad=(ArrayList)result.get("resultBad"); for(int i=0; i < resultBad.size();
-                            i=i+1) { HashMap bad=(HashMap)resultBad.get(i); %>
-
-                            <span class="fw-bold">
-                              <%= bad.get("SIDEEFFECT") %>
-                            </span>
-                            <% } %>
-                        </div>
-
+                      </sec:authorize> -->
+                      <table class="mx-4">
+                        <tr>
+                          <td class="specText">제품명:</td>
+                          <td><%= record.get("PRODUCT") %></td>
+                          <td class="specText">제조사:</td>
+                          <td><%= record.get("MANUFACTURE") %></td>
+                          <td><a class="btn btn-primary" href='<%= record.get("LINK") %>' role="button">구매 사이트</a></td>
+                        </tr>
+                        <tr>
+                          <td class="specText">복용량:</td>
+                          <td><%= record.get("DOSAGE") %></td>
+                          <td class="specText">복용횟수:</td>
+                          <td><%= record.get("FREQUENCY") %></td>
+                          <sec:authorize access="hasRole('ROLE_ADMIN')">
+                          <td class="specText">영양제 코드:</td>
+                          <td class="specCode"><%= record.get("SUPP_ID") %></td>
+                          </sec:authorize>
+                        </tr>
+                      </table>
+                      <% } %>
+                    </div>
+                    <div class="container">
+                      <div class="row fw-bold mt-4">성분:
+                        <% ArrayList resultComp=(ArrayList)result.get("resultComp"); for(int i=0; i < resultComp.size();
+                          i=i+1) { HashMap component=(HashMap)resultComp.get(i); %>
+                          <span class="fw-bold">
+                            <%= component.get("COMPONENT") %>
+                          </span>
+                          <% } %>
                       </div>
+
+                      <div class="row fw-bold mt-4">효과:
+                        <% ArrayList resultEffect=(ArrayList)result.get("resultEffect"); for(int i=0; i <
+                          resultEffect.size(); i=i+1) { HashMap effect=(HashMap)resultEffect.get(i); %>
+                          <span class="fw-bold" style="color: #00b500;">
+                            <%= effect.get("EFFECT") %>
+                          </span>
+                          <% } %>
+                      </div>
+
+                      <div class="row fw-bold mt-4">부작용:
+                        <% ArrayList resultBad=(ArrayList)result.get("resultBad"); for(int i=0; i < resultBad.size();
+                          i=i+1) { HashMap bad=(HashMap)resultBad.get(i); %>
+                          <span class="fw-bold" style="color: #ff0000;">
+                            <%= bad.get("SIDEEFFECT") %>
+                          </span>
+                          <% } %>
+                      </div>
+                    </div>
                   </div>
           </form>
         </div>
         <!-- Footer -->
         <%@ include file="/WEB-INF/views/project/footer.jsp" %>
-
     </body>
 
     </html>

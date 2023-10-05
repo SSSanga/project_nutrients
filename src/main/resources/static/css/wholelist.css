@@ -1,0 +1,19 @@
+.listProduct
+{
+    background-color: transparent;
+    border: none;
+    color: blue;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.specText
+{
+    font-weight: bolder;
+    line-height: 200%;
+}
+
+.specCode
+{
+    padding-right: 100px;
+}
