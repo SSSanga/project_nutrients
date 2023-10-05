@@ -5,11 +5,7 @@
 <!-- count for pagination -->
   <select id="selectTotal" parameterType="Map" resultType="int">
     SELECT COUNT(*)
-    FROM ((supp_list
-    INNER JOIN supp_spec
-    ON supp_list.SUPP_ID = supp_spec.SUPP_ID)
-    INNER JOIN effect
-    ON supp_list.EFFECT_ID = effect.EFFECT_ID)
+    FROM supp_spec
     WHERE 1 = 1
         <choose>
             <when test="search == 'MANUFACTURE'">
@@ -17,9 +13,6 @@
             </when>
             <when test="search == 'PRODUCT'">
                 and PRODUCT like CONCAT('%', #{words}, '%')
-            </when>
-            <when test="search == 'EFFECT'">
-                and EFFECT like CONCAT('%', #{words}, '%')
             </when>
         </choose>
 	</select>
