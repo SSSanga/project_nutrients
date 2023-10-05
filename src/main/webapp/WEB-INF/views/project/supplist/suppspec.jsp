@@ -31,12 +31,6 @@
                         width="200px" height="100%">
                     </div>
                     <div class="row mt-3">
-                      <!-- <sec:authorize access="hasRole('ROLE_ADMIN')">
-                        <div class="col">
-                          <span class="fw-bold">영양제 코드: </span>
-                          <%= record.get("SUPP_ID") %>
-                        </div>
-                      </sec:authorize> -->
                       <table class="mx-4">
                         <tr>
                           <td class="specText">제품명:</td>
