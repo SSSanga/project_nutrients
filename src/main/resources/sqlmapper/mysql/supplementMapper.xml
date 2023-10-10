@@ -5,11 +5,7 @@
 <!-- count for pagination -->
   <select id="selectTotal" parameterType="Map" resultType="int">
     SELECT COUNT(*)
-        FROM ((supp_spec
-        INNER JOIN supp_list
-        ON supp_spec.SUPP_ID = supp_list.SUPP_ID)
-        INNER JOIN effect
-        ON supp_list.EFFECT_ID = effect.EFFECT_ID)
+        FROM SUPP_SPEC
         WHERE 1 = 1
         <choose>
             <when test="search == 'MANUFACTURE'">
@@ -43,6 +39,7 @@
         </choose>
         limit #{pageBegin}, #{pageScale};
   </select>
+
 <!-- 추천 누르면 EFFECT_FLAG가 일치할때 나오게끔 -->
   <select id="recomm" parameterType="Map" resultType="Map">
         SELECT t_SUPPRECOMM.LOCATION, t_SUPPRECOMM.PRODUCT, t_SUPPRECOMM.LINK, t_SUPPRECOMM.EFFECT_FLAG
