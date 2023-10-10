@@ -70,10 +70,10 @@ public class ListService
                     "FROM effect\n" + //
                     "INNER JOIN supp_list ON effect.EFFECT_ID = supp_list.EFFECT_ID\n" + //
                     "INNER JOIN supp_spec ON supp_list.SUPP_ID = supp_spec.SUPP_ID\n" + //
-                    "WHERE supp_spec.SUPP_ID = '"+supp_id+"';";
-            String queryA = query;
-            result.put(supp_id, queryA);
-            totalList.add(result);
+                    "WHERE supp_spec.SUPP_ID = '"+supp_id+";";
+            String totalsqlMapId = "Supplement.effectresult";
+            resultmap.put(totalsqlMapId, resultList);
+            totalList.add(resultmap);
         }
 
         return (Map) totalList;
