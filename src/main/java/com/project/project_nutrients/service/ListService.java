@@ -66,13 +66,13 @@ public class ListService
         for (Map<String,Object> resultmap : resultList)
         {
             String supp_id = (String) resultmap.get("SUPP_ID");
-            String query = " SELECT EFFECT\r\n" + //
-                    "        FROM effect\r\n" + //
-                    "        INNER JOIN supp_list\r\n" + //
-                    "        ON effect.EFFECT_ID = supp_list.EFFECT_ID\r\n" + //
-                    "        INNER JOIN supp_spec\r\n" + //
-                    "        WHERE supp_list."+supp_id+" = supp_spec."+supp_id+";";
-            result.put(supp_id, query);
+            String query = "SELECT effect.EFFECT\n" + //
+                    "FROM effect\n" + //
+                    "INNER JOIN supp_list ON effect.EFFECT_ID = supp_list.EFFECT_ID\n" + //
+                    "INNER JOIN supp_spec ON supp_list.SUPP_ID = supp_spec.SUPP_ID\n" + //
+                    "WHERE supp_spec.SUPP_ID = '"+supp_id+"';";
+            String queryA = query;
+            result.put(supp_id, queryA);
             totalList.add(result);
         }
 
