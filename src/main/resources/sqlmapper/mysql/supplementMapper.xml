@@ -5,7 +5,7 @@
 <!-- count for pagination -->
   <select id="selectTotal" parameterType="Map" resultType="int">
     SELECT COUNT(*)
-        FROM SUPP_SPEC
+        FROM supp_spec
         WHERE 1 = 1
         <choose>
             <when test="search == 'MANUFACTURE'">
@@ -38,6 +38,13 @@
             </when>
         </choose>
         limit #{pageBegin}, #{pageScale};
+  </select>
+
+  <select id="effectresult" parameterType="Map" resultType="Map">
+    SELECT *
+    FROM supp_list
+    INNER JOIN effect
+    ON supp_list.EFFECT_ID = effect.EFFECT_ID;
   </select>
 
 <!-- 추천 누르면 EFFECT_FLAG가 일치할때 나오게끔 -->

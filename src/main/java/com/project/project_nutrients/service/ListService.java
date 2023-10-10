@@ -1,5 +1,6 @@
 package com.project.project_nutrients.service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -41,6 +42,7 @@ public class ListService
         // page record 수 : xml 의 limit 0,10 콕 집어져서 나와야함.
         // page 형성을 위한 계산.
         String sqlMapId = "Supplement.listwithpaginations";
+        String sqleffect = "Supplement.effectresult";
         int totalCount = (int) this.selectTotal(dataMap);
 
         int currentPage = 1;
@@ -59,6 +61,17 @@ public class ListService
         dataMap.put("pageBegin", paginations.getPageBegin());
 
         result.put("resultList", sharedDao.getList(sqlMapId, dataMap)); // 표현된 레코드 정보.
+        result.put("effectList", sharedDao.getList(sqleffect, dataMap));
+
+        List<Map<String, Object>> resultList = (List<Map<String, Object>>) result.get("resultList");
+
+        int j = 0;
+
+        while (j < resultList.size())
+        {
+            result.put(String.valueOf(result.get("resultList")), String.valueOf(result.get("effectList")));
+            j++;
+        }
 
         return result;
     }
