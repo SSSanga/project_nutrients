@@ -22,7 +22,6 @@
 
 <!-- select_wholelist with pagination -->
   <select id="listwithpaginations" parameterType="Map" resultType="Map">
-
         SELECT *
         FROM supp_spec
         WHERE 1 = 1
@@ -41,10 +40,12 @@
   </select>
 
   <select id="effectresult" parameterType="Map" resultType="Map">
-    SELECT *
-    FROM supp_list
-    INNER JOIN effect
-    ON supp_list.EFFECT_ID = effect.EFFECT_ID;
+        SELECT EFFECT
+        FROM effect
+        INNER JOIN supp_list
+        ON effect.EFFECT_ID = supp_list.EFFECT_ID
+        INNER JOIN supp_spec
+        WHERE supp_list.SUPP_ID = supp_spec.SUPP_ID;
   </select>
 
 <!-- 추천 누르면 EFFECT_FLAG가 일치할때 나오게끔 -->
