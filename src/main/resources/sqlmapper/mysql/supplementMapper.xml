@@ -28,11 +28,7 @@
   <select id="listwithpaginations" parameterType="Map" resultType="Map">
 
         SELECT *
-        FROM ((supp_spec
-        INNER JOIN supp_list
-        ON supp_spec.SUPP_ID = supp_list.SUPP_ID)
-        INNER JOIN effect
-        ON supp_list.EFFECT_ID = effect.EFFECT_ID)
+        FROM supp_spec
         WHERE 1 = 1
         <choose>
             <when test="search == 'MANUFACTURE'">
