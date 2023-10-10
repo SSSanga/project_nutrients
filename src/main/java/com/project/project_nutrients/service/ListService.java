@@ -76,7 +76,7 @@ public class ListService
             totalList.add(result);
         }
 
-        return result;
+        return (Map) totalList;
     }
 
     // 삭제만 하기
