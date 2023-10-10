@@ -5,12 +5,12 @@
 <!-- count for pagination -->
   <select id="selectTotal" parameterType="Map" resultType="int">
     SELECT COUNT(*)
-    FROM ((supp_list
-    INNER JOIN supp_spec
-    ON supp_list.SUPP_ID = supp_spec.SUPP_ID)
-    INNER JOIN effect
-    ON supp_list.EFFECT_ID = effect.EFFECT_ID)
-    WHERE 1 = 1
+        FROM ((supp_spec
+        INNER JOIN supp_list
+        ON supp_spec.SUPP_ID = supp_list.SUPP_ID)
+        INNER JOIN effect
+        ON supp_list.EFFECT_ID = effect.EFFECT_ID)
+        WHERE 1 = 1
         <choose>
             <when test="search == 'MANUFACTURE'">
                 and MANUFACTURE like CONCAT('%', #{words}, '%')
@@ -27,7 +27,7 @@
 <!-- select_wholelist with pagination -->
   <select id="listwithpaginations" parameterType="Map" resultType="Map">
 
-        SELECT LOCATION, PRODUCT, MANUFACTURE, EFFECT
+        SELECT *
         FROM ((supp_spec
         INNER JOIN supp_list
         ON supp_spec.SUPP_ID = supp_list.SUPP_ID)

@@ -26,6 +26,30 @@ public class Paginations {
         this.setBlockRange();
     }
 
+    public int getFirstPage()
+    {
+        return previousPage;
+    }
+
+    public int getPreviousPage()
+    {
+        // 이전 페이지 번호를 계산하여 반환
+        int previousPage = currentPage - 1;
+        return previousPage >= 1 ? previousPage : 1;
+    }
+
+    public int getNextPage()
+    {
+        // 다음 페이지 번호를 계산하여 반환
+        int nextPage = currentPage + 1;
+        return nextPage <= totalPage ? nextPage : totalPage;
+    }
+
+    public int getLastPage()
+    {
+        return nextPage;
+    }
+
     	// 전체 페이지 블록 갯수 계산
 	public void setTotalBlock() {
 		totalBlock = (int) Math.ceil(totalPage / blockScale);
@@ -112,16 +136,8 @@ public class Paginations {
         this.blockScale = blockScale;
     }
 
-    public int getPreviousPage() {
-        return previousPage;
-    }
-
     public void setPreviousPage(int previousPage) {
         this.previousPage = previousPage;
-    }
-
-    public int getNextPage() {
-        return nextPage;
     }
 
     public void setNextPage(int nextPage) {
