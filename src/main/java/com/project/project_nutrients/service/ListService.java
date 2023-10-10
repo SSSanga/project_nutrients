@@ -72,7 +72,7 @@ public class ListService
                     "INNER JOIN supp_spec ON supp_list.SUPP_ID = supp_spec.SUPP_ID\n" + //
                     "WHERE supp_spec.SUPP_ID = '"+supp_id+";";
             String totalsqlMapId = "Supplement.effectresult";
-            result.put(resultList, totalsqlMapId);
+            resultmap.put(resultList, totalsqlMapId);
             totalList.add(resultmap);
         }
 
