@@ -34,7 +34,7 @@ public class ListService
     }
 
     // xml에 withPagination 호출하는것.
-    public Map listWithPaginations(Map dataMap)
+    public ArrayList<Map<String, Object>> listWithPaginations(Map dataMap)
     {
         // Mapper.xml의 selectSearchWithPagination에 parameter를 가져올것.
         // pagination 호출이 필요함. 이때 pagination 필요한것은 totalcount(xml query 존재함),
@@ -62,21 +62,20 @@ public class ListService
         result.put("resultList", sharedDao.getList(sqlMapId, dataMap)); // 표현된 레코드 정보.
         List<Map<String, Object>> resultList = (List<Map<String, Object>>) result.get("resultList");
         ArrayList<Map<String, Object>> totalList = new ArrayList<>();
+        ArrayList supp = new ArrayList<>();
 
         for (Map<String,Object> resultmap : resultList)
         {
             String supp_id = (String) resultmap.get("SUPP_ID");
-            String query = "SELECT effect.EFFECT\n" + //
-                    "FROM effect\n" + //
-                    "INNER JOIN supp_list ON effect.EFFECT_ID = supp_list.EFFECT_ID\n" + //
-                    "INNER JOIN supp_spec ON supp_list.SUPP_ID = supp_spec.SUPP_ID\n" + //
-                    "WHERE supp_spec.SUPP_ID = '"+supp_id+";";
             String totalsqlMapId = "Supplement.effectresult";
-            resultmap.put(resultList, totalsqlMapId);
+            dataMap.put("SUPP_ID", supp_id);
+            supp.add(dataMap);
+            result.put("selecteffectresult", sharedDao.getList(totalsqlMapId, dataMap));
+            resultmap.put("effectresultmap", result);
             totalList.add(resultmap);
         }
 
-        return (Map) totalList;
+        return totalList;
     }
 
     // 삭제만 하기
@@ -95,7 +94,7 @@ public class ListService
         HashMap result = new HashMap<>();
 
         result.put("delcnt", this.delete(dataMap));
-        result.putAll(this.listWithPaginations(dataMap));
+        result.putAll((Map) this.listWithPaginations(dataMap));
 
         return result;
     }
@@ -219,7 +218,7 @@ public class ListService
         result.put("insertbad", this.insertbad(dataMap));
         result.put("insertcomp", this.insertcomp(dataMap));
         result.put("insertlist", this.insertlist(dataMap));
-        result.putAll(this.listWithPaginations(dataMap));
+        result.putAll((Map) this.listWithPaginations(dataMap));
         return result;
     }
 
