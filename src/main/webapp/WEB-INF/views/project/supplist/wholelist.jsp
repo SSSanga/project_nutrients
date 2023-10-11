@@ -62,8 +62,8 @@
                           </tr>
                         </thead>
                         <tbody class="">
-                          <% ArrayList<Map<String, Object>> totalList=(HashMap)result.get("resultList"); for(int i=0; i <
-                            totalList.size(); i=i+1) { HashMap record=(Map)totalList.get(i); %>
+                          <% ArrayList resultList=(ArrayList)result.get("resultList"); for(int i=0; i <
+                            resultList.size(); i=i+1) { HashMap record=(HashMap)resultList.get(i); %>
 
                             <tr>
 
@@ -73,9 +73,9 @@
                               <td class="align-middle">
                                 <button class="listProduct" type="submit" formaction='/supp/selectspec/<%= record.get("SUPP_ID") %>' value='<%= record.get("SUPP_ID") %>' name='SUPP_ID' id="suppdetail" type="hidden" formmethod="post"><%= record.get("PRODUCT") %></button>
                               </td>
-                              <!-- <td class="align-middle">
+                              <td class="align-middle">
                                 <%= record.get("EFFECT") %>
-                              </td> -->
+                              </td>
                               
                               <sec:authorize access="hasRole('ROLE_ADMIN')">
                                 <td class="align-middle"><button class="btn btn-outline-danger mt-auto mb-auto" type="submit"
