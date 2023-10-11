@@ -18,7 +18,9 @@
         <%@ include file="/WEB-INF/views/project/header.jsp" %>
         <% HashMap params=(HashMap)request.getAttribute("params"); String
         searchStr=(String)params.getOrDefault("search", "" ); HashMap
-        result=(HashMap)request.getAttribute("result"); %>
+        result=(HashMap)request.getAttribute("result");
+        HashMap totalList = (HashMap) result.get("totalList"); 
+        ArrayList selecteffectresult = (ArrayList) totalList.get("selecteffectresult"); %>
           <div class="container p-3">
             <form>
               <!-- Search bar 여긴 검색 -->
@@ -63,6 +65,7 @@
                         </thead>
                         <tbody class="">
                          <% ArrayList resultList=(ArrayList)result.get("resultList");
+                            ArrayList effectList=(ArrayList)totalList.get("selecteffectresult");
                             for(int i=0; i < resultList.size(); i=i+1)
                             {
                               HashMap record=(HashMap)resultList.get(i); %>
@@ -74,9 +77,12 @@
                               <td class="align-middle">
                                 <button class="listProduct" type="submit" formaction='/supp/selectspec/<%= record.get("SUPP_ID") %>' value='<%= record.get("SUPP_ID") %>' name='SUPP_ID' id="suppdetail" type="hidden" formmethod="post"><%= record.get("PRODUCT") %></button>
                               </td>
-                              <!-- <td class="align-middle">
-                                <%= record.get("EFFECT") %>
-                              </td> -->
+                              <td class="align-middle">
+                                <% for(int j=0; j < effectList.size(); j++){
+                                  HashMap effectrecord=(HashMap)effectList.get(j); %>
+                                  <div><%= effectrecord.get("EFFECT") %></div>
+                                  <% } %>
+                              </td>
                               
                               <sec:authorize access="hasRole('ROLE_ADMIN')">
                                 <td class="align-middle"><button class="btn btn-outline-danger mt-auto mb-auto" type="submit"

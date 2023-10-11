@@ -61,7 +61,7 @@ public class ListService
 
         result.put("resultList", sharedDao.getList(sqlMapId, dataMap)); // 표현된 레코드 정보.
         List<Map<String, Object>> resultList = (List<Map<String, Object>>) result.get("resultList");
-        ArrayList<Map<String, Object>> totalList = new ArrayList<>();
+        HashMap totalList = new HashMap<>();
         ArrayList supp = new ArrayList<>();
 
         for (Map<String,Object> resultmap : resultList)
@@ -70,10 +70,10 @@ public class ListService
             String totalsqlMapId = "Supplement.effectresult";
             dataMap.put("SUPP_ID", supp_id);
             supp.add(dataMap);
-            result.put("selecteffectresult", sharedDao.getList(totalsqlMapId, dataMap));
+            totalList.put("selecteffectresult", sharedDao.getList(totalsqlMapId, dataMap));
             resultmap.put("effectresultmap", result);
-            totalList.add(resultmap);
-            result.put("resultmap", resultmap);
+            result.putAll(resultmap);
+            result.put("totalList", totalList);
         }
 
         return result;
