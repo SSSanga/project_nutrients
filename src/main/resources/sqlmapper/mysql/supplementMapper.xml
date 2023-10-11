@@ -4,28 +4,49 @@
 
 <!-- count for pagination -->
   <select id="selectTotal" parameterType="Map" resultType="int">
-    SELECT COUNT(*) AS cnt
-    FROM (SELECT DISTINCT t_SPEC.SUPP_ID, t_LIST.EFFECT_FLAG
-    FROM supp_list AS t_LIST
-    INNER JOIN supp_spec AS t_SPEC
-    ON t_LIST.SUPP_ID = t_SPEC.SUPP_ID) AS t_WHOLELIST
-    INNER JOIN effect AS t_EFFECT
-    ON t_WHOLELIST.EFFECT_FLAG = t_EFFECT.EFFECT_ID;
+    SELECT COUNT(*)
+        FROM supp_spec
+        WHERE 1 = 1
+        <choose>
+            <when test="search == 'MANUFACTURE'">
+                and MANUFACTURE like CONCAT('%', #{words}, '%')
+            </when>
+            <when test="search == 'PRODUCT'">
+                and PRODUCT like CONCAT('%', #{words}, '%')
+            </when>
+            <when test="search == 'EFFECT'">
+                and EFFECT like CONCAT('%', #{words}, '%')
+            </when>
+        </choose>
 	</select>
 
 <!-- select_wholelist with pagination -->
   <select id="listwithpaginations" parameterType="Map" resultType="Map">
-
-        SELECT DISTINCT t_WHOLELIST.SUPP_ID, t_WHOLELIST.LOCATION, t_WHOLELIST.PRODUCT, t_EFFECT.EFFECT
-        FROM (SELECT t_SPEC.SUPP_ID, t_SPEC.LOCATION, t_SPEC.PRODUCT, t_LIST.EFFECT_FLAG 
-        FROM supp_list AS t_LIST
-        INNER JOIN supp_spec AS t_SPEC
-        ON t_LIST.SUPP_ID = t_SPEC.SUPP_ID) AS t_WHOLELIST
-        INNER JOIN effect AS t_EFFECT
-        ON t_WHOLELIST.EFFECT_FLAG = t_EFFECT.EFFECT_ID
-        LIMIT #{pageBegin},#{pageScale}
-        
+        SELECT *
+        FROM supp_spec
+        WHERE 1 = 1
+        <choose>
+            <when test="search == 'MANUFACTURE'">
+                and MANUFACTURE like CONCAT('%', #{words}, '%')
+            </when>
+            <when test="search == 'PRODUCT'">
+                and PRODUCT like CONCAT('%', #{words}, '%')
+            </when>
+            <when test="search == 'EFFECT'">
+                and EFFECT like CONCAT('%', #{words}, '%')
+            </when>
+        </choose>
+        limit #{pageBegin}, #{pageScale};
   </select>
+
+  <select id="effectresult" parameterType="Map" resultType="Map">
+        SELECT effect.EFFECT
+        FROM effect
+        INNER JOIN supp_list ON effect.EFFECT_ID = supp_list.EFFECT_ID
+        INNER JOIN supp_spec ON supp_list.SUPP_ID = supp_spec.SUPP_ID
+        WHERE supp_spec.SUPP_ID = #{SUPP_ID}
+  </select>
+
 <!-- 추천 누르면 EFFECT_FLAG가 일치할때 나오게끔 -->
   <select id="recomm" parameterType="Map" resultType="Map">
         SELECT t_SUPPRECOMM.LOCATION, t_SUPPRECOMM.PRODUCT, t_SUPPRECOMM.LINK, t_SUPPRECOMM.EFFECT_FLAG

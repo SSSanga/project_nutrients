@@ -10,17 +10,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Nutrient Recommendations Home</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/wholelist.css">
       </head>
 
       <body>
         <!-- header -->
         <%@ include file="/WEB-INF/views/project/header.jsp" %>
-
-
+        <% HashMap params=(HashMap)request.getAttribute("params"); String
+        searchStr=(String)params.getOrDefault("search", "" ); HashMap
+        result=(HashMap)request.getAttribute("result"); %>
           <div class="container p-3">
-
-
-
             <form>
               <!-- Search bar 여긴 검색 -->
               <div class="container m-2" style="font-weight: bold;">
@@ -35,17 +34,11 @@
                   </select>
 
                   <input class="form-control me-2 mt-auto mb-auto" style="font-size: 20px; width: 150px; height: 50px; "
-                    name="words" type="search" placeholder="Search..." aria-label="Search" id="keydownEnter">
+                    name="words" type="text" placeholder="Search..." aria-label="Search" id="keydownEnter" value='<%= params.getOrDefault("words", "") %>'>
                   <button class="btn btn-light btn-outline-secondary mt-auto mb-auto" type="submit"
-                    formaction="/search/selectsupp" id="keydownEnter"
-                    style="font-size: 20px; width: 100px; height: 50px;" formmethod="post">검색</button>
-
+                    formaction="/supp/wholelist" id="keydownEnter"
+                    style="font-size: 20px; width: 100px; height: 50px;" formmethod="get">검색</button>
                 </div>
-
-                <% HashMap params=(HashMap)request.getAttribute("params"); String
-                  searchStr=(String)params.getOrDefault("search", "" ); HashMap
-                  result=(HashMap)request.getAttribute("result"); %>
-
 
                   <% Paginations paginations=(Paginations)result.get("paginations"); %>
                     <sec:authorize access="hasRole('ROLE_ADMIN')">
@@ -62,7 +55,6 @@
                             <th></th>
                             <th style="font-weight: bold;">제품명</th>
                             <th style="font-weight: bold;">대표 효과</th>
-                            <th style="font-weight: bold;">상세</th>
                             
                             <sec:authorize access="hasRole('ROLE_ADMIN')">
                               <th>삭제</th>
@@ -76,19 +68,14 @@
                             <tr>
 
                               <td class="align-middle">
-                                <img src='<%= record.get("LOCATION") %>' alt='<%= record.get("PRODUCT") %>'
-                                  class="img-fluid rounded" width="200">
+                                <img src='<%= record.get("LOCATION") %>' class="img-fluid rounded" width="200">
                               </td>
                               <td class="align-middle">
-                                <%= record.get("PRODUCT") %>
+                                <button class="listProduct" type="submit" formaction='/supp/selectspec/<%= record.get("SUPP_ID") %>' value='<%= record.get("SUPP_ID") %>' name='SUPP_ID' id="suppdetail" type="hidden" formmethod="post"><%= record.get("PRODUCT") %></button>
                               </td>
                               <td class="align-middle">
                                 <%= record.get("EFFECT") %>
                               </td>
-                              <td class="align-middle"><button class="btn btn-outline-primary mt-auto mb-auto" type="submit"
-                                  formaction='/supp/selectspec/<%= record.get("SUPP_ID") %>'
-                                  value='<%= record.get("SUPP_ID") %>' name='SUPP_ID' id="suppdetail"
-                                  style="font-weight: bold;" type="hidden" formmethod="post">상세</button></td>
                               
                               <sec:authorize access="hasRole('ROLE_ADMIN')">
                                 <td class="align-middle"><button class="btn btn-outline-danger mt-auto mb-auto" type="submit"
@@ -114,31 +101,26 @@
                 <div class="m-3">
                   <nav aria-label="Page navigation">
                     <ul class="justify-content-center pagination align-middle p-2">
-                      <li class="page-item"><a class="page-link"
-                          href='/supp/wholelist?currentPage=<%= paginations.getPreviousPage() %>'>Previous</a></li>
-                      <% for (int i=paginations.getBlockStart(); i <=paginations.getBlockEnd() ; i=i+1){ %>
-                        <li class="page-item"><a class="page-link" href='/supp/wholelist?currentPage=<%= i %>'>
-                            <%= i %>
-                          </a></li>
-                        <% } %>
-                          <li class="page-item"><a class="page-link"
-                              href='/supp/wholelist?currentPage=<%= paginations.getNextPage() %>'>Next</a>
+                      <li class="page-item"><button class="page-link" formaction="/supp/wholelist/<%= paginations.getFirstPage() %>">First</button></li>
+                      <li class="page-item"><button class="page-link" formaction="/supp/wholelist/<%= paginations.getPreviousPage() %>">Previous</button></li>
+                          <%
+                          for(int i=paginations.getBlockStart();i <= paginations.getBlockEnd(); i=i+1)
+                            {
+                          %>
+                          <li class="page-item">
+                              <button class="page-link" formaction="/supp/wholelist/<%= i %>"><%= i %></button>
                           </li>
-
+                          <%
+                            }
+                          %>
+                          <li class="page-item"><button class="page-link" formaction="/supp/wholelist/<%= paginations.getNextPage() %>">Next</button></li>
+                          <li class="page-item"><button class="page-link" formaction="/supp/wholelist/<%= paginations.getLastPage() %>">Last</button></li>
                     </ul>
                   </nav>
                 </div>
-              
-
-
             </form>
-
           </div>
-
           <!-- Footer -->
           <%@ include file="/WEB-INF/views/project/footer.jsp" %>
-
-
       </body>
-
       </html>

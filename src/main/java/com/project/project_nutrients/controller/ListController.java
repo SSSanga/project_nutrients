@@ -28,8 +28,14 @@ public class ListController {
     ListService wholelistservice;
 
     // anyone 
-    @GetMapping("/wholelist")
-    public ModelAndView wholelist(@RequestParam Map params, ModelAndView modelAndView) {
+    @GetMapping({"/wholelist", "/wholelist/{currentPage}"})
+    public ModelAndView wholelist(@PathVariable(required=false) String currentPage, @RequestParam Map params, ModelAndView modelAndView)
+    {
+        if (currentPage == null)
+        {
+            currentPage = "1";
+        }
+        params.put("currentPage", currentPage);
         Object result = wholelistservice.listWithPaginations(params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);

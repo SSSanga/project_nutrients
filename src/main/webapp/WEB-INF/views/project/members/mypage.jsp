@@ -67,8 +67,8 @@
                     </div>
                 </div>
                     <div class="text-center">
-                        <button class="btn btn-primary" type="submit" formaction="/">back</button>
-                        <button class="btn btn-primary" method="post" formaction='/members/memberUpdateForm'>updete</button>
+                        <button class="btn btn-primary" type="submit" formaction="/">뒤로</button>
+                        <button class="btn btn-primary" method="post" formaction='/members/memberUpdateForm'>수정</button>
                     </div>
                 </form>
             </div>
