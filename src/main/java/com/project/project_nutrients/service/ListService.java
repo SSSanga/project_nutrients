@@ -34,7 +34,7 @@ public class ListService
     }
 
     // xml에 withPagination 호출하는것.
-    public ArrayList<Map<String, Object>> listWithPaginations(Map dataMap)
+    public HashMap listWithPaginations(Map dataMap)
     {
         // Mapper.xml의 selectSearchWithPagination에 parameter를 가져올것.
         // pagination 호출이 필요함. 이때 pagination 필요한것은 totalcount(xml query 존재함),
@@ -73,9 +73,10 @@ public class ListService
             result.put("selecteffectresult", sharedDao.getList(totalsqlMapId, dataMap));
             resultmap.put("effectresultmap", result);
             totalList.add(resultmap);
+            result.put("resultmap", resultmap);
         }
 
-        return totalList;
+        return result;
     }
 
     // 삭제만 하기
