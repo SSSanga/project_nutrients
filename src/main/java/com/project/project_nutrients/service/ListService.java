@@ -42,6 +42,7 @@ public class ListService
         // page record 수 : xml 의 limit 0,10 콕 집어져서 나와야함.
         // page 형성을 위한 계산.
         String sqlMapId = "Supplement.listwithpaginations";
+        String totalsqlMapId = "Supplement.effectresult";
         int totalCount = (int) this.selectTotal(dataMap);
 
         int currentPage = 1;
@@ -61,21 +62,17 @@ public class ListService
 
         result.put("resultList", sharedDao.getList(sqlMapId, dataMap)); // 표현된 레코드 정보.
         List<Map<String, Object>> resultList = (List<Map<String, Object>>) result.get("resultList");
-        HashMap totalList = new HashMap<>();
-        ArrayList supp = new ArrayList<>();
+        ArrayList totalList = new ArrayList<>();
 
-        for (Map<String,Object> resultmap : resultList)
+        for (int i = 0; i < resultList.size(); i++)
         {
-            String supp_id = (String) resultmap.get("SUPP_ID");
-            String totalsqlMapId = "Supplement.effectresult";
+            Map<String, Object> product = resultList.get(i);
+            String supp_id = (String) product.get("SUPP_ID");
             dataMap.put("SUPP_ID", supp_id);
-            supp.add(dataMap);
-            totalList.put("selecteffectresult", sharedDao.getList(totalsqlMapId, dataMap));
-            resultmap.put("effectresultmap", result);
-            result.putAll(resultmap);
+            product.put("producteffect", sharedDao.getList(totalsqlMapId, dataMap));
+            totalList.add(product);
             result.put("totalList", totalList);
         }
-
         return result;
     }
 
