@@ -16,9 +16,9 @@
       <body>
         <!-- header -->
         <%@ include file="/WEB-INF/views/project/header.jsp" %>
-        <% HashMap params=(HashMap)request.getAttribute("params"); String
-        searchStr=(String)params.getOrDefault("search", "" ); HashMap
-        result=(HashMap)request.getAttribute("result"); %>
+        <% HashMap params=(HashMap)request.getAttribute("params");
+        String searchStr=(String)params.getOrDefault("search", "" );
+        HashMap result=(HashMap)request.getAttribute("result"); %>
           <div class="container p-3">
             <form>
               <!-- Search bar 여긴 검색 -->
@@ -62,9 +62,13 @@
                           </tr>
                         </thead>
                         <tbody class="">
-                          <% ArrayList resultList=(ArrayList)result.get("resultList"); for(int i=0; i <
-                            resultList.size(); i=i+1) { HashMap record=(HashMap)resultList.get(i); %>
-
+                         <% ArrayList resultList=(ArrayList)result.get("resultList");
+                            ArrayList totalList=(ArrayList)result.get("totalList");
+                            for(int i=0; i < resultList.size(); i=i+1)
+                            {
+                              HashMap product=(HashMap)totalList.get(i);
+                              ArrayList producteffect=(ArrayList)product.get("producteffect");
+                              HashMap record=(HashMap)resultList.get(i); %>
                             <tr>
 
                               <td class="align-middle">
@@ -74,7 +78,10 @@
                                 <button class="listProduct" type="submit" formaction='/supp/selectspec/<%= record.get("SUPP_ID") %>' value='<%= record.get("SUPP_ID") %>' name='SUPP_ID' id="suppdetail" type="hidden" formmethod="post"><%= record.get("PRODUCT") %></button>
                               </td>
                               <td class="align-middle">
-                                <%= record.get("EFFECT") %>
+                                <% for(int j=0; j < producteffect.size(); j++){
+                                  HashMap effectrecord=(HashMap)producteffect.get(j); %>
+                                  <div><%= effectrecord.get("EFFECT") %></div>
+                                  <% } %>
                               </td>
                               
                               <sec:authorize access="hasRole('ROLE_ADMIN')">

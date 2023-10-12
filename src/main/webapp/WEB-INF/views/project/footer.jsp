@@ -3,7 +3,7 @@
 <!-- Screen adjust functions -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Footer -->
-    <footer class="p-5 d-flex justify-content-between align-items-center font-size: 0.8rem footer-Teal">
+    <footer class="p-5 d-flex justify-content-between align-items-center font-size: 0.8rem footer-Teal container">
         <div class="row">
             <div class="">
                 <div class="">
