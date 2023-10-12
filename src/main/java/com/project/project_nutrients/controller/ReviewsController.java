@@ -95,6 +95,12 @@ public class ReviewsController {
         return  modelAndView;
     }
 
+    @GetMapping("/reviewsinput")
+    public ModelAndView reviewsinput(@RequestParam Map params, ModelAndView modelAndView) {
+        modelAndView.setViewName("/WEB-INF/views/project/reviews/reviewsinput.jsp");
+        return  modelAndView;
+    }
+
 
     @GetMapping("/reviewselectSearch")
     public ModelAndView reviewselectSearch(@RequestParam Map params, ModelAndView modelAndView) {
