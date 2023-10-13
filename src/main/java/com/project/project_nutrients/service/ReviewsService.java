@@ -8,6 +8,8 @@ import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.project.project_nutrients.dao.SharedDao;
 import com.project.project_nutrients.utils.Commons;
@@ -32,6 +34,15 @@ public class ReviewsService {
     // 리뷰 테스트용/ 검색(조건-search:)
     public Map reviewselectSearch(Map dataMap) {
         String sqlMapId = "Reviews.reviewselect";
+        
+        HashMap result = new HashMap<>();
+        result.put("resultList", sharedDao.getList(sqlMapId, dataMap));
+        return result;
+    }
+
+    @ResponseBody
+    public HashMap reviewsinputSearch(@RequestParam Map<String, String> dataMap) {
+        String sqlMapId = "Reviews.reviewinput";
         
         HashMap result = new HashMap<>();
         result.put("resultList", sharedDao.getList(sqlMapId, dataMap));
