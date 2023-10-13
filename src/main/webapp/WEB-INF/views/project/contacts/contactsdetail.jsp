@@ -29,25 +29,25 @@
             </div>
             <div class="container py-4">
                 <h1 class="text-center" style="font-weight: bold;">Contacts</h1>
+                <div style="margin-top: 80px;"></div> 
                 <hr style="border-top: 4px solid;">
            
 
             <tbody>   
                  
-                <div class="card mb-2 pt-2" >
+                <div class="card mb-2 pt-1" >
                     <input class="form-control" type="hidden" id="REVIEW_ID" name="REVIEW_ID">
                     <div class="card-body">
-                       
-                        <h5 class="card-title mt-2" style="font-weight: bold;">등록일</h5>
-                        <hr>
-                        <span class="card-text pb-2"><%= result.get("WRITING_DATE") %></span>
+                        <h5 class="card-title mx-2, bx-2" style="font-weight: bold;">등록일</h5>
+                        <hr style="margin-top: 0.2rem; border-top: 0.1rem solid;">
+                        <span class="card-text pb-2"><%= result.get("WRITING_DATE").toString().split(" ")[0] %></span>
                     </div>
                 </div>
 
                 <div class="card mb-2 pt-2">
                   <div class="card-body">
                         <h5 class="card-title mt-2" style="font-weight: bold;">문의내용</h5>
-                        <hr>
+                        <hr style="margin-top: 0.2rem; border-top: 0.1rem solid;">
                         <span class="card-text pb-2"><%= result.get("CONTENT") %></span>
                    </div>
                 </div>
@@ -55,9 +55,10 @@
                 <div class="card mb-2 pt-2">
                    <div class="card-body">
                         <h5 class="card-title mt-2" style="font-weight: bold;">관리자 댓글</h5>
-                        <hr>
+                        <hr style="margin-top: 0.2rem; border-top: 0.1rem solid;">
                        <span class="card-text pb-2"><%= result.get("RESPONSE") %></span>
                        <sec:authorize access="hasRole('ROLE_ADMIN')">
+                        <div style="margin-top: 65px;"></div> 
                         <hr>
                         <h7 class="card-title mt-2" style="font-weight: bold;">관리자 댓글 작성
                         <input type="text" class ="me-4" style="width: 400px;">
@@ -76,8 +77,8 @@
         </table>
        
      </main>
-    
-
+     <div style="margin-top: 80px;"></div> 
+     <hr>
     <!-- Footer -->
    <%@ include file="/WEB-INF/views/project/footer.jsp" %>
 </body>
