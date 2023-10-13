@@ -21,6 +21,7 @@
     <div class="container">
         <div class="container py-4">
             <h1 class="text-center" style="font-weight: bold;">Reviews</h1>
+            <div style="margin-top: 80px;"></div> 
             <hr style="border-top: 4px solid;">
             <div class="row">
                 <div class="col-md-8 mx-auto">
