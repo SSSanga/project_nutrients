@@ -20,6 +20,7 @@
                     <form>
                         <div class="container text-center ">
                             <h1 class="mb-0">자주하는 질문</h1>
+                            <div style="margin-top: 80px;"></div> 
                         </div>
 
                         <main class="container p-3">
@@ -76,7 +77,7 @@
                                                     <%= record.get("CONTENT") %>
                                                 </td>
                                                 <td class="align-middle">
-                                                    <%= record.get("WRITING_DATE") %>
+                                                    <%= record.get("WRITING_DATE").toString().split(" ")[0] %>
                                                 </td>
                                                 <td><button class="btn btn-outline-secondary mt-auto mb-auto"
                                                         formaction='/contacts/contactsselectDetail/<%= record.get("INQUIRY_ID") %>'
@@ -124,6 +125,7 @@
                             </div>
                         </main>
                     </form>
+                    <div style="margin-top: 80px;"></div> 
                     <hr>
                     <!-- Footer -->
                     <%@ include file="/WEB-INF/views/project/footer.jsp" %>

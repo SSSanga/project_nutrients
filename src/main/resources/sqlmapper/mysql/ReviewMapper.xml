@@ -19,7 +19,14 @@ WHERE SUPP_ID = #{SUPP_ID}
 <!-- 검색창 -->
 <select id="reviewselect" parameterType="Map" resultType="Map">
 SELECT REVIEW_ID,TITLE,CONTENT, WRITING_DATE
-FROM review 
+FROM review;
+</select>
+
+<select id="reviewinput" parameterType="Map" resultType="Map">
+   SELECT TITLE
+   FROM review
+   WHERE 1 = 1
+   and TITLE like CONCAT('%', #{words}, '%')
 </select>
 
 
