@@ -25,7 +25,7 @@ public class RecommService {
     public Object selectList(String EFFECT_FLAG, Map dataMap) {
         // Object getOne(String sqlMapId, Object dataMap)
         String sqlMapId = "Supplement.recomm";
-        dataMap.put("EFFECT_FLAG", EFFECT_FLAG);
+        // dataMap.put("EFFECT_FLAG", EFFECT_FLAG);
         
         HashMap result = new HashMap<>();
         result.put("resultList", sharedDao.getList(sqlMapId, dataMap));

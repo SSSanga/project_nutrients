@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Chart">
+
+<!-- 파라미터 없이 그냥 리뷰테이블에서 별점 카운트하기  -->
+
+
+<select id="reviewstarcnt" parameterType="Map" resultType="Map">
+   SELECT STAR, COUNT(*) AS CNT
+   FROM project_nutrients.review
+   WHERE STAR BETWEEN 1 AND 5
+   GROUP BY STAR;
+</select>  
+
+<!-- SUPP_ID 던져졌을 때, 그에 해당하는 리뷰 테이블에서 별점 카운트해서 가져오기 -->
+
+<select id="suppid_tarcnt" parameterType="Map" resultType="Map">
+   SELECT STAR, COUNT(*) AS CNT
+   FROM project_nutrients.review
+   WHERE STAR BETWEEN 1 AND 5 AND SUPP_ID = #{SUPP_ID}
+   GROUP BY STAR;
+</select>  
+
+<select id="effectquater_cnt" parameterType="Map" resultType="Map">
+SELECT
+    MONTH(B.WRITING_DATE),
+    COUNT(CASE WHEN EFFECT_ID = 'EFFECT_01' AND B.WRITING_DATE IS NOT NULL THEN 1 END) AS LIVER,
+    COUNT(CASE WHEN EFFECT_ID = 'EFFECT_05' AND B.WRITING_DATE IS NOT NULL THEN 1 END) AS RECOVERY,
+    COUNT(CASE WHEN EFFECT_ID = 'EFFECT_09' AND B.WRITING_DATE IS NOT NULL THEN 1 END) AS CHOLESTEROL,
+    COUNT(CASE WHEN EFFECT_ID = 'EFFECT_13' AND B.WRITING_DATE IS NOT NULL THEN 1 END) AS EYES
+FROM project_nutrients.dummy_tables_supp AS B
+WHERE EFFECT_ID IN ('EFFECT_01', 'EFFECT_05', 'EFFECT_09', 'EFFECT_13')
+    AND YEAR(B.WRITING_DATE) = 2022
+GROUP BY MONTH(B.WRITING_DATE)
+ORDER BY '월';
+</select>
+</mapper>

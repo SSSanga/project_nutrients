@@ -40,4 +40,10 @@ public class SharedDao {
         Object result = sqlSessionTemplate.delete(sqlMapId, dataMap);
         return result;
     }
+
+    // 쿼리만 불러올때 (차트에 필요함)
+    public Object getselect(String sqlMapId) {
+        Object result = sqlSessionTemplate.selectList(sqlMapId);
+        return result;
+    }
 }

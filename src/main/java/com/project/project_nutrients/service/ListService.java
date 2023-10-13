@@ -106,10 +106,30 @@ public class ListService
         result.putAll(this.selectEffect(SUPP_ID, dataMap)); // Update the method call with SUPP_ID_관련 효과
         result.putAll(this.selectComp(SUPP_ID, dataMap)); // Update the method call with SUPP_ID_관련 성분
         result.putAll(this.selectBad(SUPP_ID, dataMap)); // Update the method call with SUPP_ID_관련 부작용
-
+        // result.put(this.getSuppChart(SUPP_ID, dataMap), dataMap); // review 별점 CNT 
         return result;
     }
 
+    public Object getSuppChart(String SUPP_ID, Map dataMap) {
+        // Object getOne(String sqlMapId, Object dataMap)
+        String sqlMapId = "Chart.suppid_tarcnt"; 
+        
+        dataMap.put("SUPP_ID", SUPP_ID);
+
+        
+        Object resultObject = sharedDao.getList(sqlMapId, dataMap);
+        return resultObject;
+    }
+
+    // public Map getSuppChart(String SUPP_ID, Map dataMap) {
+    //     // Object getOne(String sqlMapId, Object dataMap)
+    //     String sqlMapId = "Chart.suppid_tarcnt"; 
+    //     dataMap.put("SUPP_ID", SUPP_ID);
+    //     HashMap result = new HashMap<>();
+        
+    //     result.put("resultCNT",sharedDao.getList(sqlMapId, dataMap));
+    //     return result;
+    // }
     // 기본정보_SUPP_SPEC
     public Map selectID(String SUPP_ID, Map dataMap)
     {
@@ -219,5 +239,7 @@ public class ListService
         result.putAll((Map) this.listWithPaginations(dataMap));
         return result;
     }
+
+    
 
 }
