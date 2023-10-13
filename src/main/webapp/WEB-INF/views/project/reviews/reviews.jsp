@@ -21,6 +21,7 @@
                     
                             <div class="container p-3">
                                 <div class="h1 text-center" style="font-weight: bold;">Review list</div>
+                                <div style="margin-top: 80px;"></div> 
                                 <hr style="border-top: 4px solid;">
 
                                 <% HashMap params=(HashMap)request.getAttribute("params"); String
@@ -39,26 +40,31 @@
 
                                         <div class="row">
                                             <% ArrayList resultList=(ArrayList)result.get("resultList"); for(int i=0; i
-                                                < resultList.size(); i=i+1){ HashMap record=(HashMap)resultList.get(i);%>
+                                                < resultList.size(); i=i+1){ HashMap record=(HashMap)resultList.get(i);
+                                                    String title = (String)record.get("TITLE");
+                                                    String shortTitle = title.length() > 25 ? title.substring(0, 25) + "..." : title;
+                                                    String content = (String)record.get("CONTENT");
+                                                    String shortContent = content.length() > 100 ? content.substring(0, 100) + "..." : content;
+                                            %>
                                                 <a href='/reviews/reviewselectDetail/<%= record.get("REVIEW_ID") %>'
                                                     class="col-md-6 mx-auto btn btn-none btn-sm">
-                                                    <div class="card mb-4">
+                                                    <div class="card mb-4" style="max-height: 250px; overflow: hidden;">
                                                         <div class="card-body">
                                                             <div class="row">
                                                                 <div class="col">
                                                                     <h5 class="card-title" style="font-weight: bold;">
-                                                                        <%= record.get("TITLE") %>
+                                                                        <%= shortTitle %>
                                                                     </h5>
                                                                 </div>
                                                                 
                                                                 <div class="p-3">
                                                                     <div>
                                                                         <p class="card-text">
-                                                                            <%= record.get("CONTENT") %>
+                                                                            <%= shortContent %>
                                                                         </p>
                                                                     </div>
                                                                     <div><small class="text-muted">
-                                                                            <%= record.get("WRITING_DATE") %>
+                                                                            <%= record.get("WRITING_DATE").toString().split(" ")[0] %>
                                                                         </small></div>
                                                                     
                                                                    <sec:authorize access="hasRole('ROLE_ADMIN')">

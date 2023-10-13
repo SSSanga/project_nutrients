@@ -35,3 +35,18 @@ SET supp_id = CASE
     WHEN product_name = product THEN supp_id
     ELSE supp_id
 END;
+
+
+ALTER TABLE cdummy_tables
+ADD COLUMN EFFECT_FLAG VARCHAR(500);
+
+UPDATE cdummy_tables
+JOIN supp_spec ON cdummy_tables.product = supp_spec.product
+SET cdummy_tables.SUPP_ID = supp_spec.SUPP_ID;
+
+update cdummy_tables
+set EFFECT_FLAG = 'EFFECT_09';
+
+insert into supp_spec(LOCATION, LINK)
+select LOCATION, LINK  -- CSV 컬럼이름이랑 같음
+from dummy_table;
