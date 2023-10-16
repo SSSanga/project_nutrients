@@ -50,7 +50,7 @@ public class RecommendationController {
     }
 
     // 기존에서 pagination 돌리기
-    @GetMapping({"/effectflag/{EFFECT_FLAG}","/effectflag/{EFFECT_FLAG}{currentPage}"})
+    @GetMapping({"/effectflag/{EFFECT_FLAG}","/effectflag/{EFFECT_FLAG}/{currentPage}"})
     public ModelAndView recommendation(@PathVariable String EFFECT_FLAG, @PathVariable(required=false) String currentPage, Map params,
             ModelAndView modelAndView) {
             if (currentPage == null)
