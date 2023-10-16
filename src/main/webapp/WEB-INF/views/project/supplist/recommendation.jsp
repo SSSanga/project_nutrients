@@ -26,7 +26,7 @@
                     </div>
                     <div>
 
-                      <div id="pieChart"></div>
+                      <div id="pieChart" style="height: 400px;"></div>
 
                     </div>
                     <table class="table table-hover p-2">
@@ -92,7 +92,7 @@
                 </form>
 
               </div>
-              JavaScript Code
+
               <script type='text/javascript'>
                 // Load the Visualization API and the corechart package
                 google.charts.load('current', { 'packages': ['corechart'] });
@@ -122,7 +122,7 @@
 
                   // Options for Pie Chart
                   let pieOptions = {
-                    title: 'Review Top 8'
+                    title: 'Review Top 5'
                   };
 
                   let pieChart = new google.visualization.PieChart(document.querySelector('#pieChart'));

@@ -118,7 +118,10 @@
                                         </nav>
                                     </div>
                         </div>
+
                     </form>
+                    <div style="margin-top: 80px;"></div>
+                    <hr style="border-top: 4px;">
                     <!-- Footer -->
                     <%@ include file="/WEB-INF/views/project/footer.jsp" %>
 
