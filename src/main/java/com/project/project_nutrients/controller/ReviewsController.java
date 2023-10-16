@@ -38,7 +38,7 @@ public class ReviewsController {
     //     modelAndView.setViewName("/WEB-INF/views/project/reviews/reviews.jsp");
     //     return modelAndView;
     // }
-
+ 
     // /selectSearch?search=YEAR&words=2020
     // /selectSearch/CAR_NAME/소
     @GetMapping("/reviewlist")

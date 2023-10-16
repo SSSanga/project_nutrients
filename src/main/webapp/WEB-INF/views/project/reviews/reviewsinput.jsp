@@ -26,7 +26,7 @@
                             <input type="text" class="form-control" id="ReviewContent" name="words" value='<%= params.getOrDefault("words", "") %>'>
                         </div>
                         <!-- Submit Button -->
-                        <button type="submit" class="btn btn-primary" id="ReviewContent">Predict</button>
+                        <button type="submit" class="btn btn-primary" id="predict">Predict</button>
                     </form>
                     <!-- Result Display -->
                     <div id="resultDisplay" class="mt-4"></div>

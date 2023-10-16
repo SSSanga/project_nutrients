@@ -50,7 +50,7 @@ public class RecommendationController {
     }
 
     // 기존에서 pagination 돌리기
-    @GetMapping({"/effectflag/{EFFECT_FLAG}","/effectflag/{EFFECT_FLAG}/{currentPage}"})
+    @GetMapping({"/effectflag/{EFFECT_FLAG}","/effectflag/{EFFECT_FLAG}{currentPage}"})
     public ModelAndView recommendation(@PathVariable String EFFECT_FLAG, @PathVariable(required=false) String currentPage, Map params,
             ModelAndView modelAndView) {
         Object result = recommservice.selectList(EFFECT_FLAG, params);
@@ -67,4 +67,31 @@ public class RecommendationController {
         modelAndView.setViewName("/WEB-INF/views/project/supplist/recommendation.jsp");
         return modelAndView;
     }
+
+    // // 기존에서 pagination 돌리기_돌리면서 chart 띄워야하는데 
+    // @GetMapping({"/effectflag/{EFFECT_FLAG}","/effectflag/{EFFECT_FLAG}/{currentPage}"})
+    // public ModelAndView recommendation(@PathVariable String EFFECT_FLAG, @PathVariable(required=false) String currentPage, Map params,
+    //         ModelAndView modelAndView) {
+    //     Object result = recommservice.selectList(EFFECT_FLAG, params);
+    //             if (currentPage == null)
+    //         {
+    //             currentPage = "1";
+    //         }
+    //     //chart 들어아게 해야함
+    //     // 효과별 댓글 분포 파이 그래프
+    //     Object datas = chartsService.effectreviewcnt(EFFECT_FLAG, params); //chart 값을 받아오고자 함.
+        
+    //     // chart도 들어가게 하기  
+    //     Gson gson = new Gson();
+    //     String jsonData = gson.toJson(datas);
+    //     modelAndView.addObject("dataArray", jsonData); 
+
+        
+        
+    //     modelAndView.addObject("params", params);
+    //     modelAndView.addObject("result", result);
+    //     // modelAndView.addObject("effect", EFFECT_FLAG);
+    //     modelAndView.setViewName("/WEB-INF/views/project/supplist/recommendation.jsp");
+    //     return modelAndView;
+    // }
 }

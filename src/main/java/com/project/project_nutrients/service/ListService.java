@@ -112,7 +112,7 @@ public class ListService
 
     public Object getSuppChart(String SUPP_ID, Map dataMap) {
         // Object getOne(String sqlMapId, Object dataMap)
-        String sqlMapId = "Chart.suppid_tarcnt"; 
+        String sqlMapId = "Chart.suppidcnt"; 
         
         dataMap.put("SUPP_ID", SUPP_ID);
 

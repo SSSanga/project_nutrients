@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function() {
     // id : #, class :. , tag : 그대로 사용
     let predictObject = document.querySelector('#predict')
     predictObject.addEventListener('click', (event)=>{
@@ -23,4 +24,4 @@
       })
       .catch(error => console.error(error));
    
-    });
+    });})

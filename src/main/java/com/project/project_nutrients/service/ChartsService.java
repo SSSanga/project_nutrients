@@ -22,7 +22,7 @@ public class ChartsService {
     //SUPP_ID를 이용해서 리뷰 CNT 가져오기 
     public Object getSuppChart(String SUPP_ID, Map dataMap) {
         // Object getOne(String sqlMapId, Object dataMap)
-        String sqlMapId = "Chart.suppid_tarcnt"; 
+        String sqlMapId = "Chart.suppidcnt"; 
         
         dataMap.put("SUPP_ID", SUPP_ID);
 
@@ -35,7 +35,7 @@ public class ChartsService {
     public Object getquaterChart(Map dataMap) {
         
         // Object getOne(String sqlMapId, Object dataMap)
-        String sqlMapId = "Chart.lasteffectquater_cnt"; 
+        String sqlMapId = "Chart.lasteffectquatercnt"; 
 
         
         Object resultObject = sharedDao.getList(sqlMapId, dataMap);
@@ -54,10 +54,10 @@ public class ChartsService {
     }
 
 // EFFECT에서 댓글 평균을 pie chart로 표현하기
-    public Object effectreivewavg (String EFFECT_FLAG, Map dataMap) {
+    public Object effectreviewcnt (String EFFECT_FLAG, Map dataMap) {
         
         // Object getOne(String sqlMapId, Object dataMap)
-        String sqlMapId = "Chart.effect_review_avg"; 
+        String sqlMapId = "Chart.effectreviewcnt"; 
 
         
         Object resultObject = sharedDao.getList(sqlMapId, dataMap);
