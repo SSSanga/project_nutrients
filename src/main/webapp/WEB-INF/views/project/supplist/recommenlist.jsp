@@ -35,7 +35,7 @@
                   <div class="card-title h4"><button type="submit" class="btn btn-outline"
                       formaction="/recomm/effectflag/EFFECT_01" value="EFFECT_01" name="EFFECT_FLAG">간 기능개선</button>
                   </div>
-
+                  
                 </div>
               </label>
             </div>
@@ -50,7 +50,7 @@
               <label for="card_checkbox_2" class="card-link">
                 <div class="card-body">
                   <div class="card-title h4"><button type="submit" class="btn btn-outline"
-                      formaction="/recomm/effectflag/EFFECT_05" value="EFFECT_05" name="EFFECT_FLAG">피로회복</button></div>
+                      formaction="/recomm/effectflag/EFFECT_05"  value="EFFECT_05" name="EFFECT_FLAG">피로회복</button></div>
 
                 </div>
               </label>
@@ -83,7 +83,7 @@
               <label for="card_checkbox_4" class="card-link">
                 <div class="card-body">
                   <div class="card-title h4"><button type="submit" class="btn btn-outline"
-                      formaction="/recomm/effectflag/EFFECT_13" value="EFFECT_13" name="EFFECT_FLAG">눈 기능 향상</button>
+                      formaction="/recomm/effectflag/EFFECT_13"  value="EFFECT_13" name="EFFECT_FLAG">눈 기능 향상</button>
                   </div>
                 </div>
               </label>

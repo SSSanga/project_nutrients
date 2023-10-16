@@ -50,11 +50,12 @@ public class ListController {
     public ModelAndView spec(@PathVariable String SUPP_ID, @RequestParam Map params, ModelAndView modelAndView) {
            
         Object result = wholelistservice.selectSpec(SUPP_ID, params);
-        Object datas = chartsService.getSuppChart(SUPP_ID, params); //chart 값을 받아오고자 함.
+
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
         
         // chart도 들어가게 하기  
+        Object datas = chartsService.getSuppChart(SUPP_ID, params); //chart 값을 받아오고자 함.
         Gson gson = new Gson();
         String jsonData = gson.toJson(datas);
         modelAndView.addObject("dataArray", jsonData); //쿼리 데이터

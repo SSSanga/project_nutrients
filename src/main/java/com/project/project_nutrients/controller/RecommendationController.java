@@ -49,12 +49,21 @@ public class RecommendationController {
         return modelAndView;
     }
 
-    @GetMapping("/effectflag/{EFFECT_FLAG}")
-    public ModelAndView recommendation(@PathVariable String EFFECT_FLAG, @RequestParam Map parmas,
+    // 기존에서 pagination 돌리기
+    @GetMapping({"/effectflag/{EFFECT_FLAG}","/effectflag/{EFFECT_FLAG}/{currentPage}"})
+    public ModelAndView recommendation(@PathVariable String EFFECT_FLAG, @PathVariable(required=false) String currentPage, Map params,
             ModelAndView modelAndView) {
-        Object result = recommservice.selectList(EFFECT_FLAG, parmas);
-        modelAndView.addObject("params", parmas);
+        Object result = recommservice.selectList(EFFECT_FLAG, params);
+                if (currentPage == null)
+            {
+                currentPage = "1";
+            }
+
+        
+
+        modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
+        // modelAndView.addObject("effect", EFFECT_FLAG);
         modelAndView.setViewName("/WEB-INF/views/project/supplist/recommendation.jsp");
         return modelAndView;
     }

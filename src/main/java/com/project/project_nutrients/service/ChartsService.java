@@ -31,14 +31,36 @@ public class ChartsService {
         return resultObject;
     }
 
-    // EFFECT들을 월별로 line 그리기 
+    // EFFECT들을 월별로 line 그리기_2022 
     public Object getquaterChart(Map dataMap) {
         
         // Object getOne(String sqlMapId, Object dataMap)
-        String sqlMapId = "Chart.effectquater_cnt"; 
+        String sqlMapId = "Chart.lasteffectquater_cnt"; 
 
         
-        Object resultObject = sharedDao.getselect(sqlMapId);
+        Object resultObject = sharedDao.getList(sqlMapId, dataMap);
+        return resultObject;
+    }
+
+    // EFFECT들을 월별로 line 그리기_2023
+    public Object thisgetquaterChart(Map dataMap) {
+        
+        // Object getOne(String sqlMapId, Object dataMap)
+        String sqlMapId = "Chart.thiseffectquater_cnt"; 
+
+        
+        Object resultObject = sharedDao.getList(sqlMapId, dataMap);
+        return resultObject;
+    }
+
+// EFFECT에서 댓글 평균을 pie chart로 표현하기
+    public Object effectreivewavg (String EFFECT_FLAG, Map dataMap) {
+        
+        // Object getOne(String sqlMapId, Object dataMap)
+        String sqlMapId = "Chart.effect_review_avg"; 
+
+        
+        Object resultObject = sharedDao.getList(sqlMapId, dataMap);
         return resultObject;
     }
     

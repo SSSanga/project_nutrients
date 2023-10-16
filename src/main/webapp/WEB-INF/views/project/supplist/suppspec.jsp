@@ -120,7 +120,7 @@
             // Data for Bar Chart
             // JavaScript 변수에 데이터 할당
             let dataArray = <%= dataArrayJSON %>;
-
+            console.log(dataArray);
             // 데이터를 Google Charts DataTable으로 변환
             // number로 데이터타입을 지정하는 경우 .addRow에 parseInt(가져올item)이렇게 해줘야하는듯
             let data = new google.visualization.DataTable();
