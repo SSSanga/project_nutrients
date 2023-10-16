@@ -117,8 +117,7 @@
                             {
                           %>
                           <li class="page-item">
-                              <button class="page-link" formaction="/supp/wholelist/<%= i %>"><%= i %></button>
-                          </li>
+                              <button class="page-link" formaction="/supp/wholelist/<%= i %>"><%= i %></button></li>
                           <%
                             }
                           %>

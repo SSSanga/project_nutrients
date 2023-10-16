@@ -14,14 +14,14 @@
 
 <!-- SUPP_ID 던져졌을 때, 그에 해당하는 리뷰 테이블에서 별점 카운트해서 가져오기 -->
 
-<select id="suppid_tarcnt" parameterType="Map" resultType="Map">
+<select id="suppidcnt" parameterType="Map" resultType="Map">
    SELECT STAR, COUNT(*) AS CNT
    FROM project_nutrients.review
    WHERE STAR BETWEEN 1 AND 5 AND SUPP_ID = #{SUPP_ID}
    GROUP BY STAR;
 </select>  
 
-<select id="lasteffectquater_cnt" parameterType="Map" resultType="Map">
+<select id="lasteffectquatercnt" parameterType="Map" resultType="Map">
 SELECT
     MONTH(B.WRITING_DATE),
     COUNT(CASE WHEN EFFECT_ID = 'EFFECT_01' AND B.WRITING_DATE IS NOT NULL THEN 1 END) AS LIVER,
@@ -32,10 +32,10 @@ FROM project_nutrients.dummy_tables_supp AS B
 WHERE EFFECT_ID IN ('EFFECT_01', 'EFFECT_05', 'EFFECT_09', 'EFFECT_13')
     AND YEAR(B.WRITING_DATE) = 2022
 GROUP BY MONTH(B.WRITING_DATE)
-ORDER BY '월';
+ORDER BY MONTH(B.WRITING_DATE);
 </select>
 
-<select id="thiseffectquater_cnt" parameterType="Map" resultType="Map">
+<select id="thiseffectquatercnt" parameterType="Map" resultType="Map">
 SELECT
     MONTH(B.WRITING_DATE),
     COUNT(CASE WHEN EFFECT_ID = 'EFFECT_01' AND B.WRITING_DATE IS NOT NULL THEN 1 END) AS LIVER,
@@ -46,21 +46,16 @@ FROM project_nutrients.dummy_tables_supp AS B
 WHERE EFFECT_ID IN ('EFFECT_01', 'EFFECT_05', 'EFFECT_09', 'EFFECT_13')
     AND YEAR(B.WRITING_DATE) = 2023
 GROUP BY MONTH(B.WRITING_DATE)
-ORDER BY '월';
+ORDER BY MONTH(B.WRITING_DATE);
 </select>
 
-<!-- effect_리뷰를 평점 평균을 순위로 파이 출력하기  -->
-<select id="effect_review_avg" parameterType="Map" resultType="Map">
-SELECT
-    MONTH(B.WRITING_DATE),
-    COUNT(CASE WHEN EFFECT_ID = 'EFFECT_01' AND B.WRITING_DATE IS NOT NULL THEN 1 END) AS LIVER,
-    COUNT(CASE WHEN EFFECT_ID = 'EFFECT_05' AND B.WRITING_DATE IS NOT NULL THEN 1 END) AS RECOVERY,
-    COUNT(CASE WHEN EFFECT_ID = 'EFFECT_09' AND B.WRITING_DATE IS NOT NULL THEN 1 END) AS CHOLESTEROL,
-    COUNT(CASE WHEN EFFECT_ID = 'EFFECT_13' AND B.WRITING_DATE IS NOT NULL THEN 1 END) AS EYES
-FROM project_nutrients.dummy_tables_supp AS B
-WHERE EFFECT_ID IN ('EFFECT_01', 'EFFECT_05', 'EFFECT_09', 'EFFECT_13')
-    AND YEAR(B.WRITING_DATE) = 2023
-GROUP BY MONTH(B.WRITING_DATE)
-ORDER BY '월';
+<!-- effect_제품별 댓글수로 top을 출력하기  -->
+<select id="effectreviewcnt" parameterType="Map" resultType="Map">
+SELECT LEFT(PRODUCT, 5) AS SHORT_PRODUCT, COUNT(*) AS COUNT_RESULT
+FROM dummy_tables_supp
+WHERE EFFECT_FLAG = #{EFFECT_FLAG}
+GROUP BY LEFT(PRODUCT, 5)
+ORDER BY COUNT_RESULT DESC
+LIMIT 8;
 </select>
 </mapper>

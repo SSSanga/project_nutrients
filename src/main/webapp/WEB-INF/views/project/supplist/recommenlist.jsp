@@ -33,7 +33,7 @@
               <label for="card_checkbox_1" class="card-link">
                 <div class="card-body">
                   <div class="card-title h4"><button type="submit" class="btn btn-outline"
-                      formaction="/recomm/effectflag/EFFECT_01" value="EFFECT_01" name="EFFECT_FLAG">간 기능개선</button>
+                      formaction="/recomm/effectflag/EFFECT_01">간 기능개선</button>
                   </div>
                   
                 </div>

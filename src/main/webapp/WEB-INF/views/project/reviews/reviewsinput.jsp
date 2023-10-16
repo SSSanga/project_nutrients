@@ -17,7 +17,7 @@
             <% HashMap params=(HashMap)request.getAttribute("params");
             HashMap result=(HashMap)request.getAttribute("result"); %>
                 <div class="container mt-5">
-                    <h1>상품 리뷰 작성</h1>
+                    <h1>상품 리뷰 긍·부정</h1>
                     <!-- Form -->
                     <form id="predictionForm" class="mt-4">
                         <!-- Texture Mean Input -->

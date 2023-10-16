@@ -18,7 +18,6 @@
                 <%@ include file="/WEB-INF/views/project/header.jsp" %>
 
                     <form class="d-flex" action="" method="">
-
                         <div class="container content-center">
                             <div class="h1 text-center" style="font-weight: bold;">Review list</div>
                             <div style="margin-top: 80px;"></div>
@@ -95,26 +94,23 @@
                                         <nav aria-label="Page navigation">
                                             <ul class="justify-content-center pagination align-middle p-2">
                                                 <li class="page-item"><button class="page-link"
-                                                        formaction="/reviews/reviewlist/<%= paginations.getPreviousPage() %>">First</button>
+                                                        formaction="/reviews/reviewlist?currentPage=<%= paginations.getPreviousPage() %>">First</button>
                                                 </li>
                                                 <li class="page-item"><button class="page-link"
-                                                        formaction="/reviews/reviewlist/<%= paginations.getPreviousPage() %>">Previous</button>
+                                                        formaction="/reviews/reviewlist?currentPage=<%= paginations.getPreviousPage() %>">Previous</button>
                                                 </li>
                                                 <% for(int i=paginations.getBlockStart(); i <=paginations.getBlockEnd()
                                                     ; i=i+1) { %>
                                                     <li class="page-item">
                                                         <button class="page-link"
-                                                            formaction="/reviews/reviewlist/<%= i %>">
+                                                            formaction="/reviews/reviewlist?currentPage=<%= i %>">
                                                             <%= i %>
                                                         </button>
                                                     </li>
                                                     <% } %>
-                                                        <li class="page-item"><button class="page-link"
-                                                                formaction="/reviews/reviewlist/<%= paginations.getNextPage() %>">Next</button>
-                                                        </li>
-                                                        <li class="page-item"><button class="page-link"
-                                                                formaction="/reviews/reviewlist/<%= paginations.getNextPage() %>">Last</button>
-                                                        </li>
+                                                        <li class="page-item"><button class="page-link" formaction="/reviews/reviewlist?currentPage=<%= paginations.getNextPage() %>">Next</button></li>
+                                                        <li class="page-item"><button class="page-link" formaction="/reviews/reviewlist?currentPage=<%= paginations.getNextPage() %>">Last</button>
+</li>
                                             </ul>
                                         </nav>
                                     </div>
