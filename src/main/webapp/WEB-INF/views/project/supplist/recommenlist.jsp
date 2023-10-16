@@ -135,7 +135,7 @@
             
             // 차트를 그리기
             let lineOptions = {
-                title: 'Line Chart',
+                title: '2022년 월별 기능별 영양제 구매 현황',
                 curveType: 'function',
                 legend: { position: 'bottom' },
                 hAxis: {
