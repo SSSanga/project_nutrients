@@ -53,13 +53,14 @@ public class ChartsService {
         return resultObject;
     }
 
-// EFFECT에서 댓글 평균을 pie chart로 표현하기
+    // EFFECT에서 댓글 COUNT를 탑으로 뽑아내기
     public Object effectreviewcnt (String EFFECT_FLAG, Map dataMap) {
         
         // Object getOne(String sqlMapId, Object dataMap)
         String sqlMapId = "Chart.effectreviewcnt"; 
 
-        
+        dataMap.put("EFFECT_FLAG", EFFECT_FLAG);
+
         Object resultObject = sharedDao.getList(sqlMapId, dataMap);
         return resultObject;
     }

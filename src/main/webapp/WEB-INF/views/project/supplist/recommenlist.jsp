@@ -92,6 +92,7 @@
           <div>
             <!-- Pie Chart and Line Chart -->
             <div id="lineChart"></div>
+            
         </div>
         </form>
 
