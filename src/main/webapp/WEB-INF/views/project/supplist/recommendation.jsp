@@ -55,27 +55,27 @@
                           <nav aria-label="Page navigation">
                             <ul class="justify-content-center pagination align-middle p-2">
                               <li class="page-item"><button class="page-link"
-                                  formaction="/recomm/effectflag/<%= params.get("EFFECT_FLAG") %>?EFFECT_FLAG=<%= params.get("EFFECT_FLAG") %>&<%=
+                                  formaction="/recomm/effectflag/<%= params.get("EFFECT_FLAG") %>?EFFECT_FLAG=<%= params.get("EFFECT_FLAG") %>&currentPage=<%=
                                     paginations.getFirstPage() %>">First</button>
                               </li>
                               <li class="page-item"><button class="page-link"
-                                  formaction="/recomm/effectflag/<%= params.get("EFFECT_FLAG") %>?EFFECT_FLAG=<%= params.get("EFFECT_FLAG") %>&<%=
+                                  formaction="/recomm/effectflag/<%= params.get("EFFECT_FLAG") %>?EFFECT_FLAG=<%= params.get("EFFECT_FLAG") %>&currentPage=<%=
                                     paginations.getPreviousPage() %>">Previous</button>
                               </li>
                               <% for(int i=paginations.getBlockStart();i <=paginations.getBlockEnd(); i=i+1) { %>
                               <li class="page-item">
-                                <button class="page-link" formaction="/recomm/effectflag/<%= params.get("EFFECT_FLAG") %>?EFFECT_FLAG=<%= params.get("EFFECT_FLAG") %>&<%= i %>">
+                                <button class="page-link" formaction="/recomm/effectflag/<%= params.get("EFFECT_FLAG") %>?EFFECT_FLAG=<%= params.get("EFFECT_FLAG") %>&currentPage=<%= i %>">
                                     <%= i %>
                                     <% } %>
                                 </button>
                               </li>
                               
                               <li class="page-item"><button class="page-link"
-                                  formaction="/recomm/effectflag/<%= params.get("EFFECT_FLAG") %>?EFFECT_FLAG=<%= params.get("EFFECT_FLAG") %>&<%=
+                                  formaction="/recomm/effectflag/<%= params.get("EFFECT_FLAG") %>?EFFECT_FLAG=<%= params.get("EFFECT_FLAG") %>&currentPage=<%=
                                     paginations.getNextPage() %>" >Next</button>
                               </li>
                               <li class="page-item"><button class="page-link"
-                                  formaction="/recomm/effectflag/<%= params.get("EFFECT_FLAG") %>?EFFECT_FLAG=<%= params.get("EFFECT_FLAG") %>&<%= paginations.getLastPage() %>Last</button>
+                                  formaction="/recomm/effectflag/<%= params.get("EFFECT_FLAG") %>?EFFECT_FLAG=<%= params.get("EFFECT_FLAG") %>&currentPage=<%= paginations.getLastPage() %>Last</button>
                               </li>
                             </ul>
                           </nav>
