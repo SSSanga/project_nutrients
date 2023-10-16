@@ -26,7 +26,8 @@
                             <input class="form-control" type="hidden" id="REVIEW_ID" name="REVIEW_ID">
                         </div>
                         <div class="container py-4">
-                            <h1 class=" text-center mt-2" style="font-weight: bold;">Review</h1>
+                            <div class="h1 text-center" style="font-weight: bold;">Review</div>
+                            <div style="margin-top: 80px;"></div>
                             <hr style="border-top: 4px solid;">
 
                             <div class="row">
@@ -57,8 +58,8 @@
                                     </div>
                                 </div>
                             <div>
-                                    <h4 class=" pt-5 mb-3" style="font-weight: bold;">Comment</h4>
-                                    <hr style="border-top: 3px solid;">
+                                    <div class="h4 pt-5 mb-3" style="font-weight: bold;">Comment</div>
+                                    
                                     <!-- 여기에 댓글을 보여주는 부분을 추가하세요 (생략됨) -->
                                     <div class="mb-3">
                                         <p class="mb-0">작성자1: 효과 좋은가요?</p>
@@ -69,7 +70,7 @@
                                         <small class="text-muted">작성일: 2023-07-12</small>
                                     </div>
                                     <div class="mb-3">
-                                        <h6 class=" pt-5 mb-3" style="font-weight: bold;">Comment</h6>
+                                        <div class="h6 pt-5 mb-3" style="font-weight: bold;">Comment</div>
                                         <input type="text" class="form-control" id="comment" rows="3"></input>
                                     </div>
                                     <button type="submit" class="btn btn-outline-secondary">댓글 등록</button>
