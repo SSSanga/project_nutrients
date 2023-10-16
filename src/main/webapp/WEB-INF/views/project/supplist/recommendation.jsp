@@ -81,9 +81,46 @@
             </div>
 
 
-            <!-- Footer -->
-            <%@ include file="/WEB-INF/views/project/footer.jsp" %>
+                    <div class="m-3">
+                      <nav aria-label="Page navigation">
+                        <ul class="justify-content-center pagination align-middle p-2">
+                          <li class="page-item"><button class="page-link"
+                              formaction="/recomm/effectflag/<%= params.get(" EFFECT_FLAG") %>?EFFECT_FLAG=<%=
+                                params.get("EFFECT_FLAG") %>&<%= paginations.getFirstPage() %>">First</button>
+                          </li>
+                          <li class="page-item"><button class="page-link"
+                              formaction="/recomm/effectflag/<%= params.get(" EFFECT_FLAG") %>?EFFECT_FLAG=<%=
+                                params.get("EFFECT_FLAG") %>&<%= paginations.getPreviousPage() %>">Previous</button>
+                          </li>
+                          <% for(int i=paginations.getBlockStart();i <=paginations.getBlockEnd(); i=i+1) { %>
+                            <li class="page-item">
+                              <button class="page-link" formaction="/recomm/effectflag/<%= params.get(" EFFECT_FLAG")
+                                %>?EFFECT_FLAG=<%= params.get("EFFECT_FLAG") %>&<%= i %>">
+                                    <%= i %> </button>
+                            </li>
+                            <% } %>
+
+
+                              <li class="page-item"><button class="page-link"
+                                  formaction="/recomm/effectflag/<%= params.get(" EFFECT_FLAG") %>?EFFECT_FLAG=<%=
+                                    params.get("EFFECT_FLAG") %>&<%= paginations.getNextPage() %>" >Next</button>
+                              </li>
+                              <li class="page-item"><button class="page-link"
+                                  formaction="/recomm/effectflag/<%= params.get(" EFFECT_FLAG") %>?EFFECT_FLAG=<%=
+                                    params.get("EFFECT_FLAG") %>&<%= paginations.getLastPage() %>Last</button>
+                              </li>
+                        </ul>
+                      </nav>
+                    </div>
+
+                </div>
+
+            </form>
+          </div>
+
+
+        <!-- Footer -->
+        <%@ include file="/WEB-INF/views/project/footer.jsp" %>
 
       </body>
-
       </html>
