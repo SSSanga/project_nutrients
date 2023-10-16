@@ -62,7 +62,12 @@ public class RecommendationController {
         Object result = recommservice.selectList(EFFECT_FLAG, params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
-        // modelAndView.addObject("effect", EFFECT_FLAG);
+
+        Object datas = chartsService.effectreviewcnt(EFFECT_FLAG, params);
+        Gson gson = new Gson();
+        String dataArrayJSON = gson.toJson(datas);
+        modelAndView.addObject("dataArray", dataArrayJSON); // 쿼리 데이터
+
         modelAndView.setViewName("/WEB-INF/views/project/supplist/recommendation.jsp");
         return modelAndView;
     }
