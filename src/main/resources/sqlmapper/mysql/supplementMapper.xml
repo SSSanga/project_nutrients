@@ -57,8 +57,24 @@
         ON supp_spec.SUPP_ID = supp_list.SUPP_ID) AS t_LIST
         INNER JOIN effect
         ON t_LIST.EFFECT_FLAG = effect.EFFECT_ID) AS t_SUPPRECOMM
+        WHERE t_SUPPRECOMM.EFFECT_FLAG = #{EFFECT_FLAG}
+        limit #{pageBegin}, #{pageScale}; 
+  </select>
+  
+<!-- 추천 누르면 해당하는 EFFECT_ID 및 페이지네이션되게 하기  -->
+<!-- select_wholelist with pagination -->
+  <select id="effectCOUNT" parameterType="Map" resultType="int">
+        SELECT COUNT(*)
+        FROM (SELECT t_LIST.LOCATION, t_LIST.PRODUCT, t_LIST.LINK, t_LIST.EFFECT_FLAG, effect.EFFECT
+        FROM (SELECT DISTINCT supp_spec.LOCATION, supp_spec.SUPP_ID, supp_list.EFFECT_FLAG, supp_spec.PRODUCT, supp_spec.LINK
+        FROM supp_list
+        INNER JOIN supp_spec
+        ON supp_spec.SUPP_ID = supp_list.SUPP_ID) AS t_LIST
+        INNER JOIN effect
+        ON t_LIST.EFFECT_FLAG = effect.EFFECT_ID) AS t_SUPPRECOMM
         WHERE t_SUPPRECOMM.EFFECT_FLAG = #{EFFECT_FLAG}; 
   </select>
+
 
   <!-- delete -->
   <!-- 유니크 아이디 COMMON_CODE_ID로 delete -->
