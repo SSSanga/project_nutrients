@@ -17,9 +17,9 @@ WHERE SUPP_ID = #{SUPP_ID}
 </select> -->
 
 <!-- 검색창 -->
-<select id="reviewselect" parameterType="Map" resultType="Map">
-SELECT REVIEW_ID,TITLE,CONTENT, WRITING_DATE
-FROM review;
+<select id="reviewcount" parameterType="Map" resultType="int">
+   SELECT COUNT(*)
+   FROM review;
 </select>
 
 <select id="reviewinput" parameterType="Map" resultType="Map">
@@ -34,8 +34,8 @@ FROM review;
    <select id="reviewselectSearchWithPagination" parameterType="Map" resultType="Map">
       SELECT *
       FROM project_nutrients.review
-      limit #{pageBegin}, #{pageScale}
-      ;
+      WHERE 1 = 1
+      limit #{pageBegin}, #{pageScale};
    </select>
 
 <!-- total count -->

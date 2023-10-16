@@ -41,13 +41,17 @@ public class ReviewsController {
  
     // /selectSearch?search=YEAR&words=2020
     // /selectSearch/CAR_NAME/소
-    @GetMapping("/reviewlist")
-    public ModelAndView reviewselectSearchWithPagination(@RequestParam Map params
-                            , ModelAndView modelAndView) {
-        Object result = reviewsService.reviewselectSearchWithPagination(params);
+    @GetMapping({"/reviewlist", "/reviewlist/currentPage={currentPage}"})
+    public ModelAndView reviewselectSearchWithPagination(@PathVariable(required=false) String currentPage, @RequestParam Map params, ModelAndView modelAndView)
+    {
+        if (currentPage == null)
+        {
+            currentPage = "1";
+        }
+        params.put("currentPage", currentPage);
+        Object result = reviewsService.reviewWithPaginations(params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
-        
         modelAndView.setViewName("/WEB-INF/views/project/reviews/reviews.jsp");
         return modelAndView;
     }

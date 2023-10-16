@@ -1,5 +1,6 @@
 package com.project.project_nutrients.service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -39,6 +40,39 @@ public class ReviewsService {
         result.put("resultList", sharedDao.getList(sqlMapId, dataMap));
         return result;
     }
+
+    public Object countTotal(Map dataMap)
+    {
+        String sqlMapId = "Reviews.reviewcount";
+
+        Object result = sharedDao.getOne(sqlMapId, dataMap);
+        return result;
+    }    
+
+    // xml에 withPagination 호출하는것.
+    public HashMap reviewWithPaginations(Map dataMap)
+    {
+        int reviewCount = (int) this.countTotal(dataMap);
+
+        int currentPage = 1;
+        if (dataMap.get("currentPage") != null)
+        {
+            currentPage = Integer.parseInt((String) dataMap.get("currentPage"));
+        }
+
+        Paginations paginations = new Paginations(reviewCount, currentPage);
+        HashMap result = new HashMap<>();
+        result.put("paginations", paginations);
+
+        String sqlMapId = "Reviews.reviewselectSearchWithPagination";
+        dataMap.put("pageScale", paginations.getPageScale());
+        dataMap.put("pageBegin", paginations.getPageBegin());
+
+        result.put("resultList", sharedDao.getList(sqlMapId, dataMap));
+
+        return result;
+    }
+
 
     @ResponseBody
     public HashMap reviewsinputSearch(@RequestParam Map<String, String> dataMap) {

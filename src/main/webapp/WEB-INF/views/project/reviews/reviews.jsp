@@ -21,7 +21,7 @@
                         <div class="container content-center">
                             <div class="h1 text-center" style="font-weight: bold;">Review list</div>
                             <div style="margin-top: 80px;"></div>
-                             <hr style="border-top: 4px solid;">
+                            <hr style="border-top: 4px solid;">
 
                             <% HashMap params=(HashMap)request.getAttribute("params"); String
                                 searchStr=(String)params.getOrDefault("search", "" ); HashMap
@@ -94,28 +94,30 @@
                                         <nav aria-label="Page navigation">
                                             <ul class="justify-content-center pagination align-middle p-2">
                                                 <li class="page-item"><button class="page-link"
-                                                        formaction="/reviews/reviewlist?currentPage=<%= paginations.getPreviousPage() %>">First</button>
+                                                        formaction="/reviews/reviewlist/currentPage=<%= paginations.getFirstPage() %>">First</button>
                                                 </li>
                                                 <li class="page-item"><button class="page-link"
-                                                        formaction="/reviews/reviewlist?currentPage=<%= paginations.getPreviousPage() %>">Previous</button>
+                                                        formaction="/reviews/reviewlist/currentPage=<%= paginations.getPreviousPage() %>">Previous</button>
                                                 </li>
                                                 <% for(int i=paginations.getBlockStart(); i <=paginations.getBlockEnd()
                                                     ; i=i+1) { %>
                                                     <li class="page-item">
                                                         <button class="page-link"
-                                                            formaction="/reviews/reviewlist?currentPage=<%= i %>">
+                                                            formaction="/reviews/reviewlist/currentPage=<%= i %>">
                                                             <%= i %>
                                                         </button>
                                                     </li>
                                                     <% } %>
-                                                        <li class="page-item"><button class="page-link" formaction="/reviews/reviewlist?currentPage=<%= paginations.getNextPage() %>">Next</button></li>
-                                                        <li class="page-item"><button class="page-link" formaction="/reviews/reviewlist?currentPage=<%= paginations.getNextPage() %>">Last</button>
-</li>
+                                                        <li class="page-item"><button class="page-link"
+                                                                formaction="/reviews/reviewlist/currentPage=<%= paginations.getNextPage() %>">Next</button>
+                                                        </li>
+                                                        <li class="page-item"><button class="page-link"
+                                                                formaction="/reviews/reviewlist/currentPage=<%= paginations.getLastPage() %>">Last</button>
+                                                        </li>
                                             </ul>
                                         </nav>
                                     </div>
                         </div>
-
                     </form>
                     <!-- Footer -->
                     <%@ include file="/WEB-INF/views/project/footer.jsp" %>
