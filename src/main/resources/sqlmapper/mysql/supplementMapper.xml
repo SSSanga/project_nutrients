@@ -36,14 +36,13 @@
                 and EFFECT like CONCAT('%', #{words}, '%')
             </when>
         </choose>
-        ORDER BY LOCATION DESC
         limit #{pageBegin}, #{pageScale};
   </select>
 
   <select id="effectresult" parameterType="Map" resultType="Map">
         SELECT effect.EFFECT
         FROM effect
-        INNER JOIN supp_list ON effect.EFFECT_ID = supp_list.EFFECT_FLAG
+        INNER JOIN supp_list ON effect.EFFECT_ID = supp_list.EFFECT_ID
         INNER JOIN supp_spec ON supp_list.SUPP_ID = supp_spec.SUPP_ID
         WHERE supp_spec.SUPP_ID = #{SUPP_ID}
   </select>
