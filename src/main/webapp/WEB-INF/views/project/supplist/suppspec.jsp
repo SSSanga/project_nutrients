@@ -135,7 +135,7 @@
 
             // Options for Bar Chart
             let barOptions = {
-              title: 'Bar Chart',
+              title: '영양제의 리뷰 별점 현황',
               orientation: 'vertical'
             };
             // 차트를 그리기
