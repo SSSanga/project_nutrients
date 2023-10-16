@@ -86,7 +86,7 @@
 
 
         <!-- Footer -->
-        <div class="my-5"></div>
+        <div style="margin-top: 200px;"></div>
 
         <hr>
 
