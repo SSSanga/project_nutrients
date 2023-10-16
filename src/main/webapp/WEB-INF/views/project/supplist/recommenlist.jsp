@@ -89,10 +89,11 @@
               </label>
             </div>
           </div>
+          <div style="margin-top: 50px;"></div>
           <div>
             <!-- Pie Chart and Line Chart -->
-            <div id="lineChart"></div>
-            
+            <div id="lineChart" style="height: 800px;"></div>
+
         </div>
         </form>
 
@@ -151,6 +152,11 @@
           console.log(lineOptions);
         </script>
         
+
+        <div style="margin-top: 200px;"></div>
+
+        <hr>
+
 
         <!-- Footer -->
         <%@ include file="/WEB-INF/views/project/footer.jsp" %>
