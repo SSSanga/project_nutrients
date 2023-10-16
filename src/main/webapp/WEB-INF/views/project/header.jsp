@@ -97,10 +97,15 @@
                                                                 style="font-size: 20px;">회원
                                                                 List</button>
                                                         </li>
+                                                    </li>
+                                                    <li class="dropdown-item"><button id="singupButton"
+                                                        class="dropdown-item" formaction="/reviews/reviewsinput"
+                                                        style="font-size: 20px;">리뷰</button>
+                                                    </li>
                                                         <li class="dropdown-item"><button id="singupButton"
                                                             class="dropdown-item" formaction="/mem/charts/google_charts_scatter"
                                                             style="font-size: 20px;">차트</button>
-                                                    </li>
+                                                        </li>
                                                     </sec:authorize>
                                                     <li class="dropdown-item"><button id="singupButton"
                                                             class="dropdown-item" method="post" formaction="/logout"

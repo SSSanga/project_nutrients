@@ -36,6 +36,7 @@
                 and EFFECT like CONCAT('%', #{words}, '%')
             </when>
         </choose>
+        ORDER BY LOCATION DESC
         limit #{pageBegin}, #{pageScale};
   </select>
 
@@ -58,6 +59,7 @@
         INNER JOIN effect
         ON t_LIST.EFFECT_FLAG = effect.EFFECT_ID) AS t_SUPPRECOMM
         WHERE t_SUPPRECOMM.EFFECT_FLAG = #{EFFECT_FLAG}
+        ORDER BY LOCATION DESC
         limit #{pageBegin}, #{pageScale}; 
   </select>
   

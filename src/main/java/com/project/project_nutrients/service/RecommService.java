@@ -57,10 +57,4 @@ public class RecommService {
         
         return result;
     }
-
-    private int selecteffectcnt(Map dataMap) {
-        return 0;
-    }
-
-    
 }

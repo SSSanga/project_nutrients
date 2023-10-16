@@ -9,20 +9,20 @@
                 <div class="">
                     <ul class="list-unstyled d-flex">
                         <li>
-                            <a href="/etc/companyInfo"
+                            <a href=""
                                 class="text-black text-decoration-none border-end border-secondary">회사소개 &nbsp;</a>
                         </li>
                         <li>
-                            <a href="/etc/terms_of_use"
+                            <a href=""
                                 class="text-black text-decoration-none ps-2 border-end border-secondary">이용약관 &nbsp;</a>
                         </li>
                         <li>
-                            <a href="/etc/privacy_policy"
+                            <a href=""
                                 class="text-black text-decoration-none ps-2 border-end border-secondary">개인정보처리방침
                                 &nbsp;</a>
                         </li>
                         <li>
-                            <a href="/notice/notice_faq" class="text-black text-decoration-none ps-2">고객센터</a>
+                            <a href="" class="text-black text-decoration-none ps-2">고객센터</a>
                         </li>
                     </ul>
                 </div>

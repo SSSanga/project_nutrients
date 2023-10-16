@@ -23,10 +23,10 @@ FROM review;
 </select>
 
 <select id="reviewinput" parameterType="Map" resultType="Map">
-   SELECT TITLE
+   SELECT CONTENT
    FROM review
    WHERE 1 = 1
-   and TITLE like CONCAT('%', #{words}, '%')
+   and CONTENT like CONCAT('%', #{words}, '%')
 </select>
 
 
