@@ -36,7 +36,7 @@
                 and EFFECT like CONCAT('%', #{words}, '%')
             </when>
         </choose>
-        ORDER BY LOCATION DESC
+        ORDER BY LOCATION desc
         limit #{pageBegin}, #{pageScale};
   </select>
 
