@@ -35,3 +35,7 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### checkpoint ###
+**/*-checkpoint.*
+**/.ipynb_checkpoints/*-checkpoint.ipynb
